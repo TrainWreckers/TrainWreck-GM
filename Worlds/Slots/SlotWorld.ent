@@ -1,0 +1,3 @@
+SubScene {
+ Parent "{D4F0833B7D664857}worlds/Editor/Slots/Slots/Flat/SlotFlat.ent"
+}

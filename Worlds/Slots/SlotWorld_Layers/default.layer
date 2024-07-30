@@ -1,0 +1,110 @@
+GenericEntity TestComposition_Medium_USSR_01 : "{3BA9D94C4EE9B33B}Prefabs/Compositions/Slotted/CompositionBase.et" {
+ components {
+  Hierarchy "{61FB60430D77DCCE}" {
+  }
+ }
+ coords 83.893 0 71.517
+ {
+  StaticModelEntity : "{2D303C505CC6576A}Prefabs/Structures/Military/Camps/TentUSSR_01/TentUSSR_01_camonet_foundation.et" {
+   coords -9.298 0.518 0.943
+   angleY 90.986
+  }
+  $grp StaticModelEntity : "{605A7848CB4D361A}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Bunker_Camouflaged_USSR_01.et" {
+   {
+    coords 11.426 0 12.822
+    angleY 50.62
+   }
+   {
+    coords 11.225 0 -13.083
+    angleY 122.745
+   }
+   {
+    coords -11.251 0 -12.31
+    angleY -132.439
+   }
+   {
+    coords -13.682 0 12.646
+    angleY -41.443
+   }
+  }
+  $grp GenericEntity : "{C56ED190635B0129}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Camo_wall_high_USSR.et" {
+   {
+    coords 5.901 0 -15.872
+    angleY -19.882
+   }
+   {
+    coords 3.249 0 -16.874
+    angleY -19.882
+   }
+   {
+    coords -7.554 0 -13.387
+    angleY 34.497
+   }
+   {
+    coords -5.361 0 -14.845
+    angleY 34.497
+   }
+   {
+    coords -3.09 0 -15.746
+    angleY 12.651
+   }
+   {
+    coords -5.66 0 15.527
+    angleY 177.576
+   }
+   {
+    coords -8.017 0 14.884
+    angleY 155.73
+   }
+   {
+    coords -3.031 0 15.68
+    angleY 177.576
+   }
+   {
+    coords 5.526 0 15.932
+    angleY -144.598
+   }
+   {
+    coords 3.27 0 16.87
+    angleY -166.445
+   }
+   {
+    coords 7.696 0 14.441
+    angleY -144.598
+   }
+   {
+    coords 12.74 0 6.352
+    angleY -92.878
+   }
+   {
+    coords 12.079 0 8.705
+    angleY -114.724
+   }
+   {
+    coords 12.914 0 3.725
+    angleY -92.878
+   }
+   {
+    coords 12.874 0 -6.468
+    angleY -67.43
+   }
+   {
+    coords 13.288 0 -4.059
+    angleY -89.277
+   }
+   {
+    coords 11.902 0 -8.915
+    angleY -67.43
+   }
+  }
+  $grp SCR_DestructibleBuildingEntity : "{C768E842A6F11CEE}Prefabs/Structures/Military/Camps/TentUSSR_01/TentUSSR_01_camonet.et" {
+   {
+    coords 2.084 0 -6.437
+   }
+   {
+    coords 2.122 0 7.652
+    angleY 179.973
+   }
+  }
+ }
+}
