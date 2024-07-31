@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{120F810E6C639AAC}Configs/Editor/PlaceableEntities/TW_PlaceableEntities.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

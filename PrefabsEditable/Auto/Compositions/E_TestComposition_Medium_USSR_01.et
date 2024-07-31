@@ -1,7 +1,7 @@
 GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_USSR_01.et" {
  ID "5282DCB5DFC8538F"
  components {
-  SCR_EditableEntityComponent "{61FB60479202A589}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+  SCR_EditableEntityComponent "{61FF6A4A8D3184EC}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "(TestComposition_Medium_USSR_01)"
     m_Image ""
@@ -11,11 +11,11 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      1 124
     }
     m_EntityChildrenBudgetCost {
-     SCR_EntityBudgetValue "{61FB60479200C0F9}" {
+     SCR_EntityBudgetValue "{61FF6A4A8D32073C}" {
       m_BudgetType PROPS
       m_Value 146
      }
-     SCR_EntityBudgetValue "{61FB604792005395}" {
+     SCR_EntityBudgetValue "{61FF6A4A8D33D9A8}" {
       m_BudgetType SYSTEMS
       m_Value 4
      }
@@ -23,148 +23,148 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
    }
    m_Flags 1793
   }
-  SCR_EditorLinkComponent "{61FB60479238E111}" {
+  SCR_EditorLinkComponent "{61FF6A4A8D530A37}" {
    m_bRandomizeVariants 0
    m_aEntries {
-    SCR_EditorLinkEntry "{61FB60479238B008}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D53B5CA}" {
      m_Prefab "{24F819D251467B5C}PrefabsEditable/Auto/Structures/Military/Camps/TentUSSR_01/E_TentUSSR_01_camonet_foundation.et"
      m_vPosition -9.298 0.518 0.943
      m_vAngles 0 90.986 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479237D004}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D2D6E19}" {
      m_Prefab "{51AB40A39B944585}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Camouflaged_USSR_01.et"
      m_vPosition 11.426 0 12.822
      m_vAngles 0 50.62 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479236F0B7}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D2C2B3D}" {
      m_Prefab "{51AB40A39B944585}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Camouflaged_USSR_01.et"
      m_vPosition 11.225 0 -13.083
      m_vAngles 0 122.745 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB604792350654}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D2FE205}" {
      m_Prefab "{51AB40A39B944585}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Camouflaged_USSR_01.et"
      m_vPosition -13.682 0 12.646
      m_vAngles 0 -41.443 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479234205D}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D2EBADC}" {
      m_Prefab "{51AB40A39B944585}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Camouflaged_USSR_01.et"
      m_vPosition -11.251 0 -12.31
      m_vAngles 0 -132.439 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB604792334A50}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D287CF8}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB604792326D2A}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D2B3008}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB604792328DB2}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D2A0A26}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479231AECD}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D25CDC2}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479230B829}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D248EB8}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920FCDFD}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D26438E}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920EC090}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D21060E}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920DE5A7}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D20D9BA}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920C0661}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D2393D0}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920B1B66}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D3D5E80}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920A2ACC}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D3C075E}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479209368B}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D3FC7B9}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920856E4}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D3E880C}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB6047920763EE}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D384291}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB604792078B2D}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D3B05D3}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479206AB13}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D3AD89A}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479205C97D}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D359DCA}" {
      m_Prefab "{67DB23193FD6CEFD}PrefabsEditable/Auto/Structures/Military/CamoNets/Soviet/E_CamoNet_Wall_high_Soviet.et"
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479204D2E4}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D375151}" {
      m_Prefab "{AFEF26B29DB9DA7B}PrefabsEditable/Auto/Structures/Military/Camps/TentUSSR_01/E_TentUSSR_01_camonet.et"
      m_vPosition 2.122 0 7.652
      m_vAngles 0 179.973 0
      m_fScale 1
     }
-    SCR_EditorLinkEntry "{61FB60479203D271}" {
+    SCR_EditorLinkEntry "{61FF6A4A8D3614EC}" {
      m_Prefab "{AFEF26B29DB9DA7B}PrefabsEditable/Auto/Structures/Military/Camps/TentUSSR_01/E_TentUSSR_01_camonet.et"
      m_vPosition 2.084 0 -6.437
      m_vAngles 0 0 0
@@ -172,10 +172,10 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
     }
    }
   }
-  SCR_PreviewEntityComponent "{61FB6047921F3CE6}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+  SCR_PreviewEntityComponent "{61FF6A4A8D0D4634}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
    m_bRuntime 0
    m_aEntries {
-    SCR_BasePreviewEntry "{61FB6047921FE50C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D0DF238}" {
      m_iParentID -1
      m_Mesh ""
      m_Flags 258
@@ -185,7 +185,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047921D21AA}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D0FBB52}" {
      m_iParentID 0
      m_Mesh ""
      m_Flags 0
@@ -195,7 +195,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -9.298 0.518 0.943
      m_vAngles 0 90.986 0
     }
-    SCR_BasePreviewEntry "{61FB6047921B5FE1}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D086A66}" {
      m_iParentID 1
      m_Mesh "{B56A3191B96761B5}Assets/Structures/Military/Camps/Foundation_TentUSSR_01/Foundation_TentUSSR_01.xob"
      m_Flags 0
@@ -205,7 +205,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047921AAB38}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D0AFAFD}" {
      m_iParentID 1
      m_Mesh "{454CCBB26BB830DB}Assets/Structures/Military/Camps/TentUSSR_01/TentUSSR_01.xob"
      m_Flags 0
@@ -215,7 +215,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB60479218DCFC}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D049F66}" {
      m_iParentID 3
      m_Mesh "{A9C84183EA1C4E97}Assets/Structures/Military/Camps/TentUSSR_01/TentUSSR_01_floor.xob"
      m_Flags 0
@@ -225,7 +225,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047921626DB}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D01420C}" {
      m_iParentID 3
      m_Mesh "{01E5327CE6F3006E}Assets/Structures/Military/CamoNets/CamoNet_Tent_Soviet.xob"
      m_Flags 0
@@ -235,7 +235,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792147ABC}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D030FF2}" {
      m_iParentID 0
      m_Mesh ""
      m_Flags 257
@@ -245,7 +245,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 11.426 0 12.822
      m_vAngles 0 50.62 0
     }
-    SCR_BasePreviewEntry "{61FB60479213A72C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D1D92BD}" {
      m_iParentID 6
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -255,7 +255,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.204 0.148 0.926
      m_vAngles 0 -76.796 0
     }
-    SCR_BasePreviewEntry "{61FB60479211F409}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D1E3059}" {
      m_iParentID 6
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -265,7 +265,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.59 0.148 0.932
      m_vAngles 0 107.099 0
     }
-    SCR_BasePreviewEntry "{61FB604792EF497D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D18FA30}" {
      m_iParentID 6
      m_Mesh "{B4D812579BA957C6}Assets/Props/Military/Furniture/USSR/ChairMilitary_USSR_01.xob"
      m_Flags 0
@@ -275,7 +275,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.968 0.141 -0.698
      m_vAngles 0 -62.091 0
     }
-    SCR_BasePreviewEntry "{61FB604792EE8A78}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D1AA30D}" {
      m_iParentID 6
      m_Mesh "{8201C1F229006ECF}Assets/Structures/Walls/BarbedWire/BarbedTape_Long.xob"
      m_Flags HORIZONTAL
@@ -285,7 +285,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.078 0.1 3.002
      m_vAngles 0 -76.4 0
     }
-    SCR_BasePreviewEntry "{61FB604792ECB7FA}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D1755F7}" {
      m_iParentID 6
      m_Mesh "{4C49D7FCCB21CB3A}Assets/Vegetation/Cuttings/Pinus_sylvestris_medium_01.xob"
      m_Flags 0
@@ -295,7 +295,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.717 0.1 3.041
      m_vAngles 0 13.376 0
     }
-    SCR_BasePreviewEntry "{61FB604792EA02B1}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D111EAF}" {
      m_iParentID 6
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -305,7 +305,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.321 2.634 1.441
      m_vAngles 71.299 28.754 -34.683
     }
-    SCR_BasePreviewEntry "{61FB604792E86B1B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D13C379}" {
      m_iParentID 6
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -315,7 +315,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.358 0.2 2.451
      m_vAngles 0 -11.649 0
     }
-    SCR_BasePreviewEntry "{61FB604792E7AE63}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DEC7606}" {
      m_iParentID 6
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -325,7 +325,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.987 0.2 2.758
      m_vAngles 0 18.036 0
     }
-    SCR_BasePreviewEntry "{61FB604792E5FF3D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DEE1E59}" {
      m_iParentID 6
      m_Mesh "{B119EC6E3C59AF3B}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_01.xob"
      m_Flags HORIZONTAL
@@ -335,7 +335,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.379 0.1 -0.941
      m_vAngles 0 43.039 0
     }
-    SCR_BasePreviewEntry "{61FB604792E336E1}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DE8BFAC}" {
      m_iParentID 6
      m_Mesh "{108873E21CE8DA34}Assets/Props/Military/Furniture/USSR/TableMilitary_USSR_01.xob"
      m_Flags 0
@@ -345,7 +345,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.995 0.144 -0.64
      m_vAngles 0 -90 0
     }
-    SCR_BasePreviewEntry "{61FB604792E1703E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DE55E31}" {
      m_iParentID 16
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -355,7 +355,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.143 0.899 -0.106
      m_vAngles 0 -109.042 0
     }
-    SCR_BasePreviewEntry "{61FB604792E0C8BB}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DE7E340}" {
      m_iParentID 16
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -365,7 +365,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.004 0.899 -0.162
      m_vAngles 0 -13.715 0
     }
-    SCR_BasePreviewEntry "{61FB604792FE0610}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DE1914F}" {
      m_iParentID 16
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -375,7 +375,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.403 0.899 0.188
      m_vAngles 0 161.276 0
     }
-    SCR_BasePreviewEntry "{61FB604792FC4345}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DE23886}" {
      m_iParentID 6
      m_Mesh "{CEC8A3DF893B9C96}Assets/Props/Crates/BoxWooden_01.xob"
      m_Flags 0
@@ -385,7 +385,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.942 0.142 1.125
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792FBAD4A}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DFCD9C3}" {
      m_iParentID 20
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -395,7 +395,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.098 0.014 0.088
      m_vAngles 0 43.728 0
     }
-    SCR_BasePreviewEntry "{61FB604792F9FFD3}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DF97048}" {
      m_iParentID 20
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -405,7 +405,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.007 0 0.085
      m_vAngles 0 -155.911 0
     }
-    SCR_BasePreviewEntry "{61FB604792F71ED4}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DFB3A1D}" {
      m_iParentID 20
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -415,7 +415,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.121 0.015 -0.055
      m_vAngles 0 -92.18 0
     }
-    SCR_BasePreviewEntry "{61FB604792F55052}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DF5E976}" {
      m_iParentID 20
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -425,7 +425,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.008 0.039 -0.051
      m_vAngles 90 17.456 146.429
     }
-    SCR_BasePreviewEntry "{61FB604792F4A5EF}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DF79CDB}" {
      m_iParentID 20
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -435,7 +435,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.141 0.004 -0.09
      m_vAngles 0 -121.853 0
     }
-    SCR_BasePreviewEntry "{61FB604792F2E176}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DF00457}" {
      m_iParentID 6
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -445,7 +445,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.851 0.165 -2.061
      m_vAngles 40.511 -137.638 30.641
     }
-    SCR_BasePreviewEntry "{61FB604792F023BE}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DF2B2E9}" {
      m_iParentID 6
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -455,7 +455,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.354 0.261 1.161
      m_vAngles 0 -72.362 0
     }
-    SCR_BasePreviewEntry "{61FB604792CE79F0}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DCF69D0}" {
      m_iParentID 6
      m_Mesh "{D748834B49391924}Assets/Vegetation/Cuttings/Carpinus_betulus_large_01.xob"
      m_Flags 0
@@ -465,7 +465,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.82 0.1 -1.127
      m_vAngles 16.651 75.464 -4.249
     }
-    SCR_BasePreviewEntry "{61FB604792CDCFF2}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DC903D7}" {
      m_iParentID 6
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -475,7 +475,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.108 0.1 0.654
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB604792CB0113}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DCBA78E}" {
      m_iParentID 6
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -485,7 +485,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.068 0.1 2.203
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792C953A8}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DC457AE}" {
      m_iParentID 6
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -495,7 +495,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.123 0.1 0.893
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB604792C8BF43}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DC6EE8B}" {
      m_iParentID 6
      m_Mesh "{18363538AB174654}Assets/Vegetation/Cuttings/Sambucus_Nigra_medium_01.xob"
      m_Flags 0
@@ -505,7 +505,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.875 0.1 0.234
      m_vAngles 31.857 -54.474 0
     }
-    SCR_BasePreviewEntry "{61FB604792C6C259}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DC0898A}" {
      m_iParentID 6
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -515,7 +515,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.125 0.1 -0.937
      m_vAngles 0 -89.649 0
     }
-    SCR_BasePreviewEntry "{61FB604792C4137E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DDD33F8}" {
      m_iParentID 6
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -525,7 +525,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -3.24 0.1 -0.952
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792C26954}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DDFA4DB}" {
      m_iParentID 6
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -535,7 +535,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.242 0.1 -1.232
      m_vAngles 0 -14.774 0
     }
-    SCR_BasePreviewEntry "{61FB604792C1968B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DD8551A}" {
      m_iParentID 6
      m_Mesh "{BDC5F5921F51B497}Assets/Vegetation/Cuttings/Picea_abies_medium_01.xob"
      m_Flags 0
@@ -545,7 +545,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.359 0.1 2.815
      m_vAngles 0 -117.474 0
     }
-    SCR_BasePreviewEntry "{61FB604792DFE463}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DDA063F}" {
      m_iParentID 6
      m_Mesh "{7B90389821D6F01A}Assets/Structures/Walls/BarbedWire/BarbedTape_Short.xob"
      m_Flags HORIZONTAL
@@ -555,7 +555,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.746 0.1 3.095
      m_vAngles 0 -101.358 0
     }
-    SCR_BasePreviewEntry "{61FB604792DD1CA0}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DD4B408}" {
      m_iParentID 6
      m_Mesh ""
      m_Flags EDITABLE
@@ -565,7 +565,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.046 0.146 0.435
      m_vAngles 0 -95.529 0
     }
-    SCR_BasePreviewEntry "{61FB604792DB6D99}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DD162EA}" {
      m_iParentID 6
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -575,7 +575,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.653 2.456 -0.649
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792DABD27}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DD319B3}" {
      m_iParentID 6
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -585,7 +585,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 4.395 0.1 -0.726
      m_vAngles 0 -36.936 0
     }
-    SCR_BasePreviewEntry "{61FB604792D8E10D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DADC9E8}" {
      m_iParentID 6
      m_Mesh "{F99173478E34D1EB}Assets/Structures/Military/CamoNets/CamoNet_Bunker.xob"
      m_Flags HORIZONTAL
@@ -595,7 +595,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792D6368B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DAE6053}" {
      m_iParentID 6
      m_Mesh "{987D10CBDD2F2AAF}Assets/Props/Military/Sandbags/Sandbag_01_bunker.xob"
      m_Flags HORIZONTAL
@@ -605,7 +605,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792D47CE9}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DA81217}" {
      m_iParentID 6
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -615,7 +615,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.235 0.1 3.183
      m_vAngles 0 87.024 0
     }
-    SCR_BasePreviewEntry "{61FB604792D3BB9A}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DAACCA9}" {
      m_iParentID 6
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -625,7 +625,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.296 2.611 0.785
      m_vAngles 6.055 -105.509 2.126
     }
-    SCR_BasePreviewEntry "{61FB604792D1FD97}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DA76C98}" {
      m_iParentID 6
      m_Mesh "{FD88B3F1825313EC}Assets/Props/Military/Sandbags/Sandbag_01_foundation.xob"
      m_Flags 0
@@ -635,7 +635,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792AF20E2}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DA1182E}" {
      m_iParentID 0
      m_Mesh ""
      m_Flags 257
@@ -645,7 +645,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 11.225 0 -13.083
      m_vAngles 0 122.745 0
     }
-    SCR_BasePreviewEntry "{61FB604792AD6538}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DA3AAE5}" {
      m_iParentID 46
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -655,7 +655,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.204 0.148 0.926
      m_vAngles 0 -76.796 0
     }
-    SCR_BasePreviewEntry "{61FB604792ACBBB7}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DBC3EC3}" {
      m_iParentID 46
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -665,7 +665,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.59 0.148 0.932
      m_vAngles 0 107.099 0
     }
-    SCR_BasePreviewEntry "{61FB604792AA0F37}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DBEEA47}" {
      m_iParentID 46
      m_Mesh "{B4D812579BA957C6}Assets/Props/Military/Furniture/USSR/ChairMilitary_USSR_01.xob"
      m_Flags 0
@@ -675,7 +675,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.968 0.141 -0.698
      m_vAngles 0 -62.091 0
     }
-    SCR_BasePreviewEntry "{61FB604792A83170}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DB8857A}" {
      m_iParentID 46
      m_Mesh "{8201C1F229006ECF}Assets/Structures/Walls/BarbedWire/BarbedTape_Long.xob"
      m_Flags HORIZONTAL
@@ -685,7 +685,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.078 0.1 3.002
      m_vAngles 0 -76.4 0
     }
-    SCR_BasePreviewEntry "{61FB604792A78961}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DB51871}" {
      m_iParentID 46
      m_Mesh "{4C49D7FCCB21CB3A}Assets/Vegetation/Cuttings/Pinus_sylvestris_medium_01.xob"
      m_Flags 0
@@ -695,7 +695,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.717 0.1 3.041
      m_vAngles 0 13.376 0
     }
-    SCR_BasePreviewEntry "{61FB604792A5DF9C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DB7CA3B}" {
      m_iParentID 46
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -705,7 +705,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.321 2.634 1.441
      m_vAngles 71.299 28.754 -34.683
     }
-    SCR_BasePreviewEntry "{61FB604792A30901}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DB065A8}" {
      m_iParentID 46
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -715,7 +715,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.358 0.2 2.451
      m_vAngles 0 -11.649 0
     }
-    SCR_BasePreviewEntry "{61FB604792A135AC}" {
+    SCR_BasePreviewEntry "{61FF6A4A8DB200B3}" {
      m_iParentID 46
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -725,7 +725,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.987 0.2 2.758
      m_vAngles 0 18.036 0
     }
-    SCR_BasePreviewEntry "{61FB604792A08E21}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D8C995F}" {
      m_iParentID 46
      m_Mesh "{B119EC6E3C59AF3B}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_01.xob"
      m_Flags HORIZONTAL
@@ -735,7 +735,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.379 0.1 -0.941
      m_vAngles 0 43.039 0
     }
-    SCR_BasePreviewEntry "{61FB604792BECD6D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D8936DF}" {
      m_iParentID 46
      m_Mesh "{108873E21CE8DA34}Assets/Props/Military/Furniture/USSR/TableMilitary_USSR_01.xob"
      m_Flags 0
@@ -745,7 +745,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.995 0.144 -0.64
      m_vAngles 0 -90 0
     }
-    SCR_BasePreviewEntry "{61FB604792BC0FE3}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D8BEE34}" {
      m_iParentID 56
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -755,7 +755,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.143 0.899 -0.106
      m_vAngles 0 -109.042 0
     }
-    SCR_BasePreviewEntry "{61FB604792BA41DC}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D84776C}" {
      m_iParentID 56
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -765,7 +765,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.004 0.899 -0.162
      m_vAngles 0 -13.715 0
     }
-    SCR_BasePreviewEntry "{61FB604792B99B17}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D86299C}" {
      m_iParentID 56
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -775,7 +775,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.403 0.899 0.188
      m_vAngles 0 161.276 0
     }
-    SCR_BasePreviewEntry "{61FB604792B7D87A}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D80BC6A}" {
      m_iParentID 46
      m_Mesh "{CEC8A3DF893B9C96}Assets/Props/Crates/BoxWooden_01.xob"
      m_Flags 0
@@ -785,7 +785,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.942 0.142 1.125
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604792B5191F}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D9D5656}" {
      m_iParentID 60
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -795,7 +795,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.098 0.014 0.088
      m_vAngles 0 43.728 0
     }
-    SCR_BasePreviewEntry "{61FB604792B35C79}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D9F0D0D}" {
      m_iParentID 60
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -805,7 +805,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.007 0 0.085
      m_vAngles 0 -155.911 0
     }
-    SCR_BasePreviewEntry "{61FB604792B29110}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D99AAFB}" {
      m_iParentID 60
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -815,7 +815,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.121 0.015 -0.055
      m_vAngles 0 -92.18 0
     }
-    SCR_BasePreviewEntry "{61FB604792B0D035}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D9A30BC}" {
      m_iParentID 60
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -825,7 +825,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.008 0.039 -0.051
      m_vAngles 90 17.456 146.429
     }
-    SCR_BasePreviewEntry "{61FB6047928E1DDD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D94EDAB}" {
      m_iParentID 60
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -835,7 +835,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.141 0.004 -0.09
      m_vAngles 0 -121.853 0
     }
-    SCR_BasePreviewEntry "{61FB6047928C4FA1}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D968524}" {
      m_iParentID 46
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -845,7 +845,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.851 0.165 -2.061
      m_vAngles 40.511 -137.638 30.641
     }
-    SCR_BasePreviewEntry "{61FB6047928B8FEE}" {
+    SCR_BasePreviewEntry "{61FF6A4A8D933B69}" {
      m_iParentID 46
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -855,7 +855,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.354 0.261 1.161
      m_vAngles 0 -72.362 0
     }
-    SCR_BasePreviewEntry "{61FB60479289BFA2}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E6D9432}" {
      m_iParentID 46
      m_Mesh "{D748834B49391924}Assets/Vegetation/Cuttings/Carpinus_betulus_large_01.xob"
      m_Flags 0
@@ -865,7 +865,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.82 0.1 -1.127
      m_vAngles 16.651 75.464 -4.249
     }
-    SCR_BasePreviewEntry "{61FB60479287F187}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E6E4155}" {
      m_iParentID 46
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -875,7 +875,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.108 0.1 0.654
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB604792853B62}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E68EE22}" {
      m_iParentID 46
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -885,7 +885,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.068 0.1 2.203
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047928376AF}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E6A8F31}" {
      m_iParentID 46
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -895,7 +895,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.123 0.1 0.893
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB60479282CDC4}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E6705D6}" {
      m_iParentID 46
      m_Mesh "{18363538AB174654}Assets/Vegetation/Cuttings/Sambucus_Nigra_medium_01.xob"
      m_Flags 0
@@ -905,7 +905,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.875 0.1 0.234
      m_vAngles 31.857 -54.474 0
     }
-    SCR_BasePreviewEntry "{61FB6047928005E7}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E6191A4}" {
      m_iParentID 46
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -915,7 +915,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.125 0.1 -0.937
      m_vAngles 0 -89.649 0
     }
-    SCR_BasePreviewEntry "{61FB6047929E487B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E624AB7}" {
      m_iParentID 46
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -925,7 +925,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -3.24 0.1 -0.952
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047929C6AC4}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E7CD6FF}" {
      m_iParentID 46
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -935,7 +935,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.242 0.1 -1.232
      m_vAngles 0 -14.774 0
     }
-    SCR_BasePreviewEntry "{61FB6047929BA04D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E7E8F8C}" {
      m_iParentID 46
      m_Mesh "{BDC5F5921F51B497}Assets/Vegetation/Cuttings/Picea_abies_medium_01.xob"
      m_Flags 0
@@ -945,7 +945,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.359 0.1 2.815
      m_vAngles 0 -117.474 0
     }
-    SCR_BasePreviewEntry "{61FB60479299FF04}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E7B20B1}" {
      m_iParentID 46
      m_Mesh "{7B90389821D6F01A}Assets/Structures/Walls/BarbedWire/BarbedTape_Short.xob"
      m_Flags HORIZONTAL
@@ -955,7 +955,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.746 0.1 3.095
      m_vAngles 0 -101.358 0
     }
-    SCR_BasePreviewEntry "{61FB604792971ECD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E75C300}" {
      m_iParentID 46
      m_Mesh ""
      m_Flags EDITABLE
@@ -965,7 +965,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.046 0.146 0.435
      m_vAngles 0 -95.529 0
     }
-    SCR_BasePreviewEntry "{61FB604792955614}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E7665D1}" {
      m_iParentID 46
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -975,7 +975,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.653 2.456 -0.649
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB60479294ACF8}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E70FDE1}" {
      m_iParentID 46
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -985,7 +985,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 4.395 0.1 -0.726
      m_vAngles 0 -36.936 0
     }
-    SCR_BasePreviewEntry "{61FB60479292D502}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E7296AD}" {
      m_iParentID 46
      m_Mesh "{F99173478E34D1EB}Assets/Structures/Military/CamoNets/CamoNet_Bunker.xob"
      m_Flags HORIZONTAL
@@ -995,7 +995,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB60479290185C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E4F49AF}" {
      m_iParentID 46
      m_Mesh "{987D10CBDD2F2AAF}Assets/Props/Military/Sandbags/Sandbag_01_bunker.xob"
      m_Flags HORIZONTAL
@@ -1005,7 +1005,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047936E4258}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E49D3C1}" {
      m_iParentID 46
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -1015,7 +1015,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.235 0.1 3.183
      m_vAngles 0 87.024 0
     }
-    SCR_BasePreviewEntry "{61FB6047936D87F1}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E4A64C3}" {
      m_iParentID 46
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -1025,7 +1025,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.296 2.611 0.785
      m_vAngles 6.055 -105.509 2.126
     }
-    SCR_BasePreviewEntry "{61FB6047936BC615}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E441F6A}" {
      m_iParentID 46
      m_Mesh "{FD88B3F1825313EC}Assets/Props/Military/Sandbags/Sandbag_01_foundation.xob"
      m_Flags 0
@@ -1035,7 +1035,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB60479369011D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E46BAC2}" {
      m_iParentID 0
      m_Mesh ""
      m_Flags 257
@@ -1045,7 +1045,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -13.682 0 12.646
      m_vAngles 0 -41.443 0
     }
-    SCR_BasePreviewEntry "{61FB6047936712BA}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E434DCB}" {
      m_iParentID 86
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -1055,7 +1055,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.204 0.148 0.926
      m_vAngles 0 -76.796 0
     }
-    SCR_BasePreviewEntry "{61FB6047936556D8}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E5DE02B}" {
      m_iParentID 86
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -1065,7 +1065,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.59 0.148 0.932
      m_vAngles 0 107.099 0
     }
-    SCR_BasePreviewEntry "{61FB60479364986C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E5F86BC}" {
      m_iParentID 86
      m_Mesh "{B4D812579BA957C6}Assets/Props/Military/Furniture/USSR/ChairMilitary_USSR_01.xob"
      m_Flags 0
@@ -1075,7 +1075,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.968 0.141 -0.698
      m_vAngles 0 -62.091 0
     }
-    SCR_BasePreviewEntry "{61FB60479362DBEC}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E58243E}" {
      m_iParentID 86
      m_Mesh "{8201C1F229006ECF}Assets/Structures/Walls/BarbedWire/BarbedTape_Long.xob"
      m_Flags HORIZONTAL
@@ -1085,7 +1085,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.078 0.1 3.002
      m_vAngles 0 -76.4 0
     }
-    SCR_BasePreviewEntry "{61FB604793600A71}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E5ACE06}" {
      m_iParentID 86
      m_Mesh "{4C49D7FCCB21CB3A}Assets/Vegetation/Cuttings/Pinus_sylvestris_medium_01.xob"
      m_Flags 0
@@ -1095,7 +1095,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.717 0.1 3.041
      m_vAngles 0 13.376 0
     }
-    SCR_BasePreviewEntry "{61FB6047937E349A}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E5742E4}" {
      m_iParentID 86
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -1105,7 +1105,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.321 2.634 1.441
      m_vAngles 71.299 28.754 -34.683
     }
-    SCR_BasePreviewEntry "{61FB6047937C79D9}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E51D337}" {
      m_iParentID 86
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -1115,7 +1115,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.358 0.2 2.451
      m_vAngles 0 -11.649 0
     }
-    SCR_BasePreviewEntry "{61FB6047937BBFE0}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E5273DC}" {
      m_iParentID 86
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -1125,7 +1125,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.987 0.2 2.758
      m_vAngles 0 18.036 0
     }
-    SCR_BasePreviewEntry "{61FB60479379EAE7}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E2C1FF7}" {
      m_iParentID 86
      m_Mesh "{B119EC6E3C59AF3B}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_01.xob"
      m_Flags HORIZONTAL
@@ -1135,7 +1135,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.379 0.1 -0.941
      m_vAngles 0 43.039 0
     }
-    SCR_BasePreviewEntry "{61FB604793771C8E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E2EAA87}" {
      m_iParentID 86
      m_Mesh "{108873E21CE8DA34}Assets/Props/Military/Furniture/USSR/TableMilitary_USSR_01.xob"
      m_Flags 0
@@ -1145,7 +1145,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.995 0.144 -0.64
      m_vAngles 0 -90 0
     }
-    SCR_BasePreviewEntry "{61FB604793754397}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E2B49C7}" {
      m_iParentID 96
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -1155,7 +1155,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.143 0.899 -0.106
      m_vAngles 0 -109.042 0
     }
-    SCR_BasePreviewEntry "{61FB604793749F0D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E25D4F0}" {
      m_iParentID 96
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -1165,7 +1165,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.004 0.899 -0.162
      m_vAngles 0 -13.715 0
     }
-    SCR_BasePreviewEntry "{61FB60479372DD66}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E26674C}" {
      m_iParentID 96
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -1175,7 +1175,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.403 0.899 0.188
      m_vAngles 0 161.276 0
     }
-    SCR_BasePreviewEntry "{61FB604793701DD4}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E20FF03}" {
      m_iParentID 86
      m_Mesh "{CEC8A3DF893B9C96}Assets/Props/Crates/BoxWooden_01.xob"
      m_Flags 0
@@ -1185,7 +1185,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.942 0.142 1.125
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047934E305B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E229C10}" {
      m_iParentID 100
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1195,7 +1195,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.098 0.014 0.088
      m_vAngles 0 43.728 0
     }
-    SCR_BasePreviewEntry "{61FB6047934C76E6}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E3F32A2}" {
      m_iParentID 100
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1205,7 +1205,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.007 0 0.085
      m_vAngles 0 -155.911 0
     }
-    SCR_BasePreviewEntry "{61FB6047934BA4FD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E39D0CD}" {
      m_iParentID 100
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1215,7 +1215,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.121 0.015 -0.055
      m_vAngles 0 -92.18 0
     }
-    SCR_BasePreviewEntry "{61FB60479349E436}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E3A71E1}" {
      m_iParentID 100
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1225,7 +1225,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.008 0.039 -0.051
      m_vAngles 90 17.456 146.429
     }
-    SCR_BasePreviewEntry "{61FB604793472A15}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E341EE7}" {
      m_iParentID 100
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1235,7 +1235,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.141 0.004 -0.09
      m_vAngles 0 -121.853 0
     }
-    SCR_BasePreviewEntry "{61FB604793455763}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E36B95F}" {
      m_iParentID 86
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -1245,7 +1245,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.851 0.165 -2.061
      m_vAngles 40.511 -137.638 30.641
     }
-    SCR_BasePreviewEntry "{61FB604793449755}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E333399}" {
      m_iParentID 86
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -1255,7 +1255,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.354 0.261 1.161
      m_vAngles 0 -72.362 0
     }
-    SCR_BasePreviewEntry "{61FB60479342D4E4}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E0DDC93}" {
      m_iParentID 86
      m_Mesh "{D748834B49391924}Assets/Vegetation/Cuttings/Carpinus_betulus_large_01.xob"
      m_Flags 0
@@ -1265,7 +1265,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.82 0.1 -1.127
      m_vAngles 16.651 75.464 -4.249
     }
-    SCR_BasePreviewEntry "{61FB604793401A92}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E0E6322}" {
      m_iParentID 86
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -1275,7 +1275,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.108 0.1 0.654
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB6047935E4114}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E08FEBA}" {
      m_iParentID 86
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -1285,7 +1285,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.068 0.1 2.203
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047935C744E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E0A9A6B}" {
      m_iParentID 86
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -1295,7 +1295,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.123 0.1 0.893
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB6047935BA26C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E072603}" {
      m_iParentID 86
      m_Mesh "{18363538AB174654}Assets/Vegetation/Cuttings/Sambucus_Nigra_medium_01.xob"
      m_Flags 0
@@ -1305,7 +1305,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.875 0.1 0.234
      m_vAngles 31.857 -54.474 0
     }
-    SCR_BasePreviewEntry "{61FB60479359DC12}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E01CF97}" {
      m_iParentID 86
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -1315,7 +1315,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.125 0.1 -0.937
      m_vAngles 0 -89.649 0
     }
-    SCR_BasePreviewEntry "{61FB604793570F5A}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E025FC9}" {
      m_iParentID 86
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -1325,7 +1325,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -3.24 0.1 -0.952
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793553105}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E1CE510}" {
      m_iParentID 86
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -1335,7 +1335,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.242 0.1 -1.232
      m_vAngles 0 -14.774 0
     }
-    SCR_BasePreviewEntry "{61FB604793537954}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E1E818D}" {
      m_iParentID 86
      m_Mesh "{BDC5F5921F51B497}Assets/Vegetation/Cuttings/Picea_abies_medium_01.xob"
      m_Flags 0
@@ -1345,7 +1345,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.359 0.1 2.815
      m_vAngles 0 -117.474 0
     }
-    SCR_BasePreviewEntry "{61FB60479352AE25}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E1B105D}" {
      m_iParentID 86
      m_Mesh "{7B90389821D6F01A}Assets/Structures/Walls/BarbedWire/BarbedTape_Short.xob"
      m_Flags HORIZONTAL
@@ -1355,7 +1355,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.746 0.1 3.095
      m_vAngles 0 -101.358 0
     }
-    SCR_BasePreviewEntry "{61FB60479350D3FB}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E15AB22}" {
      m_iParentID 86
      m_Mesh ""
      m_Flags EDITABLE
@@ -1365,7 +1365,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.046 0.146 0.435
      m_vAngles 0 -95.529 0
     }
-    SCR_BasePreviewEntry "{61FB6047932E0FAB}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E16186A}" {
      m_iParentID 86
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -1375,7 +1375,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.653 2.456 -0.649
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB6047932C4DAC}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E10B92F}" {
      m_iParentID 86
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -1385,7 +1385,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 4.395 0.1 -0.726
      m_vAngles 0 -36.936 0
     }
-    SCR_BasePreviewEntry "{61FB6047932A776D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EED42C5}" {
      m_iParentID 86
      m_Mesh "{F99173478E34D1EB}Assets/Structures/Military/CamoNets/CamoNet_Bunker.xob"
      m_Flags HORIZONTAL
@@ -1395,7 +1395,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB60479329AC90}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EEFEF15}" {
      m_iParentID 86
      m_Mesh "{987D10CBDD2F2AAF}Assets/Props/Military/Sandbags/Sandbag_01_bunker.xob"
      m_Flags HORIZONTAL
@@ -1405,7 +1405,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB60479327C28E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EE87631}" {
      m_iParentID 86
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -1415,7 +1415,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.235 0.1 3.183
      m_vAngles 0 87.024 0
     }
-    SCR_BasePreviewEntry "{61FB60479325F4DD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EEA0461}" {
      m_iParentID 86
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -1425,7 +1425,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.296 2.611 0.785
      m_vAngles 6.055 -105.509 2.126
     }
-    SCR_BasePreviewEntry "{61FB60479323D12E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EE49508}" {
      m_iParentID 86
      m_Mesh "{FD88B3F1825313EC}Assets/Props/Military/Sandbags/Sandbag_01_foundation.xob"
      m_Flags 0
@@ -1435,7 +1435,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793210063}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EE13368}" {
      m_iParentID 0
      m_Mesh ""
      m_Flags 257
@@ -1445,7 +1445,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -11.251 0 -12.31
      m_vAngles 0 -132.439 0
     }
-    SCR_BasePreviewEntry "{61FB6047933F2E07}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EE3B06B}" {
      m_iParentID 126
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -1455,7 +1455,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.204 0.148 0.926
      m_vAngles 0 -76.796 0
     }
-    SCR_BasePreviewEntry "{61FB6047933D4617}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EFC5D37}" {
      m_iParentID 126
      m_Mesh "{2FEE8AEB139BA2B6}Assets/Props/Garbage/Military/Ammo/GarbageAmmo_01/GarbageAmmunition_USSR_02.xob"
      m_Flags 0
@@ -1465,7 +1465,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.59 0.148 0.932
      m_vAngles 0 107.099 0
     }
-    SCR_BasePreviewEntry "{61FB6047933B7154}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EFEE6D7}" {
      m_iParentID 126
      m_Mesh "{B4D812579BA957C6}Assets/Props/Military/Furniture/USSR/ChairMilitary_USSR_01.xob"
      m_Flags 0
@@ -1475,7 +1475,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.968 0.141 -0.698
      m_vAngles 0 -62.091 0
     }
-    SCR_BasePreviewEntry "{61FB6047933A9721}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EF88173}" {
      m_iParentID 126
      m_Mesh "{8201C1F229006ECF}Assets/Structures/Walls/BarbedWire/BarbedTape_Long.xob"
      m_Flags HORIZONTAL
@@ -1485,7 +1485,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.078 0.1 3.002
      m_vAngles 0 -76.4 0
     }
-    SCR_BasePreviewEntry "{61FB60479338C68F}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EF5039A}" {
      m_iParentID 126
      m_Mesh "{4C49D7FCCB21CB3A}Assets/Vegetation/Cuttings/Pinus_sylvestris_medium_01.xob"
      m_Flags 0
@@ -1495,7 +1495,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.717 0.1 3.041
      m_vAngles 0 13.376 0
     }
-    SCR_BasePreviewEntry "{61FB604793360951}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EF785EA}" {
      m_iParentID 126
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -1505,7 +1505,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 1.321 2.634 1.441
      m_vAngles 71.299 28.754 -34.683
     }
-    SCR_BasePreviewEntry "{61FB60479334376D}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EF02B56}" {
      m_iParentID 126
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -1515,7 +1515,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.358 0.2 2.451
      m_vAngles 0 -11.649 0
     }
-    SCR_BasePreviewEntry "{61FB604793326236}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EF2BC97}" {
      m_iParentID 126
      m_Mesh "{8B015C0ED326AF56}Assets/Vegetation/Cuttings/Rubus_idaeus_1s_small_01.xob"
      m_Flags 0
@@ -1525,7 +1525,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.987 0.2 2.758
      m_vAngles 0 18.036 0
     }
-    SCR_BasePreviewEntry "{61FB60479331A867}" {
+    SCR_BasePreviewEntry "{61FF6A4A8ECF415A}" {
      m_iParentID 126
      m_Mesh "{B119EC6E3C59AF3B}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_01.xob"
      m_Flags HORIZONTAL
@@ -1535,7 +1535,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.379 0.1 -0.941
      m_vAngles 0 43.039 0
     }
-    SCR_BasePreviewEntry "{61FB6047930FD4B6}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EC9D015}" {
      m_iParentID 126
      m_Mesh "{108873E21CE8DA34}Assets/Props/Military/Furniture/USSR/TableMilitary_USSR_01.xob"
      m_Flags 0
@@ -1545,7 +1545,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.995 0.144 -0.64
      m_vAngles 0 -90 0
     }
-    SCR_BasePreviewEntry "{61FB6047930D1DB9}" {
+    SCR_BasePreviewEntry "{61FF6A4A8ECA4078}" {
      m_iParentID 136
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -1555,7 +1555,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.143 0.899 -0.106
      m_vAngles 0 -109.042 0
     }
-    SCR_BasePreviewEntry "{61FB6047930B3498}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EC4CA30}" {
      m_iParentID 136
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -1565,7 +1565,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.004 0.899 -0.162
      m_vAngles 0 -13.715 0
     }
-    SCR_BasePreviewEntry "{61FB6047930956D7}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EC150D7}" {
      m_iParentID 136
      m_Mesh "{2BEC56BD5F4ED59B}Assets/Props/Garbage/Military/Food/GarbageFoodMilitary_01/GarbageFoodMilitaryUSSR_01.xob"
      m_Flags 0
@@ -1575,7 +1575,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.403 0.899 0.188
      m_vAngles 0 161.276 0
     }
-    SCR_BasePreviewEntry "{61FB604793088AF3}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EC3FE81}" {
      m_iParentID 126
      m_Mesh "{CEC8A3DF893B9C96}Assets/Props/Crates/BoxWooden_01.xob"
      m_Flags 0
@@ -1585,7 +1585,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.942 0.142 1.125
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB60479306CC86}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EDD865C}" {
      m_iParentID 140
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1595,7 +1595,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.098 0.014 0.088
      m_vAngles 0 43.728 0
     }
-    SCR_BasePreviewEntry "{61FB60479304FB25}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EDE1E0F}" {
      m_iParentID 140
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1605,7 +1605,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.007 0 0.085
      m_vAngles 0 -155.911 0
     }
-    SCR_BasePreviewEntry "{61FB604793021DDD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8ED89A3F}" {
      m_iParentID 140
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1615,7 +1615,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.121 0.015 -0.055
      m_vAngles 0 -92.18 0
     }
-    SCR_BasePreviewEntry "{61FB6047930020B5}" {
+    SCR_BasePreviewEntry "{61FF6A4A8ED52095}" {
      m_iParentID 140
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1625,7 +1625,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.008 0.039 -0.051
      m_vAngles 90 17.456 146.429
     }
-    SCR_BasePreviewEntry "{61FB6047931E4D4E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8ED7CEC9}" {
      m_iParentID 140
      m_Mesh "{240D853DBB045D05}Assets/Props/Civilian/BeerBottle_01/BeerBottle_01.xob"
      m_Flags 0
@@ -1635,7 +1635,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.141 0.004 -0.09
      m_vAngles 0 -121.853 0
     }
-    SCR_BasePreviewEntry "{61FB6047931C7938}" {
+    SCR_BasePreviewEntry "{61FF6A4A8ED05130}" {
      m_iParentID 126
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -1645,7 +1645,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.851 0.165 -2.061
      m_vAngles 40.511 -137.638 30.641
     }
-    SCR_BasePreviewEntry "{61FB6047931BAB39}" {
+    SCR_BasePreviewEntry "{61FF6A4A8ED2FA8D}" {
      m_iParentID 126
      m_Mesh "{23019D56BAE0F496}Assets/Vegetation/Cuttings/Corylus_avellana_small_01.xob"
      m_Flags 0
@@ -1655,7 +1655,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.354 0.261 1.161
      m_vAngles 0 -72.362 0
     }
-    SCR_BasePreviewEntry "{61FB60479319D9C6}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EAF70F5}" {
      m_iParentID 126
      m_Mesh "{D748834B49391924}Assets/Vegetation/Cuttings/Carpinus_betulus_large_01.xob"
      m_Flags 0
@@ -1665,7 +1665,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.82 0.1 -1.127
      m_vAngles 16.651 75.464 -4.249
     }
-    SCR_BasePreviewEntry "{61FB60479317FB4F}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EA90AF6}" {
      m_iParentID 126
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -1675,7 +1675,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.108 0.1 0.654
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB604793151320}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EAB93B9}" {
      m_iParentID 126
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -1685,7 +1685,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.068 0.1 2.203
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793134C02}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EA40F3E}" {
      m_iParentID 126
      m_Mesh "{5F0D3D7FD51C71DB}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_long_03.xob"
      m_Flags HORIZONTAL
@@ -1695,7 +1695,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.123 0.1 0.893
      m_vAngles 0 90 0
     }
-    SCR_BasePreviewEntry "{61FB604793117FF5}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EA692C8}" {
      m_iParentID 126
      m_Mesh "{18363538AB174654}Assets/Vegetation/Cuttings/Sambucus_Nigra_medium_01.xob"
      m_Flags 0
@@ -1705,7 +1705,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.875 0.1 0.234
      m_vAngles 31.857 -54.474 0
     }
-    SCR_BasePreviewEntry "{61FB604793109CDB}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EA325C2}" {
      m_iParentID 126
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -1715,7 +1715,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.125 0.1 -0.937
      m_vAngles 0 -89.649 0
     }
-    SCR_BasePreviewEntry "{61FB604793EEA7BD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EBDC849}" {
      m_iParentID 126
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -1725,7 +1725,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -3.24 0.1 -0.952
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793ECDEC8}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EBE51E4}" {
      m_iParentID 126
      m_Mesh "{155FCD2AE8BA59A3}Assets/Structures/Military/Fortifications/DirtMounds/DirtCover_01_short.xob"
      m_Flags HORIZONTAL
@@ -1735,7 +1735,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.242 0.1 -1.232
      m_vAngles 0 -14.774 0
     }
-    SCR_BasePreviewEntry "{61FB604793EAFCFE}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EB8E0DE}" {
      m_iParentID 126
      m_Mesh "{BDC5F5921F51B497}Assets/Vegetation/Cuttings/Picea_abies_medium_01.xob"
      m_Flags 0
@@ -1745,7 +1745,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -2.359 0.1 2.815
      m_vAngles 0 -117.474 0
     }
-    SCR_BasePreviewEntry "{61FB604793E8133C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EB576EC}" {
      m_iParentID 126
      m_Mesh "{7B90389821D6F01A}Assets/Structures/Walls/BarbedWire/BarbedTape_Short.xob"
      m_Flags HORIZONTAL
@@ -1755,7 +1755,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.746 0.1 3.095
      m_vAngles 0 -101.358 0
     }
-    SCR_BasePreviewEntry "{61FB604793E63378}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EB71BD8}" {
      m_iParentID 126
      m_Mesh ""
      m_Flags EDITABLE
@@ -1765,7 +1765,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.046 0.146 0.435
      m_vAngles 0 -95.529 0
     }
-    SCR_BasePreviewEntry "{61FB604793E47D45}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EB196D5}" {
      m_iParentID 126
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -1775,7 +1775,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.653 2.456 -0.649
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793E39479}" {
+    SCR_BasePreviewEntry "{61FF6A4A8EB23BC2}" {
      m_iParentID 126
      m_Mesh "{42D92B00E11DCA79}Assets/Vegetation/Cuttings/Betula_pendula_medium_01.xob"
      m_Flags 0
@@ -1785,7 +1785,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 4.395 0.1 -0.726
      m_vAngles 0 -36.936 0
     }
-    SCR_BasePreviewEntry "{61FB604793E1B503}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E8CBCD5}" {
      m_iParentID 126
      m_Mesh "{F99173478E34D1EB}Assets/Structures/Military/CamoNets/CamoNet_Bunker.xob"
      m_Flags HORIZONTAL
@@ -1795,7 +1795,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793FFEC0E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E8933F3}" {
      m_iParentID 126
      m_Mesh "{987D10CBDD2F2AAF}Assets/Props/Military/Sandbags/Sandbag_01_bunker.xob"
      m_Flags HORIZONTAL
@@ -1805,7 +1805,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793FD1CDF}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E8BB615}" {
      m_iParentID 126
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -1815,7 +1815,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -1.235 0.1 3.183
      m_vAngles 0 87.024 0
     }
-    SCR_BasePreviewEntry "{61FB604793FB2B8A}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E844C55}" {
      m_iParentID 126
      m_Mesh "{86F97F6639047FCE}Assets/Vegetation/Tree/Carpinus_Betulus/t_carpinus_betulus_branch.xob"
      m_Flags 0
@@ -1825,7 +1825,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0.296 2.611 0.785
      m_vAngles 6.055 -105.509 2.126
     }
-    SCR_BasePreviewEntry "{61FB604793F94E5E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E86DE26}" {
      m_iParentID 126
      m_Mesh "{FD88B3F1825313EC}Assets/Props/Military/Sandbags/Sandbag_01_foundation.xob"
      m_Flags 0
@@ -1835,7 +1835,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0.1 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793F77F3B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E836AD9}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1845,7 +1845,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793F69761}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E9DE215}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1855,7 +1855,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793F4BFB8}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E9E76C6}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1865,7 +1865,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793F2D0E2}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E9807AC}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1875,7 +1875,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793F00169}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E9A91DA}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1885,7 +1885,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793CE3D88}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E971C9B}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1895,7 +1895,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793CC531B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E91A011}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1905,7 +1905,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793CB8496}" {
+    SCR_BasePreviewEntry "{61FF6A4A8E9237D9}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1915,7 +1915,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793C9BAE7}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F6CC78B}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1925,7 +1925,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793C7EDE3}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F695746}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1935,7 +1935,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793C5F05C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F6BE07E}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1945,7 +1945,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793C317E2}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F647084}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1955,7 +1955,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793C1483B}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F660AE8}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1965,7 +1965,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793DF7D17}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F608CAA}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1975,7 +1975,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793DE8532}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F7D07A5}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1985,7 +1985,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793DCA0E3}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F7F9D0D}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -1995,7 +1995,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793DAA0C2}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F782FBC}" {
      m_iParentID 0
      m_Mesh "{48B040A023C8BA9C}Assets/Structures/Military/CamoNets/CamoNet_Wall_high.xob"
      m_Flags 257
@@ -2005,7 +2005,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -0.02 0 -0.022
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793D8C2A0}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F7AABD4}" {
      m_iParentID 0
      m_Mesh ""
      m_Flags 0
@@ -2015,7 +2015,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.122 0 7.652
      m_vAngles 0 179.973 0
     }
-    SCR_BasePreviewEntry "{61FB604793D6E251}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F771919}" {
      m_iParentID 183
      m_Mesh "{01E5327CE6F3006E}Assets/Structures/Military/CamoNets/CamoNet_Tent_Soviet.xob"
      m_Flags HORIZONTAL
@@ -2025,7 +2025,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793D41E39}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F7190DF}" {
      m_iParentID 183
      m_Mesh "{A9C84183EA1C4E97}Assets/Structures/Military/Camps/TentUSSR_01/TentUSSR_01_floor.xob"
      m_Flags 0
@@ -2035,7 +2035,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793D218D0}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F7201AD}" {
      m_iParentID 0
      m_Mesh ""
      m_Flags 0
@@ -2045,7 +2045,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 2.084 0 -6.437
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793D0244C}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F4C904D}" {
      m_iParentID 186
      m_Mesh "{01E5327CE6F3006E}Assets/Structures/Military/CamoNets/CamoNet_Tent_Soviet.xob"
      m_Flags HORIZONTAL
@@ -2055,7 +2055,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793AE586E}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F49E84D}" {
      m_iParentID 186
      m_Mesh "{A9C84183EA1C4E97}Assets/Structures/Military/Camps/TentUSSR_01/TentUSSR_01_floor.xob"
      m_Flags 0
@@ -2065,7 +2065,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 0 0 0
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{61FB604793AC7D69}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F4A7B70}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2075,7 +2075,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 5.901 0 -15.872
      m_vAngles 0 -19.882 0
     }
-    SCR_BasePreviewEntry "{61FB604793AB83A8}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F44F5EB}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2085,7 +2085,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.249 0 -16.874
      m_vAngles 0 -19.882 0
     }
-    SCR_BasePreviewEntry "{61FB604793A9A443}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F468319}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2095,7 +2095,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -3.09 0 -15.746
      m_vAngles 0 12.651 0
     }
-    SCR_BasePreviewEntry "{61FB604793A7C2FD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F43F8EC}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2105,7 +2105,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -7.554 0 -13.387
      m_vAngles 0 34.497 0
     }
-    SCR_BasePreviewEntry "{61FB604793A5F507}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F5C7CDE}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2115,7 +2115,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -5.361 0 -14.845
      m_vAngles 0 34.497 0
     }
-    SCR_BasePreviewEntry "{61FB604793A3037F}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F5EF6A7}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2125,7 +2125,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -5.66 0 15.527
      m_vAngles 0 177.576 0
     }
-    SCR_BasePreviewEntry "{61FB604793A109BB}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F58819E}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2135,7 +2135,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -3.031 0 15.68
      m_vAngles 0 177.576 0
     }
-    SCR_BasePreviewEntry "{61FB604793BF165F}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F550FEA}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2145,7 +2145,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition -8.017 0 14.884
      m_vAngles 0 155.73 0
     }
-    SCR_BasePreviewEntry "{61FB604793BD4962}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F57876C}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2155,7 +2155,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 5.526 0 15.932
      m_vAngles 0 -144.598 0
     }
-    SCR_BasePreviewEntry "{61FB604793BB66A5}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F500D3E}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2165,7 +2165,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 12.874 0 -6.468
      m_vAngles 0 -67.43 0
     }
-    SCR_BasePreviewEntry "{61FB604793BA9873}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F2D6817}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2175,7 +2175,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 13.288 0 -4.059
      m_vAngles 0 -89.277 0
     }
-    SCR_BasePreviewEntry "{61FB604793B8B007}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F2FE1F9}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2185,7 +2185,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 11.902 0 -8.915
      m_vAngles 0 -67.43 0
     }
-    SCR_BasePreviewEntry "{61FB604793B6EE28}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F28560C}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2195,7 +2195,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 7.696 0 14.441
      m_vAngles 0 -144.598 0
     }
-    SCR_BasePreviewEntry "{61FB604793B404AB}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F2AD604}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2205,7 +2205,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 3.27 0 16.87
      m_vAngles 0 -166.445 0
     }
-    SCR_BasePreviewEntry "{61FB604793B21CDD}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F275ADD}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2215,7 +2215,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 12.74 0 6.352
      m_vAngles 0 -92.878 0
     }
-    SCR_BasePreviewEntry "{61FB604793B03F69}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F21C21A}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
@@ -2225,7 +2225,7 @@ GenericEntity : "{1D78DCA944428175}Prefabs/Compositions/TestComposition_Medium_U
      m_vPosition 12.079 0 8.705
      m_vAngles 0 -114.724 0
     }
-    SCR_BasePreviewEntry "{61FB6047938E55E9}" {
+    SCR_BasePreviewEntry "{61FF6A4A8F225F79}" {
      m_iParentID 0
      m_Mesh "{6404EDF8B63C3B5B}Assets/Props/Military/Sandbags/Sandbag_01_wall_solid.xob"
      m_Flags 0
