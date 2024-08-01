@@ -1,0 +1,45 @@
+TW_SpawnInBuildings {
+ ID "620236E8476103B3"
+ components {
+  SCR_EditableEntityComponent "{620236E802CB0C6C}" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{620236E87CE2C19A}" {
+    Name "Spawn In Buildings (US)"
+    Description "Spawn US in buildings"
+    m_Image ""
+    m_aAuthoredLabels {
+     1001 10000
+    }
+    m_aAutoLabels {
+     7 124 10000 11
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{620236E857681303}" {
+      m_BudgetType SYSTEMS
+      m_Value 15
+     }
+    }
+   }
+   m_EntityInteraction SCR_EditableEntityInteraction "{62023CA3A3D5E11C}" {
+   }
+  }
+  SCR_EditableEntityVisibilityChildComponent "{620236E80B615095}" {
+  }
+  SCR_PreviewEntityComponent "{620236E80E86D692}" {
+  }
+  TW_RuntimeAreaMesh "{620236E81191E677}" {
+   m_vResolution 32
+   m_bStretchMaterial 1
+   m_Material "{0A8FAD171DB3DC49}Assets/Editor/VirtualArea/VirtualArea_01_Focused.emat"
+   m_fRadius 22
+  }
+  RplComponent "{620236E87101AFEE}" {
+  }
+  Hierarchy "{620236E873E86B3F}" {
+  }
+ }
+ m_GroupPrefabs {
+  "{AABDC9D2B81FB923}Prefabs/Groups/BLUFOR/Group_US_RandomizedSoldier.et"
+ }
+ m_FactionType US
+}

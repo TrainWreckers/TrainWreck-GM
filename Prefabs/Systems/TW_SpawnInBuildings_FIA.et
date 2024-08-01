@@ -1,0 +1,45 @@
+TW_SpawnInBuildings {
+ ID "6202CC3151E552D8"
+ components {
+  SCR_EditableEntityComponent "{6202CC3151E552E3}" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{6202CC3151E552F7}" {
+    Name "Spawn In Buildings (FIA)"
+    Description "Spawn FIA in Buildings"
+    m_Image ""
+    m_aAuthoredLabels {
+     1001 10000
+    }
+    m_aAutoLabels {
+     7 124 10000 12
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{6202CC3151E552F2}" {
+      m_BudgetType SYSTEMS
+      m_Value 15
+     }
+    }
+   }
+   m_EntityInteraction SCR_EditableEntityInteraction "{6202CC3151E552FA}" {
+   }
+  }
+  SCR_EditableEntityVisibilityChildComponent "{6202CC3151E55306}" {
+  }
+  SCR_PreviewEntityComponent "{6202CC3151E55300}" {
+  }
+  TW_RuntimeAreaMesh "{6202CC3151E55303}" {
+   m_vResolution 32
+   m_bStretchMaterial 1
+   m_Material "{0A8FAD171DB3DC49}Assets/Editor/VirtualArea/VirtualArea_01_Focused.emat"
+   m_fRadius 22
+  }
+  RplComponent "{6202CC3151E5530A}" {
+  }
+  Hierarchy "{6202CC3151E55314}" {
+  }
+ }
+ m_GroupPrefabs {
+  "{62E6C04F08BFF240}Prefabs/Groups/INDEP/Group_FIA_RandomizedSoldier.et"
+ }
+ m_FactionType FIA
+}
