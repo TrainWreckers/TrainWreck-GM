@@ -94,4 +94,5 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
  m_aUnitPrefabSlots {
   "{9E9B8952B8EEC771}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_Randomized_KLMK.et"
  }
+ m_bSnapToTerrain 0
 }

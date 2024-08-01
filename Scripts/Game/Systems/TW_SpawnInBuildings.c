@@ -77,15 +77,28 @@ class TW_SpawnInBuildings : GenericEntity
 		{
 			HasFired = true;
 			GetNearbySpawnPoints();
+			
+			if(m_NearbySpawnpoints.Count() <= 0)
+			{
+				Print(string.Format("TrainWreck: No nearby spawn points. %1", TW_AISpawnPoint.s_GlobalSpawnPoints.Count()), LogLevel.WARNING); 
+				Delete();
+				return;
+			}
+			
 			TrickleSpawn((int)m_AmountToSpawn);		
 		}
+	}
+	
+	private void Delete()
+	{
+		RplComponent.DeleteRplEntity(m_Owner, false);
 	}
 	
 	private void TrickleSpawn(int amountLeft)
 	{
 		if(amountLeft <= 0)
 		{
-			RplComponent.DeleteRplEntity(m_Owner, false);
+			Delete();
 			return;
 		}
 		
@@ -105,8 +118,16 @@ class TW_SpawnInBuildings : GenericEntity
 	{
 		m_NearbySpawnpoints.Clear();
 		
+		Print(string.Format("TrainWreck: Spawn points: %1", TW_AISpawnPoint.s_GlobalSpawnPoints.Count()), LogLevel.WARNING);
+		
 		foreach(TW_AISpawnPoint spawnPoint : TW_AISpawnPoint.s_GlobalSpawnPoints)
 		{
+			if(!spawnPoint)
+			{
+				Print("Why is this null", LogLevel.WARNING);
+				continue;
+			}
+			
 			if(vector.Distance(GetOrigin(), spawnPoint.GetOrigin()) <= m_SpawnRadius)
 				m_NearbySpawnpoints.Insert(spawnPoint);
 		}
