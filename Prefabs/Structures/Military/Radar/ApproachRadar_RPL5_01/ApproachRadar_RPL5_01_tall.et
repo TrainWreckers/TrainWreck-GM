@@ -1,3 +1,82 @@
 StaticModelEntity : "{6EAAEC6F1980C9A6}Prefabs/Structures/Military/Radar/ApproachRadar_base.et" {
  ID "56ACD1C4DB91DB10"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364C36F00342"
+    coords 2.599 4.843 1.081
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F00355"
+    coords 2.629 4.843 2.87
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F0044E"
+    coords 0.079 4.843 2.868
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F00453"
+    coords 1.192 4.843 2.908
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F06C11"
+    coords 2.775 4.843 -0.383
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F08E7F"
+    coords -2.86 4.843 -2.732
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F0A620"
+    coords -1.193 4.843 2.472
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F1039B"
+    coords -2.811 4.843 -0.138
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F107FE"
+    coords -2.932 4.843 0.987
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F15CC3"
+    coords -2.797 4.843 -1.743
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F29DC7"
+    coords -0.395 4.843 -2.652
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F2D522"
+    coords -2.837 4.843 2.53
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F31971"
+    coords 1.046 4.843 -2.746
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F38F9B"
+    coords 2.822 4.843 -1.621
+    angleY 35.486
+   }
+   {
+    ID "6203364C36F3CD7D"
+    coords 2.762 4.843 -2.574
+    angleY 35.486
+   }
+  }
+ }
 }

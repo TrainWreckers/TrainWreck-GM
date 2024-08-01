@@ -1,3 +1,107 @@
 SCR_DestructibleBuildingEntity : "{906CB40C3D7DBA68}Prefabs/Structures/Military/Houses/GuardHouse_02/GuardHouse_02_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364C59B00F2F"
+    coords 3.693 0.36 -3.72
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B00F35"
+    coords 3.756 0.36 -4.844
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B00F40"
+    coords 4.008 0.36 1.352
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B02678"
+    coords 3.854 0.36 2.507
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B09185"
+    coords 2.907 0.36 -0.677
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B0B843"
+    coords 1.086 0.36 -0.284
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B0B854"
+    coords -0.807 0.36 -0.651
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B0BF2D"
+    coords -0.329 0.36 0.904
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B11C42"
+    coords 1.244 0.36 1.217
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B1901D"
+    coords 0.277 0.36 2.53
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B311FC"
+    coords -1.335 0.36 4.791
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B32EB6"
+    coords 1.336 0.36 4.68
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B344FE"
+    coords -4.44 0.36 4.526
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B39AD5"
+    coords -2.027 0.359 -3.173
+    angleY 35.486
+   }
+   {
+    ID "6203364C59B3D818"
+    coords 1.003 0.359 -3.005
+    angleY 35.486
+   }
+   {
+    ID "6203364C59BE152B"
+    coords -4.3 0.36 -0.892
+    angleY 35.486
+   }
+   {
+    ID "6203364C59BE3E81"
+    coords -4.445 0.36 0.489
+    angleY 35.486
+   }
+   {
+    ID "6203364C59BE6C1E"
+    coords -3.437 0.36 0.542
+    angleY 35.486
+   }
+   {
+    ID "6203364C59BEAA82"
+    coords -4.398 0.36 1.883
+    angleY 35.486
+   }
+   {
+    ID "6203364C59BF273E"
+    coords -4.467 0.36 3.385
+    angleY 35.486
+   }
+  }
+ }
 }

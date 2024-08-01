@@ -1,3 +1,10 @@
 GenericEntity : "{10C26F96EF7A8CF5}Prefabs/Props/Core/Props_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  TW_SpawnInBuildings {
+   ID "6203364EDC4C7929"
+   coords 0.042 0.073 0.07
+   angleY 35.486
+  }
+ }
 }

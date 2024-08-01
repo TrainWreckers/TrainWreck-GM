@@ -1,3 +1,17 @@
 GenericEntity : "{4C3B4658B6BDA1A2}Prefabs/Structures/Recreation/Beach/LatrineBeach_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364ED6E62041"
+    coords -0.508 0.149 0.192
+    angleY 35.486
+   }
+   {
+    ID "6203364ED6E63B23"
+    coords 0.629 0.149 0.152
+    angleY 35.486
+   }
+  }
+ }
 }

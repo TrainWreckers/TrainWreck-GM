@@ -1,3 +1,17 @@
 SCR_DestructibleBuildingEntity : "{9498ADA13BCDB218}Prefabs/Structures/Military/Houses/GuardBox_01/GuardBox_01_Base.et" {
  ID "5272E317AA6E93C8"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364CAE7943ED"
+    coords -0.319 0.036 0.299
+    angleY 35.486
+   }
+   {
+    ID "6203364CAE79A1A3"
+    coords 0.21 0.037 -0.431
+    angleY 35.486
+   }
+  }
+ }
 }

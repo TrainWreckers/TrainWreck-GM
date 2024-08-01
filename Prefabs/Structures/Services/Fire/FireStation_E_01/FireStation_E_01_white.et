@@ -1,3 +1,137 @@
 SCR_DestructibleBuildingEntity : "{8FE02C29CCA9942D}Prefabs/Structures/Services/Fire/FireStation_E_01/FireStation_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364DEF046093"
+    coords -1.219 9.238 5.771
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF0499E0"
+    coords -0.519 9.217 3.859
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF0499FC"
+    coords -1.617 9.225 4.51
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF04B684"
+    coords -4.143 0.05 -1.076
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF04B69E"
+    coords -6.041 0.05 -2.513
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF04B6AF"
+    coords -4.525 0.045 -3.278
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF053027"
+    coords -6.43 0.05 -0.286
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF058A4B"
+    coords -4.271 0.05 2.31
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF05D6D3"
+    coords -6.69 0.05 2.431
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF078131"
+    coords 0.379 0.05 5.637
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF07E62C"
+    coords 1.052 9.242 6.123
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF782474"
+    coords 0.536 0.05 1.375
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF787CD0"
+    coords -1.231 0.05 6.158
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF787CF1"
+    coords -0.92 0.05 4.261
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7A1F0A"
+    coords 5.631 0.05 -5.297
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7A396F"
+    coords 3.252 0.05 -5.411
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7A7518"
+    coords 3.551 0.05 -0.171
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7A9555"
+    coords 4.086 0.05 -2.179
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7A9559"
+    coords 6.285 0.05 -2.068
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7AFC9C"
+    coords -0.617 0.05 -4.84
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7B4204"
+    coords 0.376 0.05 -4.945
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7B61FE"
+    coords -0.561 0.05 -3.009
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7B660C"
+    coords 0.393 0.05 -2.483
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7B6611"
+    coords -1.246 0.05 -1.315
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7B662E"
+    coords 0.185 0.05 -0.798
+    angleY 35.486
+   }
+   {
+    ID "6203364DEF7BD48D"
+    coords -0.286 0.05 0.405
+    angleY 35.486
+   }
+  }
+ }
 }

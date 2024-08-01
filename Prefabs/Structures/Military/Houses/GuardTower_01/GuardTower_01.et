@@ -1,3 +1,57 @@
 SCR_DestructibleBuildingEntity : "{33F50E1C918159AB}Prefabs/Structures/Military/Houses/GuardTower_01/GuardTower_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364C21567D9D"
+    coords -1.646 6.949 -1.799
+    angleY 35.486
+   }
+   {
+    ID "6203364C21571ED8"
+    coords 1.736 6.949 0.122
+    angleY 35.486
+   }
+   {
+    ID "6203364C215774D3"
+    coords 1.281 6.949 1.768
+    angleY 35.486
+   }
+   {
+    ID "6203364C2157AE9C"
+    coords 0.15 6.986 -0.423
+    angleY 35.486
+   }
+   {
+    ID "6203364C2157AEA2"
+    coords -0.461 6.986 -0.086
+    angleY 35.486
+   }
+   {
+    ID "6203364C2157F1BF"
+    coords 1.503 7.016 -1.39
+    angleY 35.486
+   }
+   {
+    ID "6203364C21581B8F"
+    coords -1.599 6.949 1.025
+    angleY 35.486
+   }
+   {
+    ID "6203364C21581BED"
+    coords -1.597 6.949 -0.408
+    angleY 35.486
+   }
+   {
+    ID "6203364C21589C31"
+    coords -0.361 6.949 1.73
+    angleY 35.486
+   }
+   {
+    ID "6203364C2158D0C6"
+    coords -1.621 6.949 1.759
+    angleY 35.486
+   }
+  }
+ }
 }

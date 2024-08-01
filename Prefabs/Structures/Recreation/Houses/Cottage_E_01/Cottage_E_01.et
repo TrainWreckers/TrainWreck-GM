@@ -1,3 +1,47 @@
 SCR_DestructibleBuildingEntity : "{8F342A3BBEADECD3}Prefabs/Structures/Recreation/Houses/Cottage_E_01/Cottage_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364DC1281C22"
+    coords 2.116 1.024 3.709
+    angleY 35.486
+   }
+   {
+    ID "6203364DC128416E"
+    coords -0.172 1.024 -0.749
+    angleY 35.486
+   }
+   {
+    ID "6203364DC128426C"
+    coords 0.395 1.024 -1.842
+    angleY 35.486
+   }
+   {
+    ID "6203364DC128D6CA"
+    coords 1.361 1.024 0.657
+    angleY 35.486
+   }
+   {
+    ID "6203364DC128ECE4"
+    coords -0.259 1.024 0.695
+    angleY 35.486
+   }
+   {
+    ID "6203364DC129D971"
+    coords 0.594 1.024 3.792
+    angleY 35.486
+   }
+   {
+    ID "6203364DC12F0ECC"
+    coords 0.732 1.024 0.076
+    angleY 35.486
+   }
+   {
+    ID "6203364DC12F7120"
+    coords -1.384 1.024 3.673
+    angleY 35.486
+   }
+  }
+ }
 }

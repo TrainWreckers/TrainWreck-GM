@@ -1,3 +1,262 @@
 SCR_DestructibleBuildingEntity : "{9E1B1BC411CE2CBC}Prefabs/Structures/Military/Houses/Barracks_01/Barracks_01_medical_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_SpawnInBuildings {
+   {
+    ID "6203364E49306256"
+    coords -4.034 0.119 -13.196
+    angleY 35.486
+   }
+   {
+    ID "6203364E493063A1"
+    coords -5.584 0.119 -14.147
+    angleY 35.486
+   }
+   {
+    ID "6203364E49306D3A"
+    coords -5.327 0.119 -10.558
+    angleY 35.486
+   }
+   {
+    ID "6203364E4930FA84"
+    coords 4.515 0.119 -6.612
+    angleY 35.486
+   }
+   {
+    ID "6203364E4930FAB6"
+    coords 4.456 0.119 -2.954
+    angleY 35.486
+   }
+   {
+    ID "6203364E4930FAB8"
+    coords 2.393 0.119 -5.25
+    angleY 35.486
+   }
+   {
+    ID "6203364E49317C2A"
+    coords 4.471 0.119 -13.536
+    angleY 35.486
+   }
+   {
+    ID "6203364E4931AE92"
+    coords 3.999 0.119 -11.173
+    angleY 35.486
+   }
+   {
+    ID "6203364E4931D65C"
+    coords -3.389 0.119 -11.468
+    angleY 35.486
+   }
+   {
+    ID "6203364E49329359"
+    coords 4.613 0.119 11.803
+    angleY 35.486
+   }
+   {
+    ID "6203364E4932DA5E"
+    coords 5.608 0.119 -12.078
+    angleY 35.486
+   }
+   {
+    ID "6203364E4932E871"
+    coords 3.05 0.119 -12.219
+    angleY 35.486
+   }
+   {
+    ID "6203364E49386256"
+    coords -4.906 0.119 8.199
+    angleY 35.486
+   }
+   {
+    ID "6203364E49386C80"
+    coords -4.951 0.119 11.591
+    angleY 35.486
+   }
+   {
+    ID "6203364E4938CC43"
+    coords -0.26 0.119 12.067
+    angleY 35.486
+   }
+   {
+    ID "6203364E4938EEEA"
+    coords -5.66 0.119 7.499
+    angleY 35.486
+   }
+   {
+    ID "6203364E4938EEF6"
+    coords 1.327 0.119 10.945
+    angleY 35.486
+   }
+   {
+    ID "6203364E49392E4D"
+    coords -0.306 0.119 -7.473
+    angleY 35.486
+   }
+   {
+    ID "6203364E49392E71"
+    coords 0.537 0.119 -9.256
+    angleY 35.486
+   }
+   {
+    ID "6203364E49396EA4"
+    coords -0.28 0.119 -11.404
+    angleY 35.486
+   }
+   {
+    ID "6203364E4939A9C7"
+    coords 0.626 0.119 -12
+    angleY 35.486
+   }
+   {
+    ID "6203364E4939E8FB"
+    coords -3.899 0.119 11.513
+    angleY 35.486
+   }
+   {
+    ID "6203364E493A76AA"
+    coords 0.395 0.119 -4.046
+    angleY 35.486
+   }
+   {
+    ID "6203364E493A93C9"
+    coords -0.308 0.119 -5.11
+    angleY 35.486
+   }
+   {
+    ID "6203364E493AF73A"
+    coords 0.512 0.119 -6.37
+    angleY 35.486
+   }
+   {
+    ID "6203364E493B5946"
+    coords -0.807 0.119 4.367
+    angleY 35.486
+   }
+   {
+    ID "6203364E493B5AB1"
+    coords -0.408 0.119 1.677
+    angleY 35.486
+   }
+   {
+    ID "6203364E493B5ABB"
+    coords 0.256 0.119 3.55
+    angleY 35.486
+   }
+   {
+    ID "6203364E493BED0B"
+    coords -0.615 0.119 -3.07
+    angleY 35.486
+   }
+   {
+    ID "6203364E493BED3E"
+    coords -0.42 0.119 -0.311
+    angleY 35.486
+   }
+   {
+    ID "6203364E493C1D28"
+    coords 2.536 0.119 1.749
+    angleY 35.486
+   }
+   {
+    ID "6203364E493C1D55"
+    coords -5.6 0.119 0.235
+    angleY 35.486
+   }
+   {
+    ID "6203364E493C67A9"
+    coords 2.9 0.119 3.899
+    angleY 35.486
+   }
+   {
+    ID "6203364E493C9E09"
+    coords 3.89 0.119 2.292
+    angleY 35.486
+   }
+   {
+    ID "6203364E493CD4C5"
+    coords 6.034 0.119 2.136
+    angleY 35.486
+   }
+   {
+    ID "6203364E493CD4CB"
+    coords 4.252 0.119 0.357
+    angleY 35.486
+   }
+   {
+    ID "6203364E493D113E"
+    coords -3.427 0.119 4.011
+    angleY 35.486
+   }
+   {
+    ID "6203364E493D63FB"
+    coords -4.887 0.119 4.597
+    angleY 35.486
+   }
+   {
+    ID "6203364E493DF3C8"
+    coords -6.553 0.119 3.834
+    angleY 35.486
+   }
+   {
+    ID "6203364E493E5C37"
+    coords -5.89 0.119 -5.158
+    angleY 35.486
+   }
+   {
+    ID "6203364E493EF690"
+    coords -3.511 0.119 2.218
+    angleY 35.486
+   }
+   {
+    ID "6203364E493F1EEE"
+    coords 4.577 0.119 -5.21
+    angleY 35.486
+   }
+   {
+    ID "6203364E493F8BB6"
+    coords -4.579 0.119 -3.855
+    angleY 35.486
+   }
+   {
+    ID "6203364E493F9028"
+    coords -4.035 0.119 -4.738
+    angleY 35.486
+   }
+   {
+    ID "6203364E493F9E75"
+    coords 5.911 0.119 -4.837
+    angleY 35.486
+   }
+   {
+    ID "6203364E493FCA44"
+    coords -4.537 0.119 -6.537
+    angleY 35.486
+   }
+   {
+    ID "6203364E494739D1"
+    coords 1.294 0.119 7.609
+    angleY 35.486
+   }
+   {
+    ID "6203364E494739E3"
+    coords -0.224 0.119 7.799
+    angleY 35.486
+   }
+   {
+    ID "6203364E494739EC"
+    coords -0.257 0.119 9.672
+    angleY 35.486
+   }
+   {
+    ID "6203364E49479298"
+    coords 5.223 0.119 7.87
+    angleY 35.486
+   }
+   {
+    ID "6203364E4947BE51"
+    coords 3.709 0.119 7.595
+    angleY 35.486
+   }
+  }
+ }
 }
