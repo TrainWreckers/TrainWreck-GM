@@ -1,0 +1,39 @@
+GenericEntity {
+ ID "61FD1777C30BF56F"
+ components {
+  SCR_SlotCompositionComponent "{61FD1777C30BF555}" {
+  }
+  ActionsManagerComponent "{61FD1777C30BF55D}" {
+   ActionContexts {
+    UserActionContext "{61FD1777C30BF559}" {
+     ContextName "Disassembly"
+     Position PointInfo "{61FD1777C30BF544}" {
+      Offset 0 0.5 0
+     }
+     Radius 5
+    }
+   }
+   additionalActions {
+    SCR_CampaignBuildingDisassemblyUserAction "{61FD1777C30BF540}" {
+     ParentContextList {
+      "Disassembly"
+     }
+     UIInfo UIInfo "{61FD1777C30BF543}" {
+      Name "#AR-FreeRoamBuilding_Action_Disassembly-UC"
+     }
+     Duration 20
+    }
+   }
+  }
+  RplComponent "{54AC8D6E673199EE}" : "{B193E926C1935A4C}Prefabs/Editor/Components/Default_RplComponent.ct" {
+  }
+ }
+ coords 64 0 64
+ Flags 1027
+ {
+  SCR_DestructibleBuildingEntity : "{FBCE1861B987EA68}Prefabs/Structures/Military/Houses/GuardTower_01/GuardTower_01.et" {
+   ID "61FD177689B6965A"
+   coords 2.553 0 0.351
+  }
+ }
+}

@@ -1,0 +1,102 @@
+GenericEntity : "{3BA9D94C4EE9B33B}Prefabs/Compositions/Slotted/CompositionBase.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  Hierarchy "{61FD24400C1D02E7}" {
+   Enabled 1
+  }
+ }
+ coords 0 0 0
+ {
+  $grp GenericEntity : "{64C9C1D1C2C1B38D}Prefabs/Props/Infrastructure/Roadblocks/RoadBlock_01.et" {
+   {
+    ID "61FD3DC6F85BC3B8"
+    components {
+     Hierarchy "{61FD3DC6E3D04A89}" {
+      Enabled 1
+     }
+    }
+    coords 9.254 0 3.354
+   }
+   {
+    ID "61FD3DC6F85BC422"
+    components {
+     Hierarchy "{61FD3DC6E3D00D4B}" {
+      Enabled 1
+     }
+    }
+    coords 9.105 0 -0.529
+   }
+   {
+    ID "61FD3DC6F85BC438"
+    components {
+     Hierarchy "{61FD3DC6E3D0D8BA}" {
+      Enabled 1
+     }
+    }
+    coords 8.4 0 1.491
+   }
+   {
+    ID "61FD3DC6F85BC45D"
+    components {
+     Hierarchy "{61FD3DC6E3D0A77C}" {
+      Enabled 1
+     }
+    }
+    coords 13.006 0 1.632
+    angleY -57.92
+   }
+  }
+  Vehicle Mi8MT_armed1 : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
+   ID "61FD49F80C675516"
+   components {
+    Hierarchy "{61FD49F830D0E195}" {
+    }
+   }
+   coords -9.12 0 -15.549
+  }
+  $grp SCR_DestructibleEntity : "{9AEEFE7F2A93F585}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_4m.et" {
+   {
+    ID "61FD3DC6F85BC381"
+    components {
+     Hierarchy "{61FD3DC6E3D77545}" {
+      Enabled 1
+     }
+    }
+    coords -5.598 0 2.983
+    angleY -101.381
+   }
+   {
+    ID "61FD3DC6F85BC396"
+    components {
+     Hierarchy "{61FD3DC6E3D741D4}" {
+      Enabled 1
+     }
+    }
+    coords -8.584 0 0.139
+    angleY -44.906
+   }
+   {
+    ID "61FD3DC6F85BC463"
+    components {
+     Hierarchy "{61FD3DC6E3D710E5}" {
+      Enabled 1
+     }
+    }
+    coords -12.527 0 -0.085
+   }
+  }
+  Tree : "{DA8942CAD83BA70C}Prefabs/Vegetation/Tree/t_betula_pendula_3sw.et" {
+   ID "61FD3DC6F85BC445"
+   components {
+    Hierarchy "{61FD3DC6E3D7DF26}" {
+     Enabled 1
+    }
+   }
+   coords 12.302 0 -10.1
+  }
+  SCR_DestructibleBuildingEntity : "{FBCE1861B987EA68}Prefabs/Structures/Military/Houses/GuardTower_01/GuardTower_01.et" {
+   ID "61FD2441A64E5422"
+   coords 1.056 0 -0.461
+  }
+ }
+}

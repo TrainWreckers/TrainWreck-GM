@@ -1,0 +1,96 @@
+GenericEntity : "{3BA9D94C4EE9B33B}Prefabs/Compositions/Slotted/CompositionBase.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  Hierarchy "{61FD3DC3183D5DEF}" {
+   Enabled 1
+  }
+ }
+ coords 32.417 0 61.532
+ {
+  GenericEntity : "{03B44EA7652D0D17}Prefabs/Props/Military/Radios/RadioStation_R123M_01.et" {
+   ID "61FD3B947AEB4E27"
+   coords -1.02 0.635 -2.295
+   angleZ 49.275
+  }
+  GenericEntity : "{1A4A501E5DFA6051}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_OilStain_01_extralarge.et" {
+   ID "61FD3DC0C8063E2C"
+   coords -0.617 0 4.05
+  }
+  StaticModelEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
+   ID "61FD3B947AEB4E31"
+   components {
+    Hierarchy "{61FD3DC318221152}" {
+     Enabled 1
+    }
+   }
+   coords 2.309 0.898 -0.746
+   angleY 0
+  }
+  StaticModelEntity : "{55973C5B0950D4AB}Prefabs/Props/Military/Furniture/ChairMilitary_US_01.et" {
+   ID "61FD3B947AEB4FDC"
+   components {
+    Hierarchy "{61FD3DC31821F2BF}" {
+     Enabled 1
+    }
+   }
+   coords -0.885 0 -2.365
+   angleY 0
+  }
+  GenericEntity : "{6CD65604C7945A66}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_03.et" {
+   ID "61FD3DC0C8063E4C"
+   coords -5.053 0 6.799
+  }
+  StaticModelEntity : "{764414C0E2EF983E}Prefabs/Props/Military/Furniture/TableMilitary_USSR_02.et" {
+   ID "61FD3B947AEB4FC3"
+   components {
+    Hierarchy "{61FD3DC31820D000}" {
+     Enabled 1
+    }
+   }
+   coords 2.617 0 -0.765
+   angleY 0
+  }
+  GenericEntity : "{9EF2973AE46B5AFC}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_02.et" {
+   ID "61FD3DC2A3677D9A"
+   coords -0.693 0 -1.68
+   angleY 86.743
+   {
+    DecalEntity {
+     ID "61FD3DC02D5754A2"
+     coords 1.746 -0.001 -6.683
+    }
+   }
+  }
+  GenericEntity : "{AFFB24010001435C}Prefabs/Props/Forest/FeedRack/FeedRack_01.et" {
+   ID "61FD3B947AEB4F83"
+   components {
+    Hierarchy "{61FD3DC318278610}" {
+     Enabled 1
+    }
+   }
+   coords 3.279 0 2.29
+  }
+  GenericEntity : "{B898D2A1F45058F6}Prefabs/Props/Garbage/Military/Food/GarbageFoodMilitaryUSSR_01.et" {
+   ID "61FD3B947AEB4FE5"
+   components {
+    Hierarchy "{61FD3DC3182742B6}" {
+     Enabled 1
+    }
+   }
+   coords 0.525 0 1.942
+  }
+  GenericEntity : "{EF49B1F62D20ABD1}Prefabs/Props/Garbage/Cardboard/Cardboard_05.et" {
+   ID "61FD3B947AEB4FF0"
+   components {
+    Hierarchy "{61FD3DC31825E619}" {
+     Enabled 1
+    }
+   }
+   coords -1.552 0 -0.026
+  }
+  GenericEntity : "{F2C6155063FA9719}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_PetrolStain_01_V2.et" {
+   ID "61FD3DC0C8063E76"
+   coords 0.077 0 4.925
+  }
+ }
+}

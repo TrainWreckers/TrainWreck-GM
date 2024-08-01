@@ -1,0 +1,692 @@
+GenericEntity : "{0199ED114CF03B2F}Prefabs/Compositions/TWTEST_L_USSR_02.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  SCR_EditableEntityComponent "{61FD49F830F525D5}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "HELICOPTER"
+    m_Image ""
+    m_aAuthoredLabels {
+     1001
+    }
+    m_aAutoLabels {
+     1 124
+    }
+    m_EntityChildrenBudgetCost {
+     SCR_EntityBudgetValue "{61FD49F830E84FBA}" {
+      m_BudgetType RANK_LIEUTENANT
+      m_Value 4
+     }
+     SCR_EntityBudgetValue "{61FD49F830EBF146}" {
+      m_BudgetType COOLDOWN
+      m_Value 1
+     }
+     SCR_EntityBudgetValue "{61FD49F830E765B7}" {
+      m_BudgetType CAMPAIGN
+      m_Value 1625
+     }
+     SCR_EntityBudgetValue "{61FD49F830E2FD10}" {
+      m_BudgetType VEHICLES
+      m_Value 1
+     }
+     SCR_EntityBudgetValue "{61FD49F830FE4B55}" {
+      m_BudgetType PROPS
+      m_Value 4
+     }
+    }
+   }
+   m_Flags 1793
+  }
+  SCR_EditorLinkComponent "{61FD49F830D5AB83}" {
+   m_bRandomizeVariants 0
+   m_aEntries {
+    SCR_EditorLinkEntry "{61FD49F830D4EFCC}" {
+     m_Prefab "{525781C399409474}PrefabsEditable/Auto/Props/Infrastructure/Roadblocks/E_RoadBlock_01.et"
+     m_vPosition 9.254 0 3.354
+     m_vAngles 0 0 0
+     m_fScale 1
+    }
+    SCR_EditorLinkEntry "{61FD49F830DEF389}" {
+     m_Prefab "{525781C399409474}PrefabsEditable/Auto/Props/Infrastructure/Roadblocks/E_RoadBlock_01.et"
+     m_vPosition 9.105 0 -0.529
+     m_vAngles 0 0 0
+     m_fScale 1
+    }
+    SCR_EditorLinkEntry "{61FD49F830C78CD1}" {
+     m_Prefab "{525781C399409474}PrefabsEditable/Auto/Props/Infrastructure/Roadblocks/E_RoadBlock_01.et"
+     m_vPosition 8.4 0 1.491
+     m_vAngles 0 0 0
+     m_fScale 1
+    }
+    SCR_EditorLinkEntry "{61FD49F830CA44C7}" {
+     m_Prefab "{525781C399409474}PrefabsEditable/Auto/Props/Infrastructure/Roadblocks/E_RoadBlock_01.et"
+     m_vPosition 13.006 0 1.632
+     m_vAngles 0 -57.92 0
+     m_fScale 1
+    }
+    SCR_EditorLinkEntry "{61FD49F830CC196A}" {
+     m_Prefab "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+     m_vPosition -9.12 0 -15.549
+     m_vAngles 0 0 0
+     m_fScale 1
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{61FD49F830ECD273}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 0
+   m_aEntries {
+    SCR_BasePreviewEntry "{61FD49F83113E01C}" {
+     m_iParentID -1
+     m_Mesh ""
+     m_Flags 258
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83118B05C}" {
+     m_iParentID 0
+     m_Mesh "{57ED7877A0B116D3}Assets/Props/Infrastructure/RoadBlock_01/RoadBlock_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 9.254 0 3.354
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831063A58}" {
+     m_iParentID 0
+     m_Mesh "{57ED7877A0B116D3}Assets/Props/Infrastructure/RoadBlock_01/RoadBlock_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 9.105 0 -0.529
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8310C69A3}" {
+     m_iParentID 0
+     m_Mesh "{57ED7877A0B116D3}Assets/Props/Infrastructure/RoadBlock_01/RoadBlock_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 8.4 0 1.491
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831391FEF}" {
+     m_iParentID 0
+     m_Mesh "{57ED7877A0B116D3}Assets/Props/Infrastructure/RoadBlock_01/RoadBlock_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 13.006 0 1.632
+     m_vAngles 0 -57.92 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8312769E4}" {
+     m_iParentID 0
+     m_Mesh "{A6373BE246B5C482}Assets/Vehicles/Helicopters/Mi8/Mi8MT_base.xob"
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition -9.12 -1 -15.549
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8312CF9FA}" {
+     m_iParentID 5
+     m_Mesh "{0BD332D91E8EE288}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Door_Left_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "v_door_L01"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83159ADC1}" {
+     m_iParentID 5
+     m_Mesh "{F65931F3415557A4}Assets/Weapons/MachineGuns/PKMT/PKMT_Mi8_mount_rear.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "slot_gunner_rear"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831470E46}" {
+     m_iParentID 7
+     m_Mesh "{BBCC383293E619E5}Assets/Weapons/MachineGuns/PKMT/PKMT_body.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "snap_weapon"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8314D44F8}" {
+     m_iParentID 5
+     m_Mesh "{1E09869F6045F8D8}Assets/Vehicles/Helicopters/Mi8/VehParts/Rotor/Mi8_mainRotor.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8317AD769}" {
+     m_iParentID 5
+     m_Mesh "{1F8ADF7BB67C4D30}Assets/Vehicles/Helicopters/Mi8/VehParts/Rotor/Mi8_tailRotor.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831606696}" {
+     m_iParentID 5
+     m_Mesh ""
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0.4 -3.65
+     m_vAngles 87 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8316D13BC}" {
+     m_iParentID 5
+     m_Mesh "{47D81964AFFE4A93}Assets/Vehicles/Helicopters/Mi8/VehParts/Seats/Mi8MT_Seats.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8319AFADA}" {
+     m_iParentID 5
+     m_Mesh "{E4C7A6C2BC2F766D}Assets/Vehicles/Helicopters/Mi8/VehParts/Cockpit/Mi8_CockpitPanel_Top.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831805756}" {
+     m_iParentID 5
+     m_Mesh "{B5D5366762ED43AC}Assets/Vehicles/Helicopters/Mi8/VehParts/Cockpit/Mi8_CockpitPanels_Mid.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8318DF6C0}" {
+     m_iParentID 5
+     m_Mesh "{7CF0A580603C7F76}Assets/Vehicles/Helicopters/Mi8/VehParts/Cockpit/Mi8_CockpitPanel_Left.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831BB58FA}" {
+     m_iParentID 5
+     m_Mesh "{8ACA23E40823B0EB}Assets/Vehicles/Helicopters/Mi8/VehParts/Cockpit/Mi8_CockpitPanel_Right.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831A08545}" {
+     m_iParentID 5
+     m_Mesh "{308F56C0EE9BAAB2}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831ADDD83}" {
+     m_iParentID 5
+     m_Mesh "{A991EF59F37C9B22}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_02.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831DAE3A0}" {
+     m_iParentID 5
+     m_Mesh "{DE9B87D107DE7452}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_03.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831C7EB81}" {
+     m_iParentID 5
+     m_Mesh "{D95C7D806158CE91}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_04.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831CC92BD}" {
+     m_iParentID 5
+     m_Mesh "{AE56150895FA21E1}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_05.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831F9A814}" {
+     m_iParentID 5
+     m_Mesh "{3748AC91881D1071}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_06.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831E77225}" {
+     m_iParentID 5
+     m_Mesh "{4042C4197CBFFF01}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_07.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F831EC5BDE}" {
+     m_iParentID 5
+     m_Mesh "{38C75833451065F7}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_08.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832193F65}" {
+     m_iParentID 5
+     m_Mesh "{E9F8E08CB412CAED}Assets/Weapons/MachineGuns/PKMT/PKMT_Mi8_mount_front.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "slot_gunner_front"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83206CAE9}" {
+     m_iParentID 25
+     m_Mesh "{BBCC383293E619E5}Assets/Weapons/MachineGuns/PKMT/PKMT_body.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "slot_weapon"
+     m_vScale 1 1 1
+     m_vPosition 0 -0.001 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8323392B0}" {
+     m_iParentID 5
+     m_Mesh "{B38D79D017E42DB6}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_10.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832394027}" {
+     m_iParentID 5
+     m_Mesh "{C4871158E346C2C6}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Cockpit_11.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832265807}" {
+     m_iParentID 5
+     m_Mesh "{9F8836C833ED04F6}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Right_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8325244F1}" {
+     m_iParentID 5
+     m_Mesh "{06968F512E0A3566}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Right_02.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8325F5707}" {
+     m_iParentID 5
+     m_Mesh "{719CE7D9DAA8DA16}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Right_03.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832442910}" {
+     m_iParentID 5
+     m_Mesh "{765B1D88BC2E60D5}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Right_04.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832711796}" {
+     m_iParentID 5
+     m_Mesh "{01517500488C8FA5}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Right_05.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8327EFEE4}" {
+     m_iParentID 5
+     m_Mesh "{B852E13B77D8D2D9}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Left_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8326BB7F3}" {
+     m_iParentID 5
+     m_Mesh "{214C58A26A3FE349}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Left_02.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832917ADE}" {
+     m_iParentID 5
+     m_Mesh "{5646302A9E9D0C39}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Left_03.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8329E1424}" {
+     m_iParentID 5
+     m_Mesh "{5181CA7BF81BB6FA}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Left_04.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8328BF9E9}" {
+     m_iParentID 5
+     m_Mesh "{268BA2F30CB9598A}Assets/Vehicles/Helicopters/Mi8/Glass/Mi8_Glass_Left_05.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832B01398}" {
+     m_iParentID 5
+     m_Mesh "{5595D0AFA35E0F2B}Assets/Vehicles/Helicopters/Mi8/VehParts/Seats/Mi8MT_GunnerFrontSeat.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "slot_gunner_front"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832BD1A5F}" {
+     m_iParentID 0
+     m_Mesh "{4AFEE777E9117C72}Assets/Structures/Walls/Net/NetFence_03_4m.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition -5.598 0 2.983
+     m_vAngles 0 -101.381 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832AACA1E}" {
+     m_iParentID 0
+     m_Mesh "{4AFEE777E9117C72}Assets/Structures/Walls/Net/NetFence_03_4m.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition -8.584 0 0.139
+     m_vAngles 0 -44.906 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832D787C0}" {
+     m_iParentID 0
+     m_Mesh "{4AFEE777E9117C72}Assets/Structures/Walls/Net/NetFence_03_4m.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition -12.527 0 -0.085
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832DC99C2}" {
+     m_iParentID 0
+     m_Mesh "{DFCF326E4190844C}Assets/Vegetation/Tree/Betula_Pendula/t_betula_pendula_3sw.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 12.302 0 -10.1
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832CA50E8}" {
+     m_iParentID 0
+     m_Mesh "{FDC41A94BB3C96B1}Assets/Structures/Military/Houses/GuardTower_01/GuardTower_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 1.056 0 -0.461
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832F73DDF}" {
+     m_iParentID 44
+     m_Mesh "{515E403EE5432E2A}Assets/Structures/BuildingsParts/Windows/Glass_42x43/Glass_01_42x43.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_42x43_02"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832FCE76C}" {
+     m_iParentID 44
+     m_Mesh "{515E403EE5432E2A}Assets/Structures/BuildingsParts/Windows/Glass_42x43/Glass_01_42x43.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_42x43_01"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F832E9EDF0}" {
+     m_iParentID 44
+     m_Mesh "{A398FE0383B6E8A0}Assets/Structures/BuildingsParts/Windows/Glass_50x100/Glass_01_50x100.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_Glass_50x100_03"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83316DACA}" {
+     m_iParentID 44
+     m_Mesh "{A398FE0383B6E8A0}Assets/Structures/BuildingsParts/Windows/Glass_50x100/Glass_01_50x100.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_Glass_50x100_02"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83303DB6E}" {
+     m_iParentID 44
+     m_Mesh "{A398FE0383B6E8A0}Assets/Structures/BuildingsParts/Windows/Glass_50x100/Glass_01_50x100.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_Glass_50x100_04"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8330885B3}" {
+     m_iParentID 44
+     m_Mesh "{A398FE0383B6E8A0}Assets/Structures/BuildingsParts/Windows/Glass_50x100/Glass_01_50x100.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_Glass_50x100_01"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83335B8B7}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_01"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F833228D56}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_03"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83328436A}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_02"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83355E1E0}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_04"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83342071C}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_06"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F8334F1FB5}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_05"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83374E935}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_07"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{61FD49F83361008D}" {
+     m_iParentID 44
+     m_Mesh "{F70CA936A5299BC6}Assets/Structures/BuildingsParts/Windows/Glass_44x122/Glass_01_44x122.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID "socket_glass_44x122_08"
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
+ {
+  GenericEntity {
+   ID "61FD3DC6F85BC3B8"
+   Flags 1048576
+  }
+  GenericEntity {
+   ID "61FD3DC6F85BC422"
+   Flags 1048576
+  }
+  GenericEntity {
+   ID "61FD3DC6F85BC438"
+   Flags 1048576
+  }
+  GenericEntity {
+   ID "61FD3DC6F85BC45D"
+   Flags 1048576
+  }
+  Vehicle "61FD49F820E0CF4B" {
+   ID "61FD49F80C675516"
+   Flags 1048576
+  }
+ }
+}
