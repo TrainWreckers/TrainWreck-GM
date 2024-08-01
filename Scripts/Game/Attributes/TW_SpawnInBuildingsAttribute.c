@@ -30,10 +30,6 @@ class TW_SpawnInBuildingsRadiusAttribute : SCR_BaseValueListEditorAttribute
 		if(!sib)
 			return null;
 		
-		// If this entity is already active, then we'll ignore it
-		if(sib.IsActive())
-			return null;
-		
 		return SCR_BaseEditorAttributeVar.CreateFloat(sib.GetSpawnRadius());
 	}
 	
@@ -45,9 +41,6 @@ class TW_SpawnInBuildingsRadiusAttribute : SCR_BaseValueListEditorAttribute
 		TW_SpawnInBuildings sib = TW_SpawnInBuildingsAttribute.IsValidEntity(item);
 		
 		if(!sib)
-			return;
-		
-		if(sib.IsActive())
 			return;
 		
 		sib.SetSpawnRadius(Math.AbsFloat(var.GetFloat()));
@@ -64,9 +57,6 @@ class TW_SpawnInBuildingsAmountAttribute : SCR_BaseValueListEditorAttribute
 		if(!sib)
 			return null;
 		
-		if(sib.IsActive())
-			return null;
-		
 		return SCR_BaseEditorAttributeVar.CreateInt(sib.GetSpawnAmount());
 	}
 	
@@ -78,9 +68,6 @@ class TW_SpawnInBuildingsAmountAttribute : SCR_BaseValueListEditorAttribute
 		TW_SpawnInBuildings sib = TW_SpawnInBuildingsAttribute.IsValidEntity(item);
 		
 		if(!sib)
-			return;
-		
-		if(sib.IsActive())
 			return;
 		
 		sib.SetSpawnAmount(Math.AbsInt(var.GetInt()));
@@ -111,32 +98,5 @@ class TW_SpawnInBuildingsActiveAttribute : SCR_BaseValueListEditorAttribute
 			return;
 		
 		sib.SetIsActive(var.GetBool());
-	}
-}
-
-[BaseContainerProps(), SCR_BaseEditorAttributeCustomTitle()]
-class TW_SpawnInBuildingsFactionType : SCR_BaseValueListEditorAttribute
-{
-	override SCR_BaseEditorAttributeVar ReadVariable(Managed item, SCR_AttributesManagerEditorComponent manager)
-	{
-		TW_SpawnInBuildings sib = TW_SpawnInBuildingsAttribute.IsValidEntity(item);
-		
-		if(!sib)
-			return null;
-		
-		return SCR_BaseEditorAttributeVar.CreateInt(sib.GetFactionType());
-	}
-	
-	override void WriteVariable(Managed item, SCR_BaseEditorAttributeVar var, SCR_AttributesManagerEditorComponent manager, int playerID)
-	{
-		if(!var)
-			return;
-		
-		TW_SpawnInBuildings sib = TW_SpawnInBuildingsAttribute.IsValidEntity(item);
-		
-		if(!sib)
-			return;
-		
-		sib.SetFactionType(var.GetInt());
 	}
 }

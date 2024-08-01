@@ -83,8 +83,6 @@ class TW_AISpawnPoint : GenericEntity
 		
 		if(!waypoint)
 			Print("TrainWreck: Invalid Waypoint provided.", LogLevel.ERROR);
-		else
-			Print(string.Format("TrainWreck: Waypoint %1", waypointPrefab), LogLevel.ERROR);
 		
 		group.AddWaypoint(waypoint);
 	}

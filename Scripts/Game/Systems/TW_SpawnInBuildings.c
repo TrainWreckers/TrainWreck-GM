@@ -84,8 +84,13 @@ class TW_SpawnInBuildings : GenericEntity
 				return;
 			}
 			
-			TrickleSpawn((int)m_AmountToSpawn);		
+			GetGame().GetCallqueue().CallLater(Handle, 1000 * 3, false);
 		}
+	}
+	
+	private void Handle()
+	{
+		TrickleSpawn((int)m_AmountToSpawn);		
 	}
 	
 	private void Delete()
