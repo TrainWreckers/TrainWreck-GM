@@ -1,3 +1,83 @@
 SCR_DestructibleBuildingEntity : "{23ED22AC15AA9EE7}Prefabs/Structures/Houses/Farm/FarmHouse_E_1L01/FarmHouse_E_1L01_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "620321866ABA6AF5"
+    coords 3.923 0.279 -5.007
+   }
+   {
+    ID "620321866ABA7085"
+    coords 2.666 0.28 -7.367
+   }
+   {
+    ID "620321866ABAE9F9"
+    coords 1.067 0.278 -4.796
+   }
+   {
+    ID "620321866ABB76DE"
+    coords 0.981 0.278 8.805
+   }
+   {
+    ID "620321866ABB9148"
+    coords -0.87 0.278 6.579
+   }
+   {
+    ID "620321866ABBD417"
+    coords 3.241 0.278 -0.615
+   }
+   {
+    ID "620321866ABBE015"
+    coords -0.472 0.278 0.068
+   }
+   {
+    ID "620321866ABC7AB0"
+    coords -1.074 1.378 -3.394
+   }
+   {
+    ID "620321866ABC96A8"
+    coords 3.442 3.583 -3.127
+   }
+   {
+    ID "620321866ABCD547"
+    coords 2.788 3.586 -5.679
+   }
+   {
+    ID "620321866ABD1BB1"
+    coords -2.903 0.278 -7.517
+   }
+   {
+    ID "620321866ABD513D"
+    coords -7.755 0.286 -7.567
+   }
+   {
+    ID "620321866ABDDAA2"
+    coords -4.755 0.283 -3.325
+   }
+   {
+    ID "620321866ABDFC75"
+    coords -8.05 0.278 -3.953
+   }
+   {
+    ID "620321866ABE02B1"
+    coords -5.404 3.583 -4.89
+   }
+   {
+    ID "620321866ABEB2F8"
+    coords 3.21 0.278 7.004
+   }
+   {
+    ID "620321866ABEBB3D"
+    coords -2.988 3.583 -5.884
+   }
+   {
+    ID "620321866ABF45C0"
+    coords -0.325 3.583 -6.095
+   }
+   {
+    ID "620321866ABFC529"
+    coords -8.015 4.068 -6.672
+   }
+  }
+ }
 }

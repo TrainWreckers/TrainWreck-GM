@@ -1,3 +1,19 @@
 SCR_DestructibleBuildingEntity : "{BFBD94F65277304F}Prefabs/Structures/Military/Bunkers/Bunker_01/Bunker_01_1fp_Base.et" {
  ID "5272E317ABDB05F7"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203219038DD0408"
+    coords 0.209 0.201 -1.569
+   }
+   {
+    ID "6203219038DD108C"
+    coords -0.563 0.2 0.642
+   }
+   {
+    ID "6203219038DD8ED2"
+    coords 1.265 0.2 0.367
+   }
+  }
+ }
 }

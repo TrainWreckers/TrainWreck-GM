@@ -1,3 +1,35 @@
 SCR_DestructibleBuildingEntity : "{9E72F044008AB5B2}Prefabs/Structures/Military/Houses/GuardHouse_01/GuardHouse_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "620321927DC97CEC"
+    coords 2.722 0.2 3.923
+   }
+   {
+    ID "620321927DC9BE02"
+    coords 1.672 0.2 -2.037
+   }
+   {
+    ID "620321927DC9CB07"
+    coords -2.16 0.2 1.7
+   }
+   {
+    ID "620321927DC9F629"
+    coords -2.48 0.2 3.549
+   }
+   {
+    ID "620321927DC9F6CF"
+    coords 1.891 0.2 0.902
+   }
+   {
+    ID "620321927DC9F6F2"
+    coords 0.112 0.2 0.845
+   }
+   {
+    ID "620321927DC9FAC0"
+    coords -1.88 0.2 -1.689
+   }
+  }
+ }
 }

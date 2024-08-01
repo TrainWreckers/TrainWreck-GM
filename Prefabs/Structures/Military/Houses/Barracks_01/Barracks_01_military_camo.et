@@ -1,3 +1,115 @@
 SCR_DestructibleBuildingEntity : "{5F97E54397247954}Prefabs/Structures/Military/Houses/Barracks_01/Barracks_01_military_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032190F7BA05C3"
+    coords 2.79 0.119 1.798
+   }
+   {
+    ID "62032190F7BA3CAB"
+    coords 6.178 0.119 -3.618
+   }
+   {
+    ID "62032190F7BAB36D"
+    coords 5.943 0.119 0.308
+   }
+   {
+    ID "62032190F7BAE344"
+    coords 5.918 0.119 3.731
+   }
+   {
+    ID "62032190F7BB01E8"
+    coords 5.887 0.119 11.577
+   }
+   {
+    ID "62032190F7BB233A"
+    coords 2.867 0.119 9.026
+   }
+   {
+    ID "62032190F7BB2D0C"
+    coords 5.681 0.119 7.566
+   }
+   {
+    ID "62032190F7BC102F"
+    coords -5.434 0.119 -3.286
+   }
+   {
+    ID "62032190F7BC5F94"
+    coords -3.532 0.119 -4.864
+   }
+   {
+    ID "62032190F7BC880C"
+    coords -6.058 0.119 -10.462
+   }
+   {
+    ID "62032190F7BC89C6"
+    coords -3.405 0.119 -11.128
+   }
+   {
+    ID "62032190F7BC95D2"
+    coords -6.281 0.119 -6.403
+   }
+   {
+    ID "62032190F7BCCA76"
+    coords -5.178 0.119 -14.014
+   }
+   {
+    ID "62032190F7BD2495"
+    coords 0.197 0.119 0.122
+   }
+   {
+    ID "62032190F7BD34AE"
+    coords 0.08 0.119 -14.111
+   }
+   {
+    ID "62032190F7BD8AB6"
+    coords 6.328 0.119 -10.542
+   }
+   {
+    ID "62032190F7BD96C7"
+    coords 6.166 0.119 -13.881
+   }
+   {
+    ID "62032190F7BDEF0E"
+    coords 3.395 0.119 -3.4
+   }
+   {
+    ID "62032190F7BDEF16"
+    coords 5.716 0.119 -7.085
+   }
+   {
+    ID "62032190F7BDFE61"
+    coords 4.016 0.119 -6.644
+   }
+   {
+    ID "62032190F7BE732F"
+    coords -3.765 0.119 11.041
+   }
+   {
+    ID "62032190F7BE8D08"
+    coords -3.963 0.119 12.051
+   }
+   {
+    ID "62032190F7BEA60F"
+    coords -4.898 0.119 8.153
+   }
+   {
+    ID "62032190F7BEA61A"
+    coords -5.401 0.119 10.541
+   }
+   {
+    ID "62032190F7BF261B"
+    coords -2.977 0.119 3.31
+   }
+   {
+    ID "62032190F7BFAE5D"
+    coords -5.966 0.119 3.961
+   }
+   {
+    ID "62032190F7BFF914"
+    coords -6.286 0.119 0.558
+   }
+  }
+ }
 }

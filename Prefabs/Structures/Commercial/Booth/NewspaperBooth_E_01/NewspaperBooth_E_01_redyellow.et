@@ -1,3 +1,15 @@
 SCR_DestructibleBuildingEntity : "{D6CCD293C7425808}Prefabs/Structures/Commercial/Booth/NewspaperBooth_E_01/NewspaperBooth_E_01_Base.et" {
  ID "2C2B66CEDBBD0B40"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218133FE1BF6"
+    coords -0.161 0.05 -1.386
+   }
+   {
+    ID "6203218133FE2ACD"
+    coords 0.463 0.05 0.339
+   }
+  }
+ }
 }

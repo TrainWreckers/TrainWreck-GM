@@ -1,3 +1,9 @@
 SCR_DestructibleBuildingEntity : "{0E9DBC9B70C345F3}Prefabs/Structures/Cultural/Chapels/Chapel_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  TW_AISpawnPoint {
+   ID "62032183F8E05743"
+   coords -0.193 0.176 0.698
+  }
+ }
 }

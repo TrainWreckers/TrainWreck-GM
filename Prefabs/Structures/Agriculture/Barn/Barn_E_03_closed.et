@@ -1,3 +1,27 @@
 SCR_DestructibleBuildingEntity : "{63BD8E3A8AC76F88}Prefabs/Structures/Agriculture/Barn/Barn_E_03_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "620321808DE86DB5"
+    coords -1.81 0.105 -0.123
+   }
+   {
+    ID "620321808DE86DBC"
+    coords -0.242 0.105 -1.741
+   }
+   {
+    ID "620321808DE88534"
+    coords -5.175 0.105 1.833
+   }
+   {
+    ID "620321808DE9089D"
+    coords 5.379 0.173 1.532
+   }
+   {
+    ID "620321808DEBEC96"
+    coords 5.674 0.105 -1.576
+   }
+  }
+ }
 }

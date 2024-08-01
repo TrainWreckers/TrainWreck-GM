@@ -1,3 +1,119 @@
 SCR_DestructibleBuildingEntity : "{0B1B8B16E7E9481F}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032181BEAC2A51"
+    coords -5.73 0 -7.07
+   }
+   {
+    ID "62032181BEAC2A76"
+    coords -3.356 0 -7.796
+   }
+   {
+    ID "62032181BEACADF5"
+    coords -7.692 0 -3.326
+   }
+   {
+    ID "62032181BEACDA69"
+    coords -5.01 0 -3.379
+   }
+   {
+    ID "62032181BEAD26FF"
+    coords -7.823 -0 -0.673
+   }
+   {
+    ID "62032181BEADBFDA"
+    coords -5.137 -0 -0.761
+   }
+   {
+    ID "62032181BEADEF49"
+    coords -2.406 0 -0.058
+   }
+   {
+    ID "62032181BEADEF57"
+    coords 5.605 0 -1.148
+   }
+   {
+    ID "62032181BEB0196B"
+    coords 0.497 3.8 0.303
+   }
+   {
+    ID "62032181BEB034F5"
+    coords -1.81 3.8 0.152
+   }
+   {
+    ID "62032181BEB07102"
+    coords 6.43 3.8 -0.36
+   }
+   {
+    ID "62032181BEB09D25"
+    coords 6.889 3.8 2.533
+   }
+   {
+    ID "62032181BEB0CE94"
+    coords 5.649 3.81 -3.678
+   }
+   {
+    ID "62032181BEB0DAA5"
+    coords 6.896 3.8 4.921
+   }
+   {
+    ID "62032181BEB1315C"
+    coords 1.232 3.8 -7.166
+   }
+   {
+    ID "62032181BEB16D7D"
+    coords 2.788 3.8 -3.206
+   }
+   {
+    ID "62032181BEB1C41A"
+    coords -1.535 3.8 -3.434
+   }
+   {
+    ID "62032181BEB206E7"
+    coords 6.475 -0 3.305
+   }
+   {
+    ID "62032181BEB266FE"
+    coords 4.424 0 -7.567
+   }
+   {
+    ID "62032181BEB2CEED"
+    coords 5.896 0 -5.547
+   }
+   {
+    ID "62032181BEB30237"
+    coords 1.635 1.9 5.384
+   }
+   {
+    ID "62032181BEB3952C"
+    coords 3.469 1.9 5.51
+   }
+   {
+    ID "62032181BEB3B5B2"
+    coords 2.915 3.8 -0.121
+   }
+   {
+    ID "62032181BEB635B5"
+    coords -5.231 3.8 0.474
+   }
+   {
+    ID "62032181BEB64DB0"
+    coords -6.759 3.8 -2.14
+   }
+   {
+    ID "62032181BEB6578B"
+    coords -7.17 3.8 0.072
+   }
+   {
+    ID "62032181BEB69AAB"
+    coords -6.479 3.8 -4.793
+   }
+   {
+    ID "62032181BEB6D46A"
+    coords -7.736 0 -5.865
+   }
+  }
+ }
 }

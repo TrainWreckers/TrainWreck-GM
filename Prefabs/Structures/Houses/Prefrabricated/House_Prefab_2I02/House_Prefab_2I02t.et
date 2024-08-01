@@ -1,3 +1,71 @@
 SCR_DestructibleBuildingEntity : "{07465627D9BD8A0A}Prefabs/Structures/Houses/Prefrabricated/House_Prefab_2I02/House_Prefab_2I02t_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032186E9D03149"
+    coords -2.07 2.997 -4.114
+   }
+   {
+    ID "62032186E9D07C88"
+    coords -3.637 2.997 -3.759
+   }
+   {
+    ID "62032186E9D092CA"
+    coords -2.599 2.997 0.353
+   }
+   {
+    ID "62032186E9D10D51"
+    coords -2.172 0.011 6.13
+   }
+   {
+    ID "62032186E9D1710D"
+    coords -1.007 0.011 -4.359
+   }
+   {
+    ID "62032186E9D19E5D"
+    coords -2.635 0.011 -4.575
+   }
+   {
+    ID "62032186E9D19EAF"
+    coords -2.563 0.013 -1.113
+   }
+   {
+    ID "62032186E9D1D59F"
+    coords 0.203 2.997 1.137
+   }
+   {
+    ID "62032186E9D1F34F"
+    coords -2.265 2.997 2.753
+   }
+   {
+    ID "62032186E9D208F9"
+    coords 3.15 0.011 3.18
+   }
+   {
+    ID "62032186E9D31E79"
+    coords -2.317 2.997 5.93
+   }
+   {
+    ID "62032186E9D33181"
+    coords 3.283 3.476 1.92
+   }
+   {
+    ID "62032186E9D33D89"
+    coords 1.986 2.997 5.262
+   }
+   {
+    ID "62032186E9D3B90D"
+    coords 1.416 6.229 3.244
+   }
+   {
+    ID "62032186E9D6D0AB"
+    coords -0.456 0.011 2.266
+   }
+   {
+    ID "62032186E9D6D0C4"
+    coords 1.166 0.011 5.924
+   }
+  }
+ }
 }

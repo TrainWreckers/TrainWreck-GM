@@ -1,3 +1,39 @@
 SCR_DestructibleBuildingEntity : "{ED6901CF01CD7360}Prefabs/Structures/Industrial/Houses/Workshop_02/Workshop_02_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218E519B771B"
+    coords 2.952 0.5 -2.87
+   }
+   {
+    ID "6203218E519B772D"
+    coords -2.124 0.5 -3.54
+   }
+   {
+    ID "6203218E519B7770"
+    coords 2.221 0.5 2.591
+   }
+   {
+    ID "6203218E519B8B7A"
+    coords -2.722 0.5 1.043
+   }
+   {
+    ID "6203218E519B9984"
+    coords 1.418 0.5 -7.059
+   }
+   {
+    ID "6203218E519B9988"
+    coords -1.581 0.5 -1.108
+   }
+   {
+    ID "6203218E519C10E5"
+    coords -2.032 0.5 -7.23
+   }
+   {
+    ID "6203218E519C7ACE"
+    coords -2.151 0.5 4.38
+   }
+  }
+ }
 }

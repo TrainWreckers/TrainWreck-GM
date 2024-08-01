@@ -1,3 +1,9 @@
 SCR_DestructibleBuildingEntity : "{C875B63FF5118515}Prefabs/Structures/Industrial/Houses/PortableCabin_E_01/PortableCabin_E_01_Base.et" {
  ID "51B282FAFCB515EE"
+ {
+  TW_AISpawnPoint {
+   ID "6203218D78C21844"
+   coords 0.442 0.288 -0.16
+  }
+ }
 }

@@ -1,3 +1,91 @@
 SCR_DestructibleBuildingEntity : "{79CE8730C95EFD23}Prefabs/Structures/Houses/Village/House_Mountain_E_1I01/House_Mountain_E_1I01_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032188FF386BD4"
+    coords -6.007 -0 5.096
+   }
+   {
+    ID "62032188FF3881ED"
+    coords -3.925 0 -5.407
+   }
+   {
+    ID "62032188FF38BC45"
+    coords 9.477 -0.211 4.766
+   }
+   {
+    ID "62032188FF3956CC"
+    coords -4.831 0 -2.723
+   }
+   {
+    ID "62032188FF39C924"
+    coords -1.96 0 -2.564
+   }
+   {
+    ID "62032188FF39EEA7"
+    coords -3.819 0 5.081
+   }
+   {
+    ID "62032188FF3E2156"
+    coords 1.656 0.019 3.039
+   }
+   {
+    ID "62032188FF3E4448"
+    coords 0.873 0 -0.469
+   }
+   {
+    ID "62032188FF3E5BE7"
+    coords -9.846 0 0.691
+   }
+   {
+    ID "62032188FF3E5BEE"
+    coords -8.221 0 3.136
+   }
+   {
+    ID "62032188FF3E5BF6"
+    coords -5.058 0 3.048
+   }
+   {
+    ID "62032188FF3E5BFE"
+    coords -2.048 0 3.203
+   }
+   {
+    ID "62032188FF3E7A27"
+    coords -10.469 0 -1.392
+   }
+   {
+    ID "62032188FF3EF5FF"
+    coords -8.904 0 -3.099
+   }
+   {
+    ID "62032188FF3F0F08"
+    coords 9.322 0 2.894
+   }
+   {
+    ID "62032188FF3F0F24"
+    coords 8.703 0 -1.795
+   }
+   {
+    ID "62032188FF3F67A9"
+    coords 9.706 3.205 -1.607
+   }
+   {
+    ID "62032188FF3FB8E6"
+    coords 6.347 3.163 -1.427
+   }
+   {
+    ID "62032188FF3FF301"
+    coords 2.497 3.25 -0.507
+   }
+   {
+    ID "62032188FF3FF338"
+    coords -10.471 3.25 -0.163
+   }
+   {
+    ID "62032188FF3FF81A"
+    coords -2.904 3.25 -1.144
+   }
+  }
+ }
 }

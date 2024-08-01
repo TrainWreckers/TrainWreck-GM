@@ -1,3 +1,9 @@
 SCR_DestructibleBuildingEntity : "{9F49B2CCBC2FF396}Prefabs/Structures/Infrastructure/Landlines/PhoneBooth_E/PhoneBooth_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  TW_AISpawnPoint {
+   ID "6203218E65BD6544"
+   coords 0.029 0.161 0.045
+  }
+ }
 }

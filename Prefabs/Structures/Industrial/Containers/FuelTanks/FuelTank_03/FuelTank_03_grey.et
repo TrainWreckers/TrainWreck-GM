@@ -1,3 +1,31 @@
 SCR_DestructibleBuildingEntity : "{CDEFEE1847C0933A}Prefabs/Structures/Industrial/Containers/FuelTanks/FuelTank_03/FuelTank_03_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218CB6D86C74"
+    coords 3.967 9.34 2.994
+   }
+   {
+    ID "6203218CB6D8891C"
+    coords 5.08 4.468 5.821
+   }
+   {
+    ID "6203218CB6D89D0F"
+    coords -5.5 9.189 -2.798
+   }
+   {
+    ID "6203218CB6D89DF2"
+    coords -2.597 9.028 7.309
+   }
+   {
+    ID "6203218CB6D89DFD"
+    coords -4.783 9.245 3.16
+   }
+   {
+    ID "6203218CB6D8C35C"
+    coords 2.459 9.455 -3.232
+   }
+  }
+ }
 }

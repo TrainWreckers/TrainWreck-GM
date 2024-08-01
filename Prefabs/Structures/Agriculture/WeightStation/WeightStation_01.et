@@ -1,3 +1,23 @@
 SCR_DestructibleBuildingEntity : "{F3C04211BAE932F2}Prefabs/Structures/Agriculture/WeightStation/WeightStation_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "620321810648800E"
+    coords 0.581 -0 -2.518
+   }
+   {
+    ID "6203218106488012"
+    coords -0.784 0 4.149
+   }
+   {
+    ID "62032181064B373E"
+    coords 1.744 -0 2.836
+   }
+   {
+    ID "62032181064B6096"
+    coords 0.352 -0 0.397
+   }
+  }
+ }
 }

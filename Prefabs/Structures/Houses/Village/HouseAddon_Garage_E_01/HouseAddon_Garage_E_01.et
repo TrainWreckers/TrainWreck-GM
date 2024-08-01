@@ -1,3 +1,19 @@
 SCR_DestructibleBuildingEntity : "{ED100C4FA5097FC5}Prefabs/Structures/Houses/Village/HouseAddon_Garage_E_01/HouseAddon_Garage_E_01_base.et" {
  ID "5A329A347ABF40EA"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218C23927AF9"
+    coords 0.953 0.3 -1.812
+   }
+   {
+    ID "6203218C2393C86A"
+    coords 0.134 -0.089 3.619
+   }
+   {
+    ID "6203218C2393E342"
+    coords -0.043 0.3 2.182
+   }
+  }
+ }
 }

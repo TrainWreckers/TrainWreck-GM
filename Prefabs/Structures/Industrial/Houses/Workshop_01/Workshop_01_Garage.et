@@ -1,3 +1,15 @@
 SCR_DestructibleBuildingEntity : "{85C6B051DE85112B}Prefabs/Structures/Industrial/Houses/Workshop_01/Workshop_01_Garage_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218E07CF1A3B"
+    coords -1.945 0.19 -0.662
+   }
+   {
+    ID "6203218E07CF7E94"
+    coords 1.886 0.19 0.077
+   }
+  }
+ }
 }

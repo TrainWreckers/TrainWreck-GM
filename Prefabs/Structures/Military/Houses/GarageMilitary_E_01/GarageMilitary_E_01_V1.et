@@ -1,3 +1,71 @@
 SCR_DestructibleBuildingEntity : "{1E7AC996BD3B73A7}Prefabs/Structures/Military/Houses/GarageMilitary_E_01/GarageMilitary_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032192549C5576"
+    coords -13.563 0.439 -7.033
+   }
+   {
+    ID "62032192549CB0AB"
+    coords -17.706 0.439 3.302
+   }
+   {
+    ID "62032192549CB0BF"
+    coords -14.917 0.439 10.483
+   }
+   {
+    ID "62032192549D0286"
+    coords -8.29 0.439 1.834
+   }
+   {
+    ID "62032192549D4853"
+    coords -4.954 0.439 9.774
+   }
+   {
+    ID "62032192549D57DA"
+    coords 4.958 0.439 9.52
+   }
+   {
+    ID "62032192549D9411"
+    coords 20.493 0.439 9.515
+   }
+   {
+    ID "62032192549D942E"
+    coords -5.753 0.439 -6.655
+   }
+   {
+    ID "6203219254A20354"
+    coords 3.37 0.439 -4.305
+   }
+   {
+    ID "6203219254A22A63"
+    coords 11.857 0.439 -5.757
+   }
+   {
+    ID "6203219254A2797C"
+    coords 8.44 0.439 -1.849
+   }
+   {
+    ID "6203219254A2A422"
+    coords 21.737 0.439 -1.5
+   }
+   {
+    ID "6203219254A2A43F"
+    coords 16.889 0.439 -1.896
+   }
+   {
+    ID "6203219254A2FD4A"
+    coords 23.649 0.439 -5.64
+   }
+   {
+    ID "6203219254A366B0"
+    coords 26.53 0.439 -4.601
+   }
+   {
+    ID "6203219254A3C197"
+    coords -15.673 0.439 -5.572
+   }
+  }
+ }
 }

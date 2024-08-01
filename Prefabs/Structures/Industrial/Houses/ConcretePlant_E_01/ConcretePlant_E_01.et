@@ -1,3 +1,31 @@
 SCR_DestructibleBuildingEntity : "{67BB04E9136D6A3E}Prefabs/Structures/Industrial/Houses/ConcretePlant_E_01/ConcretePlant_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218CC6EA4287"
+    coords -2.823 4.936 8.821
+   }
+   {
+    ID "6203218CC6EA81DF"
+    coords -4.965 4.936 0.883
+   }
+   {
+    ID "6203218CC6EA953B"
+    coords -5.153 4.949 4.801
+   }
+   {
+    ID "6203218CC6EA9E70"
+    coords -4.836 4.936 3.319
+   }
+   {
+    ID "6203218CC6EAEF60"
+    coords -0.105 4.949 6.795
+   }
+   {
+    ID "6203218CC6EB2B54"
+    coords -2.997 4.968 6.703
+   }
+  }
+ }
 }

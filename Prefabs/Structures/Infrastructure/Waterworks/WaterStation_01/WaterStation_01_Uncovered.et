@@ -1,3 +1,15 @@
 SCR_DestructibleBuildingEntity : "{1D4AA0AA6AF86050}Prefabs/Structures/Infrastructure/Waterworks/WaterStation_01/WaterStation_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218FD7DC490E"
+    coords -0.008 0.036 0.919
+   }
+   {
+    ID "6203218FD7DC4933"
+    coords 0.777 -0.08 2.823
+   }
+  }
+ }
 }
