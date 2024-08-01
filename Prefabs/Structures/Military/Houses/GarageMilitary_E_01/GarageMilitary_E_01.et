@@ -1,151 +1,26 @@
 SCR_DestructibleBuildingEntity : "{1E7AC996BD3B73A7}Prefabs/Structures/Military/Houses/GarageMilitary_E_01/GarageMilitary_E_01_base.et" {
  ID "F0DBA538AC2A0552"
  {
-  $grp TW_SpawnInBuildings {
+  $grp TW_AISpawnPoint {
    {
-    ID "6203364C86A020E0"
-    coords 17.231 0.439 6.346
-    angleY 35.486
+    ID "6203219226E53473"
+    coords 10.768 0.439 9.1
    }
    {
-    ID "6203364C86A03728"
-    coords 15.008 0.439 -5.235
-    angleY 35.486
+    ID "6203219226E5414D"
+    coords 7.804 0.439 0.207
    }
    {
-    ID "6203364C86A05F6A"
-    coords 11.029 0.439 -3.501
-    angleY 35.486
+    ID "6203219226E5AB87"
+    coords -7.58 0.439 4.91
    }
    {
-    ID "6203364C86A0DC84"
-    coords 24.27 0.439 8.013
-    angleY 35.486
+    ID "6203219226E6DE43"
+    coords 22.196 0.439 -2.642
    }
    {
-    ID "6203364C86A20606"
-    coords 6.05 0.439 -0.216
-    angleY 35.486
-   }
-   {
-    ID "6203364C86A23EE2"
-    coords 10.27 0.439 -0.729
-    angleY 35.486
-   }
-   {
-    ID "6203364C86A2C5D9"
-    coords 1.17 0.439 -0.462
-    angleY 35.486
-   }
-   {
-    ID "6203364C86A357B2"
-    coords -12.535 0.439 -3.949
-    angleY 35.486
-   }
-   {
-    ID "6203364C86A357BB"
-    coords -12.833 0.439 -2.009
-    angleY 35.486
-   }
-   {
-    ID "6203364C86A365C1"
-    coords -4.836 0.439 -0.973
-    angleY 35.486
-   }
-   {
-    ID "6203364C86A38ED4"
-    coords 5.826 0.439 -3.74
-    angleY 35.486
-   }
-   {
-    ID "6203364C86A3E5EC"
-    coords -5.056 0.439 -4.032
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AC0797"
-    coords -11.317 0.439 3.408
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AC69AC"
-    coords -8.547 0.439 7.562
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AC6ED0"
-    coords -0.284 0.439 7.554
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AC771F"
-    coords 5.433 0.439 7.542
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AC9E11"
-    coords 2.892 0.439 3.233
-    angleY 35.486
-   }
-   {
-    ID "6203364C86ACE63B"
-    coords -3.868 0.439 2.986
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AD4F1F"
-    coords 8.535 0.439 3.457
-    angleY 35.486
-   }
-   {
-    ID "6203364C86ADA282"
-    coords 12.425 0.439 -1.172
-    angleY 35.486
-   }
-   {
-    ID "6203364C86ADCE82"
-    coords 13.682 0.439 1.57
-    angleY 35.486
-   }
-   {
-    ID "6203364C86ADD72C"
-    coords 11.417 0.439 3.408
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AECE3E"
-    coords 24.445 0.439 3.558
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AF3521"
-    coords 17.596 0.439 1.297
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AF7B45"
-    coords 24.145 0.439 -3.714
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AF7B4A"
-    coords 18.247 0.439 -2.645
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AF82F2"
-    coords 9.639 0.439 7.344
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AF8F89"
-    coords 12.865 0.439 6.985
-    angleY 35.486
-   }
-   {
-    ID "6203364C86AFE479"
-    coords 18.641 0.439 5.884
-    angleY 35.486
+    ID "6203219226E6DE4E"
+    coords -17.742 0.439 -4.833
    }
   }
  }

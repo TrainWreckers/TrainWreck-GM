@@ -1,3 +1,9 @@
 SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  TW_AISpawnPoint {
+   ID "6203218397A1EB33"
+   coords 0.899 5.999 1.939
+  }
+ }
 }

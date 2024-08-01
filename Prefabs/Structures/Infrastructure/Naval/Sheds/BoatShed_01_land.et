@@ -1,3 +1,15 @@
 SCR_DestructibleBuildingEntity : "{A4B690DEC3D39B11}Prefabs/Structures/Infrastructure/Naval/Sheds/BoatShed_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218F1379974C"
+    coords -1.557 1.537 0.472
+   }
+   {
+    ID "6203218F137A6010"
+    coords 2.095 1.046 -1.729
+   }
+  }
+ }
 }

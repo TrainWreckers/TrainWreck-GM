@@ -1,3 +1,23 @@
 SCR_DestructibleBuildingEntity : "{26A4193702B0EC4A}Prefabs/Structures/Military/Bunkers/ShelterMilitary_E_01/ShelterMilitary_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "620321907F8D0A8C"
+    coords -0.298 0.096 -1.036
+   }
+   {
+    ID "620321907F8D19AB"
+    coords -3.652 0.096 0.256
+   }
+   {
+    ID "620321907F8D1B22"
+    coords -3.781 0.096 -1.97
+   }
+   {
+    ID "620321907F8D76D2"
+    coords 1.583 0.096 1.131
+   }
+  }
+ }
 }

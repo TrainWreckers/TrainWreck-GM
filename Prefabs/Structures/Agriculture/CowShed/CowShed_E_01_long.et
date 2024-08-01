@@ -1,3 +1,67 @@
 SCR_DestructibleBuildingEntity : "{5478F1635999CE3B}Prefabs/Structures/Agriculture/CowShed/CowShed_E_01_long_Base.et" {
  ID "6D222784C250C790"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032180D1002FC9"
+    coords 2.287 -0.25 -10.482
+   }
+   {
+    ID "62032180D1004006"
+    coords -6.937 0 -3.271
+   }
+   {
+    ID "62032180D100EB54"
+    coords -6.725 0 13.008
+   }
+   {
+    ID "62032180D10105DB"
+    coords 6.889 0 17.295
+   }
+   {
+    ID "62032180D1013EC0"
+    coords -5.193 0 16.229
+   }
+   {
+    ID "62032180D1013EDF"
+    coords -2.89 0 17.929
+   }
+   {
+    ID "62032180D101430D"
+    coords 8.008 0 23.194
+   }
+   {
+    ID "62032180D1014DD9"
+    coords 5.839 0 23.079
+   }
+   {
+    ID "62032180D1021279"
+    coords -4.845 0 21.179
+   }
+   {
+    ID "62032180D1029B09"
+    coords 4.49 0 -25.036
+   }
+   {
+    ID "62032180D1032465"
+    coords -1.358 -0.043 -41.669
+   }
+   {
+    ID "62032180D10371E6"
+    coords 6.242 0 -43.713
+   }
+   {
+    ID "62032180D10399E9"
+    coords -7.072 0 -37.046
+   }
+   {
+    ID "62032180D103DA9E"
+    coords 8.27 0 5.634
+   }
+   {
+    ID "62032180D103F728"
+    coords 6.103 0 -21.065
+   }
+  }
+ }
 }

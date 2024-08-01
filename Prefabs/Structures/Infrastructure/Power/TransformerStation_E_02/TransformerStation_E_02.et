@@ -1,3 +1,79 @@
 SCR_DestructibleBuildingEntity : "{9ACEB1AC0BA9561D}Prefabs/Structures/Infrastructure/Power/TransformerStation_E_02/TransformerStation_E_02_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218F8E4653AC"
+    coords -2.052 9.65 -4.056
+   }
+   {
+    ID "6203218F8E46AAF0"
+    coords -4 9.65 -1.217
+   }
+   {
+    ID "6203218F8E47CF86"
+    coords 1.366 1.2 6.17
+   }
+   {
+    ID "6203218F8E4856F8"
+    coords 0.407 5.25 -2.873
+   }
+   {
+    ID "6203218F8E4882D8"
+    coords 1.084 0.05 -3.241
+   }
+   {
+    ID "6203218F8E48F26A"
+    coords -4.618 0.05 -2.518
+   }
+   {
+    ID "6203218F8E492D3A"
+    coords 2.236 9.65 1.223
+   }
+   {
+    ID "6203218F8E493533"
+    coords 0.281 9.65 -2.965
+   }
+   {
+    ID "6203218F8E494968"
+    coords -5.331 9.65 1.267
+   }
+   {
+    ID "6203218F8E49D9BC"
+    coords -2.452 5.25 -3.497
+   }
+   {
+    ID "6203218F8E4A0B70"
+    coords -4.861 1.2 5.995
+   }
+   {
+    ID "6203218F8E4B0A54"
+    coords -2.527 0.05 -3.517
+   }
+   {
+    ID "6203218F8E4B0A5E"
+    coords -3.96 1.2 3.622
+   }
+   {
+    ID "6203218F8E4B9AD8"
+    coords 4.851 0.05 1.051
+   }
+   {
+    ID "6203218F8E4B9E60"
+    coords 4.476 0.05 -3.692
+   }
+   {
+    ID "6203218F8E4B9E6E"
+    coords -0.458 1.2 3.603
+   }
+   {
+    ID "6203218F8E4BCF92"
+    coords -1.954 1.2 6.214
+   }
+   {
+    ID "6203218F8E4BF9BC"
+    coords 4.85 -0.091 5.81
+   }
+  }
+ }
 }

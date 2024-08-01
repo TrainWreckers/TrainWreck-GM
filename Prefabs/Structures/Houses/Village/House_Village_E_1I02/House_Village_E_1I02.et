@@ -1,3 +1,67 @@
 SCR_DestructibleBuildingEntity : "{556A40267288B406}Prefabs/Structures/Houses/Village/House_Village_E_1I02/House_Village_E_1I02_base.et" {
  ID "46B3A6A453594AB6"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032189C5922706"
+    coords 4.417 0.486 4.119
+   }
+   {
+    ID "62032189C5922709"
+    coords -1.506 0.486 1.961
+   }
+   {
+    ID "62032189C5923D8E"
+    coords -1.366 0.486 7.895
+   }
+   {
+    ID "62032189C59258FD"
+    coords -3.221 0.486 4.298
+   }
+   {
+    ID "62032189C5930686"
+    coords 4.055 0.486 -1.173
+   }
+   {
+    ID "62032189C593BE7A"
+    coords 3.98 0.486 -4.215
+   }
+   {
+    ID "62032189C593CDD7"
+    coords 2.584 0.486 8.087
+   }
+   {
+    ID "62032189C593F5D3"
+    coords 3.023 0.486 2.207
+   }
+   {
+    ID "62032189C59C2615"
+    coords 1.366 0.486 -7.779
+   }
+   {
+    ID "62032189C59C261D"
+    coords 4.203 0.486 -9.409
+   }
+   {
+    ID "62032189C59C68EB"
+    coords -2.802 0.486 -7.067
+   }
+   {
+    ID "62032189C59C822D"
+    coords -2.666 0.486 -1.199
+   }
+   {
+    ID "62032189C59C8D15"
+    coords 0.503 0.486 -3.937
+   }
+   {
+    ID "62032189C59D556C"
+    coords -4.706 0.405 -1.064
+   }
+   {
+    ID "62032189C59D909F"
+    coords -3.572 0.486 -4.175
+   }
+  }
+ }
 }

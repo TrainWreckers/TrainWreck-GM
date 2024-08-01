@@ -1,3 +1,59 @@
 SCR_DestructibleBuildingEntity : "{E35EA41864A3B0ED}Prefabs/Structures/Industrial/Houses/Warehouse_01/Warehouse_01_Base.et" {
  ID "51DC7DF1903152C8"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218DD6F03BEB"
+    coords 4.62 0.05 -3.365
+   }
+   {
+    ID "6203218DD6F04786"
+    coords 5.18 0.05 4.997
+   }
+   {
+    ID "6203218DD6F04791"
+    coords 9.41 0.05 3.156
+   }
+   {
+    ID "6203218DD6F0E9E6"
+    coords 14.501 0.05 -2.75
+   }
+   {
+    ID "6203218DD6F268DB"
+    coords 14.337 0.05 3.689
+   }
+   {
+    ID "6203218DD6F2B2EA"
+    coords -13.689 0.05 -3.284
+   }
+   {
+    ID "6203218DD6F2D3E8"
+    coords -18.536 1.163 -5.4
+   }
+   {
+    ID "6203218DD6F30CF7"
+    coords -16.866 0.05 3.139
+   }
+   {
+    ID "6203218DD6F366A4"
+    coords -8.419 4.033 -1.654
+   }
+   {
+    ID "6203218DD6F3A7E4"
+    coords -1.883 1.145 2.3
+   }
+   {
+    ID "6203218DD6F3AE33"
+    coords -6.705 0.05 4.153
+   }
+   {
+    ID "6203218DD6F3EE8B"
+    coords -3.02 0.05 -0.483
+   }
+   {
+    ID "6203218DD6F3FEF5"
+    coords -0.927 0.05 -4.447
+   }
+  }
+ }
 }

@@ -1,3 +1,139 @@
 SCR_DestructibleBuildingEntity : "{0B1B8B16E7E9481F}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032181DBE01BE3"
+    coords 6.813 3.8 -0.419
+   }
+   {
+    ID "62032181DBE0A399"
+    coords 6.252 4.291 5.887
+   }
+   {
+    ID "62032181DBE0AFFF"
+    coords 5.19 4.274 2.236
+   }
+   {
+    ID "62032181DBE0E384"
+    coords 6.761 3.8 3.094
+   }
+   {
+    ID "62032181DBE1107A"
+    coords 2.564 4.288 -7.283
+   }
+   {
+    ID "62032181DBE1107D"
+    coords -1.456 3.8 -3.607
+   }
+   {
+    ID "62032181DBE129DA"
+    coords 0.674 3.8 -6.968
+   }
+   {
+    ID "62032181DBE151EF"
+    coords -5.707 3.8 0.108
+   }
+   {
+    ID "62032181DBE1A039"
+    coords 4.092 3.8 -4.531
+   }
+   {
+    ID "62032181DBE1CF5A"
+    coords -0.514 4.276 -6.974
+   }
+   {
+    ID "62032181DBE1FBF3"
+    coords 6.165 4.275 -2.178
+   }
+   {
+    ID "62032181DBE21C67"
+    coords -1.483 3.8 0.179
+   }
+   {
+    ID "62032181DBE21C7C"
+    coords 0.801 3.8 0.335
+   }
+   {
+    ID "62032181DBE2E12B"
+    coords -7.265 3.8 0.156
+   }
+   {
+    ID "62032181DBE2F5D5"
+    coords -6.981 3.8 -2.385
+   }
+   {
+    ID "62032181DBE349D1"
+    coords 4.529 0 -7.141
+   }
+   {
+    ID "62032181DBE360AA"
+    coords 1.025 1.9 5.454
+   }
+   {
+    ID "62032181DBE3BEFA"
+    coords 3.112 3.8 0.633
+   }
+   {
+    ID "62032181DBE3E3E1"
+    coords 2.949 1.9 5.582
+   }
+   {
+    ID "62032181DBE71150"
+    coords 1.464 0 -7.095
+   }
+   {
+    ID "62032181DBEC0861"
+    coords 5.725 0 -0.42
+   }
+   {
+    ID "62032181DBEC1BD4"
+    coords 6.204 0 4.71
+   }
+   {
+    ID "62032181DBECA49E"
+    coords 4.492 0 -5.982
+   }
+   {
+    ID "62032181DBECC875"
+    coords 6.362 -0 2.696
+   }
+   {
+    ID "62032181DBECE9BF"
+    coords 6.123 0 -5.476
+   }
+   {
+    ID "62032181DBED0D40"
+    coords -7.83 0 -3.332
+   }
+   {
+    ID "62032181DBED4474"
+    coords -7.774 0 -6.027
+   }
+   {
+    ID "62032181DBED9FE7"
+    coords -7.878 -0 -0.96
+   }
+   {
+    ID "62032181DBED9FEE"
+    coords -6.47 -0 -2.043
+   }
+   {
+    ID "62032181DBED9FF0"
+    coords 0.937 0 0.188
+   }
+   {
+    ID "62032181DBEDE73A"
+    coords -4.926 0 -3.561
+   }
+   {
+    ID "62032181DBEE7D13"
+    coords -3.337 0 -7.058
+   }
+   {
+    ID "62032181DBEEC4B0"
+    coords -5.426 0 -6.955
+   }
+  }
+ }
 }

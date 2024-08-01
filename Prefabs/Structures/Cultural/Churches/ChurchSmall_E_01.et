@@ -1,3 +1,75 @@
 SCR_DestructibleBuildingEntity : "{8E796437146BA2D2}Prefabs/Structures/Cultural/Churches/ChurchSmall_E_01_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032184186053DA"
+    coords 1.363 11.959 6.697
+   }
+   {
+    ID "62032184186DA4EA"
+    coords -2.282 0.19 -6.433
+   }
+   {
+    ID "62032184186DA4FE"
+    coords -1.49 0.19 0.28
+   }
+   {
+    ID "62032184186DEFEE"
+    coords -0.89 11.959 6.916
+   }
+   {
+    ID "62032184186E0E76"
+    coords 2.254 0.19 -3.376
+   }
+   {
+    ID "62032184186E0E7F"
+    coords 0.48 0.19 -8.732
+   }
+   {
+    ID "62032184186E492E"
+    coords -0.496 0.19 -8.742
+   }
+   {
+    ID "62032184186E8943"
+    coords -3.261 0.19 2.85
+   }
+   {
+    ID "62032184186E8A3E"
+    coords 3.402 0.19 3.006
+   }
+   {
+    ID "62032184186F03E6"
+    coords -0.077 4.097 2.343
+   }
+   {
+    ID "62032184186F1C63"
+    coords 3.857 2.382 7.433
+   }
+   {
+    ID "62032184186F5E85"
+    coords -0.843 0.302 7.68
+   }
+   {
+    ID "62032184186F5E8F"
+    coords 1.356 0.302 7.585
+   }
+   {
+    ID "62032184186F6A6B"
+    coords 3.911 1.626 5.437
+   }
+   {
+    ID "62032184186FC517"
+    coords -0.025 4.102 4.659
+   }
+   {
+    ID "62032184186FCD0C"
+    coords -0.029 4.102 7.343
+   }
+   {
+    ID "62032184186FCD38"
+    coords 0.08 8.066 6.956
+   }
+  }
+ }
 }

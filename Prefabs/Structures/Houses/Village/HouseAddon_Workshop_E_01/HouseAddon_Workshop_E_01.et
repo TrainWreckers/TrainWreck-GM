@@ -1,3 +1,23 @@
 SCR_DestructibleBuildingEntity : "{4472D9B48597C94D}Prefabs/Structures/Houses/Village/HouseAddon_Workshop_E_01/HouseAddon_Workshop_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218C5A1D54B2"
+    coords -1.296 -0.096 2.602
+   }
+   {
+    ID "6203218C5A1D5541"
+    coords -2.23 0.3 -0.546
+   }
+   {
+    ID "6203218C5A1D5563"
+    coords 2.56 0.3 -1.832
+   }
+   {
+    ID "6203218C5A1D5C31"
+    coords 1.568 0.3 1.262
+   }
+  }
+ }
 }

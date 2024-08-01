@@ -1,3 +1,39 @@
 StaticModelEntity : "{68CA807F237FFB7A}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_base.et" {
  ID "50D67C36F435260A"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218FBC781E1C"
+    coords 0.997 19.037 1.294
+   }
+   {
+    ID "6203218FBC78A12B"
+    coords 0.989 37.457 1.093
+   }
+   {
+    ID "6203218FBC78A138"
+    coords 1.01 37.457 -1.236
+   }
+   {
+    ID "6203218FBC78B74C"
+    coords -1.182 37.457 -1.252
+   }
+   {
+    ID "6203218FBC78C984"
+    coords -1.623 19.037 -1.279
+   }
+   {
+    ID "6203218FBC78C9F7"
+    coords -1.582 19.037 1.637
+   }
+   {
+    ID "6203218FBC7B2601"
+    coords -1.197 37.457 1.551
+   }
+   {
+    ID "6203218FBC7BFD80"
+    coords 1.072 19.037 -0.712
+   }
+  }
+ }
 }

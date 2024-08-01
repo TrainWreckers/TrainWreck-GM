@@ -1,3 +1,19 @@
 SCR_DestructibleBuildingEntity : "{B1C6B4A379D1BB77}Prefabs/Structures/Houses/Garage/Garage_E_01/Garage_E_01_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032186882EA803"
+    coords 0.177 -0.146 3.92
+   }
+   {
+    ID "62032186882EA831"
+    coords -1.388 0.003 -0.374
+   }
+   {
+    ID "62032186882EF1AF"
+    coords 1.029 0.009 -1.702
+   }
+  }
+ }
 }

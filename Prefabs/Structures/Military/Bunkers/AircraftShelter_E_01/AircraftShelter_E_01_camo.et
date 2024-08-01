@@ -1,3 +1,47 @@
 SCR_DestructibleBuildingEntity : "{CA7778B914D3A9FC}Prefabs/Structures/Military/Bunkers/AircraftShelter_E_01/AircraftShelter_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218FC8680E05"
+    coords -3.255 0 -22.479
+   }
+   {
+    ID "6203218FC8680E76"
+    coords -4.591 0 -33.133
+   }
+   {
+    ID "6203218FC8689783"
+    coords 5.882 -0 -14.219
+   }
+   {
+    ID "6203218FC868978F"
+    coords -14.042 0.005 1.801
+   }
+   {
+    ID "6203218FC8689797"
+    coords -11.906 0 -8.98
+   }
+   {
+    ID "6203218FC8689BE6"
+    coords -13.37 0 -5.956
+   }
+   {
+    ID "6203218FC868FE92"
+    coords 5.079 0.108 -24.652
+   }
+   {
+    ID "6203218FC8699302"
+    coords -1.051 0 -31.088
+   }
+   {
+    ID "6203218FC869D188"
+    coords 15.693 0.009 2.02
+   }
+   {
+    ID "6203218FC86B4522"
+    coords -5.766 0 -1.031
+   }
+  }
+ }
 }

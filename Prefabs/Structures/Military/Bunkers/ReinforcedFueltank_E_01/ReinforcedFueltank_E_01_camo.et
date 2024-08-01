@@ -1,3 +1,51 @@
 SCR_DestructibleBuildingEntity : "{51043B1D2125E391}Prefabs/Structures/Military/Bunkers/ReinforcedFueltank_E_01/ReinforcedFueltank_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "62032190772679B8"
+    coords 2.636 -0 10.164
+   }
+   {
+    ID "62032190772711DF"
+    coords -2.349 -0 -9.689
+   }
+   {
+    ID "62032190772711E1"
+    coords 0.376 -0 -9.614
+   }
+   {
+    ID "62032190772711EB"
+    coords -0.955 -0 10.24
+   }
+   {
+    ID "6203219077272E04"
+    coords -2.404 0.004 -7.763
+   }
+   {
+    ID "6203219077272E1E"
+    coords -0.011 -0.001 -7.525
+   }
+   {
+    ID "6203219077272FE2"
+    coords -3.485 0.003 -0.852
+   }
+   {
+    ID "6203219077272FE8"
+    coords -2.876 0 2.212
+   }
+   {
+    ID "620321907727A249"
+    coords -0.033 -0.001 4.346
+   }
+   {
+    ID "620321907727CC4F"
+    coords 6.116 -0 2.685
+   }
+   {
+    ID "620321907727F425"
+    coords 5.471 -0 -2.382
+   }
+  }
+ }
 }

@@ -1,3 +1,23 @@
 SCR_DestructibleBuildingEntity : "{0921B79E3B234115}Prefabs/Structures/Military/Bunkers/AmmoDump_E_02/AmmoDump_E_02_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203219034174D59"
+    coords -1.389 0.133 -14.521
+   }
+   {
+    ID "6203219034176185"
+    coords 0.529 0.132 -7.521
+   }
+   {
+    ID "620321903417C901"
+    coords -1.785 0.136 -6.532
+   }
+   {
+    ID "620321903417EDD4"
+    coords 2.057 0.132 -18.883
+   }
+  }
+ }
 }

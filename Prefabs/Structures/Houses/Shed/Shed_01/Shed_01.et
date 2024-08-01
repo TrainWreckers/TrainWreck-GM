@@ -1,3 +1,9 @@
 SCR_DestructibleBuildingEntity : "{4A69647388F17A23}Prefabs/Structures/Houses/Shed/Shed_01/Shed_01_Base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  TW_AISpawnPoint {
+   ID "62032187172E59C0"
+   coords 0.885 0.011 -0.132
+  }
+ }
 }

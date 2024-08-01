@@ -1,3 +1,15 @@
 SCR_DestructibleBuildingEntity : "{301874A9C9A455C7}Prefabs/Structures/Houses/Village/HouseAddon_Shed_E_01/HouseAddon_Shed_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218C52B583B6"
+    coords 0.919 0.566 -2.716
+   }
+   {
+    ID "6203218C52B5A1B6"
+    coords -1.405 0.646 1.639
+   }
+  }
+ }
 }

@@ -1,3 +1,47 @@
 SCR_DestructibleBuildingEntity : "{BF36B09531B570F1}Prefabs/Structures/Infrastructure/Naval/Houses/CottagePier_01_base.et" {
  ID "52327BA0289C21ED"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218ED7B38EFE"
+    coords -2.272 0.509 -2.088
+   }
+   {
+    ID "6203218ED7B3D56F"
+    coords 0.214 3.502 -3.945
+   }
+   {
+    ID "6203218ED7B3E5CC"
+    coords -0.003 3.509 -0.973
+   }
+   {
+    ID "6203218ED7B3F34F"
+    coords 1.904 3.509 2.339
+   }
+   {
+    ID "6203218ED7B41380"
+    coords -2.502 0.508 0.542
+   }
+   {
+    ID "6203218ED7B4139F"
+    coords 2.309 0.509 -0.222
+   }
+   {
+    ID "6203218ED7B413AA"
+    coords 1.77 0.509 -2.227
+   }
+   {
+    ID "6203218ED7B4A1F2"
+    coords -2.293 0.529 2.609
+   }
+   {
+    ID "6203218ED7B4A39C"
+    coords 2.841 0.518 2.691
+   }
+   {
+    ID "6203218ED7B4AC5E"
+    coords -1.683 3.509 2.146
+   }
+  }
+ }
 }

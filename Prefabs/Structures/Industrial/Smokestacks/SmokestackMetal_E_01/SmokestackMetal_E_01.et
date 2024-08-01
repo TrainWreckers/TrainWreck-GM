@@ -1,3 +1,19 @@
 SCR_DestructibleBuildingEntity : "{E02E472700BCAA71}Prefabs/Structures/Industrial/Smokestacks/SmokestackMetal_E_01/SmokestackMetal_E_01_base.et" {
  ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "6203218E4024A963"
+    coords -0.785 43.426 -1.362
+   }
+   {
+    ID "6203218E4024EBE0"
+    coords -1.592 43.426 0.719
+   }
+   {
+    ID "6203218E4024EBF9"
+    coords 1.375 43.426 0.513
+   }
+  }
+ }
 }
