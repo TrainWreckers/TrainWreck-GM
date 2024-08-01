@@ -79,8 +79,7 @@ class TW_SpawnInBuildings : GenericEntity
 			GetNearbySpawnPoints();
 			
 			if(m_NearbySpawnpoints.Count() <= 0)
-			{
-				Print(string.Format("TrainWreck: No nearby spawn points. %1", TW_AISpawnPoint.s_GlobalSpawnPoints.Count()), LogLevel.WARNING); 
+			{				
 				Delete();
 				return;
 			}
@@ -116,11 +115,11 @@ class TW_SpawnInBuildings : GenericEntity
 	
 	private void GetNearbySpawnPoints()
 	{
-		m_NearbySpawnpoints.Clear();
-		
-		Print(string.Format("TrainWreck: Spawn points: %1", TW_AISpawnPoint.s_GlobalSpawnPoints.Count()), LogLevel.WARNING);
-		
-		foreach(TW_AISpawnPoint spawnPoint : TW_AISpawnPoint.s_GlobalSpawnPoints)
+		m_NearbySpawnpoints.Clear();		
+		ref array<TW_AISpawnPoint> nearbySpawnPoints = {};
+		TW_AISpawnPoint.GetNearbySpawnPoints(GetOrigin(), nearbySpawnPoints);
+				
+		foreach(TW_AISpawnPoint spawnPoint : nearbySpawnPoints)
 		{
 			if(!spawnPoint)
 			{
