@@ -1,0 +1,182 @@
+GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposition_Base.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  FactionAffiliationComponent "{61FD302B3A209A49}" {
+   "faction affiliation" "US"
+  }
+  RigidBody "{5E96A067A67C5029}" {
+   Geometries {
+    PhysicsBoxGeometry UserAction {
+     Extents 10 0.5 6
+    }
+   }
+  }
+  SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
+   m_AudioSourceConfigurationSpawn SCR_AudioSourceConfiguration "{5E96A067C355978C}" {
+    m_sSoundEventName "SOUND_BUILD_MG_NEST_01"
+   }
+  }
+  Hierarchy "{61FD302B3A209A78}" {
+   Enabled 1
+  }
+ }
+ coords -1.501 0 -0.787
+ {
+  GenericEntity : "{520626A206926F47}Prefabs/Props/Agriculture/Farm/Haystack_01.et" {
+   ID "61FD302BD4E4FF13"
+   components {
+    Hierarchy "{61FD302A18D978E9}" {
+    }
+   }
+   coords 3.953 -0.532 2.701
+   angleY 0
+  }
+  $grp GenericEntity : "{86BA5E5CD528D5BC}Prefabs/Props/Military/Sandbags/Sandbag_01_end_plastic.et" {
+   {
+    ID "61FD302B3A200950"
+    components {
+     Hierarchy "{61FD302B3A209D98}" {
+      Enabled 1
+     }
+    }
+    coords -2.9 0 1.526
+    angleY -179.686
+   }
+   {
+    ID "61FD302B3A200951"
+    components {
+     Hierarchy "{61FD302B3A209D9F}" {
+      Enabled 1
+     }
+    }
+    coords -1.476 0 0.641
+    angleY 4.945
+   }
+   {
+    ID "61FD302B3A219B17"
+    components {
+     Hierarchy "{61FD302B3A209A62}" {
+      Enabled 1
+     }
+    }
+    coords 3.435 0 0.506
+    angleY 7.207
+   }
+  }
+  GenericEntity : "{894A1AFDCB71CD0D}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_02.et" {
+   ID "61FD302B3A20095C"
+   coords -0.186 0.1 0.308
+   angleY 12.122
+  }
+  GenericEntity : "{92A3009960EBCFDA}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_MG_US_01_M60.et" {
+   ID "61FD302B3A20095B"
+   coords 0 0 2
+   angleY 0
+   {
+    GenericEntity {
+     ID "570CFD7584B8E353"
+     coords 0.669 0 -0.852
+    }
+    GenericEntity {
+     ID "570CFD7584B8ECDD"
+     coords -1.711 0 -0.535
+    }
+    StaticModelEntity {
+     ID "570CFD7584B8ECE0"
+     coords -1.317 0 -5.857
+    }
+    Turret {
+     ID "5CB0D9912C9F8B8C"
+     coords -0.099 0.645 -0.897
+    }
+   }
+  }
+  GenericEntity : "{A04DC55EB7C367F8}Prefabs/Props/Garbage/Military/Ammo/GarbageAmmunition_US_02.et" {
+   ID "61FD302B3A200924"
+   components {
+    Hierarchy "{61FD302B3A209D97}" {
+     Enabled 1
+    }
+   }
+   coords 0.553 0.04 0.474
+   angleY -27.392
+  }
+  StaticModelEntity : "{B03F9691E961C4CA}Prefabs/Structures/Military/Fortifications/DirtCover_01/DirtCover_01_long_v3.et" {
+   ID "61FD302B3A200927"
+   components {
+    Hierarchy "{61FD302B3A209D93}" {
+     Enabled 1
+    }
+   }
+   coords -3.557 0 1.063
+  }
+  $grp GenericEntity : "{B47E3FC5BE1D443A}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_05.et" {
+   {
+    ID "61FD302B3A200920"
+    coords -3.689 0.1 0.196
+   }
+   {
+    ID "61FD302B3A20467D"
+    coords 2.846 0.1 -0.042
+    angleY 14.032
+   }
+  }
+  GenericEntity : "{C258AD45887AA8CA}Prefabs/Vegetation/Cuttings/Picea_abies_medium_01.et" {
+   ID "61FD302B3A20467F"
+   coords 2.823 0 1.694
+   angleY -73.756
+  }
+  GenericEntity : "{E105D2F87098E1D8}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_LoiterPoint.et" {
+   ID "61FD302B3A204671"
+   components {
+    Hierarchy "{61FD302B3A209D8F}" {
+     Enabled 1
+    }
+   }
+   coords -1.944 0 -0.086
+   angleY 98.049
+  }
+  $grp StaticModelEntity : "{EF39F5715EF2323E}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Short.et" {
+   {
+    ID "61FD302B3A204675"
+    components {
+     Hierarchy "{61FD302B3A209D88}" {
+      Enabled 1
+     }
+    }
+    coords 1.906 0 2.191
+    angleY -53.228
+   }
+   {
+    ID "61FD302B3A209A50"
+    components {
+     Hierarchy "{61FD302B3A209D85}" {
+      Enabled 1
+     }
+    }
+    coords -4.236 0 2.081
+    angleY -83.008
+   }
+   {
+    ID "61FD302B3A209A53"
+    components {
+     Hierarchy "{61FD302B3A209D86}" {
+      Enabled 1
+     }
+    }
+    coords -2.789 0 2.235
+    angleY -115.47
+   }
+  }
+  GenericEntity : "{F76BD5785C7FE191}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_ObservationPoint.et" {
+   ID "61FD302B3A209A4D"
+   components {
+    Hierarchy "{61FD302B3A209D83}" {
+     Enabled 1
+    }
+   }
+   coords 1.45 0 -0.705
+   angleY -81.728
+  }
+ }
+}
