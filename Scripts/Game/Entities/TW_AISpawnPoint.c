@@ -12,7 +12,29 @@ class TW_AISpawnPoint : GenericEntity
 	[Attribute("{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et", UIWidgets.ResourceNamePicker, category: "Waypoints")]
 	protected ResourceName m_CycleWaypointPrefab;
 
-	private static ref TW_GridCoordArrayManager<TW_AISpawnPoint> s_GridManager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(500);
+	//! Size of grid that is to be used by spawn points
+	private static int s_SpawnGridSize = 500;
+	
+	//! Get size of spawn grid
+	static int GetSpawnGridSize() { return s_SpawnGridSize; }
+	
+	//! Change spawn grid. Will re-register already registered points to new grid manager
+	static void ChangeSpawnGridSize(int newSize)
+	{
+		s_SpawnGridSize = newSize;
+		ref TW_GridCoordArrayManager<TW_AISpawnPoint> manager = new TW_GridCoordArrayManager<TW_AISpawnPoint>();
+		ref array<TW_AISpawnPoint> items = {};
+		int count = s_GridManager.GetAllItems(items);
+		
+		foreach(TW_AISpawnPoint spawnPoint : items)
+			manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
+		
+		delete s_GridManager;
+		s_GridManager = manager
+	}
+	
+	//! Manager which will handle grabbing spawn points by grid square
+	private static ref TW_GridCoordArrayManager<TW_AISpawnPoint> s_GridManager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(s_SpawnGridSize);
 	
 	static void GetNearbySpawnPoints(vector center, notnull array<TW_AISpawnPoint> spawnPoints)
 	{
