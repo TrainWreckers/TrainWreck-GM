@@ -36,16 +36,35 @@ class TW_AISpawnPoint : GenericEntity
 	//! Manager which will handle grabbing spawn points by grid square
 	private static ref TW_GridCoordArrayManager<TW_AISpawnPoint> s_GridManager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(s_SpawnGridSize);
 	
-	static void GetNearbySpawnPoints(vector center, notnull array<TW_AISpawnPoint> spawnPoints)
+	//! Get spawn points in each of the provided chunks
+	static void GetSpawnPointsInChunks(notnull set<string> chunks, notnull array<TW_AISpawnPoint> spawnPoints)
 	{
 		int x, y;
-		TW_Util.ToGrid(center, x, y, 500);
+		foreach(string chunk : chunks)
+		{
+			TW_Util.FromGridString(chunk, x, y);
+			if(s_GridManager.HasCoord(x, y))
+			{
+				TW_GridCoordArray<TW_AISpawnPoint> coord = s_GridManager.GetCoord(x,y);
+				coord.GetData(spawnPoints);
+			}
+		}
+	}
+	
+	//! Get nearby spawn points around a given point (used by game master, hopefully eliminates weird bordering)
+	static void GetNearbySpawnPoints(vector center, notnull array<TW_AISpawnPoint> spawnPoints, int chunkRadius = 1)
+	{
+		int x, y;
+		TW_Util.ToGrid(center, x, y, s_SpawnGridSize);
 		
 		if(!s_GridManager.HasCoord(x, y))
 			return;
 		
-		TW_GridCoordArray<TW_AISpawnPoint> coord = s_GridManager.GetCoord(x, y);
-		spawnPoints.InsertAll(coord.GetAll());
+		ref array<ref TW_GridCoordArray<TW_AISpawnPoint>> items = {};
+		s_GridManager.GetNeighbors(items, x, y, chunkRadius);
+		
+		foreach(ref TW_GridCoordArray<TW_AISpawnPoint> item : items)
+			spawnPoints.InsertAll(item.GetAll());				
 	}
 		
 	static void RegisterSpawnPoint(TW_AISpawnPoint spawnPoint)
