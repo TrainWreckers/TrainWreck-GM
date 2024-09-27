@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{4C0ED4136348C722}Prefabs/Systems/TW_SpawnInBuildings_FIA.et"
+ Name "{9AF0548E8758756E}Prefabs/Groups/BLUFOR/Group_Empty.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

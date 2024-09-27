@@ -224,4 +224,220 @@ class TW_Util
 			y = nums[1];
 		}
 	}
+	
+	protected static ref map<ResourceName, ref UIInfo> s_ItemUIInfo = new map<ResourceName, ref UIInfo>();
+	protected static ref map<ResourceName, ref SCR_EditableVehicleUIInfo> s_VehicleUIInfo = new map<ResourceName, ref SCR_EditableVehicleUIInfo>();
+	
+	static string GetNameFromPath(ResourceName path)
+	{		
+		string search = "" + path;
+		
+		int length = path.Length() - 1;
+		
+		int index = -1;
+		for(int i = length; i > 0; i--)
+		{
+			if(search.Get(i) == "/")
+			{
+				index = i + 1;
+				break;
+			}
+		}
+		
+		if(index != -1)
+			return path.Substring(index, path.Length() - index);
+		return path;		
+	}
+	
+	static string ArsenalTypeAsString(SCR_EArsenalItemType type)
+	{		
+		return SCR_Enum.GetEnumName(SCR_EArsenalItemType, type);		
+	}
+	
+	static int GetPlayerId()
+	{
+		IEntity playerEntity = SCR_PlayerController.GetLocalControlledEntity();
+		
+		if(!playerEntity) return 0;
+		return GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(playerEntity);
+	}
+	
+	static string GetPlayerLootFileName(int playerId = -1)
+	{
+		if(playerId < 0)
+			playerId = GetPlayerId();
+		
+		return GetGame().GetPlayerManager().GetPlayerName(playerId) + ".json";
+	}
+	
+	static bool PlayerHasLootFile(int playerId = -1)
+	{
+		string filename = GetPlayerLootFileName(playerId);
+		
+		SCR_JsonLoadContext context = new SCR_JsonLoadContext();
+		
+		return context.LoadFromFile(filename);
+	}
+	
+	static map<string, int> DeserializeLootJson(string jsonContents)
+	{
+		MenuManager menuManager = GetGame().GetMenuManager();
+		SCR_InventoryMenuUI inventoryMenu = SCR_InventoryMenuUI.Cast(menuManager.OpenMenu(ChimeraMenuPreset.Inventory20Menu));
+		
+		SCR_JsonLoadContext context = new SCR_JsonLoadContext();
+		
+		if(!context.ImportFromString(jsonContents))
+		{
+			Print(string.Format("TrainWreck: Player failed to load jsonContents %1", jsonContents), LogLevel.ERROR);
+			return null;
+		}
+		
+		ref map<string, int> items;		
+		if(!context.ReadValue("items", items))
+		{
+			Print(string.Format("TrainWreck: Player failed to load items from jsonContents: %1", jsonContents), LogLevel.ERROR);
+			return null;
+		}
+		
+		return items;
+	}
+	
+	static void ResetInventoryMenu()
+	{
+		MenuManager menuManager = GetGame().GetMenuManager();
+		menuManager.CloseAllMenus();
+		SCR_InventoryMenuUI inventoryMenu = SCR_InventoryMenuUI.Cast(menuManager.OpenMenu(ChimeraMenuPreset.Inventory20Menu));
+	}
+	
+	static UIInfo GetItemUIInfo(ResourceName prefab)
+	{
+		UIInfo resultInfo = s_ItemUIInfo.Get(prefab);
+		
+		if(!resultInfo)
+		{
+			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+			
+			if(entitySource)
+			{
+				for(int nComponent, componentCount = entitySource.GetComponentCount(); nComponent < componentCount; nComponent++)
+				{
+					IEntityComponentSource componentSource = entitySource.GetComponent(nComponent);
+					
+					if(componentSource.GetClassName().ToType().IsInherited(InventoryItemComponent))
+					{
+						BaseContainer attributesContainer = componentSource.GetObject("Attributes");
+						if(attributesContainer)
+						{
+							BaseContainer itemDisplayNameContainer = attributesContainer.GetObject("ItemDisplayName");
+							if(itemDisplayNameContainer)
+							{
+								resultInfo = UIInfo.Cast(BaseContainerTools.CreateInstanceFromContainer(itemDisplayNameContainer));
+								break;
+							}
+						}
+					}
+				}
+			}
+			
+			s_ItemUIInfo.Set(prefab, resultInfo);
+		}
+		
+		return resultInfo;
+	}
+	
+	static SCR_EditableVehicleUIInfo GetVehicleUIInfo(ResourceName prefab)
+	{
+		SCR_EditableVehicleUIInfo resultInfo = s_VehicleUIInfo.Get(prefab);
+		
+		if(!resultInfo)
+		{
+			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+			
+			if(entitySource)
+			{
+				for(int nComponent, componentCount = entitySource.GetComponentCount(); nComponent < componentCount; nComponent++)
+				{
+					IEntityComponentSource componentSource = entitySource.GetComponent(nComponent);
+					
+					if(componentSource.GetClassName().ToType().IsInherited(SCR_EditableVehicleComponent))
+					{
+						BaseContainer baseUIInfo = componentSource.GetObject("m_UIInfo");
+						if(baseUIInfo)
+						{
+							resultInfo = SCR_EditableVehicleUIInfo.Cast(BaseContainerTools.CreateInstanceFromContainer(baseUIInfo));
+							break;
+						}
+					}
+				}
+			}
+			
+			s_VehicleUIInfo.Set(prefab, resultInfo);
+		}
+		
+		return resultInfo;
+	}
+	
+	static string GetPrefabDisplayName(ResourceName prefab)
+	{
+		SCR_EditableVehicleUIInfo uiInfo = GetVehicleUIInfo(prefab);
+		
+		if(uiInfo)
+			return uiInfo.GetName();
+		
+		UIInfo itemUIInfo = GetItemUIInfo(prefab);
+		if(itemUIInfo)
+			return itemUIInfo.GetName();
+		
+		return prefab;
+	}
+	
+	static string GetPrefabDescription(ResourceName prefab)
+	{
+		SCR_EditableVehicleUIInfo uiInfo = GetVehicleUIInfo(prefab);
+		
+		if(uiInfo)
+			return uiInfo.GetDescription();
+		
+		UIInfo itemInfo = GetItemUIInfo(prefab);
+		
+		if(itemInfo)
+			return itemInfo.GetDescription();
+				
+		return prefab;
+	}
+	
+	static ResourceName GetPrefabDisplayIcon(ResourceName prefab)
+	{
+		SCR_EditableVehicleUIInfo uiInfo = GetVehicleUIInfo(prefab);
+		
+		if(uiInfo)
+			return uiInfo.GetIconPath();
+		
+		UIInfo itemInfo = GetItemUIInfo(prefab);
+		if(itemInfo)
+			return itemInfo.GetIconPath();
+		
+		return string.Empty;
+	}
+	
+	static bool InsertAutoEquipItem(SCR_InventoryStorageManagerComponent inventory, IEntity item)
+	{
+		EStoragePurpose purpose = EStoragePurpose.PURPOSE_ANY;
+		if(item.FindComponent(WeaponComponent)) purpose = EStoragePurpose.PURPOSE_WEAPON_PROXY;
+		if(item.FindComponent(BaseLoadoutClothComponent)) purpose = EStoragePurpose.PURPOSE_LOADOUT_PROXY;
+		if(item.FindComponent(SCR_GadgetComponent)) purpose = EStoragePurpose.PURPOSE_GADGET_PROXY;
+		
+		bool insertedItem = inventory.TryInsertItem(item, purpose, null);
+		
+		if(!insertedItem)
+			insertedItem = inventory.TryInsertItem(item, EStoragePurpose.PURPOSE_ANY, null);
+		
+		return insertedItem;
+	}
+	
+	//! Retrieve translated display name for a resource
+	static string GetTranslatedDisplayName(ResourceName resource)
+	{
+		return WidgetManager.Translate(GetPrefabDisplayName(resource));
+	}
 };

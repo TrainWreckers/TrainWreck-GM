@@ -3,12 +3,14 @@ class TW_SpawnInBuildingsClass : GenericEntityClass {};
 
 class TW_SpawnInBuildings : GenericEntity
 {	
-	[Attribute("", UIWidgets.ResourceNamePicker, params: "et")]
-	// Prefabs to spawn at positions nearby
-	protected ref array<ResourceName> m_GroupPrefabs;
+	//! Prefab to spawn
+	protected ResourceName m_Prefab;
 	
-	[Attribute("1", UIWidgets.ComboBox, "Projection type", "", ParamEnumArray.FromEnum(TW_EFactionType))]
-	protected TW_EFactionType m_FactionType;
+	[Attribute("", UIWidgets.Auto, "Faction")]
+	protected ref SCR_Faction m_FactionToSpawn;
+	
+	[Attribute("{9AF0548E8758756E}Prefabs/Groups/Group_Empty.et", UIWidgets.ResourceNamePicker, params: "et")]
+	protected ResourceName m_EmptyGroupPrefab;
 	
 	//! Can this system spawn more units?
 	protected bool m_RespawnEnabled = false;
@@ -30,7 +32,7 @@ class TW_SpawnInBuildings : GenericEntity
 	protected int m_AmountToSpawn;
 	
 	[Attribute("50", UIWidgets.Slider, params: "10 1000 10")]
-	protected float m_SpawnRadius;
+	protected float m_SpawnRadius;		
 	
 	protected bool m_IsActive = false;
 	
@@ -39,12 +41,10 @@ class TW_SpawnInBuildings : GenericEntity
 	private bool HasFired = false;
 	private IEntity m_Owner;
 	
-	void Initialize(float radius, notnull array<ResourceName> groupPrefabs, int amount)
+	void Initialize(float radius, ResourceName prefab, int amount)
 	{		
 		// Ensure we're empty in case this is called again in the future
-		m_GroupPrefabs.Clear(); 				
-		m_GroupPrefabs.InsertAll(groupPrefabs);
-		
+		m_Prefab = prefab;					
 		m_AmountToSpawn = amount;
 		m_SpawnRadius = radius;				
 		
@@ -90,6 +90,12 @@ class TW_SpawnInBuildings : GenericEntity
 	
 	private void Handle()
 	{
+		if(!m_Prefab)
+		{
+			PrintFormat("System does not have prefabs to use. Selected Faction: %1", m_FactionToSpawn, LogLevel.ERROR);
+			return;
+		}
+		
 		TrickleSpawn((int)m_AmountToSpawn);		
 	}
 	
@@ -100,6 +106,12 @@ class TW_SpawnInBuildings : GenericEntity
 	
 	private void TrickleSpawn(int amountLeft)
 	{
+		if(!m_Prefab)
+		{
+			Delete();
+			return;
+		}
+		
 		if(amountLeft <= 0)
 		{
 			Delete();
@@ -111,11 +123,28 @@ class TW_SpawnInBuildings : GenericEntity
 		if(!spawnPoint)
 			return;
 		
-		spawnPoint.Spawn(m_GroupPrefabs.GetRandomElement());
+		CreateNewGroup(spawnPoint);
 		amountLeft--;
 		
 		// Trickle spawn to avoid slowdown
 		GetGame().GetCallqueue().CallLater(TrickleSpawn, 250, false, amountLeft);
+	}
+	
+	private void CreateNewGroup(TW_AISpawnPoint spawnPoint)
+	{
+		SCR_AIGroup group = TW_Util.SpawnGroup(m_EmptyGroupPrefab, spawnPoint.GetOrigin(), 1, 0);
+		
+		// Have to set the group faction to selected faction
+		group.SetFaction(m_FactionToSpawn);
+		
+		// Need to tell the group which prefabs to spawn
+		group.m_aUnitPrefabSlots.Insert(m_Prefab);
+		
+		// Finally spawn those units
+		group.SpawnUnits();
+		
+		// Add them to point
+		spawnPoint.AddGroupToPoint(group);
 	}
 	
 	private void GetNearbySpawnPoints()
@@ -162,21 +191,14 @@ class TW_SpawnInBuildings : GenericEntity
 	bool IsActive() { return m_IsActive; }
 	void SetIsActive(bool value) { m_IsActive = value; }
 	
+	void SetPrefab(ResourceName prefab) { m_Prefab = prefab; }
+	ResourceName GetPrefab() { return m_Prefab; }
 	
-	TW_EFactionType GetFactionType() { return m_FactionType; }
-	void SetFactionType(TW_EFactionType factionType)
-	{
-		m_FactionType = factionType;
-	}
+	SCR_Faction GetFaction() { return m_FactionToSpawn; }
 	
-	void SetPrefabs(notnull array<ResourceName> prefabs)
-	{
-		m_GroupPrefabs.Clear();
-		m_GroupPrefabs.InsertAll(prefabs);
-	}
-	
-	array<ResourceName> GetPrefabs()
-	{
-		return m_GroupPrefabs;
-	}
+	void SetFaction(SCR_Faction faction) 
+	{ 		
+		m_FactionToSpawn = faction;
+		Print("Faction changed", LogLevel.WARNING);
+	}		
 };

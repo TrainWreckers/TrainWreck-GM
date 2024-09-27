@@ -4,8 +4,8 @@ TW_SpawnInBuildings {
   SCR_EditableEntityComponent "{620236E802CB0C6C}" {
    m_EntityType SYSTEM
    m_UIInfo SCR_EditableEntityUIInfo "{620236E87CE2C19A}" {
-    Name "Spawn In Buildings (US)"
-    Description "Spawn US in buildings"
+    Name "Spawn In Buildings"
+    Description "Spawn units from selected faction"
     m_Image ""
     m_aAuthoredLabels {
      1001 10000
@@ -38,8 +38,4 @@ TW_SpawnInBuildings {
   Hierarchy "{620236E873E86B3F}" {
   }
  }
- m_GroupPrefabs {
-  "{AABDC9D2B81FB923}Prefabs/Groups/BLUFOR/Group_US_RandomizedSoldier.et"
- }
- m_FactionType US
 }

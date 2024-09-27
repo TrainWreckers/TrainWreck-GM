@@ -86,6 +86,25 @@ class TW_AISpawnPoint : GenericEntity
 		RegisterSpawnPoint(this);
 	}
 	
+	void AddGroupToPoint(SCR_AIGroup group, ResourceName waypointOverride = ResourceName.Empty, IEntity goToPositionOverride = null, bool shouldPatrol = false, float patrolRadius = 250, int patrolWaypointCount = 5)
+	{
+		if(!group)
+			return;
+		
+		if(shouldPatrol)
+		{
+			TW_Util.CreatePatrolPathFor(group, m_PatrolWaypointPrefab, m_CycleWaypointPrefab, patrolWaypointCount, patrolRadius);
+			return;
+		}
+		
+		ResourceName waypointPrefab = m_DefaultWaypointPrefab;
+		
+		if(waypointOverride)
+			waypointPrefab = waypointOverride;
+		
+		GetGame().GetCallqueue().CallLater(SpawnWaypoint, 250, false, group, waypointPrefab);
+	}
+	
 	SCR_AIGroup Spawn(ResourceName groupPrefab, ResourceName waypointOverride = ResourceName.Empty, IEntity goToPositionOverride = null, bool shouldPatrol = false,	float patrolRadius = 250, int patrolWaypointCount = 5)
 	{
 		vector spawnPosition;
