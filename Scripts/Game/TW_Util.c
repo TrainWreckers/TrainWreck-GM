@@ -210,6 +210,9 @@ class TW_Util
 	//! Convert World Position to grid-based coordinates
 	static void ToGrid(vector position, out int x, out int y, int gridSize = 1000)
 	{
+		if(gridSize < 10)
+			gridSize = 1000;
+		
 		x = position[0] / gridSize;
 		y = position[2] / gridSize;
 	}
@@ -439,5 +442,27 @@ class TW_Util
 	static string GetTranslatedDisplayName(ResourceName resource)
 	{
 		return WidgetManager.Translate(GetPrefabDisplayName(resource));
+	}
+	
+	private static ResourceName s_EmptyGroupPrefab = "{9AF0548E8758756E}Prefabs/Groups/Group_Empty.et";
+	
+	static SCR_AIGroup CreateNewGroup(TW_AISpawnPoint spawnPoint, string factionKey, notnull array<ResourceName> characterPrefabs, int groupSize)
+	{
+		SCR_AIGroup group = TW_Util.SpawnGroup(s_EmptyGroupPrefab, spawnPoint.GetOrigin(), 1, 0);
+		
+		// Have to set the group faction to selected faction
+		group.SetFaction(GetGame().GetFactionManager().GetFactionByKey(factionKey));
+		
+		// Need to tell the group which prefabs to spawn
+		for(int i = 0; i < groupSize; i++)			
+			group.m_aUnitPrefabSlots.Insert(characterPrefabs.GetRandomElement());
+		
+		// Finally spawn those units
+		group.SpawnUnits();
+		
+		// Add them to point
+		spawnPoint.AddGroupToPoint(group);
+		
+		return group;
 	}
 };

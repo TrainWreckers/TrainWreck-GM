@@ -22,7 +22,7 @@ class TW_AISpawnPoint : GenericEntity
 	static void ChangeSpawnGridSize(int newSize)
 	{
 		s_SpawnGridSize = newSize;
-		ref TW_GridCoordArrayManager<TW_AISpawnPoint> manager = new TW_GridCoordArrayManager<TW_AISpawnPoint>();
+		ref TW_GridCoordArrayManager<TW_AISpawnPoint> manager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(newSize);
 		ref array<TW_AISpawnPoint> items = {};
 		int count = s_GridManager.GetAllItems(items);
 		
@@ -32,6 +32,8 @@ class TW_AISpawnPoint : GenericEntity
 		delete s_GridManager;
 		s_GridManager = manager
 	}
+	
+	static TW_GridCoordArrayManager<TW_AISpawnPoint> GetGridManager() { return s_GridManager; }
 	
 	//! Manager which will handle grabbing spawn points by grid square
 	private static ref TW_GridCoordArrayManager<TW_AISpawnPoint> s_GridManager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(s_SpawnGridSize);
