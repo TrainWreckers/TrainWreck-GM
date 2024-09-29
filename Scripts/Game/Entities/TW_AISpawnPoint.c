@@ -27,7 +27,8 @@ class TW_AISpawnPoint : GenericEntity
 		int count = s_GridManager.GetAllItems(items);
 		
 		foreach(TW_AISpawnPoint spawnPoint : items)
-			manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
+			if(spawnPoint)
+				manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
 		
 		delete s_GridManager;
 		s_GridManager = manager

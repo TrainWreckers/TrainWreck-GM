@@ -446,7 +446,7 @@ class TW_Util
 	
 	private static ResourceName s_EmptyGroupPrefab = "{9AF0548E8758756E}Prefabs/Groups/Group_Empty.et";
 	
-	static SCR_AIGroup CreateNewGroup(TW_AISpawnPoint spawnPoint, string factionKey, notnull array<ResourceName> characterPrefabs, int groupSize)
+	static SCR_AIGroup CreateNewGroup(TW_AISpawnPoint spawnPoint, string factionKey, ResourceName characterPrefab, int groupSize)
 	{
 		SCR_AIGroup group = TW_Util.SpawnGroup(s_EmptyGroupPrefab, spawnPoint.GetOrigin(), 1, 0);
 		
@@ -455,7 +455,7 @@ class TW_Util
 		
 		// Need to tell the group which prefabs to spawn
 		for(int i = 0; i < groupSize; i++)			
-			group.m_aUnitPrefabSlots.Insert(characterPrefabs.GetRandomElement());
+			group.m_aUnitPrefabSlots.Insert(characterPrefab);
 		
 		// Finally spawn those units
 		group.SpawnUnits();
