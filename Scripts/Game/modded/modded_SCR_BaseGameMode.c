@@ -42,7 +42,7 @@ modded class SCR_BaseGameMode
 	{
 		super.EOnInit(owner);
 		
-		if(!GetGame().InPlayMode() || !IsMaster())
+		if(!TW_Global.IsServer(this) || !TW_Global.IsInRuntime())
 			return;
 		
 		InitializePositionMonitor();
