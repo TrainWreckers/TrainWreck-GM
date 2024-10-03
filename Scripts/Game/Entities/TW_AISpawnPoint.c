@@ -12,8 +12,8 @@ class TW_AISpawnPoint : GenericEntity
 	[Attribute("{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et", UIWidgets.ResourceNamePicker, category: "Waypoints")]
 	protected ResourceName m_CycleWaypointPrefab;
 	
-	[Attribute("{E105D2F87098E1D8}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_LoiterPoint.et", UIWidgets.ResourceNamePicker, category: "Loiter")]
-	protected ResourceName m_LoiterPoint;	
+	[Attribute("{0EC5F76A0DDF05EF}Prefabs/Systems/Compositions/PatrolPoint/LoiterPost.et", UIWidgets.ResourceNamePicker, category: "Loiter")]
+	protected ResourceName m_LoiterPoint;
 	
 	//! Size of grid that is to be used by spawn points
 	private static int s_SpawnGridSize = 500;

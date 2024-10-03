@@ -1,0 +1,16 @@
+GenericEntity : "{CF2220AF47F02F54}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_base.et" {
+ ID "5CB0DBCC265217A0"
+ components {
+  SCR_AISmartActionSentinelComponent "{5CB0DBCC796A6F1C}" {
+   AIBehaviorTree "{BC53D77D23308CD6}AI/BehaviorTrees/SmartActions/SA_ObservationPost.bt"
+   Tags {
+    "ObservationPost"
+   }
+   m_vLookPosition 25 0 0
+   m_fLookDirectionRange 60
+   m_bUseBinoculars 1
+  }
+ }
+ coords 15.422 0.001 14.527
+ angleY 150.092
+}
