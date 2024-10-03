@@ -11,7 +11,10 @@ class TW_AISpawnPoint : GenericEntity
 	
 	[Attribute("{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et", UIWidgets.ResourceNamePicker, category: "Waypoints")]
 	protected ResourceName m_CycleWaypointPrefab;
-
+	
+	[Attribute("{E105D2F87098E1D8}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_LoiterPoint.et", UIWidgets.ResourceNamePicker, category: "Loiter")]
+	protected ResourceName m_LoiterPoint;	
+	
 	//! Size of grid that is to be used by spawn points
 	private static int s_SpawnGridSize = 500;
 	
@@ -87,6 +90,10 @@ class TW_AISpawnPoint : GenericEntity
 			return;
 		
 		RegisterSpawnPoint(this);
+		
+		EntitySpawnParams params = EntitySpawnParams();
+		GetTransform(params.Transform);
+		GetGame().SpawnEntityPrefab(m_LoiterPoint, false, GetWorld(), params);
 	}
 	
 	void AddGroupToPoint(SCR_AIGroup group, ResourceName waypointOverride = ResourceName.Empty, IEntity goToPositionOverride = null, bool shouldPatrol = false, float patrolRadius = 250, int patrolWaypointCount = 5)
