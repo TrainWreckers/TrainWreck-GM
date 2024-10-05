@@ -465,4 +465,39 @@ class TW_Util
 		
 		return group;
 	}
+	
+	//! Set vehicle to have random fuel between min/max
+	static void SetVehicleFuel(IEntity vehicle, float min, float max)
+	{
+		SCR_FuelManagerComponent fuelManager = TW<SCR_FuelManagerComponent>.Find(vehicle);
+		
+		if(!fuelManager)
+			return;
+		
+		float fuel = Math.RandomFloatInclusive(min, max);
+		fuelManager.SetTotalFuelPercentage(fuel);				
+	}
+	
+	//! Apply damage between min/max to a percentage of hit zones on vehicle at random
+	static void SetVehicleDamage(IEntity vehicle, float zonePercent, float min, float max)
+	{
+		DamageManagerComponent damageManager = TW<DamageManagerComponent>.Find(vehicle);
+		
+		if(!damageManager)
+			return;
+		
+		ref array<HitZone> zones = {};
+		damageManager.GetAllHitZones(zones);
+		
+		int count = zones.Count() * zonePercent;
+		
+		for(int i = 0; i < count; i++)
+		{
+			HitZone zone = zones.Get(i);
+			float maxHealth = zone.GetMaxHealth();
+			float damagePercent = Math.RandomFloatInclusive(min, max);
+			float damage = maxHealth * damagePercent;
+			zone.HandleDamage(damage, EDamageType.KINETIC, vehicle);			
+		}				
+	}
 };
