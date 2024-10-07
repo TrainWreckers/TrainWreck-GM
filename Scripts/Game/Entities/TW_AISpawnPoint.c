@@ -35,7 +35,7 @@ class TW_AISpawnPoint : GenericEntity
 		
 		delete s_GridManager;
 		s_GridManager = manager
-	}
+	}	
 	
 	static TW_GridCoordArrayManager<TW_AISpawnPoint> GetGridManager() { return s_GridManager; }
 	

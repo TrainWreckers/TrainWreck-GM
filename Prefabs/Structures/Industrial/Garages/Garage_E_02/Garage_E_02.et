@@ -47,5 +47,27 @@ SCR_DestructibleBuildingEntity : "{9D656741EA2AABC5}Prefabs/Structures/Industria
     coords 0.47 0.073 7.495
    }
   }
+  $grp TW_VehicleSpawnPoint {
+   {
+    ID "628E021DB8970F57"
+    coords 3.208 0.073 2.684
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021DB8971052"
+    coords -3.605 0.073 1.779
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021DB8974C59"
+    coords -9.104 0.073 1.593
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021DB8974C6D"
+    coords 9.923 0.073 4.082
+    m_AllowedVehicleTypes 6
+   }
+  }
  }
 }

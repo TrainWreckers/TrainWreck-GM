@@ -19,32 +19,32 @@ SCR_DestructibleBuildingEntity : "{8FE02C29CCA9942D}Prefabs/Structures/Services/
    }
    {
     ID "6203364DEF04B684"
-    coords -4.143 0.05 -1.076
+    coords -3.168 0.05 -2.07
     angleY 35.486
    }
    {
     ID "6203364DEF04B69E"
-    coords -6.041 0.05 -2.513
+    coords -6.853 0.05 -3.327
     angleY 35.486
    }
    {
     ID "6203364DEF04B6AF"
-    coords -4.525 0.045 -3.278
+    coords -3.933 0.045 -3.574
     angleY 35.486
    }
    {
     ID "6203364DEF053027"
-    coords -6.43 0.05 -0.286
+    coords -6.884 0.05 -0.365
     angleY 35.486
    }
    {
     ID "6203364DEF058A4B"
-    coords -4.271 0.05 2.31
+    coords -3.148 0.05 3.357
     angleY 35.486
    }
    {
     ID "6203364DEF05D6D3"
-    coords -6.69 0.05 2.431
+    coords -6.992 0.05 3.906
     angleY 35.486
    }
    {
@@ -132,6 +132,11 @@ SCR_DestructibleBuildingEntity : "{8FE02C29CCA9942D}Prefabs/Structures/Services/
     coords -0.286 0.05 0.405
     angleY 35.486
    }
+  }
+  TW_VehicleSpawnPoint {
+   ID "628E021EF9B0E85C"
+   coords -5.121 0.042 -0.205
+   m_AllowedVehicleTypes 6
   }
  }
 }

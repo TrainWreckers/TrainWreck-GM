@@ -67,5 +67,18 @@ SCR_DestructibleBuildingEntity : "{58A839659867372C}Prefabs/Structures/Houses/Vi
     coords 3.706 0.35 -2.263
    }
   }
+  $grp TW_VehicleSpawnPoint {
+   {
+    ID "628E021BF63AEAF0"
+    coords 5.382 0 9.657
+    angleY -48.288
+    m_AllowedVehicleTypes Small
+   }
+   {
+    ID "628E021BF63AF23F"
+    coords -5.998 0 -0.252
+    m_AllowedVehicleTypes 14
+   }
+  }
  }
 }

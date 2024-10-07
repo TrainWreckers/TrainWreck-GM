@@ -8,12 +8,17 @@ SCR_DestructibleBuildingEntity : "{B1C6B4A379D1BB77}Prefabs/Structures/Houses/Ga
    }
    {
     ID "62032186882EA831"
-    coords -1.388 0.003 -0.374
+    coords -1.488 0.003 2.098
    }
    {
     ID "62032186882EF1AF"
-    coords 1.029 0.009 -1.702
+    coords 1.718 0.009 -3.132
    }
+  }
+  TW_VehicleSpawnPoint {
+   ID "628E021C8436F753"
+   coords 0.006 0.003 -0.491
+   m_AllowedVehicleTypes Small
   }
  }
 }

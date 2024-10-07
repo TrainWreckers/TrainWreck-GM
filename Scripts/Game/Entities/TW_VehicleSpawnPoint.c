@@ -1,7 +1,18 @@
+enum TW_VehicleType
+{
+	Small = 1 << 1,
+	Medium = 1 << 2,
+	Large = 1 << 3,
+	Air = 1 << 4
+};
+
 [EntityEditorProps(category: "GameScripted/TrainWreck", description: "Vehicle Spawn Point")]
 class TW_VehicleSpawnPointClass : GenericEntityClass{};
 class TW_VehicleSpawnPoint : GenericEntity 
-{
+{	
+	[Attribute("0", UIWidgets.Flags, "", enums: ParamEnumArray.FromEnum(TW_VehicleType))]
+	protected TW_VehicleType m_AllowedVehicleTypes;
+	
 	protected bool m_CanSpawn = true;
 	
 	protected RplComponent m_RplComponent;
@@ -12,6 +23,25 @@ class TW_VehicleSpawnPoint : GenericEntity
 	{
 		m_RplComponent = TW<RplComponent>.Find(owner);		
 		s_VehicleGrid.InsertByWorld(GetOrigin(), this);
+	}
+	
+	static void ChangeSpawnGridSize(int newSize)
+	{
+		ref TW_GridCoordArrayManager<TW_VehicleSpawnPoint> manager = new TW_GridCoordArrayManager<TW_VehicleSpawnPoint>(newSize);
+		ref array<TW_VehicleSpawnPoint> items = {};
+		int count = s_VehicleGrid.GetAllItems(items);
+		
+		foreach(TW_VehicleSpawnPoint spawnPoint : items)
+			if(spawnPoint)
+				manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
+		
+		delete s_VehicleGrid;
+		s_VehicleGrid = manager
+	}	
+	
+	bool CanSpawnVehicleType(TW_VehicleType type)
+	{
+		return SCR_Enum.HasFlag(m_AllowedVehicleTypes, type);
 	}
 	
 	bool SpawnVehicle(ResourceName vehiclePrefab, out IEntity vehicle)
@@ -37,7 +67,6 @@ class TW_VehicleSpawnPoint : GenericEntity
 			return false;
 		
 		return true;
-		
 	}
 	
 	vector GetForwardVec()

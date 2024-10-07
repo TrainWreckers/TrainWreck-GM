@@ -23,5 +23,42 @@ SCR_DestructibleBuildingEntity : "{1E7AC996BD3B73A7}Prefabs/Structures/Military/
     coords -17.742 0.439 -4.833
    }
   }
+  $grp TW_VehicleSpawnPoint {
+   {
+    ID "628E021D2CBD2FA0"
+    coords -12.753 0.439 4.049
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021D2CBD2FAF"
+    coords -2.555 0.439 3.456
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021D2CBD2FB4"
+    coords -17.378 0.439 4.134
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021D2CBD2FC7"
+    coords 15.509 0.439 3.758
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021D2CBD2FD6"
+    coords 1.945 0.439 4.252
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021D2CBD2FE8"
+    coords 20.713 0.439 4.029
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021D2CBD8BDF"
+    coords 25.003 0.439 3.92
+    m_AllowedVehicleTypes 14
+   }
+  }
  }
 }

@@ -380,6 +380,36 @@ class TW_Util
 		return resultInfo;
 	}
 	
+	private static ref map<ResourceName, vector> s_VehicleSizes = new map<ResourceName, vector>();
+	static vector GetEntitySize(ResourceName prefab, BaseWorld world = null)
+	{
+		if(s_VehicleSizes.Contains(prefab))
+			return s_VehicleSizes.Get(prefab);
+		
+		if(!world)
+			world = GetGame().GetWorld();
+		
+		IEntity spawnedEntity = GetGame().SpawnEntityPrefab(prefab, false, world, EntitySpawnParams());
+		
+		if(!spawnedEntity)
+		{
+			s_VehicleSizes.Set(prefab, vector.One);
+			return vector.One;
+		}
+		
+		vector size = SCR_EntityHelper.GetEntitySize(spawnedEntity);
+		s_VehicleSizes.Set(prefab, size);
+		
+		GetGame().GetCallqueue().CallLater(DeleteLater, 500, false, spawnedEntity);
+		
+		return size;
+	}
+	
+	private static void DeleteLater(IEntity entity)
+	{
+		SCR_EntityHelper.DeleteEntityAndChildren(entity);
+	}
+	
 	static string GetPrefabDisplayName(ResourceName prefab)
 	{
 		SCR_EditableVehicleUIInfo uiInfo = GetVehicleUIInfo(prefab);

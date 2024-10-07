@@ -40,7 +40,7 @@ SCR_DestructibleBuildingEntity : "{5478F1635999CE3B}Prefabs/Structures/Agricultu
    }
    {
     ID "62032180D1029B09"
-    coords 4.49 0 -25.036
+    coords 1.763 0 -24.185
    }
    {
     ID "62032180D1032465"
@@ -61,6 +61,31 @@ SCR_DestructibleBuildingEntity : "{5478F1635999CE3B}Prefabs/Structures/Agricultu
    {
     ID "62032180D103F728"
     coords 6.103 0 -21.065
+   }
+  }
+  $grp TW_VehicleSpawnPoint {
+   {
+    ID "628E021E2F2D3277"
+    coords 0.613 -0.163 -39.605
+    angleY -175.474
+    m_AllowedVehicleTypes 14
+   }
+   {
+    ID "628E021E2F2DB27C"
+    coords 6.126 0 -25.82
+    angleY 94.57
+    m_AllowedVehicleTypes 6
+   }
+   {
+    ID "628E021E2F328F86"
+    coords -4.057 0 -6.988
+    angleY -87.371
+    m_AllowedVehicleTypes 6
+   }
+   {
+    ID "628E021E2F32A9C6"
+    coords 0.109 0 18.537
+    m_AllowedVehicleTypes 14
    }
   }
  }

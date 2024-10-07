@@ -19,5 +19,10 @@ SCR_DestructibleBuildingEntity : "{C3BCE9690AC14EA4}Prefabs/Structures/Agricultu
     coords 1.966 0 3.091
    }
   }
+  TW_VehicleSpawnPoint {
+   ID "628E021F07607A0E"
+   coords 0.282 0.003 -0.264
+   m_AllowedVehicleTypes 6
+  }
  }
 }

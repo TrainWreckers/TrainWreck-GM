@@ -4,7 +4,7 @@ SCR_DestructibleBuildingEntity : "{ED100C4FA5097FC5}Prefabs/Structures/Houses/Vi
   $grp TW_AISpawnPoint {
    {
     ID "6203218C23927AF9"
-    coords 0.953 0.3 -1.812
+    coords 1.841 0.3 -3.008
    }
    {
     ID "6203218C2393C86A"
@@ -12,8 +12,13 @@ SCR_DestructibleBuildingEntity : "{ED100C4FA5097FC5}Prefabs/Structures/Houses/Vi
    }
    {
     ID "6203218C2393E342"
-    coords -0.043 0.3 2.182
+    coords -2.185 0.3 1.003
    }
+  }
+  TW_VehicleSpawnPoint {
+   ID "628E021BBE9C21D6"
+   coords -0.402 0.3 0.141
+   m_AllowedVehicleTypes Small
   }
  }
 }
