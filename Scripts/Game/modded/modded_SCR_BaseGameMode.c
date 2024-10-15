@@ -9,6 +9,33 @@ modded class SCR_BaseGameMode
 	protected ref TW_MonitorPositions positionMonitor;
 	protected float m_PositionMonitorUpdateInterval = 10.0;
 	
+	protected ref TW_MapManager m_MapManager;
+	
+	protected ref FactionCompositions m_USCompositions;	
+	protected ref FactionCompositions m_USSRCompositions;	
+	protected ref FactionCompositions m_FIACompositions;	
+	
+	FactionCompositions GetFIACompositions() { return m_FIACompositions; }
+	FactionCompositions GetUSSRCompositions() { return m_USSRCompositions; }
+	FactionCompositions GetUSCompositions() { return m_USCompositions; }
+	
+	private void InitializeCompositions()
+	{
+		m_USCompositions = Load("{0C96E3FCC84E8CD4}Configs/Compositions/TW_US_Compositions.conf");
+		m_USSRCompositions = Load("{B482220F45A754E6}Configs/Compositions/TW_USSR_Compositions.conf");
+		m_FIACompositions = Load("{E37B578DE2724443}Configs/Compositions/TW_FIA_Compositions.conf");
+	}
+	
+	private FactionCompositions Load(ResourceName prefab)
+	{
+		Resource configContainer = BaseContainerTools.LoadContainer(prefab);
+		if (!configContainer || !configContainer.IsValid())
+			return null;
+
+		ref FactionCompositions registry = FactionCompositions.Cast(BaseContainerTools.CreateInstanceFromContainer(configContainer.GetResource().ToBaseContainer()));
+		return registry;
+	}
+	
 	/*!
 		This update doesn't trigger every interval. This only changes
 		when player chunks from previous check are different from current
@@ -48,14 +75,34 @@ modded class SCR_BaseGameMode
 		InitializePositionMonitor();
 		
 		// 10 seconds before things kick off
-		GetGame().GetCallqueue().CallLater(DelayEvents, 10000, false);	
+		GetGame().GetCallqueue().CallLater(DelayEvents, 10000, false);					
 	};
+	
 	
 	private void DelayEvents()
 	{
 		if(positionMonitor)
 			GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);
-	}
+		InitializeCompositions();
+		m_MapManager = TW_MapManager();
+		m_MapManager.InitializeMap(this, GetGame().GetMapManager());
+		
+		int attempts = 5;
+		
+		while(attempts > 0)
+		{
+			ref TW_MapLocation location = m_MapManager.GetRandomLocation();
+			ref LocationConfig config = m_MapManager.settings.GetConfigType(location.LocationType());
+			
+			attempts--;
+			bool result = m_MapManager.TrySpawnCompositionCollection("USSR", location.GetPosition(), config.radius * m_MapManager.settings.gridSize, Math.RandomIntInclusive(3,10), Math.RandomIntInclusive(2,4), Math.RandomIntInclusive(2,6), Math.RandomIntInclusive(1,3), Math.RandomIntInclusive(0, 1));	
+			PrintFormat("TrainWreck-GM: Spawned composition(%1)", result);
+			
+			if(result)
+				break;
+		}		
+		
+	}		
 	
 	void DisableGMBudget_SetBudgetsEnabled(bool enabled) 
 	{

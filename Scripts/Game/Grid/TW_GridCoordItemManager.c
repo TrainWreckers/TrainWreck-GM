@@ -103,6 +103,14 @@ class TW_GridCoordItemManager<Class T>
 		return sub.Contains(y);
 	}
 	
+	bool HasPosition(vector worldPosition)
+	{
+		int x, y;
+		TW_Util.ToGrid(worldPosition, x, y, GridSize);
+		
+		return HasCoord(x,y);
+	}
+	
 	void InsertCoord(TW_GridCoordItem<T> coord)
 	{
 		// IF X coordinate doesn't exist we have to insert both x and y

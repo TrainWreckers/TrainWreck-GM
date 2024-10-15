@@ -102,6 +102,14 @@ class TW_GridCoordArrayManager<Class T>
 		return sub.Contains(y);
 	}
 	
+	bool HasPosition(vector worldPosition)
+	{
+		int x, y;
+		TW_Util.ToGrid(worldPosition, x, y, GridSize);
+		
+		return HasCoord(x,y);
+	}
+	
 	//! Retrieve coords around center
 	int GetNeighbors(notnull out array<ref TW_GridCoordArray<T>> items, int x, int y, int radius = 1, bool includeCenter = true)
 	{
