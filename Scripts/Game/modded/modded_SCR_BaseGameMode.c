@@ -87,22 +87,27 @@ modded class SCR_BaseGameMode
 		m_MapManager = TW_MapManager();
 		m_MapManager.InitializeMap(this, GetGame().GetMapManager());
 		
-		int attempts = 5;
+	}
+	
+	private int m_CompositionSpawnAttempts = 50;
+	void TryToSpawnSite()
+	{
+		m_CompositionSpawnAttempts--;
 		
-		while(attempts > 0)
+		ref TW_MapLocation location = m_MapManager.GetRandomLocation();
+		ref LocationConfig config = m_MapManager.settings.GetConfigType(location.LocationType());
+		
+		m_CompositionSpawnAttempts--;
+		bool result = m_MapManager.TrySpawnCompositionCollection("USSR", location.GetPosition(), config.radius * m_MapManager.settings.gridSize, Math.RandomIntInclusive(3,10), Math.RandomIntInclusive(2,4), Math.RandomIntInclusive(2,6), Math.RandomIntInclusive(1,3), Math.RandomIntInclusive(0, 1));	
+		PrintFormat("TrainWreck-GM: Spawned composition(%1)", result);
+		
+		if(m_CompositionSpawnAttempts < 0)
 		{
-			ref TW_MapLocation location = m_MapManager.GetRandomLocation();
-			ref LocationConfig config = m_MapManager.settings.GetConfigType(location.LocationType());
-			
-			attempts--;
-			bool result = m_MapManager.TrySpawnCompositionCollection("USSR", location.GetPosition(), config.radius * m_MapManager.settings.gridSize, Math.RandomIntInclusive(3,10), Math.RandomIntInclusive(2,4), Math.RandomIntInclusive(2,6), Math.RandomIntInclusive(1,3), Math.RandomIntInclusive(0, 1));	
-			PrintFormat("TrainWreck-GM: Spawned composition(%1)", result);
-			
-			if(result)
-				break;
-		}		
+			PrintFormat("TrainWreck-GM: Failed to find suitable location for base", LogLevel.ERROR);
+			m_MapManager.GetOnCompositionBasePlacementFailed().Remove(TryToSpawnSite);
+		}
+	}
 		
-	}		
 	
 	void DisableGMBudget_SetBudgetsEnabled(bool enabled) 
 	{

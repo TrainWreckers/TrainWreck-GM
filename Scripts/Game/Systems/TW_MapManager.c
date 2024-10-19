@@ -13,6 +13,16 @@ class TW_CompositionSpawnSettings
 	int DefensiveWalls;
 	int DefensiveBunkers;
 	ref FactionCompositions Compositions;
+	
+	void TW_CompositionSpawnSettings(FactionCompositions settings = null)
+	{
+		SmallCompositions = 0;
+		MediumCompositions = 0;
+		LargeCompositions = 0;
+		DefensiveWalls = 0;
+		DefensiveBunkers = 0;
+		Compositions = settings;
+	}
 }
 
 class TW_MapManager
@@ -23,15 +33,22 @@ class TW_MapManager
 	
 	ref TW_GridCoordItemManager<string> gridManager;
 	
-	const int SMALL_COMPOSITION_SIZE = 8;
-	const int MEDIUM_COMPOSITION_SIZE = 15;
-	const int LARGE_COMPOSITION_SIZE = 23;
+	const int PADDING = 10;
+	const int SMALL_COMPOSITION_SIZE = 8 + PADDING; // 8
+	const int MEDIUM_COMPOSITION_SIZE = 15 + PADDING; // 15
+	const int LARGE_COMPOSITION_SIZE = 23 + PADDING; // 23
+	const int SPAWN_DELAY = 1000;
 	private SCR_BaseGameMode m_GameMode;
 	
 	//! Is the manager currently trickle spawning compositions
 	private bool m_IsTrickleSpawning = false;
 	private ref array<IEntity> m_BaseEntities = {};
 	
+	private ref ScriptInvoker m_OnCompositionBasePlacementFailed = new ScriptInvoker();
+	private ref ScriptInvoker m_OnCompositionBasePlacementSuccess = new ScriptInvoker();
+	
+	ScriptInvoker GetOnCompositionBasePlacementFailed() { return m_OnCompositionBasePlacementFailed; }
+	ScriptInvoker GetOnCompositionBasePlacementSuccess() { return m_OnCompositionBasePlacementSuccess; }
 	
 	void InitializeMap(SCR_BaseGameMode gameMode, MapEntity mapManager)
 	{
@@ -80,197 +97,7 @@ class TW_MapManager
 	{
 		foreach(IEntity entity : entities)
 			SCR_EntityHelper.DeleteEntityAndChildren(entity);
-	}
-	
-	private void SpawnSmallCompositions(TW_CompositionSpawnSettings spawnAmount, TW_CompositionSpawnSettings config, vector center, vector currentPosition)
-	{
-		if(!config.Compositions.HasSmallCompositions())
-			spawnAmount.SmallCompositions = -1;
-		
-		if(spawnAmount.SmallCompositions >= config.SmallCompositions || spawnAmount.SmallCompositions < 0)
-		{
-			GetGame().GetCallqueue().CallLater(SpawnMediumCompositions, 250, false, spawnAmount, config, center, currentPosition);
-			return;
-		}
-		
-		IEntity current;
-		
-		int attempts = 5;
-		bool success = false;
-		while(attempts > 0)
-		{
-			attempts--;
-			
-			success = TrySpawnComposition(center, current, currentPosition, 50, TW_CompositionSize.SMALL, config.Compositions.GetRandomSmallComposition());
-			
-			if(success)
-			{
-				m_BaseEntities.Insert(current);	
-				break;
-			}
-		}
-		
-		if(!success)
-		{
-			DeleteAll(m_BaseEntities);
-			m_IsTrickleSpawning = false;
-			return;
-		}
-		
-		spawnAmount.SmallCompositions++;
-	}
-	
-	private void SpawnMediumCompositions(TW_CompositionSpawnSettings spawnAmount, TW_CompositionSpawnSettings config, vector center, vector currentPosition)
-	{
-		if(!config.Compositions.HasMediumCompositions())
-			spawnAmount.MediumCompositions = -1;
-		
-		if(spawnAmount.MediumCompositions >= config.MediumCompositions || spawnAmount.MediumCompositions < 0)
-		{
-			GetGame().GetCallqueue().CallLater(SpawnLargeCompositions, 250, false, spawnAmount, config, center, currentPosition);
-			return;
-		}
-		
-		IEntity current;
-		
-		int attempts = 5;
-		bool success = false;
-		while(attempts > 0)
-		{
-			attempts--;
-			
-			success = TrySpawnComposition(center, current, currentPosition, 50, TW_CompositionSize.MEDIUM, config.Compositions.GetRandomMediumComposition());
-			
-			if(success)
-			{
-				m_BaseEntities.Insert(current);	
-				break;
-			}
-		}
-		
-		if(!success)
-		{
-			DeleteAll(m_BaseEntities);
-			m_IsTrickleSpawning = false;
-			return;
-		}
-		
-		spawnAmount.MediumCompositions++;
-	}
-	
-	private void SpawnLargeCompositions(TW_CompositionSpawnSettings spawnAmount, TW_CompositionSpawnSettings config, vector center, vector currentPosition)
-	{
-		if(!config.Compositions.HasLargeCompositions())
-			spawnAmount.LargeCompositions = -1;
-		
-		if(spawnAmount.LargeCompositions >= config.LargeCompositions || spawnAmount.LargeCompositions < 0)
-		{
-			GetGame().GetCallqueue().CallLater(SpawnDefensiveBunkers, 250, false, spawnAmount, config, center, currentPosition);
-			return;
-		}
-		
-		IEntity current;
-		
-		int attempts = 5;
-		bool success = false;
-		while(attempts > 0)
-		{
-			attempts--;
-			
-			success = TrySpawnComposition(center, current, currentPosition, 50, TW_CompositionSize.LARGE, config.Compositions.GetRandomLargeComposition());
-			
-			if(success)
-			{
-				m_BaseEntities.Insert(current);	
-				break;
-			}
-		}
-		
-		if(!success)
-		{
-			DeleteAll(m_BaseEntities);
-			m_IsTrickleSpawning = false;
-			return;
-		}
-		
-		spawnAmount.LargeCompositions++;
-	}
-	
-	private void SpawnDefensiveBunkers(TW_CompositionSpawnSettings spawnAmount, TW_CompositionSpawnSettings config, vector center, vector currentPosition)
-	{
-		if(!config.Compositions.HasDefensiveBunkers())
-			spawnAmount.DefensiveBunkers = -1;
-		
-		if(spawnAmount.DefensiveBunkers >= config.DefensiveBunkers || spawnAmount.DefensiveBunkers < 0)
-		{
-			GetGame().GetCallqueue().CallLater(SpawnDefensiveWalls, 250, false, spawnAmount, config, center, currentPosition);
-			return;
-		}
-		
-		IEntity current;
-		
-		int attempts = 5;
-		bool success = false;
-		while(attempts > 0)
-		{
-			attempts--;
-			
-			success = TrySpawnComposition(center, current, currentPosition, 50, TW_CompositionSize.SMALL, config.Compositions.GetRandomDefensiveBunkder());
-			
-			if(success)
-			{
-				m_BaseEntities.Insert(current);	
-				break;
-			}
-		}
-		
-		if(!success)
-		{
-			DeleteAll(m_BaseEntities);
-			m_IsTrickleSpawning = false;
-			return;
-		}
-		
-		spawnAmount.DefensiveBunkers++;
-	}
-	
-	private void SpawnDefensiveWalls(TW_CompositionSpawnSettings spawnAmount, TW_CompositionSpawnSettings config, vector center, vector currentPosition)
-	{
-		if(!config.Compositions.HasDefensiveWalls())
-			spawnAmount.DefensiveWalls = -1;
-		
-		if(spawnAmount.DefensiveWalls >= config.DefensiveWalls || spawnAmount.DefensiveWalls < 0)
-		{
-			m_IsTrickleSpawning = false;
-			m_BaseEntities.Clear();
-			return;
-		}
-		
-		IEntity current;
-		
-		int attempts = 5;
-		bool success = false;
-		while(attempts > 0)
-		{
-			attempts--;
-			
-			success = TrySpawnComposition(center, current, currentPosition, 50, TW_CompositionSize.SMALL, config.Compositions.GetRandomDefensiveWall());
-			
-			if(success)
-			{
-				m_BaseEntities.Insert(current);	
-				break;
-			}
-		}
-		
-		if(!success)
-		{
-			DeleteAll(m_BaseEntities);
-			m_IsTrickleSpawning = false;
-			return;
-		}
-		
-		spawnAmount.DefensiveWalls++;
+		m_OnCompositionBasePlacementFailed.Invoke();
 	}
 	
 	bool TrySpawnCompositionCollection(FactionKey faction, vector basePosition, float spacing, int defensiveWalls, int defensiveStructures, int smallCompositions, int mediumCompositions, int largeCompositions)
@@ -298,130 +125,19 @@ class TW_MapManager
 		int attempts = 0;
 		basePosition = TW_Util.GetLandPositionAround(basePosition, spacing);
 		
-		if(config.HasSmallCompositions())
-		{
-			attempts = 0;
-			for(int i = 0; i < smallCompositions; i++)
-			{
-				if(TrySpawnComposition(basePosition, spawnedEntity, position, 50, TW_CompositionSize.SMALL, config.GetRandomSmallComposition()))
-				{
-					spawnedEntities.Insert(spawnedEntity);
-					basePosition = TW_Util.GetLandPositionAround(position, 25);
-				}
-				else
-				{
-					attempts++;
-					
-					if(attempts > 10)
-					{
-						DeleteAll(spawnedEntities);
-						return false;
-					}
-					else 
-						i--;
-				}
-			}
-		}
+		m_IsTrickleSpawning = true;
 		
-		if(config.HasMediumCompositions())
-		{
-			attempts = 0;
-			for(int i = 0; i < mediumCompositions; i++)
-			{
-				if(TrySpawnComposition(basePosition, spawnedEntity, position, 50, TW_CompositionSize.MEDIUM, config.GetRandomMediumComposition()))
-				{
-					spawnedEntities.Insert(spawnedEntity);
-					basePosition = TW_Util.GetLandPositionAround(position, 25);
-				}
-				else
-				{
-					attempts++;
-					
-					if(attempts > 10)
-					{
-						DeleteAll(spawnedEntities);
-						return false;
-					}
-					else 
-						i--;
-				}
-			}
-		}
+		if(!m_BaseEntities) m_BaseEntities = {};
+		m_BaseEntities.Clear();
 		
-		if(config.HasLargeCompositions())
-		{
-			attempts = 0;
-			for(int i = 0; i < largeCompositions; i++)
-			{
-				if(TrySpawnComposition(basePosition, spawnedEntity, position, 50, TW_CompositionSize.LARGE, config.GetRandomLargeComposition()))
-				{
-					spawnedEntities.Insert(spawnedEntity);
-					basePosition = TW_Util.GetLandPositionAround(position, 25);
-				}
-				else
-				{
-					attempts++;
-					
-					if(attempts > 10)
-					{
-						DeleteAll(spawnedEntities);
-						return false;
-					}
-					else 
-						i--;
-				}
-			}
-		}
+		ref TW_CompositionSpawnSettings spawnConfig = new TW_CompositionSpawnSettings(config);
+		ref TW_CompositionSpawnSettings amounts = new TW_CompositionSpawnSettings();
 		
-		if(config.HasDefensiveWalls())
-		{
-			attempts = 0;
-			for(int i = 0; i < defensiveWalls; i++)
-			{
-				if(TrySpawnComposition(basePosition, spawnedEntity, position, 50, TW_CompositionSize.SMALL, config.GetRandomDefensiveWall()))
-				{
-					spawnedEntities.Insert(spawnedEntity);
-					basePosition = TW_Util.GetLandPositionAround(position, 25);
-				}
-				else
-				{
-					attempts++;
-					
-					if(attempts > 10)
-					{
-						DeleteAll(spawnedEntities);
-						return false;
-					}
-					else 
-						i--;
-				}
-			}
-		}
-		
-		if(config.HasDefensiveBunkers())
-		{
-			attempts = 0;
-			for(int i = 0; i < defensiveStructures; i++)
-			{
-				if(TrySpawnComposition(basePosition, spawnedEntity, position, 50, TW_CompositionSize.SMALL, config.GetRandomDefensiveBunkder()))
-				{
-					spawnedEntities.Insert(spawnedEntity);
-					basePosition = TW_Util.GetLandPositionAround(position, 25);
-				}
-				else
-				{
-					attempts++;
-					
-					if(attempts > 10)
-					{
-						DeleteAll(spawnedEntities);
-						return false;
-					}
-					else 
-						i--;
-				}
-			}
-		}
+		spawnConfig.LargeCompositions = Math.RandomIntInclusive(0, 2);
+		spawnConfig.MediumCompositions = Math.RandomIntInclusive(0, 4);
+		spawnConfig.SmallCompositions = Math.RandomIntInclusive(1, 5);
+		spawnConfig.DefensiveWalls = Math.RandomIntInclusive(0, 5);
+		spawnConfig.DefensiveBunkers = Math.RandomIntInclusive(0, 4);
 		
 		return true;		
 	}
@@ -455,7 +171,13 @@ class TW_MapManager
 			{
 				SCR_EditorPreviewParams previewParams = SCR_EditorPreviewParams.CreateParams(params.Transform, EEditorTransformVertical.TERRAIN);
 				SCR_RefPreviewEntity.SpawnAndApplyReference(editable, previewParams);
+				Print("TrainWreck-GM: Oriented Terrain for Entity");
 			}
+			
+			SCR_SlotCompositionComponent slotComposition = SCR_SlotCompositionComponent.Cast(entity.FindComponent(SCR_SlotCompositionComponent));
+			
+			if(slotComposition)				
+				slotComposition.OrientToTerrain();
 			
 			SCR_AIWorld aiWorld = SCR_AIWorld.Cast(GetGame().GetAIWorld());
 			if(aiWorld)
@@ -486,7 +208,7 @@ class TW_MapManager
 			}
 		}
 		
-		return SCR_WorldTools.FindEmptyTerrainPosition(position, centerPosition, radius, compositionSize, compositionSize);
+		return SCR_WorldTools.FindEmptyTerrainPosition(position, centerPosition, radius, compositionSize, compositionSize, TraceFlags.ENTS | TraceFlags.OCEAN | TraceFlags.WORLD);
 	}
 	
 	TW_MapLocation GetRandomLocation()

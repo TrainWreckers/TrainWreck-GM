@@ -14,6 +14,16 @@ class TW_Util
 		return position;
 	}
 	
+	static vector RandomPositionAround(vector point, int radius, int minimumDistance = 0)
+	{
+		vector position = s_Generator.GenerateRandomPointInRadius(minimumDistance, radius, point);
+		
+		while(IsWater(position))
+			position = RandomPositionAround(point, Math.Max(radius * 0.9, minimumDistance), minimumDistance);
+		
+		return position;
+	}
+	
 	static vector RandomPositionAround_ButNotNear(IEntity point, notnull array<IEntity> entities, int radius, int minimumDistance = 0)
 	{
 		while(true)
@@ -64,12 +74,9 @@ class TW_Util
 		else
 			params.Transform[3] = s_Generator.GenerateRandomPointInRadius(minimumDistance, radius, center);
 		
-		int attempts = 0;
-		while(IsWater(params.Transform[3]) && attempts < 30)
-		{
-			params.Transform[3] = s_Generator.GenerateRandomPointInRadius(minimumDistance, Math.ClampInt(radius-(attempts*25), minimumDistance, int.MAX), center);
-			attempts++;
-		}
+		vector pos = params.Transform[3];
+		SCR_WorldTools.FindEmptyTerrainPosition(pos, params.Transform[3], radius, 1, 1, TraceFlags.ENTS | TraceFlags.WORLD);
+		params.Transform[3] = pos;
 		
 		return SCR_AIGroup.Cast(GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params));
 	}
