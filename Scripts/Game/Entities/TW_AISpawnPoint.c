@@ -149,6 +149,9 @@ class TW_AISpawnPoint : GenericEntity
 	
 	void SpawnWaypoint(SCR_AIGroup group, ResourceName waypointPrefab)
 	{				
+		if(!group)
+			return;
+		
 		AIWaypoint waypoint = TW_Util.CreateWaypointAt(waypointPrefab, group.GetOrigin());
 		
 		if(!waypoint)
