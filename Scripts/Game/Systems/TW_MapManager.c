@@ -13,6 +13,7 @@ class TW_CompositionSpawnSettings
 	int DefensiveWalls;
 	int DefensiveBunkers;
 	ref FactionCompositions Compositions;
+	bool ShouldFailAfterRetries = false;
 	
 	void TW_CompositionSpawnSettings(FactionCompositions settings = null)
 	{
@@ -159,7 +160,11 @@ class TW_MapManager
 			angles[0] = Math.RandomFloat(0, 360);
 			Math3D.AnglesToMatrix(angles, params.Transform);
 			
-			entity = GetGame().SpawnEntityPrefab(prefab, false, GetGame().GetWorld(), params);
+			Resource prefabResource = Resource.Load(prefab);
+			if(!prefabResource.IsValid())
+				return false;
+						
+			entity = GetGame().SpawnEntityPrefab(prefabResource, GetGame().GetWorld(), params);
 			
 			if(!entity) 
 				return false;

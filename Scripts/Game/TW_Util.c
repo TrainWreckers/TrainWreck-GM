@@ -4,24 +4,12 @@ class TW_Util
 	
 	static vector RandomPositionAround(IEntity point, int radius, int minimumDistance = 0)
 	{
-		vector position = s_Generator.GenerateRandomPointInRadius(minimumDistance, radius, point.GetOrigin());
-		
-		while(IsWater(position))
-		{
-			position = RandomPositionAround(point, Math.Max(radius * 0.9, minimumDistance), minimumDistance);
-		}
-		
-		return position;
+		return s_Generator.GenerateRandomPointInRadius(Math.Min(minimumDistance, radius), Math.Max(minimumDistance, radius), point.GetOrigin());
 	}
 	
 	static vector RandomPositionAround(vector point, int radius, int minimumDistance = 0)
 	{
-		vector position = s_Generator.GenerateRandomPointInRadius(minimumDistance, radius, point);
-		
-		while(IsWater(position))
-			position = RandomPositionAround(point, Math.Max(radius * 0.9, minimumDistance), minimumDistance);
-		
-		return position;
+		return s_Generator.GenerateRandomPointInRadius(Math.Min(minimumDistance, radius), Math.Max(minimumDistance, radius), point);
 	}
 	
 	static vector RandomPositionAround_ButNotNear(IEntity point, notnull array<IEntity> entities, int radius, int minimumDistance = 0)
@@ -396,7 +384,11 @@ class TW_Util
 		if(!world)
 			world = GetGame().GetWorld();
 		
-		IEntity spawnedEntity = GetGame().SpawnEntityPrefab(prefab, false, world, EntitySpawnParams());
+		Resource prefabResource = Resource.Load(prefab);
+		if(!prefabResource.IsValid())
+			return vector.Zero;
+		
+		IEntity spawnedEntity = GetGame().SpawnEntityPrefab(prefabResource, world, EntitySpawnParams());
 		
 		if(!spawnedEntity)
 		{

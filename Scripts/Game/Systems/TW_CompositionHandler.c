@@ -3,6 +3,7 @@ class TW_CompositionHandler
 	private int m_Padding = 10;
 	private int m_SpawnDelay = 1000;
 	private int m_Radius;
+	private int m_PlacementAttempts;
 	
 	const int SMALL_COMPOSITION_SIZE = 8;
 	const int MEDIUM_COMPOSITION_SIZE = 15;
@@ -22,6 +23,7 @@ class TW_CompositionHandler
 	private vector m_CurrentPosition;
 	
 	private FactionKey m_FactionKey = FactionKey.Empty;
+	private bool m_PlacementSucceeded = false;
 	
 	ScriptInvoker GetOnCompositionPlacementFailed() { return m_OnCompositionPlacementFailed; }
 	ScriptInvoker GetOnCompositionPlacementSuccess() { return m_OnCompositionPlacementSuccess; }
@@ -30,21 +32,52 @@ class TW_CompositionHandler
 	{
 		m_GameMode = gameMode;
 		m_MapManager = mapManager;
+		
+		GetOnCompositionPlacementFailed().Insert(RetryPlacement);
 	}
 	
-	void SpawnAt(vector centerLocation, float radius, TW_CompositionSpawnSettings settings)
+	void ~TW_CompositionHandler()
+	{
+		GetOnCompositionPlacementFailed().Clear();
+	}
+	
+	private void RetryPlacement()
+	{
+		PrintFormat("TrainWreck: Composition Placement Failed (%1)", m_PlacementAttempts, LogLevel.WARNING);
+		m_PlacementAttempts -= 1;
+		
+		foreach(IEntity entity : m_Entities)
+			SCR_EntityHelper.DeleteEntityAndChildren(entity);
+		
+		if(m_PlacementAttempts > 0)
+		{
+			SpawnSmallComposition();
+			return;
+		}
+		
+		GetOnCompositionPlacementFailed().Remove(RetryPlacement);
+	}	
+	
+	void SpawnAt(vector centerLocation, float radius, TW_CompositionSpawnSettings settings, int placementAttempts = 5)
 	{
 		m_PlacementCenter = centerLocation;
 		m_CurrentPosition = m_PlacementCenter;
+		m_PlacementAttempts = placementAttempts;
 		
 		m_Config = settings;
 		m_SpawnAmount = TW_CompositionSpawnSettings();
-		m_Entities.Clear();		
+		
+		foreach(IEntity entity : m_Entities)
+			SCR_EntityHelper.DeleteEntityAndChildren(entity);
+		
+		m_Entities.Clear();
+		
+		SpawnSmallComposition();
 	}
 	
 	private bool TrySpawnComposition(out IEntity entity, TW_CompositionSize size, ResourceName prefab)
 	{
-		if(FindOpenAreaForComposition(m_CurrentPosition, m_Radius, size, m_CurrentPosition))
+		if(FindOpenAreaForComposition(m_PlacementCenter, m_Radius, size, m_CurrentPosition))
 		{
 			EntitySpawnParams params = EntitySpawnParams();
 			vector mat[4];
@@ -59,7 +92,12 @@ class TW_CompositionHandler
 			angles[0] = Math.RandomFloat(0, 360);
 			Math3D.AnglesToMatrix(angles, params.Transform);
 			
-			entity = GetGame().SpawnEntityPrefab(prefab, false, GetGame().GetWorld(), params);
+			Resource prefabResource = Resource.Load(prefab);
+			
+			if(!prefabResource.IsValid())
+				return false;
+			
+			entity = GetGame().SpawnEntityPrefab(prefabResource, GetGame().GetWorld(), params);
 			
 			if(!entity)
 				return false;
@@ -138,7 +176,7 @@ class TW_CompositionHandler
 			}
 		}
 		
-		if(!success)
+		if(!success && m_Config.ShouldFailAfterRetries)
 		{
 			m_OnCompositionPlacementFailed.Invoke();
 			return;
@@ -176,7 +214,7 @@ class TW_CompositionHandler
 			}
 		}
 		
-		if(!success)
+		if(!success && m_Config.ShouldFailAfterRetries)
 		{
 			m_OnCompositionPlacementFailed.Invoke();
 			return;
@@ -202,7 +240,7 @@ class TW_CompositionHandler
 		IEntity current;
 		int attempts = 5;
 		bool success = false;
-		while(attempts > 0)
+		while(attempts > 0 && m_Config.ShouldFailAfterRetries)
 		{
 			attempts--;
 			
@@ -214,7 +252,7 @@ class TW_CompositionHandler
 			}
 		}
 		
-		if(!success)
+		if(!success && m_Config.ShouldFailAfterRetries)
 		{
 			m_OnCompositionPlacementFailed.Invoke();
 			return;
@@ -241,7 +279,7 @@ class TW_CompositionHandler
 		IEntity current;
 		int attempts = 5;
 		bool success = false;
-		while(attempts > 0)
+		while(attempts > 0 && m_Config.ShouldFailAfterRetries)
 		{
 			attempts--;
 			success = TrySpawnComposition(current, TW_CompositionSize.SMALL, m_Config.Compositions.GetRandomDefensiveBunkder());
@@ -253,7 +291,7 @@ class TW_CompositionHandler
 			}
 		}
 		
-		if(!success)
+		if(!success && m_Config.ShouldFailAfterRetries)
 		{
 			m_OnCompositionPlacementFailed.Invoke();
 			return;
@@ -270,6 +308,7 @@ class TW_CompositionHandler
 		
 		if(m_SpawnAmount.DefensiveWalls >= m_Config.DefensiveWalls || m_SpawnAmount.DefensiveWalls < 0)
 		{
+			m_PlacementSucceeded = true;
 			m_OnCompositionPlacementSuccess.Invoke();
 			return;
 		}
@@ -291,7 +330,7 @@ class TW_CompositionHandler
 			}
 		}
 		
-		if(!success)
+		if(!success && m_Config.ShouldFailAfterRetries)
 		{
 			m_OnCompositionPlacementFailed.Invoke();
 			return;

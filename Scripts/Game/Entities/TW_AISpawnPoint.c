@@ -93,7 +93,10 @@ class TW_AISpawnPoint : GenericEntity
 		
 		EntitySpawnParams params = EntitySpawnParams();
 		GetTransform(params.Transform);
-		GetGame().SpawnEntityPrefab(m_LoiterPoint, false, GetWorld(), params);
+		
+		Resource loiterResource = Resource.Load(m_LoiterPoint);		
+		if(loiterResource.IsValid())
+			GetGame().SpawnEntityPrefab(loiterResource, GetWorld(), params);
 	}
 	
 	void AddGroupToPoint(SCR_AIGroup group, ResourceName waypointOverride = ResourceName.Empty, IEntity goToPositionOverride = null, bool shouldPatrol = false, float patrolRadius = 250, int patrolWaypointCount = 5)
