@@ -19,11 +19,59 @@ modded class SCR_BaseGameMode
 	FactionCompositions GetUSSRCompositions() { return m_USSRCompositions; }
 	FactionCompositions GetUSCompositions() { return m_USCompositions; }
 	
+	protected ref ScriptInvoker Event_OnGameInitializePlugins = new ScriptInvoker();
+	protected ref ScriptInvoker Event_OnGamePluginsInitialized = new ScriptInvoker();
+	protected ref ScriptInvoker<TW_MonitorPositions> Event_OnPositionMonitorChanged = new ScriptInvoker<TW_MonitorPositions>();
+	
 	private void InitializeCompositions()
 	{
 		m_USCompositions = Load("{0C96E3FCC84E8CD4}Configs/Compositions/TW_US_Compositions.conf");
 		m_USSRCompositions = Load("{B482220F45A754E6}Configs/Compositions/TW_USSR_Compositions.conf");
 		m_FIACompositions = Load("{E37B578DE2724443}Configs/Compositions/TW_FIA_Compositions.conf");
+	}
+	
+	protected void InitializePlugins();	
+	
+	override void StartGameMode()
+	{
+		if (!IsMaster())
+			return;
+
+		if (IsRunning())
+		{
+			Print("Trying to start a gamemode that is already running.", LogLevel.WARNING);
+			return;
+		}
+		
+		if(Event_OnGameInitializePlugins)
+		{
+			Print("TrainWreck: Initializing Plugins");
+			Event_OnGameInitializePlugins.Invoke();
+		}
+		
+		InitializePlugins();
+		
+		if(Event_OnGamePluginsInitialized)
+		{
+			Print("TrainWreck: Initialized Plugins");
+			Event_OnGamePluginsInitialized.Invoke();
+		}
+		
+		InitializePositionMonitor();
+		
+		GetOnPositionMonitorChanged().Invoke(positionMonitor);
+		
+		m_MapManager = TW_MapManager();
+		m_MapManager.InitializeMap(this, GetGame().GetMapManager());
+				
+		Print("TrainWreck: GameMode Starting...");
+
+		m_fTimeElapsed = 0.0;
+		m_eGameState = SCR_EGameModeState.GAME;
+		Replication.BumpMe();
+
+		// Raise event for authority
+		OnGameStateChanged();
 	}
 	
 	private FactionCompositions Load(ResourceName prefab)
@@ -45,12 +93,27 @@ modded class SCR_BaseGameMode
 		- Anti spawn chunk positions
 		- Unloaded chunks
 	*/
-	ScriptInvoker<GridUpdateEvent> GetOnPlayerPositionsUpdated() 
+	ref ScriptInvoker<GridUpdateEvent> GetOnPlayerPositionsUpdated() 
 	{ 
 		if(!positionMonitor) 
 			return null;
 		
 		return positionMonitor.GetGridUpdate(); 
+	}
+	
+	ref ScriptInvoker<TW_MonitorPositions> GetOnPositionMonitorChanged()
+	{
+		return Event_OnPositionMonitorChanged;
+	}
+	
+	ref ScriptInvoker GetOnPluginsInitialized()
+	{
+		return Event_OnGameInitializePlugins;
+	}
+	
+	ref ScriptInvoker GetOnInitializePlugins()
+	{
+		return Event_OnGamePluginsInitialized;
 	}
 	
 	//! Initialize the player update monitor
@@ -72,22 +135,15 @@ modded class SCR_BaseGameMode
 		if(!TW_Global.IsServer(this) || !TW_Global.IsInRuntime())
 			return;
 		
-		InitializePositionMonitor();
-		
-		// 10 seconds before things kick off
-		GetGame().GetCallqueue().CallLater(DelayEvents, 10000, false);					
+		Event_OnPositionMonitorChanged.Insert(RegisterMonitorEvent);
 	};
 	
-	
-	private void DelayEvents()
+	private void RegisterMonitorEvent(TW_MonitorPositions monitor)
 	{
-		if(positionMonitor)
-			GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);
-		InitializeCompositions();
-		m_MapManager = TW_MapManager();
-		m_MapManager.InitializeMap(this, GetGame().GetMapManager());
-		
+		if(monitor)
+			GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);		
 	}
+	
 	
 	private int m_CompositionSpawnAttempts = 50;
 	void TryToSpawnSite()
