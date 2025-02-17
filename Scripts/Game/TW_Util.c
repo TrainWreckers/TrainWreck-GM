@@ -2,6 +2,42 @@ class TW_Util
 {
 	static ref RandomGenerator s_Generator = new RandomGenerator();
 	
+	//! Save Json File: Credit to Bacon
+	static bool SaveJsonFile(string path, Managed data, bool useTypeDiscriminator = false) 
+	{
+		ContainerSerializationSaveContext saveContext = new ContainerSerializationSaveContext(false);
+		if(useTypeDiscriminator)
+			saveContext.EnableTypeDiscriminator();
+		
+		PrettyJsonSaveContainer container = new PrettyJsonSaveContainer();
+		saveContext.SetContainer(container);
+		
+		if(!saveContext.WriteValue("", data)) 
+		{
+			PrintFormat("TrainWreck: Serialization of '%1' failed for file '%2'", data, path, LogLevel.ERROR);
+			return false;
+		}
+		
+		return container.SaveToFile(path);
+	}
+	
+	//! Load Json File: Credit to Bacon
+	static SCR_JsonLoadContext LoadJsonFile(string path, bool useTypeDiscriminator = false)
+	{
+		SCR_JsonLoadContext context = new SCR_JsonLoadContext(false);
+		
+		if(useTypeDiscriminator)
+			context.EnableTypeDiscriminator();
+		
+		if(!context.LoadFromFile(path))
+		{
+			PrintFormat("TrainWreck: Loading JSON file '%1' failed", path, LogLevel.ERROR);
+			return null;
+		}
+		
+		return context;
+	}
+	
 	static vector RandomPositionAround(IEntity point, int radius, int minimumDistance = 0)
 	{
 		return s_Generator.GenerateRandomPointInRadius(Math.Min(minimumDistance, radius), Math.Max(minimumDistance, radius), point.GetOrigin());

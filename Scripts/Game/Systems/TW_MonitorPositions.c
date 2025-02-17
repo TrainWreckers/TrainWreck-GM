@@ -34,7 +34,7 @@ class TW_MonitorPositions
 	private int m_GridSize;
 	private int m_GridRadius;
 	private int m_AntiSpawnGridSize;
-	private int m_AntiSpawnGridRadius;
+	private int m_AntiSpawnDistanceInChunks;
 	
 	private ref ScriptInvoker<ref GridUpdateEvent> m_OnGridUpdate = new ScriptInvoker<ref GridUpdateResponse>();
 	
@@ -57,7 +57,7 @@ class TW_MonitorPositions
 		m_GridSize = gridSize;
 		m_GridRadius = gridRadius;
 		m_AntiSpawnGridSize = antiGridSize;
-		m_AntiSpawnGridRadius = antiRadius;
+		m_AntiSpawnDistanceInChunks = antiRadius;
 		
 		m_PlayerChunks.Clear();
 		m_PlayerChunkCount = 0;
@@ -90,7 +90,7 @@ class TW_MonitorPositions
 			
 			chunksAroundPlayer.Clear();
 			
-			TW_Util.AddSurroundingGridSquares(m_AntiSpawnChunks, player.GetOrigin(), m_AntiSpawnGridRadius, m_AntiSpawnGridSize);
+			TW_Util.AddSurroundingGridSquares(m_AntiSpawnChunks, player.GetOrigin(), m_AntiSpawnDistanceInChunks, m_AntiSpawnGridSize);
 			TW_Util.AddSurroundingGridSquares(chunksAroundPlayer, player.GetOrigin(), m_GridRadius, m_GridSize);
 			
 			foreach(string chunk : chunksAroundPlayer)
