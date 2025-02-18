@@ -17,27 +17,13 @@ class TW_VehicleSpawnPoint : GenericEntity
 	
 	protected RplComponent m_RplComponent;
 	
-	static ref TW_GridCoordArrayManager<TW_VehicleSpawnPoint> s_VehicleGrid = new TW_GridCoordArrayManager<TW_VehicleSpawnPoint>();
-	
 	override void EOnInit(IEntity owner)
 	{
 		m_RplComponent = TW<RplComponent>.Find(owner);		
-		s_VehicleGrid.InsertByWorld(GetOrigin(), this);
+		
+		// TODO: Refactor
+		// s_VehicleGrid.InsertByWorld(GetOrigin(), this);
 	}
-	
-	static void ChangeSpawnGridSize(int newSize)
-	{
-		ref TW_GridCoordArrayManager<TW_VehicleSpawnPoint> manager = new TW_GridCoordArrayManager<TW_VehicleSpawnPoint>(newSize);
-		ref array<TW_VehicleSpawnPoint> items = {};
-		int count = s_VehicleGrid.GetAllItems(items);
-		
-		foreach(TW_VehicleSpawnPoint spawnPoint : items)
-			if(spawnPoint)
-				manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
-		
-		delete s_VehicleGrid;
-		s_VehicleGrid = manager
-	}	
 	
 	bool CanSpawnVehicleType(TW_VehicleType type)
 	{

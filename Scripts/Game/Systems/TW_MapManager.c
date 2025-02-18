@@ -32,7 +32,8 @@ class TW_MapManager
 	ref LocationSettings settings;
 	ref set<string> locationNames = new set<string>();
 	
-	ref TW_GridCoordItemManager<string> gridManager;
+	// TODO: Refactor
+	// ref TW_GridCoordItemManager<string> gridManager;
 	
 	const int PADDING = 10;
 	const int SMALL_COMPOSITION_SIZE = 8 + PADDING; // 8
@@ -62,7 +63,9 @@ class TW_MapManager
 		PrintFormat("TrainWreck-GM: Map items count --> %1", locationsCount);
 		
 		settings = LocationSettings.LoadFromFile();
-		gridManager = new TW_GridCoordItemManager<string>(settings.gridSize);
+
+		// TODO: Refactor
+		// gridManager = new TW_GridCoordItemManager<string>(settings.gridSize);
 		
 		ref set<string> chunks = new set<string>();
 		string center;
