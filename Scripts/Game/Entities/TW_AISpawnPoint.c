@@ -15,10 +15,15 @@ class TW_AISpawnPoint : GenericEntity
 	[Attribute("{0EC5F76A0DDF05EF}Prefabs/Systems/Compositions/PatrolPoint/LoiterPost.et", UIWidgets.ResourceNamePicker, category: "Loiter")]
 	protected ResourceName m_LoiterPoint;
 	
-	// TODO: Refactor
 	static void RegisterSpawnPoint(TW_AISpawnPoint spawnPoint)
 	{
-		// s_GridManager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
+		if(!TW_AISpawnManager.GetInstance())
+		{
+			Print("TrainWreck-GM: TW_AISpawnManager has not been initialized...", LogLevel.ERROR);
+			return;			
+		}
+		
+		TW_AISpawnManager.GetInstance().GetAISpawnGrid().InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
 	}
 	
 	void TW_AISpawnPoint(IEntitySource src, IEntity parent)

@@ -10,6 +10,7 @@ modded class SCR_BaseGameMode
 	protected float m_PositionMonitorUpdateInterval = 10.0;
 	
 	protected ref TW_MapManager m_MapManager;
+	protected ref TW_AISpawnManager m_AISpawnManager = new TW_AISpawnManager();
 	
 	protected ref FactionCompositions m_USCompositions;	
 	protected ref FactionCompositions m_USSRCompositions;	

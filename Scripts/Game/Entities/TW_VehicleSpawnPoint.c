@@ -21,8 +21,10 @@ class TW_VehicleSpawnPoint : GenericEntity
 	{
 		m_RplComponent = TW<RplComponent>.Find(owner);		
 		
-		// TODO: Refactor
-		// s_VehicleGrid.InsertByWorld(GetOrigin(), this);
+		if(!TW_AISpawnManager.GetInstance())
+			return;
+		
+		TW_AISpawnManager.GetInstance().GetVehicleSpawnGrid().InsertByWorld(GetOrigin(), this);		
 	}
 	
 	bool CanSpawnVehicleType(TW_VehicleType type)

@@ -32,8 +32,7 @@ class TW_MapManager
 	ref LocationSettings settings;
 	ref set<string> locationNames = new set<string>();
 	
-	// TODO: Refactor
-	// ref TW_GridCoordItemManager<string> gridManager;
+	ref TW_GridItemManager<string> gridManager;	
 	
 	const int PADDING = 10;
 	const int SMALL_COMPOSITION_SIZE = 8 + PADDING; // 8
@@ -64,8 +63,10 @@ class TW_MapManager
 		
 		settings = LocationSettings.LoadFromFile();
 
-		// TODO: Refactor
-		// gridManager = new TW_GridCoordItemManager<string>(settings.gridSize);
+		ref GridSettings temp = new GridSettings();
+		temp.SizeInMeters = settings.gridSize;
+				
+		gridManager = new TW_GridItemManager<string>(temp);
 		
 		ref set<string> chunks = new set<string>();
 		string center;

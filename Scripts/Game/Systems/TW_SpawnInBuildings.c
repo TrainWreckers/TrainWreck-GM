@@ -151,8 +151,8 @@ class TW_SpawnInBuildings : GenericEntity
 	{
 		m_NearbySpawnpoints.Clear();		
 		ref array<TW_AISpawnPoint> nearbySpawnPoints = {};
-		// TODO: Refactor
-		// TW_AISpawnPoint.GetNearbySpawnPoints(GetOrigin(), nearbySpawnPoints);
+		
+		TW_AISpawnManager.GetInstance().GetAISpawnGrid().GetNeighborsAroundPosition(GetOrigin(), nearbySpawnPoints);		
 				
 		foreach(TW_AISpawnPoint spawnPoint : nearbySpawnPoints)
 		{
