@@ -1,8 +1,13 @@
 class TW_AISpawnManager
 {
-	private static TW_AISpawnManager s_Instance;
+	private static ref TW_AISpawnManager s_Instance;
 	
-	static TW_AISpawnManager GetInstance() { return s_Instance; }
+	static TW_AISpawnManager GetInstance() 
+	{
+		if(!s_Instance)
+			s_Instance = TW_AISpawnManager();	 
+		return s_Instance; 	
+	}
 	
 	static GridSettings DefaultGridSettings()
 	{
@@ -11,6 +16,11 @@ class TW_AISpawnManager
 		settings.DistanceInChunks = 3;
 		
 		return settings;
+	}
+	
+	void TW_AISpawnManager()
+	{
+		s_Instance = this;
 	}
 	
 	private ref TW_GridCoordArrayManager<TW_AISpawnPoint> _gridManager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(DefaultGridSettings());	
