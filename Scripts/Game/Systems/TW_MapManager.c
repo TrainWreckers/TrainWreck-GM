@@ -5,6 +5,15 @@ enum TW_CompositionSize
 	LARGE
 }
 
+enum TW_CompositionSpawnType
+{
+	SMALL = 0, 
+	MEDIUM = 1, 
+	LARGE = 2, 
+	WALLS = 3, 
+	BUNKERS = 4
+}
+
 class TW_CompositionSpawnSettings
 {
 	int SmallCompositions;
@@ -40,10 +49,7 @@ class TW_MapManager
 	const int LARGE_COMPOSITION_SIZE = 23 + PADDING; // 23
 	const int SPAWN_DELAY = 1000;
 	private SCR_BaseGameMode m_GameMode;
-	
-	//! Is the manager currently trickle spawning compositions
-	private bool m_IsTrickleSpawning = false;
-	private ref array<IEntity> m_BaseEntities = {};
+	private MapEntity m_Map;
 	
 	private ref ScriptInvoker m_OnCompositionBasePlacementFailed = new ScriptInvoker();
 	private ref ScriptInvoker m_OnCompositionBasePlacementSuccess = new ScriptInvoker();
@@ -54,6 +60,7 @@ class TW_MapManager
 	void InitializeMap(SCR_BaseGameMode gameMode, MapEntity mapManager)
 	{
 		m_GameMode = gameMode; 
+		m_Map = mapManager;
 		
 		//! We're going to query all the things on the map. This allows us to grab things by descriptor types
 		ref array<MapItem> entities = {};
@@ -105,6 +112,28 @@ class TW_MapManager
 		m_OnCompositionBasePlacementFailed.Invoke();
 	}
 	
+	private void OnCompSpawnedCompleted()
+	{
+		Print("TrainWreck -> Successfully spawned compositions");
+	}
+	
+	private void OnCompFailed(TW_CompositionPlacementEvent e)
+	{
+		PrintFormat("TrainWreck -> Failed to place '%1' at '%2'", e.prefab, e.position, LogLevel.ERROR);
+	}	
+	
+	private void OnCompSuccess(TW_CompositionPlacementEvent e)
+	{
+		PrintFormat("TrainWreck -> Placed'%1' at '%2'", e.prefab, e.position, LogLevel.WARNING);
+		ref MapItem item = m_Map.CreateCustomMapItem();
+		item.SetPos(e.position[0], e.position[2]);
+		item.SetInfoText(e.prefab);
+		item.SetDisplayName(e.prefab);		
+	}
+	
+	private ref TW_CompositionSpawnHandler handler = new TW_CompositionSpawnHandler();
+	private ref TW_CompositionSpawnSettings spawnConfig;
+	
 	bool TrySpawnCompositionCollection(FactionKey faction, vector basePosition, float spacing, int defensiveWalls, int defensiveStructures, int smallCompositions, int mediumCompositions, int largeCompositions)
 	{
 		ref FactionCompositions config = m_GameMode.GetUSSRCompositions();
@@ -122,6 +151,7 @@ class TW_MapManager
 				break;
 			}
 		}
+		spawnConfig = new TW_CompositionSpawnSettings(config);
 		
 		ref array<IEntity> spawnedEntities = {};
 		
@@ -130,94 +160,19 @@ class TW_MapManager
 		int attempts = 0;
 		basePosition = TW_Util.GetLandPositionAround(basePosition, spacing);
 		
-		m_IsTrickleSpawning = true;
-		
-		if(!m_BaseEntities) m_BaseEntities = {};
-		m_BaseEntities.Clear();
-		
-		ref TW_CompositionSpawnSettings spawnConfig = new TW_CompositionSpawnSettings(config);
-		ref TW_CompositionSpawnSettings amounts = new TW_CompositionSpawnSettings();
-		
 		spawnConfig.LargeCompositions = Math.RandomIntInclusive(0, 2);
 		spawnConfig.MediumCompositions = Math.RandomIntInclusive(0, 4);
 		spawnConfig.SmallCompositions = Math.RandomIntInclusive(1, 5);
 		spawnConfig.DefensiveWalls = Math.RandomIntInclusive(0, 5);
 		spawnConfig.DefensiveBunkers = Math.RandomIntInclusive(0, 4);
 		
+		handler.Init(basePosition, spacing, spawnConfig);
+		handler.GetOnCompleted().Insert(OnCompSpawnedCompleted);
+		handler.GetOnPlacementFailed().Insert(OnCompFailed);
+		handler.GetOnPlacementSucceeded().Insert(OnCompSuccess);
+		handler.SpawnStart();
+		
 		return true;		
-	}
-	
-	bool TrySpawnComposition(vector centerPosition, out IEntity entity, out vector position, int radius, TW_CompositionSize size, ResourceName prefab)
-	{
-		if(FindOpenAreaForComposition(centerPosition, radius, size, position))
-		{
-			EntitySpawnParams params = EntitySpawnParams();
-			vector mat[4];
-			mat[3] = position;			
-			
-			if(!SCR_TerrainHelper.SnapToTerrain(mat, GetGame().GetWorld(), true))
-				return false;
-			
-			params.Transform = mat;
-			params.TransformMode = ETransformMode.WORLD;
-			vector angles = Math3D.MatrixToAngles(params.Transform);
-			angles[0] = Math.RandomFloat(0, 360);
-			Math3D.AnglesToMatrix(angles, params.Transform);
-			
-			Resource prefabResource = Resource.Load(prefab);
-			if(!prefabResource.IsValid())
-				return false;
-						
-			entity = GetGame().SpawnEntityPrefab(prefabResource, GetGame().GetWorld(), params);
-			
-			if(!entity) 
-				return false;
-			
-			
-			SCR_EditableEntityComponent editable = SCR_EditableEntityComponent.GetEditableEntity(entity);
-			
-			if(editable)
-			{
-				SCR_EditorPreviewParams previewParams = SCR_EditorPreviewParams.CreateParams(params.Transform, EEditorTransformVertical.TERRAIN);
-				SCR_RefPreviewEntity.SpawnAndApplyReference(editable, previewParams);
-				Print("TrainWreck-GM: Oriented Terrain for Entity");
-			}
-			
-			SCR_SlotCompositionComponent slotComposition = SCR_SlotCompositionComponent.Cast(entity.FindComponent(SCR_SlotCompositionComponent));
-			
-			if(slotComposition)				
-				slotComposition.OrientToTerrain();
-			
-			SCR_AIWorld aiWorld = SCR_AIWorld.Cast(GetGame().GetAIWorld());
-			if(aiWorld)
-				aiWorld.RequestNavmeshRebuildEntity(entity);
-			
-			return true;
-		}
-		
-		return false;
-	}
-	
-	bool FindOpenAreaForComposition(vector centerPosition, float radius, TW_CompositionSize size, out vector position, FactionKey faction = FactionKey.Empty)
-	{
-		int compositionSize = SMALL_COMPOSITION_SIZE;
-		
-		switch(size)
-		{
-			case TW_CompositionSize.MEDIUM:
-			{
-				compositionSize = MEDIUM_COMPOSITION_SIZE;
-				break;
-			}
-			
-			case TW_CompositionSize.LARGE:
-			{
-				compositionSize = LARGE_COMPOSITION_SIZE;
-				break;
-			}
-		}
-		
-		return SCR_WorldTools.FindEmptyTerrainPosition(position, centerPosition, radius, compositionSize, compositionSize, TraceFlags.ENTS | TraceFlags.OCEAN | TraceFlags.WORLD);
 	}
 	
 	TW_MapLocation GetRandomLocation()

@@ -117,8 +117,17 @@ class TW_Util
 		return waterSurfacePos[1];
 	}
 	
-	static bool IsWater(vector worldPosition)
+	static vector GetMidpoint(vector one, vector two, int div = 2)
 	{
+		float x = (one[0] + two[0]) / div;
+		float y = (one[1] + two[1]) / div;
+		float z = (one[2] + two[2]) / div;
+		
+		return Vector(x, y, z);
+	}
+	
+	static bool IsWater(vector worldPosition)
+	{		
 		bool isWater = false;
 		BaseWorld world = GetGame().GetWorld();
 		
