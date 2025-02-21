@@ -38,6 +38,24 @@ class TW_Util
 		return context;
 	}
 	
+	//! Attempt to retrieve the affiliated faction for this AI Agent
+	static FactionKey GetFactionKeyFromAgent(SCR_ChimeraAIAgent agent)
+	{
+		SCR_ChimeraAIAgent ai = SCR_ChimeraAIAgent.Cast(agent);
+		
+		IEntity controlledEntity = ai.GetControlledEntity();
+		
+		if(!controlledEntity) 
+			return FactionKey.Empty;
+		
+		FactionAffiliationComponent fac = FactionAffiliationComponent.Cast(controlledEntity.FindComponent(FactionAffiliationComponent));
+		
+		if(!fac)
+			return FactionKey.Empty;
+		
+		return fac.GetAffiliatedFactionKey();
+	}
+	
 	static vector RandomPositionAround(IEntity point, int radius, int minimumDistance = 0)
 	{
 		return s_Generator.GenerateRandomPointInRadius(Math.Min(minimumDistance, radius), Math.Max(minimumDistance, radius), point.GetOrigin());
