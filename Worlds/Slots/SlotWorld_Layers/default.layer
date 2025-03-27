@@ -5,6 +5,39 @@ TimeAndWeatherManagerEntity : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeath
  "Internal subvariant 0" 0
  "Internal subvariant 1" 0
 }
-GenericEntity : "{0199ED114CF03B2F}Prefabs/Compositions/TWTEST_L_USSR_02.et" {
- coords 31.39 0 67.499
+GenericEntity : "{01E0B52B5BA2EF72}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_04.et" {
+ coords 86.712 0.009 62.568
+ angleY 47.36
+}
+SCR_SiteSlotEntity : "{055DDE93F47A6A1D}PrefabsEditable/Slots/Flat/E_SlotFlatLarge.et" {
+ coords 70.887 0 67.29
+ {
+  StaticModelEntity {
+   ID "52E8C3643526D54D"
+   coords 0 -0.491 0
+  }
+ }
+}
+GenericEntity : "{3CD490132ECE6645}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_03.et" {
+ coords 84.295 0.009 73.032
+ angleY 92.646
+}
+GenericEntity : "{9930D1685FD3988F}Prefabs/Compositions/Slotted/CompositionBase.et" {
+ coords 70.907 0 67.325
+}
+GenericEntity : "{B51CE80A9EEF7E00}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_01.et" {
+ coords 77.258 0.009 69.122
+ {
+  GenericEntity {
+   ID "58ECA7C4B7DDA478"
+   components {
+    TW_SchemaTesterComponent "{64DD334C1849713E}" {
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{D948DCEA222BF12E}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_02.et" {
+ coords 83.695 0.009 67.755
+ angleY 64.631
 }

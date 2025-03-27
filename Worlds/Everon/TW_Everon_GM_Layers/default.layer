@@ -1,40 +1,9 @@
-$grp TW_AISpawnPoint {
- {
-  coords 4984.068 16.371 4002.028
-  angleY -29.187
+TW_VehicleSpawnPoint {
+ components {
+  RplComponent "{64D31559BC2E3A92}" {
+  }
+  Hierarchy "{64D31559BF4C6B54}" {
+  }
  }
- {
-  coords 4975.991 16.371 4001.446
-  angleY -132.415
- }
- {
-  coords 4977.259 16.371 3998.988
-  angleY 134.435
- }
- {
-  coords 4969.471 16.371 4000.182
-  angleY 134.435
- }
- {
-  coords 4972.619 16.371 4001.875
-  angleY -113.685
- }
- {
-  coords 4969.187 16.371 4002.668
-  angleY 25.964
- }
- {
-  coords 4973.658 16.364 4013.677
- }
- {
-  coords 4973.178 16.364 4019.928
-  angleY -36.769
- }
- {
-  coords 5010.455 16.166 3996.291
- }
- {
-  coords 5008.605 16.166 3999.679
-  angleY -78.907
- }
+ coords 6264.083 164.252 6479.624
 }

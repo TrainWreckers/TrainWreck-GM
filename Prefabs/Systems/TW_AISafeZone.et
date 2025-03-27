@@ -1,0 +1,35 @@
+TW_AISafeArea {
+ ID "64C2E22299B5EBBB"
+ components {
+  SCR_EditableEntityComponent "{64C2E2210C9405F4}" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{64C2E22161638188}" {
+    Name "AI Safe Zone"
+    Description "AI Spawn Points are disabled within this area"
+    m_aAuthoredLabels {
+     1001 10000
+    }
+    m_aAutoLabels {
+     7 124 10000
+    }
+   }
+   m_EntityInteraction SCR_EditableEntityInteraction "{64C2E2217A255A87}" {
+   }
+  }
+  SCR_EditableEntityVisibilityChildComponent "{64C2E2224573C13F}" {
+  }
+  SCR_PreviewEntityComponent "{64C2E222B0C0E579}" {
+  }
+  TW_RuntimeAreaMesh "{64C2E222B5E991AC}" {
+   m_vResolution 32
+   m_bStretchMaterial 1
+   m_Material "{0A8FAD171DB3DC49}Assets/Editor/VirtualArea/VirtualArea_01_Focused.emat"
+   m_fRadius 120
+  }
+  RplComponent "{64C2E222028D3572}" {
+  }
+  Hierarchy "{64C2E222035540F4}" {
+  }
+ }
+ SafeZoneRadius 25
+}

@@ -9,6 +9,13 @@ class TW_GridCoordArrayManager<Class T>
 	private int pointerIndex = -1;
 	private int activeCoordsCount = 0;
 	
+	int GetGridSize() { return GridSize; }
+	int GetTrackedItemsCount()
+	{
+		ref array<T> allItems = {};
+		return GetAllItems(allItems);
+	}
+	
 	void TW_GridCoordArrayManager(int gridSize = 1000)
 	{
 		this.GridSize = gridSize;

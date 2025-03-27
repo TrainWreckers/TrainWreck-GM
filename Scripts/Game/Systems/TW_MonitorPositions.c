@@ -40,6 +40,11 @@ class TW_MonitorPositions
 	
 	ScriptInvoker<ref GridUpdateEvent> GetGridUpdate() { return m_OnGridUpdate; }
 	
+	int GetGridSizeInMeters() { return m_GridSize; }
+	int GetDistanceInChunks() { return m_GridRadius; }
+	int GetAntiSpawnGridSizeInMeters() { return m_AntiSpawnGridSize; }
+	int GetAntiSpawnDistanceInChunks() { return m_AntiSpawnDistanceInChunks; }
+	
 	void TW_MonitorPositions(int gridSize, int gridRadius, int antiGridSize, int antiRadius)
 	{
 		UpdateGrid(gridSize, gridRadius, antiGridSize, antiRadius);

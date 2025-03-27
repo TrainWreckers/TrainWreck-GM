@@ -18,6 +18,11 @@ class TW_AISpawnPoint : GenericEntity
 	//! Size of grid that is to be used by spawn points
 	private static int s_SpawnGridSize = 500;
 	
+	private bool _isActive = true;
+	
+	void SetIsActive(bool value) { _isActive = value; }
+	bool IsActive() { return _isActive; }
+	
 	//! Get size of spawn grid
 	static int GetSpawnGridSize() { return s_SpawnGridSize; }
 	
@@ -34,7 +39,7 @@ class TW_AISpawnPoint : GenericEntity
 				manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
 		
 		delete s_GridManager;
-		s_GridManager = manager
+		s_GridManager = manager;
 	}	
 	
 	static TW_GridCoordArrayManager<TW_AISpawnPoint> GetGridManager() { return s_GridManager; }
@@ -52,7 +57,47 @@ class TW_AISpawnPoint : GenericEntity
 			if(s_GridManager.HasCoord(x, y))
 			{
 				TW_GridCoordArray<TW_AISpawnPoint> coord = s_GridManager.GetCoord(x,y);
-				coord.GetData(spawnPoints);
+				
+				ref array<TW_AISpawnPoint> points = {};
+				coord.GetData(points);
+				
+				foreach(TW_AISpawnPoint sp : points)
+					if(sp.IsActive())
+						spawnPoints.Insert(sp);				
+			}
+		}
+	}
+	
+	static void GetSpawnPointsInChunks(notnull set<string> playerChunks, notnull set<string> antiSpawnChunks, notnull array<TW_AISpawnPoint> spawnPoints)
+	{
+		int antiRadius = TW_MonitorPositions.GetInstance().GetAntiSpawnGridSizeInMeters();
+		
+		int x, y;
+		ref array<TW_AISpawnPoint> points = {};
+		
+		// We iterate over our player chunks to see if those chunks exist within our grid manager
+		foreach(string chunk : playerChunks)
+		{
+			TW_Util.FromGridString(chunk, x, y);
+			
+			if(!s_GridManager.HasCoord(x, y))
+				continue;
+			
+			ref TW_GridCoordArray<TW_AISpawnPoint> coord = s_GridManager.GetCoord(x, y);
+			points.Clear();
+			coord.GetData(points);
+			
+			// We then iterate over our spawn points to verify they don't
+			// correspond to an antispawn chunk
+			foreach(TW_AISpawnPoint spawnPoint : points)
+			{
+				if(!spawnPoint.IsActive()) 
+					continue;
+				
+				string antiChunk = TW_Util.ToGridText(spawnPoint.GetOrigin(), antiRadius);
+				if(antiSpawnChunks.Contains(antiChunk))
+					continue;
+				spawnPoints.Insert(spawnPoint);
 			}
 		}
 	}
@@ -68,14 +113,27 @@ class TW_AISpawnPoint : GenericEntity
 		
 		ref array<ref TW_GridCoordArray<TW_AISpawnPoint>> items = {};
 		s_GridManager.GetNeighbors(items, x, y, chunkRadius);
-		
+				
 		foreach(ref TW_GridCoordArray<TW_AISpawnPoint> item : items)
-			spawnPoints.InsertAll(item.GetAll());				
+		{
+			ref array<TW_AISpawnPoint> points = item.GetAll();
+			
+			foreach(TW_AISpawnPoint spawnPoint : points)
+			{
+				if(spawnPoint.IsActive())
+					spawnPoints.Insert(spawnPoint);
+			}		
+		}			
 	}
 		
 	static void RegisterSpawnPoint(TW_AISpawnPoint spawnPoint)
 	{
 		s_GridManager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
+	}
+	
+	static void UnregisterSpawnPoint(TW_AISpawnPoint spawnPoint)
+	{
+		s_GridManager.RemoveByWorld(spawnPoint.GetOrigin(), spawnPoint);
 	}
 	
 	void TW_AISpawnPoint(IEntitySource src, IEntity parent)
@@ -120,6 +178,9 @@ class TW_AISpawnPoint : GenericEntity
 	
 	SCR_AIGroup Spawn(ResourceName groupPrefab, ResourceName waypointOverride = ResourceName.Empty, IEntity goToPositionOverride = null, bool shouldPatrol = false,	float patrolRadius = 250, int patrolWaypointCount = 5)
 	{
+		if(!IsActive()) 
+			return null;
+		
 		vector spawnPosition;
 		
 		vector mat[4];

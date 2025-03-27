@@ -2,6 +2,58 @@ class TW_Util
 {
 	static ref RandomGenerator s_Generator = new RandomGenerator();
 	
+	static void ApplyRandomDamageToEntity(IEntity entity)
+	{
+		if(!entity)
+			return;
+		
+		DamageManagerComponent damageManager = DamageManagerComponent.Cast(entity.FindComponent(DamageManagerComponent));
+		
+		if(!damageManager)
+			return;
+		
+		ref array<HitZone> zones = {};
+		damageManager.GetAllHitZones(zones);
+		
+		int randomAmount = Math.RandomInt(0, zones.Count());
+		
+		for(int i = 0; i < randomAmount; i++)
+		{
+			if(zones.IsEmpty()) break;			
+						
+			HitZone zone = zones.GetRandomElement();
+			zones.RemoveItem(zone);
+			
+			float max = zone.GetMaxHealth();
+			float damagePercent = Math.RandomFloat01();
+			float damage = max * damagePercent;
+			
+			zone.HandleDamage(damage, EDamageType.KINETIC, entity);
+		}
+		
+		SCR_FuelManagerComponent fuelManager = SCR_FuelManagerComponent.Cast(entity.FindComponent(SCR_FuelManagerComponent));
+		
+		if(!fuelManager)
+			return;
+		
+		float fuelLevel = Math.RandomFloat01();
+		fuelManager.SetTotalFuelPercentage(fuelLevel);		
+	}
+	
+	static float GetAngleTo(vector center, vector position)
+	{
+		float yDiff = position[0] - center[0];
+		float xDiff = position[2] - center[2];
+		
+		float atan2 = (float)Math.Atan2(xDiff, yDiff);
+		float radians = atan2 / 2;
+		
+		if(radians < 0.0)
+			radians += (float)Math.PI;
+		
+		return radians * (180 * Math.PI);		
+	}
+	
 	//! Save Json File: Credit to Bacon
 	static bool SaveJsonFile(string path, Managed data, bool useTypeDiscriminator = false) 
 	{
