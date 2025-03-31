@@ -74,24 +74,17 @@ class TW_CharacterSelectorAttribute : SCR_BasePresetsEditorAttribute
 		
 		SCR_BaseEditorAttributeVar factionVar;
 		
-		if(!m_SelectedFaction)
-		{
-			m_SelectedFaction = TW_FactionSelectorAttribute.s_CachedFactions.Get(0);
-			InitializeCharacters();
-		}
-		
-		if(manager.GetAttributeVariable(TW_FactionSelectorAttribute, factionVar))
-		{
-			int selectedFaction = factionVar.GetInt();
-			m_SelectedFaction = TW_FactionSelectorAttribute.s_CachedFactions.Get(selectedFaction);
-			InitializeCharacters();
-		}
-		
 		TW_SpawnInBuildings sib = TW_SpawnInBuildingsAttribute.IsValidEntity(item);
 		
 		if(!sib)
 			return null;
 		
+		if(!m_SelectedFaction || (m_SelectedFaction.GetFactionKey() != sib.GetFaction().GetFactionKey()))
+		{
+			m_SelectedFaction = sib.GetFaction();
+			InitializeCharacters();		
+		}
+				
 		int count = m_CharacterPrefabs.Count();
 		
 		for(int i = 0; i < count; i++)
@@ -111,11 +104,10 @@ class TW_CharacterSelectorAttribute : SCR_BasePresetsEditorAttribute
 		
 		SCR_BaseEditorAttributeVar factionVar;
 		
-		if(manager.GetAttributeVariable(TW_FactionSelectorAttribute, factionVar))
+		if(!m_SelectedFaction)
 		{
-			int selectedFaction = factionVar.GetInt();
-			m_SelectedFaction = TW_FactionSelectorAttribute.s_CachedFactions.Get(selectedFaction);
-			InitializeCharacters();
+			PrintFormat("TrainWreck: Character Selector does not have faction selected", LogLevel.ERROR);
+			return;
 		}
 		
 		if(!var)
