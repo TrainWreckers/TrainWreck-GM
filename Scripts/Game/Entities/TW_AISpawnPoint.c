@@ -120,6 +120,7 @@ class TW_AISpawnPoint : GenericEntity
 			
 			foreach(TW_AISpawnPoint spawnPoint : points)
 			{
+				if(!spawnPoint) continue;
 				if(spawnPoint.IsActive())
 					spawnPoints.Insert(spawnPoint);
 			}		
