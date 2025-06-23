@@ -413,6 +413,28 @@ class TW_Util
 		SCR_InventoryMenuUI inventoryMenu = SCR_InventoryMenuUI.Cast(menuManager.OpenMenu(ChimeraMenuPreset.Inventory20Menu));
 	}
 	
+	static SCR_EditableEntityUIInfo GetCharacterUIInfo(ResourceName prefab)
+	{
+		IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+		
+		if(!entitySource) return null;
+		
+		for(int nComponent, componentCount = entitySource.GetComponentCount(); nComponent < componentCount; nComponent++)
+		{
+			IEntityComponentSource componentSource = entitySource.GetComponent(nComponent);
+			
+			if(componentSource.GetClassName().ToType().IsInherited(SCR_EditableCharacterComponent))
+			{
+				BaseContainer attributeContainer = componentSource.GetObject("m_UIInfo");
+				if(!attributeContainer) return null;
+				
+				return SCR_EditableEntityUIInfo.Cast(BaseContainerTools.CreateInstanceFromContainer(attributeContainer));
+			}
+		}
+		
+		return null;
+	}
+	
 	static UIInfo GetItemUIInfo(ResourceName prefab)
 	{
 		UIInfo resultInfo = s_ItemUIInfo.Get(prefab);
