@@ -73,6 +73,24 @@ class TW_Util
 		return container.SaveToFile(path);
 	}
 	
+	static string ToJson(Managed data, bool useTypeDiscriminator = false)
+	{
+		ContainerSerializationSaveContext saveContext = new ContainerSerializationSaveContext(false);
+		if(useTypeDiscriminator)
+			saveContext.EnableTypeDiscriminator();
+		
+		JsonSaveContainer container = new JsonSaveContainer();
+		saveContext.SetContainer(container);
+		
+		if(!saveContext.WriteValue("", data))
+		{
+			PrintFormat("TrainWreck: Failed to serialize data.", LogLevel.ERROR);
+			return string.Empty;
+		}
+		
+		return container.ExportToString();
+	}
+	
 	//! Load Json File: Credit to Bacon
 	static SCR_JsonLoadContext LoadJsonFile(string path, bool useTypeDiscriminator = false)
 	{
