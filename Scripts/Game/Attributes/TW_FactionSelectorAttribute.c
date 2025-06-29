@@ -84,6 +84,9 @@ class TW_FactionSelectorAttribute : SCR_BasePresetsEditorAttribute
 		if(!s_CachedFactions || s_CachedFactions.IsEmpty())
 			InitializeFactions();
 		
+		if(m_SelectedFactionIndex < 0)
+			m_SelectedFactionIndex = 0;
+		
 		TW_SpawnInBuildings sib = TW_SpawnInBuildingsAttribute.IsValidEntity(item);
 		
 		if(!sib)
@@ -97,8 +100,8 @@ class TW_FactionSelectorAttribute : SCR_BasePresetsEditorAttribute
 		
 		if(!sib.GetFaction())
 		{
-			sib.SetFaction(s_CachedFactions.Get(0));
-			return SCR_BaseEditorAttributeVar.CreateInt(0);
+			sib.SetFaction(s_CachedFactions.Get(m_SelectedFactionIndex));
+			return SCR_BaseEditorAttributeVar.CreateInt(m_SelectedFactionIndex);
 		}
 		
 		int count = s_CachedFactions.Count();
@@ -108,7 +111,7 @@ class TW_FactionSelectorAttribute : SCR_BasePresetsEditorAttribute
 				return SCR_BaseEditorAttributeVar.CreateInt(i);	
 		}
 		
-		return SCR_BaseEditorAttributeVar.CreateInt(0);
+		return SCR_BaseEditorAttributeVar.CreateInt(m_SelectedFactionIndex);
 	}
 	
 	override void WriteVariable(Managed item, SCR_BaseEditorAttributeVar var, SCR_AttributesManagerEditorComponent manager, int playerID)

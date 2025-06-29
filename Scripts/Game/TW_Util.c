@@ -73,6 +73,24 @@ class TW_Util
 		return container.SaveToFile(path);
 	}
 	
+	static string ToJson(Managed data, bool useTypeDiscriminator = false)
+	{
+		ContainerSerializationSaveContext saveContext = new ContainerSerializationSaveContext(false);
+		if(useTypeDiscriminator)
+			saveContext.EnableTypeDiscriminator();
+		
+		JsonSaveContainer container = new JsonSaveContainer();
+		saveContext.SetContainer(container);
+		
+		if(!saveContext.WriteValue("", data))
+		{
+			PrintFormat("TrainWreck: Failed to serialize data.", LogLevel.ERROR);
+			return string.Empty;
+		}
+		
+		return container.ExportToString();
+	}
+	
 	//! Load Json File: Credit to Bacon
 	static SCR_JsonLoadContext LoadJsonFile(string path, bool useTypeDiscriminator = false)
 	{
@@ -411,6 +429,28 @@ class TW_Util
 		MenuManager menuManager = GetGame().GetMenuManager();
 		menuManager.CloseAllMenus();
 		SCR_InventoryMenuUI inventoryMenu = SCR_InventoryMenuUI.Cast(menuManager.OpenMenu(ChimeraMenuPreset.Inventory20Menu));
+	}
+	
+	static SCR_EditableEntityUIInfo GetCharacterUIInfo(ResourceName prefab)
+	{
+		IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+		
+		if(!entitySource) return null;
+		
+		for(int nComponent, componentCount = entitySource.GetComponentCount(); nComponent < componentCount; nComponent++)
+		{
+			IEntityComponentSource componentSource = entitySource.GetComponent(nComponent);
+			
+			if(componentSource.GetClassName().ToType().IsInherited(SCR_EditableCharacterComponent))
+			{
+				BaseContainer attributeContainer = componentSource.GetObject("m_UIInfo");
+				if(!attributeContainer) return null;
+				
+				return SCR_EditableEntityUIInfo.Cast(BaseContainerTools.CreateInstanceFromContainer(attributeContainer));
+			}
+		}
+		
+		return null;
 	}
 	
 	static UIInfo GetItemUIInfo(ResourceName prefab)
