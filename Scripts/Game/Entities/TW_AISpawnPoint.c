@@ -70,7 +70,15 @@ class TW_AISpawnPoint : GenericEntity
 	
 	static void GetSpawnPointsInChunks(notnull set<string> playerChunks, notnull set<string> antiSpawnChunks, notnull array<TW_AISpawnPoint> spawnPoints)
 	{
-		int antiRadius = TW_MonitorPositions.GetInstance().GetAntiSpawnGridSizeInMeters();
+		if(!TW_MonitorPositions.GetInstance().HasGridSystem(s_GridManager.GetGridSize()))
+		{
+			PrintFormat("TrainWreck: Unable to get spawn points in chunks. Grid System for GridSize: '%1' does not exist", s_GridManager.GetGridSize(), LogLevel.WARNING);
+			return;	
+		}
+		
+		ref TW_Grid gridSystem = TW_MonitorPositions.GetInstance().GetGridSystem(s_GridManager.GetGridSize());
+		
+		int antiRadius = gridSystem.GetAntiGridRadius();
 		
 		int x, y;
 		ref array<TW_AISpawnPoint> points = {};

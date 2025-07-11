@@ -10,7 +10,7 @@ modded class SCR_BaseGameMode
 	
 	protected ref ScriptInvoker Event_OnGameInitializePlugins = new ScriptInvoker();
 	protected ref ScriptInvoker Event_OnGamePluginsInitialized = new ScriptInvoker();
-	protected ref ScriptInvoker<TW_MonitorPositions> Event_OnPositionMonitorChanged = new ScriptInvoker<TW_MonitorPositions>();
+	protected ref ScriptInvoker Event_OnGameStarted = new ScriptInvoker();
 	
 	protected void InitializePlugins();	
 	
@@ -42,9 +42,8 @@ modded class SCR_BaseGameMode
 			Event_OnGamePluginsInitialized.Invoke();
 		}
 		
-		InitializePositionMonitor();
-		
-		GetOnPositionMonitorChanged().Invoke(positionMonitor);
+		if(GetOnGameStarted())
+			GetOnGameStarted().Invoke();
 				
 		Print("TrainWreck: GameMode Starting...");
 
@@ -65,18 +64,18 @@ modded class SCR_BaseGameMode
 		- Anti spawn chunk positions
 		- Unloaded chunks
 	*/
-	ref ScriptInvoker<GridUpdateEvent> GetOnPlayerPositionsUpdated() 
+	ref TW_OnPlayerPositionsChangedInvoker GetOnPlayerPositionsUpdated(int gridSize) 
 	{ 
 		if(!positionMonitor) 
 			return null;
 		
-		return positionMonitor.GetGridUpdate(); 
+		if(!positionMonitor.HasGridSystem(gridSize))
+			return null;
+		
+		return positionMonitor.GetGridUpdate(gridSize);
 	}
 	
-	ref ScriptInvoker<TW_MonitorPositions> GetOnPositionMonitorChanged()
-	{
-		return Event_OnPositionMonitorChanged;
-	}
+	ref ScriptInvoker GetOnGameStarted() { return Event_OnGameStarted; }
 	
 	ref ScriptInvoker GetOnPluginsInitialized()
 	{
@@ -86,12 +85,6 @@ modded class SCR_BaseGameMode
 	ref ScriptInvoker GetOnInitializePlugins()
 	{
 		return Event_OnGamePluginsInitialized;
-	}
-	
-	//! Initialize the player update monitor
-	protected void InitializePositionMonitor()
-	{
-		positionMonitor = new TW_MonitorPositions(250, 5, 150, 2);		
 	}
 	
 	private void MonitorUpdate()
@@ -106,16 +99,10 @@ modded class SCR_BaseGameMode
 		
 		if(!TW_Global.IsServer(this) || !TW_Global.IsInRuntime())
 			return;
-		
-		Event_OnPositionMonitorChanged.Insert(RegisterMonitorEvent);
+	
+		positionMonitor = new TW_MonitorPositions();		
+		GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);
 	};
-	
-	private void RegisterMonitorEvent(TW_MonitorPositions monitor)
-	{
-		if(monitor)
-			GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);		
-	}
-	
 	
 	private int m_CompositionSpawnAttempts = 50;
 	void TryToSpawnSite()
