@@ -527,6 +527,11 @@ class TW_Util
 		if(s_VehicleSizes.Contains(prefab))
 			return s_VehicleSizes.Get(prefab);
 		
+		if(!GetGame().InPlayMode())
+		{
+			return vector.Zero;
+		}
+		
 		if(!world)
 			world = GetGame().GetWorld();
 		
