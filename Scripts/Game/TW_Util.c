@@ -1,3 +1,70 @@
+class TW_IterableHelper<Class T>
+{
+	//! Get common items between both iterable arrays
+	static int GetIntersection(notnull array<T> one, notnull array<T> two, inout array<T> common)
+	{
+		int count = 0;
+		
+		foreach(ref T item : one)
+		{
+			if(!two.Contains(item))
+				continue;
+			
+			common.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+	
+	//! Get common items between both iterable sets
+	static int GetIntersection(notnull set<T> one, notnull set<T> two, inout set<T> common)
+	{
+		int count = 0;
+		foreach(ref T item : one)
+		{
+			if(!two.contains(item))
+				continue;
+			
+			common.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+	
+	static int GetDifference(notnull array<T> one, notnull array<T> two, inout array<T> diff)
+	{
+		int count = 0;
+		foreach(ref T item : one)
+		{
+			if(two.Contains(item))
+				continue;
+			
+			diff.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+	
+	static int GetDifference(notnull set<T> one, notnull set<T> two, inout set<T> diff)
+	{
+		int count = 0;
+		
+		foreach(ref T item : one)
+		{
+			if(two.Contains(item))
+				continue;
+			
+			diff.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+};
+
 class TW_Util 
 {
 	static ref RandomGenerator s_Generator = new RandomGenerator();
