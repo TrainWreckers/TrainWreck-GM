@@ -4,13 +4,16 @@
 modded class SCR_BaseGameMode 
 {
 	protected ref TW_MonitorPositions positionMonitor;
-	protected float m_PositionMonitorUpdateInterval = 10.0;
+	protected float m_PositionMonitorUpdateInterval = 5.0;
 	
 	protected ref TW_MapManager m_MapManager;
 	
 	protected ref ScriptInvoker Event_OnGameInitializePlugins = new ScriptInvoker();
 	protected ref ScriptInvoker Event_OnGamePluginsInitialized = new ScriptInvoker();
-	protected ref ScriptInvoker<TW_MonitorPositions> Event_OnPositionMonitorChanged = new ScriptInvoker<TW_MonitorPositions>();
+	protected ref ScriptInvoker Event_OnGameStarted = new ScriptInvoker();
+	
+	[RplProp(onRplName: "DisableGMBudget_OnBroadcastValueUpdated")]
+	bool m_TWBudgetsEnabled = true;
 	
 	protected void InitializePlugins();	
 	
@@ -42,11 +45,12 @@ modded class SCR_BaseGameMode
 			Event_OnGamePluginsInitialized.Invoke();
 		}
 		
-		InitializePositionMonitor();
-		
-		GetOnPositionMonitorChanged().Invoke(positionMonitor);
+		if(GetOnGameStarted())
+			GetOnGameStarted().Invoke();
 				
 		Print("TrainWreck: GameMode Starting...");
+		
+		DisableGMBudget_SetBudgetsEnabled(m_TWBudgetsEnabled);
 
 		m_fTimeElapsed = 0.0;
 		m_eGameState = SCR_EGameModeState.GAME;
@@ -65,18 +69,18 @@ modded class SCR_BaseGameMode
 		- Anti spawn chunk positions
 		- Unloaded chunks
 	*/
-	ref ScriptInvoker<GridUpdateEvent> GetOnPlayerPositionsUpdated() 
+	ref TW_OnPlayerPositionsChangedInvoker GetOnPlayerPositionsUpdated(int gridSize) 
 	{ 
 		if(!positionMonitor) 
 			return null;
 		
-		return positionMonitor.GetGridUpdate(); 
+		if(!positionMonitor.HasGridSystem(gridSize))
+			return null;
+		
+		return positionMonitor.GetGridUpdate(gridSize);
 	}
 	
-	ref ScriptInvoker<TW_MonitorPositions> GetOnPositionMonitorChanged()
-	{
-		return Event_OnPositionMonitorChanged;
-	}
+	ref ScriptInvoker GetOnGameStarted() { return Event_OnGameStarted; }
 	
 	ref ScriptInvoker GetOnPluginsInitialized()
 	{
@@ -88,16 +92,18 @@ modded class SCR_BaseGameMode
 		return Event_OnGamePluginsInitialized;
 	}
 	
-	//! Initialize the player update monitor
-	protected void InitializePositionMonitor()
-	{
-		positionMonitor = new TW_MonitorPositions(250, 5, 150, 2);		
-	}
-	
 	private void MonitorUpdate()
 	{
 		if(positionMonitor)
 			positionMonitor.MonitorPlayers();
+	}
+	
+	//! Change how often player positions are checked
+	void ChangeMonitorInterval(float seconds)
+	{
+		m_PositionMonitorUpdateInterval = seconds;
+		GetGame().GetCallqueue().Remove(MonitorUpdate);
+		GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);
 	}
 	
 	override void EOnInit(IEntity owner) 
@@ -106,16 +112,10 @@ modded class SCR_BaseGameMode
 		
 		if(!TW_Global.IsServer(this) || !TW_Global.IsInRuntime())
 			return;
-		
-		Event_OnPositionMonitorChanged.Insert(RegisterMonitorEvent);
+	
+		positionMonitor = new TW_MonitorPositions();		
+		GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);
 	};
-	
-	private void RegisterMonitorEvent(TW_MonitorPositions monitor)
-	{
-		if(monitor)
-			GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);		
-	}
-	
 	
 	private int m_CompositionSpawnAttempts = 50;
 	void TryToSpawnSite()
@@ -124,6 +124,25 @@ modded class SCR_BaseGameMode
 		
 		ref TW_MapLocation location = m_MapManager.GetRandomLocation();
 		ref LocationConfig config = m_MapManager.settings.GetConfigType(location.LocationType());
+	}
+	
+	void DisableGMBudget_SetBudgetsEnabled(bool enabled)
+	{
+		m_TWBudgetsEnabled = enabled;
+		SCR_BudgetEditorComponent.SetIsBudgetEnabled(enabled);
+		
+		Replication.BumpMe();
+		DisableGMBudget_OnBroadcastValueUpdated();
+	}
+	
+	bool DisableGMBudget_AreBudgetsEnabled() 
+	{
+		return m_TWBudgetsEnabled;
+	};
+	
+	private void DisableGMBudget_OnBroadcastValueUpdated()
+	{
+		SCR_BudgetEditorComponent.SetIsBudgetEnabled(m_TWBudgetsEnabled);
 	}
 	
 }
