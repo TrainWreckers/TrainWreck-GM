@@ -28,3 +28,12 @@ class TW_SettingsManager<TW_SettingsInterface TInterface>
 		return _instance;
 	}
 };
+
+//! Dummy settings to make things compile
+class DummySettings {};
+
+//! Dummy interface to make things compile
+class TW_SettingsDummyInterface : TW_SettingsInterface<DummySettings>{};
+
+//! Dummy manager, simply to make things compile
+typedef TW_SettingsManager<ref TW_SettingsDummyInterface<DummySettings>> TW_DummySettingsManager;
