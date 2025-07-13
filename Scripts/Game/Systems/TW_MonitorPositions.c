@@ -6,6 +6,7 @@ class TW_Grid
 	
 	private ref set<string> m_PlayerChunks;
 	private ref set<string> m_AntiChunks;
+	private ref TW_OnPlayerPositionsChangedInvoker m_OnPositionsChanged = new TW_OnPlayerPositionsChangedInvoker();
 	
 	void TW_Grid(int gridSize, int gridRadius, int antiRadius=-1)
 	{
@@ -18,6 +19,8 @@ class TW_Grid
 		m_PlayerChunks = new set<string>();
 		m_AntiChunks = new set<string>();
 	}
+	
+	TW_OnPlayerPositionsChangedInvoker GetOnPositionsChanged() { return m_OnPositionsChanged; }
 	
 	int GetGridSize() { return m_GridSize; }
 	int GetGridRadius() { return m_GridRadius; }
@@ -97,8 +100,6 @@ class TW_MonitorPositions
 		
 	private ref array<IEntity> m_Players = {};
 	
-	private ref map<int, ref TW_OnPlayerPositionsChangedInvoker> m_OnGridUpdate = new map<int, ref TW_OnPlayerPositionsChangedInvoker>();
-	
 	private ref TW_OnGridSystemChangedInvoker m_OnGridSystemChanged = new TW_OnGridSystemChangedInvoker();
 	
 	TW_OnGridSystemChangedInvoker GetOnGridSystemChanged() { return m_OnGridSystemChanged; }
@@ -108,10 +109,7 @@ class TW_MonitorPositions
 		if(!HasGridSystem(gridSize)) 
 			return null;
 		
-		if(!m_OnGridUpdate.Contains(gridSize))
-			return null;
-		
-		return m_OnGridUpdate.Get(gridSize);
+		return GetGridSystem(gridSize).GetOnPositionsChanged();
 	}
 	
 	//! Does the monitor have a system for specific grid size
@@ -132,24 +130,9 @@ class TW_MonitorPositions
 			m_GridSystems.Remove(oldSize);
 		}
 		
-		RemoveGridInvoker(oldSize);
-		
 		m_GridSystems.Insert(newSize, grid);
 		if(GetOnGridSystemChanged())
 			GetOnGridSystemChanged().Invoke(oldSize, newSize, grid);
-	}
-	
-	//! Remove subscriptions to grid size
-	private void RemoveGridInvoker(int oldSize)
-	{
-		if(m_OnGridUpdate.Contains(oldSize))
-		{
-			ref TW_OnPlayerPositionsChangedInvoker invoker = m_OnGridUpdate.Get(oldSize);
-			invoker.Clear();
-			delete invoker;
-			
-			m_OnGridUpdate.Remove(oldSize);
-		}	
 	}
 	
 	//! Remove Grid System, and any listeners
@@ -159,8 +142,6 @@ class TW_MonitorPositions
 		{
 			m_GridSystems.Remove(gridSize);
 		}
-		
-		RemoveGridInvoker(gridSize);
 	}
 	
 	void TW_MonitorPositions()
@@ -170,12 +151,10 @@ class TW_MonitorPositions
 	
 	void ~TW_MonitorPositions()
 	{
+		foreach(int size, ref TW_Grid grid : m_GridSystems)
+			grid.GetOnPositionsChanged().Clear();
+		
 		m_GridSystems.Clear();
-		
-		foreach(int size, TW_OnPlayerPositionsChangedInvoker invoker : m_OnGridUpdate)
-			invoker.Clear();
-		
-		m_OnGridUpdate.Clear();
 	}
 	
 	void AddGridSystem(int gridSize, int gridRadius, int antiRadius)
@@ -201,7 +180,6 @@ class TW_MonitorPositions
 		
 		ref TW_Grid grid = new TW_Grid(gridSize, gridRadius, antiRadius);
 		m_GridSystems.Insert(gridSize, grid);
-		m_OnGridUpdate.Insert(gridSize, new TW_OnPlayerPositionsChangedInvoker());
 	}
 	
 	void AddSpawnGridSystem(int gridSize, int gridRadius)
@@ -222,7 +200,6 @@ class TW_MonitorPositions
 		
 		ref TW_Grid grid = new TW_Grid(gridSize, gridRadius);
 		m_GridSystems.Insert(gridSize, grid);
-		m_OnGridUpdate.Insert(gridSize, new TW_OnPlayerPositionsChangedInvoker());
 	}
 	
 	void AddAntiGridSystem(int gridSize, int gridRadius)
@@ -235,7 +212,6 @@ class TW_MonitorPositions
 		
 		ref TW_Grid grid = new TW_Grid(gridSize, -1, gridRadius);
 		m_GridSystems.Insert(gridSize, grid);
-		m_OnGridUpdate.Insert(gridSize, new TW_OnPlayerPositionsChangedInvoker());
 	}
 	
 	void MonitorPlayers()
@@ -320,11 +296,8 @@ class TW_MonitorPositions
 			
 			if(positionsHaveChanged)
 			{
-				if(!m_OnGridUpdate.Contains(gridSystem.GetGridSize()))
-					continue;
-				
 				ref GridUpdateEvent updateEvent = new GridUpdateEvent(gridSystem.GetPlayerChunks(), gridSystem.GetAntiChunks(), unloaded);
-				m_OnGridUpdate.Get(gridSystem.GetGridSize()).Invoke(updateEvent);
+				gridSystem.GetOnPositionsChanged().Invoke(updateEvent);
 			}
 		}
 	}
