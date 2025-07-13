@@ -4,7 +4,7 @@
 modded class SCR_BaseGameMode 
 {
 	protected ref TW_MonitorPositions positionMonitor;
-	protected float m_PositionMonitorUpdateInterval = 10.0;
+	protected float m_PositionMonitorUpdateInterval = 5.0;
 	
 	protected ref TW_MapManager m_MapManager;
 	
@@ -13,7 +13,7 @@ modded class SCR_BaseGameMode
 	protected ref ScriptInvoker Event_OnGameStarted = new ScriptInvoker();
 	
 	[RplProp(onRplName: "DisableGMBudget_OnBroadcastValueUpdated")]
-	bool m_TWBudgetsEnabled = false;
+	bool m_TWBudgetsEnabled = true;
 	
 	protected void InitializePlugins();	
 	
@@ -96,6 +96,14 @@ modded class SCR_BaseGameMode
 	{
 		if(positionMonitor)
 			positionMonitor.MonitorPlayers();
+	}
+	
+	//! Change how often player positions are checked
+	void ChangeMonitorInterval(float seconds)
+	{
+		m_PositionMonitorUpdateInterval = seconds;
+		GetGame().GetCallqueue().Remove(MonitorUpdate);
+		GetGame().GetCallqueue().CallLater(MonitorUpdate, m_PositionMonitorUpdateInterval * 1000, true);
 	}
 	
 	override void EOnInit(IEntity owner) 
