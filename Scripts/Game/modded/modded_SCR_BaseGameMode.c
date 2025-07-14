@@ -60,26 +60,6 @@ modded class SCR_BaseGameMode
 		OnGameStateChanged();
 	}
 	
-	/*!
-		This update doesn't trigger every interval. This only changes
-		when player chunks from previous check are different from current
-	
-		This update will pass along the various chunk information
-		- Player chunk positions
-		- Anti spawn chunk positions
-		- Unloaded chunks
-	*/
-	ref TW_OnPlayerPositionsChangedInvoker GetOnPlayerPositionsUpdated(int gridSize) 
-	{ 
-		if(!positionMonitor) 
-			return null;
-		
-		if(!positionMonitor.HasGridSystem(gridSize))
-			return null;
-		
-		return positionMonitor.GetGridUpdate(gridSize);
-	}
-	
 	ref ScriptInvoker GetOnGameStarted() { return Event_OnGameStarted; }
 	
 	ref ScriptInvoker GetOnPluginsInitialized()

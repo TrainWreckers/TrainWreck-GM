@@ -1,3 +1,87 @@
+/*!
+	The reason for separate helper class is because for whatever reason when I tried using strings
+	with the TW_IterableHelper, it would say 
+
+	"auto-pointer 'string' must be class-type"
+
+	Despite the same code for SCR_ArrayHelper working with strings. So I made the separate class specifically for strings
+*/
+class TW_IterableStringHelper
+{
+	static int GetIntersection(notnull array<string> one, notnull array<string> two, inout array<string> common)
+	{
+		int count = 0;
+		
+		foreach(string item : one)
+		{
+			if(!two.Contains(item))
+				continue;
+			
+			common.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+	
+	static int GetIntersection(notnull set<string> one, notnull set<string> two, inout set<string> common)
+	{
+		int count = 0;
+		
+		foreach(string item : one)
+		{
+			if(!two.Contains(item))
+				continue;
+			common.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+	
+	static int GetDifference(notnull array<string> one, notnull array<string> two, inout array<string> diff)
+	{
+		int count = 0;
+		foreach(string item : one)
+		{
+			if(two.Contains(item))
+				continue;
+			diff.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+	
+	static int GetDifference(notnull set<string> one, notnull set<string> two, inout set<string> diff)
+	{
+		int count = 0;
+		foreach(string item : one)
+		{
+			if(two.Contains(item))
+				continue;
+			diff.Insert(item);
+			count++;
+		}
+		
+		return count;
+	}
+	
+	static array<string> GetCopy(notnull array<string> items)
+	{
+		ref array<string> copy = {};
+		copy.Copy(items);
+		return copy;
+	}
+	
+	static set<string> GetCopy(notnull set<string> items)
+	{
+		ref set<string> copy = new set<string>();
+		copy.Copy(items);
+		return copy;
+	}
+}
+
 class TW_IterableHelper<Class T>
 {
 	//! Get common items between both iterable arrays
@@ -62,6 +146,20 @@ class TW_IterableHelper<Class T>
 		}
 		
 		return count;
+	}
+	
+	static array<T> GetCopy(notnull array<T> one)
+	{
+		ref array<T> copy = {};
+		copy.Copy(one);
+		return copy;
+	}
+	
+	static set<T> GetCopy(notnull set<T> one)
+	{
+		ref set<T> copy = new set<T>();
+		copy.Copy(one);
+		return one;
 	}
 };
 

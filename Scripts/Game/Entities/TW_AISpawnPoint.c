@@ -15,135 +15,10 @@ class TW_AISpawnPoint : GenericEntity
 	[Attribute("{0EC5F76A0DDF05EF}Prefabs/Systems/Compositions/PatrolPoint/LoiterPost.et", UIWidgets.ResourceNamePicker, category: "Loiter")]
 	protected ResourceName m_LoiterPoint;
 	
-	//! Size of grid that is to be used by spawn points
-	private static int s_SpawnGridSize = 500;
-	
 	private bool _isActive = true;
 	
 	void SetIsActive(bool value) { _isActive = value; }
 	bool IsActive() { return _isActive; }
-	
-	//! Get size of spawn grid
-	static int GetSpawnGridSize() { return s_SpawnGridSize; }
-	
-	//! Change spawn grid. Will re-register already registered points to new grid manager
-	static void ChangeSpawnGridSize(int newSize)
-	{
-		s_SpawnGridSize = newSize;
-		ref TW_GridCoordArrayManager<TW_AISpawnPoint> manager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(newSize);
-		ref array<TW_AISpawnPoint> items = {};
-		int count = s_GridManager.GetAllItems(items);
-		
-		foreach(TW_AISpawnPoint spawnPoint : items)
-			if(spawnPoint)
-				manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
-		
-		delete s_GridManager;
-		s_GridManager = manager;
-	}	
-	
-	static TW_GridCoordArrayManager<TW_AISpawnPoint> GetGridManager() { return s_GridManager; }
-	
-	//! Manager which will handle grabbing spawn points by grid square
-	private static ref TW_GridCoordArrayManager<TW_AISpawnPoint> s_GridManager = new TW_GridCoordArrayManager<TW_AISpawnPoint>(s_SpawnGridSize);
-	
-	//! Get spawn points in each of the provided chunks
-	static void GetSpawnPointsInChunks(notnull set<string> chunks, notnull array<TW_AISpawnPoint> spawnPoints)
-	{
-		int x, y;
-		foreach(string chunk : chunks)
-		{
-			TW_Util.FromGridString(chunk, x, y);
-			if(s_GridManager.HasCoord(x, y))
-			{
-				TW_GridCoordArray<TW_AISpawnPoint> coord = s_GridManager.GetCoord(x,y);
-				
-				ref array<TW_AISpawnPoint> points = {};
-				coord.GetData(points);
-				
-				foreach(TW_AISpawnPoint sp : points)
-					if(sp.IsActive())
-						spawnPoints.Insert(sp);				
-			}
-		}
-	}
-	
-	static void GetSpawnPointsInChunks(notnull set<string> playerChunks, notnull set<string> antiSpawnChunks, notnull array<TW_AISpawnPoint> spawnPoints)
-	{
-		if(!TW_MonitorPositions.GetInstance().HasGridSystem(s_GridManager.GetGridSize()))
-		{
-			PrintFormat("TrainWreck: Unable to get spawn points in chunks. Grid System for GridSize: '%1' does not exist", s_GridManager.GetGridSize(), LogLevel.WARNING);
-			return;	
-		}
-		
-		ref TW_Grid gridSystem = TW_MonitorPositions.GetInstance().GetGridSystem(s_GridManager.GetGridSize());
-		
-		int antiRadius = gridSystem.GetAntiGridRadius();
-		
-		int x, y;
-		ref array<TW_AISpawnPoint> points = {};
-		
-		// We iterate over our player chunks to see if those chunks exist within our grid manager
-		foreach(string chunk : playerChunks)
-		{
-			TW_Util.FromGridString(chunk, x, y);
-			
-			if(!s_GridManager.HasCoord(x, y))
-				continue;
-			
-			ref TW_GridCoordArray<TW_AISpawnPoint> coord = s_GridManager.GetCoord(x, y);
-			points.Clear();
-			coord.GetData(points);
-			
-			// We then iterate over our spawn points to verify they don't
-			// correspond to an antispawn chunk
-			foreach(TW_AISpawnPoint spawnPoint : points)
-			{
-				if(!spawnPoint.IsActive()) 
-					continue;
-				
-				string antiChunk = TW_Util.ToGridText(spawnPoint.GetOrigin(), antiRadius);
-				if(antiSpawnChunks.Contains(antiChunk))
-					continue;
-				spawnPoints.Insert(spawnPoint);
-			}
-		}
-	}
-	
-	//! Get nearby spawn points around a given point (used by game master, hopefully eliminates weird bordering)
-	static void GetNearbySpawnPoints(vector center, notnull array<TW_AISpawnPoint> spawnPoints, int chunkRadius = 1)
-	{
-		int x, y;
-		TW_Util.ToGrid(center, x, y, s_SpawnGridSize);
-		
-		if(!s_GridManager.HasCoord(x, y))
-			return;
-		
-		ref array<ref TW_GridCoordArray<TW_AISpawnPoint>> items = {};
-		s_GridManager.GetNeighbors(items, x, y, chunkRadius);
-				
-		foreach(ref TW_GridCoordArray<TW_AISpawnPoint> item : items)
-		{
-			ref array<TW_AISpawnPoint> points = item.GetAll();
-			
-			foreach(TW_AISpawnPoint spawnPoint : points)
-			{
-				if(!spawnPoint) continue;
-				if(spawnPoint.IsActive())
-					spawnPoints.Insert(spawnPoint);
-			}		
-		}			
-	}
-		
-	static void RegisterSpawnPoint(TW_AISpawnPoint spawnPoint)
-	{
-		s_GridManager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
-	}
-	
-	static void UnregisterSpawnPoint(TW_AISpawnPoint spawnPoint)
-	{
-		s_GridManager.RemoveByWorld(spawnPoint.GetOrigin(), spawnPoint);
-	}
 	
 	void TW_AISpawnPoint(IEntitySource src, IEntity parent)
 	{
@@ -156,7 +31,7 @@ class TW_AISpawnPoint : GenericEntity
 		if(!GetGame().InPlayMode())
 			return;
 		
-		RegisterSpawnPoint(this);
+		TW_AISpawnPointGrid.GetInstance().RegisterSpawnPoint(this);
 		
 		EntitySpawnParams params = EntitySpawnParams();
 		GetTransform(params.Transform);
