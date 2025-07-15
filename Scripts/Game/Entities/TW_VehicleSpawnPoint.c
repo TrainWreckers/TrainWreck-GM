@@ -19,7 +19,6 @@ class TW_VehicleSpawnPoint : GenericEntity
 	
 	TW_VehicleType GetAllowedVehicleTypes() { return m_AllowedVehicleTypes; }
 	
-	static ref TW_GridCoordArrayManager<TW_VehicleSpawnPoint> s_VehicleGrid = new TW_GridCoordArrayManager<TW_VehicleSpawnPoint>();
 	private static ref array<IEntity> _vehicles = {};
 	
 	void TW_VehicleSpawnPoint(IEntitySource src, IEntity parent)
@@ -34,8 +33,7 @@ class TW_VehicleSpawnPoint : GenericEntity
 			return;
 		
 		m_RplComponent = TW<RplComponent>.Find(owner);
-		
-		s_VehicleGrid.InsertByWorld(GetOrigin(), this);		
+		TW_VehicleSpawnPointGrid.GetInstance().RegisterSpawnPoint(this);
 	}
 	
 	static void ManageVehicles(notnull set<string> playerChunks, int maxDistance = 3)
@@ -58,7 +56,7 @@ class TW_VehicleSpawnPoint : GenericEntity
 		
 		foreach(IEntity vehicle : _vehicles)
 		{			
-			TW_Util.ToGrid(vehicle.GetOrigin(), x, y, s_VehicleGrid.GetGridSize());		
+			TW_Util.ToGrid(vehicle.GetOrigin(), x, y, TW_VehicleSpawnPointGrid.GetInstance().GetGridSize());		
 			
 			bool isClose = false;
 							
@@ -81,41 +79,6 @@ class TW_VehicleSpawnPoint : GenericEntity
 		}
 	}
 	
-	static void ChangeSpawnGridSize(int newSize)
-	{
-		ref TW_GridCoordArrayManager<TW_VehicleSpawnPoint> manager = new TW_GridCoordArrayManager<TW_VehicleSpawnPoint>(newSize);
-		ref array<TW_VehicleSpawnPoint> items = {};
-		int count = s_VehicleGrid.GetAllItems(items);
-		
-		foreach(TW_VehicleSpawnPoint spawnPoint : items)
-			if(spawnPoint)
-				manager.InsertByWorld(spawnPoint.GetOrigin(), spawnPoint);
-		
-		delete s_VehicleGrid;
-		s_VehicleGrid = manager;
-	}	
-	
-	static void GetSpawnPointsInChunks(notnull set<string> chunks, notnull array<TW_VehicleSpawnPoint> spawnPoints)
-	{
-		int x, y;
-		foreach(string chunk : chunks)
-		{			
-			TW_Util.FromGridString(chunk, x, y);
-			
-			if(s_VehicleGrid.HasCoord(x, y))
-			{
-				TW_GridCoordArray<TW_VehicleSpawnPoint> coord = s_VehicleGrid.GetCoord(x,y);
-				
-				ref array<TW_VehicleSpawnPoint> points = {};
-				coord.GetData(points);
-				
-				foreach(TW_VehicleSpawnPoint sp : points)
-					if(sp.IsActive())
-						spawnPoints.Insert(sp);				
-			}
-		}
-	}
-	
 	bool CanSpawnVehicleType(TW_VehicleType type)
 	{
 		return SCR_Enum.HasFlag(m_AllowedVehicleTypes, type);
@@ -126,17 +89,17 @@ class TW_VehicleSpawnPoint : GenericEntity
 		return m_CanSpawn;
 	}
 	
-	bool SpawnVehicle(ResourceName vehiclePrefab, out IEntity vehicle, float chanceToSpawn)
+	bool SpawnVehicle(ResourceName vehiclePrefab, out IEntity vehicle, float chanceToSpawn, bool shouldRemove=true)
 	{
 		if(!m_CanSpawn)
 			return false;
 		
 		float roll = Math.RandomFloat01();
 		
-		if(roll <= chanceToSpawn)
+		if(roll <= chanceToSpawn && shouldRemove)
 		{
 			m_CanSpawn = false;
-			s_VehicleGrid.RemoveByWorld(GetOrigin(), this);
+			TW_VehicleSpawnPointGrid.GetInstance().UnregisterSpawnPoint(this);
 		}
 		
 		Resource resource = Resource.Load(vehiclePrefab);
@@ -156,7 +119,9 @@ class TW_VehicleSpawnPoint : GenericEntity
 		_vehicles.Insert(vehicle);
 		
 		m_CanSpawn = false;
-		s_VehicleGrid.RemoveByWorld(GetOrigin(), this);		
+		
+		if(shouldRemove)
+			TW_VehicleSpawnPointGrid.GetInstance().UnregisterSpawnPoint(this);
 		
 		return true;
 	}

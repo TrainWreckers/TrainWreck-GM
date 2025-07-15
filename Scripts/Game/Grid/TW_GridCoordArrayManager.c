@@ -120,6 +120,8 @@ class TW_GridCoordArrayManager<Class T>
 	//! Retrieve coords around center
 	int GetNeighbors(notnull out array<ref TW_GridCoordArray<T>> items, int x, int y, int radius = 1, bool includeCenter = true)
 	{
+		radius = Math.Max(0, radius);
+		
 		int leftBounds = x - radius;
 		int rightBounds = x + radius;
 		int upperBounds = y + radius;
@@ -195,7 +197,7 @@ class TW_GridCoordArrayManager<Class T>
 		return totalCount;
 	}
 	
-	int GetNeighborsAround(notnull out array<T> data, notnull set<string> textCoords, int radius = 1)
+	int GetNeighborsAround(notnull out array<T> data, notnull set<string> textCoords, int radius = 0)
 	{
 		ref set<string> completedCoords = new set<string>();
 		
@@ -210,17 +212,41 @@ class TW_GridCoordArrayManager<Class T>
 			
 			TW_Util.FromGridString(textCoord, x, y);
 			
-			// If this coordinate has already been checked -- continue
-			if(completedCoords.Contains(textCoord))
-				continue;
-					
-			completedCoords.Insert(textCoord);
-					
-			if(HasCoord(x, y))
+			
+			if(radius <= 0)
 			{
-				ref TW_GridCoordArray<T> chunk = GetCoord(x, y);
-				totalCount += chunk.GetData(data);
+				completedCoords.Insert(textCoord);
+					
+				if(HasCoord(x, y))
+				{
+					ref TW_GridCoordArray<T> chunk = GetCoord(x, y);
+					totalCount += chunk.GetData(data);
+				}
 			}
+			else
+			{
+				int left = x - radius;
+				int right = x + radius;
+				int top = y + radius;
+				int bottom = y - radius;
+				
+				for(int cx = left; cx < right; cx++)
+				{
+					for(int cy = bottom; cy < top; cy++)
+					{
+						string coord = string.Format("%1 %2", cx, cy);
+						if(completedCoords.Contains(coord))
+							continue;
+						
+						if(HasCoord(x, y))
+						{
+							ref TW_GridCoordArray<T> chunk = GetCoord(x, y);
+							totalCount += chunk.GetData(data);
+						}
+					}
+				}
+			}
+			
 		}
 		
 		return totalCount;
