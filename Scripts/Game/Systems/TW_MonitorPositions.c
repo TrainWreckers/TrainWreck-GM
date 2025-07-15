@@ -87,7 +87,17 @@ class TW_GridRadiusSubscription
 				unloaded.Clear();
 				
 				if(m_Cache.Contains(radius))
-					previousCheck.Copy(m_Cache.Get(radius));
+				{
+					ref set<string> existing = m_Cache.Get(radius);
+					
+					// Appears to crash Workbench when empty...
+					// So we're doing a check to prevent that
+					if(existing && !existing.IsEmpty())
+					{
+						previousCheck.Clear();
+						previousCheck.Copy(existing);
+					}
+				}
 				
 				TW_Util.AddSurroundingGridSquares(playerChunks, player.GetOrigin(), radius, m_GridSize);
 				
