@@ -8,6 +8,7 @@ class TW_GridCoordArrayManager<Class T>
 	
 	private int pointerIndex = -1;
 	private int activeCoordsCount = 0;
+	private ref TW_GridFilterBase gridFilter;
 	
 	int GetGridSize() { return GridSize; }
 	int GetTrackedItemsCount()
@@ -16,9 +17,13 @@ class TW_GridCoordArrayManager<Class T>
 		return GetAllItems(allItems);
 	}
 	
-	void TW_GridCoordArrayManager(int gridSize = 1000)
+	TW_GridFilterBase GetGridFilter() { return gridFilter; }
+	void SetGridFilter(TW_GridFilterBase filter) { gridFilter = filter; }
+	
+	void TW_GridCoordArrayManager(int gridSize = 1000, TW_GridFilterBase filter = null)
 	{
 		this.GridSize = gridSize;
+		this.gridFilter = filter;
 	}
 	
 	TW_GridCoordArray<T> GetCoord(int x, int y)
@@ -137,6 +142,8 @@ class TW_GridCoordArrayManager<Class T>
 				
 				if(HasCoord(gridX, gridY))
 				{
+					if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(gridX, gridY))
+						continue;
 					items.Insert(GetCoord(gridX, gridY));
 					count++;
 				}
@@ -188,6 +195,9 @@ class TW_GridCoordArrayManager<Class T>
 				
 			if(HasCoord(x, y))
 			{
+				if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(x, y))
+					continue;
+				
 				ref TW_GridCoordArray<T> chunk = GetCoord(x, y);
 				chunks.Insert(chunk);
 				totalCount++;
@@ -216,6 +226,9 @@ class TW_GridCoordArrayManager<Class T>
 			if(radius <= 0)
 			{
 				completedCoords.Insert(textCoord);
+				
+				if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(x, y))
+					continue;
 					
 				if(HasCoord(x, y))
 				{
@@ -238,6 +251,9 @@ class TW_GridCoordArrayManager<Class T>
 						if(completedCoords.Contains(coord))
 							continue;
 						
+						if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(cx, cy))
+							continue;
+						
 						if(HasCoord(x, y))
 						{
 							ref TW_GridCoordArray<T> chunk = GetCoord(x, y);
@@ -256,7 +272,7 @@ class TW_GridCoordArrayManager<Class T>
 	{
 		ref array<ref TW_GridCoordArray<T>> neighbors = {};
 		int chunks = GetNeighbors(neighbors, x, y, radius, includeCenter);
-		
+	
 		if(chunks < 0)
 			return 0;
 		
