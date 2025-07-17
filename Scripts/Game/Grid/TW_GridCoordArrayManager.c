@@ -26,6 +26,20 @@ class TW_GridCoordArrayManager<Class T>
 		this.gridFilter = filter;
 	}
 	
+	map<string, ref TW_GridCoordArray<T>> GetGrid()
+	{
+		ref map<string, ref TW_GridCoordArray<T>> results = new map<string, ref TW_GridCoordArray<T>>();
+		foreach(int x, ref map<int, ref TW_GridCoordArray<T>> subgrid : grid)
+		{
+			foreach(int y, ref TW_GridCoordArray<T> gridArray : subgrid)
+			{
+				results.Insert(string.Format("%1 %2", x, y), gridArray);
+			}
+		}
+		
+		return results;
+	}
+	
 	TW_GridCoordArray<T> GetCoord(int x, int y)
 	{
 		if(!HasCoord(x, y))
@@ -123,7 +137,7 @@ class TW_GridCoordArrayManager<Class T>
 	}
 	
 	//! Retrieve coords around center
-	int GetNeighbors(notnull out array<ref TW_GridCoordArray<T>> items, int x, int y, int radius = 1, bool includeCenter = true)
+	int GetNeighbors(notnull out array<ref TW_GridCoordArray<T>> items, int x, int y, int radius = 1, bool includeCenter = true, set<string> exclude = null)
 	{
 		radius = Math.Max(0, radius);
 		
@@ -144,6 +158,10 @@ class TW_GridCoordArrayManager<Class T>
 				{
 					if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(gridX, gridY))
 						continue;
+					
+					if(exclude && exclude.Contains(string.Format("%1 %2", gridX, gridY)))
+						continue;
+					
 					items.Insert(GetCoord(gridX, gridY));
 					count++;
 				}
@@ -172,7 +190,7 @@ class TW_GridCoordArrayManager<Class T>
 	}
 	
 	//! Get all chunks around player positions
-	int GetChunksAround(notnull out array<ref TW_GridCoordArray<T>> chunks, notnull set<string> textCoords, int radius = 1)
+	int GetChunksAround(notnull out array<ref TW_GridCoordArray<T>> chunks, notnull set<string> textCoords, int radius = 1, set<string> exclude = null)
 	{
 		ref set<string> completedCoords = new set<string>();
 		
@@ -190,12 +208,18 @@ class TW_GridCoordArrayManager<Class T>
 			// If this coordinate has already been checked -- continue
 			if(completedCoords.Contains(textCoord))
 				continue;
+			
+			if(exclude && exclude.Contains(textCoord))
+				continue;
 					
 			completedCoords.Insert(textCoord);
 				
 			if(HasCoord(x, y))
 			{
 				if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(x, y))
+					continue;
+				
+				if(exclude && exclude.Contains(textCoord))
 					continue;
 				
 				ref TW_GridCoordArray<T> chunk = GetCoord(x, y);
@@ -207,7 +231,7 @@ class TW_GridCoordArrayManager<Class T>
 		return totalCount;
 	}
 	
-	int GetNeighborsAround(notnull out array<T> data, notnull set<string> textCoords, int radius = 0)
+	int GetNeighborsAround(notnull out array<T> data, notnull set<string> textCoords, int radius = 0, set<string> exclude = null)
 	{
 		ref set<string> completedCoords = new set<string>();
 		
@@ -228,6 +252,9 @@ class TW_GridCoordArrayManager<Class T>
 				completedCoords.Insert(textCoord);
 				
 				if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(x, y))
+					continue;
+				
+				if(exclude && exclude.Contains(textCoord))
 					continue;
 					
 				if(HasCoord(x, y))
@@ -254,6 +281,9 @@ class TW_GridCoordArrayManager<Class T>
 						if(GetGridFilter() && GetGridFilter().ShouldIncludeCoord(cx, cy))
 							continue;
 						
+						if(exclude && exclude.Contains(coord))
+							continue;
+						
 						if(HasCoord(x, y))
 						{
 							ref TW_GridCoordArray<T> chunk = GetCoord(x, y);
@@ -268,10 +298,10 @@ class TW_GridCoordArrayManager<Class T>
 		return totalCount;
 	}	
 	
-	int GetNeighboringItems(notnull out array<T> items, int x, int y, int radius = 1, bool includeCenter = true)
+	int GetNeighboringItems(notnull out array<T> items, int x, int y, int radius = 1, bool includeCenter = true, set<string> exclude = null)
 	{
 		ref array<ref TW_GridCoordArray<T>> neighbors = {};
-		int chunks = GetNeighbors(neighbors, x, y, radius, includeCenter);
+		int chunks = GetNeighbors(neighbors, x, y, radius, includeCenter, exclude);
 	
 		if(chunks < 0)
 			return 0;

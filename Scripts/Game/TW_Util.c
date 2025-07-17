@@ -808,6 +808,8 @@ class TW_Util
 		// Add them to point
 		spawnPoint.AddGroupToPoint(group);
 		
+		GetGame().GetCallqueue().CallLater(TW_AISpawnPointGrid.GetInstance().OnGroupSpawn, 250, false, group);
+		
 		return group;
 	}
 	

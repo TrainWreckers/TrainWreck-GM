@@ -14,6 +14,8 @@ class TW_GridCoordArray<Class T>
 	void Add(T item) { data.Insert(item); }
 	void RemoveItem(T item) { data.RemoveItem(item); }
 	
+	int Count() { return data.Count(); }
+	
 	T GetRandomElement() { return data.GetRandomElement(); }
 	array<T> GetAll() { return data; }
 	

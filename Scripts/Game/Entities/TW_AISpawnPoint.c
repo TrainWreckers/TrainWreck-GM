@@ -26,6 +26,12 @@ class TW_AISpawnPoint : GenericEntity
 		SetFlags(EntityFlags.ACTIVE, true);
 	}
 	
+	bool CanSpawn()
+	{
+		if(!IsActive()) return false;
+		return TW_AISpawnPointGrid.GetInstance().CanSpawnFrom(this);
+	}
+	
 	override void EOnInit(IEntity owner)
 	{
 		if(!GetGame().InPlayMode())
@@ -82,6 +88,7 @@ class TW_AISpawnPoint : GenericEntity
 		if(shouldPatrol)
 		{
 			TW_Util.CreatePatrolPathFor(group, m_PatrolWaypointPrefab, m_CycleWaypointPrefab, patrolWaypointCount, patrolRadius);
+			TW_AISpawnPointGrid.GetInstance().OnGroupSpawn(group);
 			return group;
 		}
 		
