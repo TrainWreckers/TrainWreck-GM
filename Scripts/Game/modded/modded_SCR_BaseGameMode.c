@@ -12,9 +12,6 @@ modded class SCR_BaseGameMode
 	protected ref ScriptInvoker Event_OnGamePluginsInitialized = new ScriptInvoker();
 	protected ref ScriptInvoker Event_OnGameStarted = new ScriptInvoker();
 	
-	[RplProp(onRplName: "DisableGMBudget_OnBroadcastValueUpdated")]
-	bool m_TWBudgetsEnabled = true;
-	
 	protected void InitializePlugins();	
 	
 	override void StartGameMode()
@@ -50,7 +47,6 @@ modded class SCR_BaseGameMode
 				
 		Print("TrainWreck: GameMode Starting...");
 		
-		DisableGMBudget_SetBudgetsEnabled(m_TWBudgetsEnabled);
 
 		m_fTimeElapsed = 0.0;
 		m_eGameState = SCR_EGameModeState.GAME;
@@ -104,25 +100,6 @@ modded class SCR_BaseGameMode
 		
 		ref TW_MapLocation location = m_MapManager.GetRandomLocation();
 		ref LocationConfig config = m_MapManager.settings.GetConfigType(location.LocationType());
-	}
-	
-	void DisableGMBudget_SetBudgetsEnabled(bool enabled)
-	{
-		m_TWBudgetsEnabled = enabled;
-		SCR_BudgetEditorComponent.SetIsBudgetEnabled(enabled);
-		
-		Replication.BumpMe();
-		DisableGMBudget_OnBroadcastValueUpdated();
-	}
-	
-	bool DisableGMBudget_AreBudgetsEnabled() 
-	{
-		return m_TWBudgetsEnabled;
-	};
-	
-	private void DisableGMBudget_OnBroadcastValueUpdated()
-	{
-		SCR_BudgetEditorComponent.SetIsBudgetEnabled(m_TWBudgetsEnabled);
 	}
 	
 }
