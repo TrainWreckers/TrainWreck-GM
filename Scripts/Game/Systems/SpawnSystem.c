@@ -39,9 +39,10 @@ class TW_AISpawnPointGrid
 	*/
 	void GetSpawnPointsInChunks(notnull set<string> chunks, notnull array<TW_AISpawnPoint> spawnPoints, int radius = -1)
 	{
+		ref set<string> processed = new set<string>();
 		foreach(string chunk : chunks)
 		{
-			m_Grid.GetNeighborsAround(spawnPoints, chunks, radius);
+			m_Grid.GetNeighborsAround(spawnPoints, chunks, processed, radius);
 		}
 	}
 	
@@ -58,11 +59,22 @@ class TW_AISpawnPointGrid
 		if(!m_Grid.HasCoord(x, y))
 			return;
 		
+		ref set<string> processed = new set<string>();
+		
+		processed.Insert(TW_Util.ToGridText(center, m_GridSize));
+		
 		ref array<ref TW_GridCoordArray<TW_AISpawnPoint>> items = {};
-		m_Grid.GetNeighbors(items, x, y, radius);
+		m_Grid.GetNeighbors(items, x, y, processed, radius);
 		
 		foreach(ref TW_GridCoordArray<TW_AISpawnPoint> item : items)
 		{
+			string currentCoord = TW_Util.ToGridText(item.x, item.y);
+			
+			if(processed.Contains(currentCoord))
+				continue;
+			
+			processed.Insert(currentCoord);
+			
 			ref array<TW_AISpawnPoint> points = item.GetAll();
 			foreach(TW_AISpawnPoint spawnPoint : points)
 			{
@@ -117,9 +129,10 @@ class TW_VehicleSpawnPointGrid
 	*/
 	void GetSpawnPointsInChunks(notnull set<string> chunks, notnull array<TW_VehicleSpawnPoint> spawnPoints, int radius = -1)
 	{
+		ref set<string> processed = new set<string>();
 		foreach(string chunk : chunks)
 		{
-			m_Grid.GetNeighborsAround(spawnPoints, chunks, radius);
+			m_Grid.GetNeighborsAround(spawnPoints, chunks, processed, radius);
 		}
 	}
 	
@@ -136,8 +149,10 @@ class TW_VehicleSpawnPointGrid
 		if(!m_Grid.HasCoord(x, y))
 			return;
 		
+		ref set<string> processed = new set<string>();
+		
 		ref array<ref TW_GridCoordArray<TW_VehicleSpawnPoint>> items = {};
-		m_Grid.GetNeighbors(items, x, y, radius);
+		m_Grid.GetNeighbors(items, x, y, processed, radius);
 		
 		foreach(ref TW_GridCoordArray<TW_VehicleSpawnPoint> item : items)
 		{
