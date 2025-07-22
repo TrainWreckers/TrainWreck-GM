@@ -1,3 +1,4 @@
+// Delegates for making it easier to work with later
 void TW_OnPlayerPositionsChanged(GridUpdateEvent gridInfo);
 typedef func TW_OnPlayerPositionsChangedDelegate;
 typedef ScriptInvoker<ref TW_OnPlayerPositionsChangedDelegate> TW_OnPlayerPositionsChangedInvoker;

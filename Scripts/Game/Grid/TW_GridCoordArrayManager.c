@@ -118,7 +118,7 @@ class TW_GridCoordArrayManager<Class T>
 	}
 	
 	//! Retrieve coords around center
-	int GetNeighbors(notnull out array<ref TW_GridCoordArray<T>> items, int x, int y, int radius = 1, bool includeCenter = true)
+	int GetNeighbors(notnull out array<ref TW_GridCoordArray<T>> items, int x, int y, inout set<string> processed, int radius = 1, bool includeCenter = true)
 	{
 		radius = Math.Max(0, radius);
 		
@@ -134,6 +134,11 @@ class TW_GridCoordArrayManager<Class T>
 			{
 				if(gridX == x && gridY == y && !includeCenter)
 					continue;
+				
+				string coord = TW_Util.ToGridText(gridX, gridY);
+				if(processed.Contains(coord))
+					continue;
+				processed.Insert(coord);
 				
 				if(HasCoord(gridX, gridY))
 				{
@@ -165,7 +170,7 @@ class TW_GridCoordArrayManager<Class T>
 	}
 	
 	//! Get all chunks around player positions
-	int GetChunksAround(notnull out array<ref TW_GridCoordArray<T>> chunks, notnull set<string> textCoords, int radius = 1)
+	int GetChunksAround(notnull out array<ref TW_GridCoordArray<T>> chunks, notnull set<string> textCoords)
 	{
 		ref set<string> completedCoords = new set<string>();
 		
@@ -197,25 +202,22 @@ class TW_GridCoordArrayManager<Class T>
 		return totalCount;
 	}
 	
-	int GetNeighborsAround(notnull out array<T> data, notnull set<string> textCoords, int radius = 0)
+	int GetNeighborsAround(notnull out array<T> data, notnull set<string> textCoords, inout set<string> processed, int radius = 0)
 	{
-		ref set<string> completedCoords = new set<string>();
-		
 		int x;
 		int y;
 		int totalCount = 0;
 		
 		foreach(string textCoord : textCoords)
 		{
-			if(completedCoords.Contains(textCoord))
+			if(processed.Contains(textCoord))
 				continue;
 			
 			TW_Util.FromGridString(textCoord, x, y);
 			
-			
 			if(radius <= 0)
 			{
-				completedCoords.Insert(textCoord);
+				processed.Insert(textCoord);
 					
 				if(HasCoord(x, y))
 				{
@@ -235,8 +237,10 @@ class TW_GridCoordArrayManager<Class T>
 					for(int cy = bottom; cy < top; cy++)
 					{
 						string coord = string.Format("%1 %2", cx, cy);
-						if(completedCoords.Contains(coord))
+						if(processed.Contains(coord))
 							continue;
+						
+						processed.Insert(coord);
 						
 						if(HasCoord(x, y))
 						{
@@ -252,10 +256,10 @@ class TW_GridCoordArrayManager<Class T>
 		return totalCount;
 	}	
 	
-	int GetNeighboringItems(notnull out array<T> items, int x, int y, int radius = 1, bool includeCenter = true)
+	int GetNeighboringItems(notnull out array<T> items, int x, int y, inout set<string> processed, int radius = 1, bool includeCenter = true)
 	{
 		ref array<ref TW_GridCoordArray<T>> neighbors = {};
-		int chunks = GetNeighbors(neighbors, x, y, radius, includeCenter);
+		int chunks = GetNeighbors(neighbors, x, y, processed, radius, includeCenter);
 		
 		if(chunks < 0)
 			return 0;

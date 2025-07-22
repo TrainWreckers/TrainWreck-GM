@@ -491,6 +491,11 @@ class TW_Util
 		return string.Format("%1 %2", x, y);
 	}
 	
+	static string ToGridText(int x, int y)
+	{
+		return string.Format("%1 %2", x, y);
+	}
+	
 	//! Convert World Position to grid-based coordinates
 	static void ToGrid(vector position, out int x, out int y, int gridSize = 1000)
 	{
