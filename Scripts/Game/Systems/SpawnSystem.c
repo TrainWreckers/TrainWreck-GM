@@ -60,20 +60,12 @@ class TW_AISpawnPointGrid
 			return;
 		
 		ref set<string> processed = new set<string>();
-		
-		processed.Insert(TW_Util.ToGridText(center, m_GridSize));
-		
 		ref array<ref TW_GridCoordArray<TW_AISpawnPoint>> items = {};
 		m_Grid.GetNeighbors(items, x, y, processed, radius);
 		
 		foreach(ref TW_GridCoordArray<TW_AISpawnPoint> item : items)
 		{
 			string currentCoord = TW_Util.ToGridText(item.x, item.y);
-			
-			if(processed.Contains(currentCoord))
-				continue;
-			
-			processed.Insert(currentCoord);
 			
 			ref array<TW_AISpawnPoint> points = item.GetAll();
 			foreach(TW_AISpawnPoint spawnPoint : points)
