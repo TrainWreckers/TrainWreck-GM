@@ -57,4 +57,46 @@ class TW_Global
 		RplComponent rpl = TW<RplComponent>.Find(entity);
 		return rpl.Id();
 	}
+	
+	sealed static SCR_BaseGameMode GetGameMode()
+	{
+		return SCR_BaseGameMode.Cast(GetGame().GetGameMode());
+	}
+	
+	sealed static bool IsGameModeRunning()
+	{
+		return (GetGameMode() && GetGameMode().GetState() == SCR_EGameModeState.GAME);
+	}
+	
+	static float GetServerElapsedSeconds(WorldTimestamp since)
+	{
+		WorldTimestamp now = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetServerTimestamp();
+		return now.DiffSeconds(since);
+	}
+	
+	static float GetServerElapsedMs(WorldTimestamp since)
+	{
+		WorldTimestamp now = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetServerTimestamp();
+		return now.DiffMilliseconds(since);
+	}
+	
+	static WorldTimestamp GetFutureServerTimestampSeconds(float seconds)
+	{
+		WorldTimestamp now = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetServerTimestamp();
+		return now.PlusSeconds(seconds);		
+	}
+	
+	static WorldTimestamp GetFutureTimestampMs(float ms)
+	{
+		WorldTimestamp now = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetServerTimestamp();
+		return now.PlusMilliseconds(ms);
+	}
+	
+	static bool IsServerTimestampPast(WorldTimestamp time)
+	{
+		if(time == 0) return true;
+		
+		WorldTimestamp now = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetServerTimestamp();
+		return time.Less(now);
+	}
 };
