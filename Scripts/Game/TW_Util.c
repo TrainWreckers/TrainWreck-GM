@@ -167,6 +167,150 @@ class TW_Util
 {
 	static ref RandomGenerator s_Generator = new RandomGenerator();
 	
+	static vector DEFAULT_TRACE_OFFSET = Vector(0, 2, 0);
+	
+	/*!
+		Checks to see if position is visible from source entity
+	*/
+	static bool TraceEntityPointToPointLineOfSight(IEntity sourceEntity, vector from, vector to, float threshold = 1.0, BaseWorld world = null)
+	{
+		if(!world)
+			world = GetGame().GetWorld();
+		
+		TraceParam traceParams = new TraceParam();
+		traceParams.Flags = TraceFlags.ENTS | TraceFlags.WORLD | TraceFlags.VISIBILITY;
+		traceParams.LayerMask = EPhysicsLayerDefs.Projectile;
+		traceParams.Start = from;
+		traceParams.End = to;
+		traceParams.Exclude = sourceEntity;
+		
+		float percent = world.TraceMove(traceParams, null);
+		bool result = (percent >= threshold);
+		
+		return result;
+	}
+	
+	static bool TraceEntityPointsLineOfSight(IEntity sourceEntity, vector from, IEntity targetEntity, vector to, float threshold = 1.0, BaseWorld world = null)
+	{
+		if(!world)
+			world = GetGame().GetWorld();
+		
+		TraceParam traceParams = new TraceParam();
+		traceParams.Flags = TraceFlags.ENTS | TraceFlags.WORLD | TraceFlags.VISIBILITY;
+		traceParams.LayerMask = EPhysicsLayerDefs.Projectile;
+		
+		traceParams.Start = from;
+		traceParams.End = to;
+		traceParams.Exclude = sourceEntity;
+		
+		float percent = world.TraceMove(traceParams, null);
+		bool result = false;
+		
+		GenericEntity ent = GenericEntity.Cast(traceParams.TraceEnt);
+		if(ent) {
+			if(ent == targetEntity || ent.GetParent() == targetEntity || ent.GetRootParent() == targetEntity) {
+				result = true;
+				percent = 1;
+			}
+		} else if (percent >= threshold) 
+			result = true;
+		
+		return result;
+	}
+	
+	static bool TraceEntitiesLineOfSight(IEntity from, IEntity to, vector commonOffset = vector.Zero)
+	{
+		return TraceEntityPointsLineOfSight(from, from.GetOrigin() + commonOffset, to, to.GetOrigin() + commonOffset);
+	}
+	
+	static bool CheckCharactersLineOfSight(array<IEntity> characters, IEntity entity)
+	{
+		foreach(IEntity character : characters)
+			if(TraceEntitiesLineOfSight(character, entity, DEFAULT_TRACE_OFFSET))
+				return true;
+		return false;
+	}
+	
+	static bool FindEmptyTerrainPosition(
+		out vector outPosition,
+		vector areaCenter,
+		float areaRadius,
+		float traceRadius = 0.5,
+		float traceHeight = 2,
+		TraceFlags flags = TraceFlags.ENTS | TraceFlags.OCEAN,
+		BaseWorld world = null
+	) {
+		if(areaRadius <= 0 || traceRadius <= 0 || traceHeight <= 0)
+		{
+			outPosition = areaCenter;
+			return false;
+		}
+		
+		if(!world)
+			world = GetGame().GetWorld();
+		
+		const float cellW = traceRadius * Math.Sqrt(3);
+		const float cellH = traceRadius * 2;
+		const vector traceVectorOffset = Vector(0, traceHeight * 0.5, 0);
+		const int rMax = Math.Ceil(areaRadius / traceRadius / Math.Sqrt(3));
+		const float maxDistanceSq = (areaRadius - traceRadius) * (areaRadius - traceRadius);
+		
+		TraceParam trace = new TraceParam();
+		trace.Flags = flags | TraceFlags.WORLD;
+		const vector traceOffset = Vector(0, 10, 0);
+		
+		float posX, posY;
+		int yMin, yMax, yStep;
+		float traceCoef;
+		
+		for(int r; r < rMax; r++)
+		{
+			for(int x = -r; x <= r; x++)
+			{
+				posX = cellW * x;
+				posY = cellH * (x - SCR_Math.fmod(x, 1)) * 0.5;
+				
+				yMin = Math.Max(-r - x, -r);
+				yMax = Math.Min(r - x, r);
+				
+				if(Math.AbsInt(x) == r)
+					yStep = 1;
+				else
+					yStep = yMax - yMin;
+				
+				for(int y = yMin; y <= yMax; y += yStep)
+				{
+					outPosition = areaCenter + Vector(posX, 0, posY + cellH * y);
+					if(vector.DistanceSqXZ(outPosition, areaCenter) > maxDistanceSq)
+						continue;
+					
+					const float surfaceY = world.GetSurfaceY(outPosition[0], outPosition[2]);
+					if(surfaceY < world.GetOceanHeight(outPosition[0], outPosition[2]))
+						continue;
+					
+					trace.Start = outPosition;
+					trace.End = outPosition - traceOffset;
+					traceCoef = world.TraceMove(trace, null);
+					
+					outPosition[1] = Math.Max(trace.Start[1] - traceCoef * traceOffset[1] + 0.01, surfaceY);
+					
+					if(SCR_WorldTools.TraceCylinder(outPosition + traceVectorOffset, traceRadius, traceHeight, flags, world))
+						return true;
+				}
+			}
+		}
+		
+		outPosition = areaCenter;
+		return false;
+	}
+	
+	static vector GetTerrainSnappedVector(vector worldPos, BaseWorld world = null)
+	{
+		if(!world) world = GetGame().GetWorld();
+		worldPos[1] = worldPos[1] + Math.Max(world.GetSurfaceY(worldPos[0], worldPos[2]), world.GetOceanBaseHeight());
+		return worldPos;
+	}
+	
 	static void ApplyRandomDamageToEntity(IEntity entity)
 	{
 		if(!entity)
@@ -224,7 +368,7 @@ class TW_Util
 	{
 		ContainerSerializationSaveContext saveContext = new ContainerSerializationSaveContext(false);
 		if(useTypeDiscriminator)
-			saveContext.EnableTypeDiscriminator();
+			saveContext.EnableTypeDiscriminator(true);
 		
 		PrettyJsonSaveContainer container = new PrettyJsonSaveContainer();
 		saveContext.SetContainer(container);
@@ -242,7 +386,7 @@ class TW_Util
 	{
 		ContainerSerializationSaveContext saveContext = new ContainerSerializationSaveContext(false);
 		if(useTypeDiscriminator)
-			saveContext.EnableTypeDiscriminator();
+			saveContext.EnableTypeDiscriminator(true);
 		
 		JsonSaveContainer container = new JsonSaveContainer();
 		saveContext.SetContainer(container);
@@ -262,7 +406,7 @@ class TW_Util
 		SCR_JsonLoadContext context = new SCR_JsonLoadContext(false);
 		
 		if(useTypeDiscriminator)
-			context.EnableTypeDiscriminator();
+			context.EnableTypeDiscriminator(true);
 		
 		if(!context.LoadFromFile(path))
 		{
@@ -850,4 +994,77 @@ class TW_Util
 			zone.HandleDamage(damage, EDamageType.KINETIC, vehicle);			
 		}				
 	}
+	
+	static const int SPAWN_MIN_PLAYER_DIST_SQ = (100*100);
+	static const float SPAWN_MAX_LOS_CHECK_DIST_SQ = (1000*1000);
+	
+	static bool IsSpawnPositionVisible(TW_SpawnVisibilityCheckContext context, vector position)
+	{
+		array<float> playerDistances = {};
+		playerDistances.Resize(context.playerEntities.Count());
+		
+		foreach(int i, vector playerPos : context.playerPositions)
+		{
+			float distSq = vector.DistanceSqXZ(playerPos, position);
+			if(distSq < SPAWN_MIN_PLAYER_DIST_SQ) return true;
+			playerDistances[i] = distSq;
+		}
+		
+		vector traceTarget = position + DEFAULT_TRACE_OFFSET;
+		vector playerPoint;
+		
+		foreach(int i, float dist : playerDistances)
+		{
+			if(dist >= SPAWN_MAX_LOS_CHECK_DIST_SQ) continue;
+			playerPoint = context.playerPositions[i] + DEFAULT_TRACE_OFFSET;
+			
+			if(TraceEntityPointToPointLineOfSight(context.playerEntities[i], playerPoint, traceTarget))
+				return true;
+		}
+		
+		return false;
+	}
+	
+	static TW_SpawnVisibilityCheckContext CreateVisibilityCheckContext()
+	{
+		TW_SpawnVisibilityCheckContext context = new TW_SpawnVisibilityCheckContext();
+		GetAllPlayers(context.playerPositions, context.playerEntities);
+		return context;
+	}
+	
+	static void GetAllPlayers(out array<vector> outPositions, out array<IEntity> outEntities)
+	{
+		auto manager = GetGame().GetPlayerManager();
+		array<int> players = new array<int>;
+		manager.GetPlayers(players);
+		
+		outPositions.Clear();
+		outEntities.Clear();
+		
+		IEntity entity;
+		foreach(int playerId : players)
+		{
+			entity = manager.GetPlayerControlledEntity(playerId);
+			
+			if(!entity) continue;
+			
+			outPositions.Insert(entity.GetOrigin());
+			outEntities.Insert(entity);
+		}
+	}
+	
+	static bool IsPlayerAlive(int playerId)
+	{
+		SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(GetGame().GetPlayerManager().GetPlayerControlledEntity(playerId));
+		if(!character) return false;
+		
+		SCR_CharacterControllerComponent controller = TW<SCR_CharacterControllerComponent>.Find(character);
+		return (controller && controller.GetLifeState() != ECharacterLifeState.DEAD);
+	}
 };
+
+class TW_SpawnVisibilityCheckContext
+{
+	ref array<vector> playerPositions = {};
+	ref array<IEntity> playerEntities = {};
+}
