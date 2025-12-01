@@ -585,10 +585,19 @@ class TW_Util
 	{
 		Resource resource = Resource.Load(waypointPrefab);
 		
-		if(!resource) return null;
+		if(!resource) 
+		{			
+			PrintFormat("TrainWreck: Waypoint was invalid %1", waypointPrefab, LogLevel.ERROR);
+			return null;
+		}
 		
-		AIWaypoint wp = AIWaypoint.Cast(GetGame().SpawnEntityPrefab(resource));
-		if(!wp) return null;
+		AIWaypoint wp = AIWaypoint.Cast(GetGame().SpawnEntityPrefab(resource));		
+		
+		if(!wp)
+		{
+			PrintFormat("TrainWreck: Was unable to spawn waypoint prefab: %1", waypointPrefab, LogLevel.ERROR);
+			return null;
+		}
 		
 		wp.SetOrigin(waypointPosition);
 		return wp;
@@ -746,8 +755,9 @@ class TW_Util
 	}
 	
 	static SCR_EditableEntityUIInfo GetCharacterUIInfo(ResourceName prefab)
-	{
-		IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+	{	
+		Resource resource = Resource.Load(prefab);
+		IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(resource);
 		
 		if(!entitySource) return null;
 		
@@ -773,7 +783,8 @@ class TW_Util
 		
 		if(!resultInfo)
 		{
-			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+			Resource resource = Resource.Load(prefab);
+			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(resource);
 			
 			if(entitySource)
 			{
@@ -809,7 +820,8 @@ class TW_Util
 		
 		if(!resultInfo)
 		{
-			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+			Resource resource = Resource.Load(prefab);
+			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(resource);
 			
 			if(entitySource)
 			{
