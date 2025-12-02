@@ -952,7 +952,7 @@ class TW_Util
 	
 	private static ResourceName s_EmptyGroupPrefab = "{9AF0548E8758756E}Prefabs/Groups/Group_Empty.et";
 	
-	static SCR_AIGroup CreateNewGroup(TW_AISpawnPoint spawnPoint, string factionKey, ResourceName characterPrefab, int groupSize)
+	static SCR_AIGroup CreateNewGroup(TW_AISpawnPoint spawnPoint, string factionKey, ResourceName characterPrefab, int groupSize, bool skipWaypoint=false)
 	{
 		SCR_AIGroup group = TW_Util.SpawnGroup(s_EmptyGroupPrefab, spawnPoint.GetOrigin(), 1, 0);
 		
@@ -966,8 +966,9 @@ class TW_Util
 		// Finally spawn those units
 		group.SpawnUnits();
 		
-		// Add them to point
-		spawnPoint.AddGroupToPoint(group);
+		// Waypoints handled elsewhere
+		if(!skipWaypoint)
+			spawnPoint.AddGroupToPoint(group);
 		
 		return group;
 	}
