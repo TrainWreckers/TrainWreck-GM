@@ -585,10 +585,19 @@ class TW_Util
 	{
 		Resource resource = Resource.Load(waypointPrefab);
 		
-		if(!resource) return null;
+		if(!resource) 
+		{			
+			PrintFormat("TrainWreck: Waypoint was invalid %1", waypointPrefab, LogLevel.ERROR);
+			return null;
+		}
 		
-		AIWaypoint wp = AIWaypoint.Cast(GetGame().SpawnEntityPrefab(resource));
-		if(!wp) return null;
+		AIWaypoint wp = AIWaypoint.Cast(GetGame().SpawnEntityPrefab(resource));		
+		
+		if(!wp)
+		{
+			PrintFormat("TrainWreck: Was unable to spawn waypoint prefab: %1", waypointPrefab, LogLevel.ERROR);
+			return null;
+		}
 		
 		wp.SetOrigin(waypointPosition);
 		return wp;
@@ -746,8 +755,9 @@ class TW_Util
 	}
 	
 	static SCR_EditableEntityUIInfo GetCharacterUIInfo(ResourceName prefab)
-	{
-		IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+	{	
+		Resource resource = Resource.Load(prefab);
+		IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(resource);
 		
 		if(!entitySource) return null;
 		
@@ -773,7 +783,8 @@ class TW_Util
 		
 		if(!resultInfo)
 		{
-			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+			Resource resource = Resource.Load(prefab);
+			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(resource);
 			
 			if(entitySource)
 			{
@@ -809,7 +820,8 @@ class TW_Util
 		
 		if(!resultInfo)
 		{
-			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(Resource.Load(prefab));
+			Resource resource = Resource.Load(prefab);
+			IEntitySource entitySource = SCR_BaseContainerTools.FindEntitySource(resource);
 			
 			if(entitySource)
 			{
@@ -940,7 +952,7 @@ class TW_Util
 	
 	private static ResourceName s_EmptyGroupPrefab = "{9AF0548E8758756E}Prefabs/Groups/Group_Empty.et";
 	
-	static SCR_AIGroup CreateNewGroup(TW_AISpawnPoint spawnPoint, string factionKey, ResourceName characterPrefab, int groupSize)
+	static SCR_AIGroup CreateNewGroup(TW_AISpawnPoint spawnPoint, string factionKey, ResourceName characterPrefab, int groupSize, bool skipWaypoint=false)
 	{
 		SCR_AIGroup group = TW_Util.SpawnGroup(s_EmptyGroupPrefab, spawnPoint.GetOrigin(), 1, 0);
 		
@@ -954,8 +966,9 @@ class TW_Util
 		// Finally spawn those units
 		group.SpawnUnits();
 		
-		// Add them to point
-		spawnPoint.AddGroupToPoint(group);
+		// Waypoints handled elsewhere
+		if(!skipWaypoint)
+			spawnPoint.AddGroupToPoint(group);
 		
 		return group;
 	}
