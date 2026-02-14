@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BD909A0417AF0D76}Prefabs/Structures/Military/Houses/Cafeteria_E_01/Cafeteria_USSR_01_soviet.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

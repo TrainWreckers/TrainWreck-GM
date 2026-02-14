@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B140A3B8BB7E4730}Prefabs/Structures/Military/Houses/ClubMilitary_01/ClubMilitary_01_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

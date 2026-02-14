@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{501047F28C12AA8C}Prefabs/Structures/Military/Houses/ClubMilitary_01/ClubMilitary_USSR_01_camo.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

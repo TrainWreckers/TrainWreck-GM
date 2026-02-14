@@ -1,0 +1,103 @@
+SCR_DestructibleBuildingEntity : "{EAF94EE6779EB1DE}Prefabs/Structures/Industrial/CoalMineShaft_01/Complete/CoalMineShaft_01_complete_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB07531D578"
+    coords -1.935 0.188 5.213
+   }
+   {
+    ID "689C3DB07531D5A5"
+    coords 1.99 0.19 3.038
+   }
+   {
+    ID "689C3DB07531D5AC"
+    coords 1.658 0.177 0.81
+   }
+   {
+    ID "689C3DB07531D5BA"
+    coords -1.796 0.19 0.761
+   }
+   {
+    ID "689C3DB0753426E9"
+    coords 0.937 0.177 -21.458
+   }
+   {
+    ID "689C3DB075342F33"
+    coords -0.838 0.177 -15.749
+   }
+   {
+    ID "689C3DB0753473C9"
+    coords 1.114 0.177 -24.698
+   }
+   {
+    ID "689C3DB07534D48B"
+    coords 1.285 0.177 -27.288
+   }
+   {
+    ID "689C3DB07534D4BD"
+    coords 0.667 0.177 -29.441
+   }
+   {
+    ID "689C3DB0753506C3"
+    coords -0.762 0.177 -32.774
+   }
+   {
+    ID "689C3DB0753506D5"
+    coords 3.238 0.177 -25.221
+   }
+   {
+    ID "689C3DB075351C60"
+    coords -2.308 0.177 -35.317
+   }
+   {
+    ID "689C3DB075356C5D"
+    coords -5.273 0.177 -34.998
+   }
+   {
+    ID "689C3DB07535AB69"
+    coords -6.978 0.177 -35.07
+   }
+   {
+    ID "689C3DB07535C7B5"
+    coords -9.017 0.177 -35.134
+   }
+   {
+    ID "689C3DB07535C7BD"
+    coords 1.942 0.19 5.049
+   }
+   {
+    ID "689C3DB075361493"
+    coords -2.29 0.19 3.424
+   }
+   {
+    ID "689C3DB075369FE0"
+    coords 1.108 0.185 -1.779
+   }
+   {
+    ID "689C3DB075369FF9"
+    coords -1.46 0.19 -1.661
+   }
+   {
+    ID "689C3DB07536B953"
+    coords 0.492 0.177 -4.009
+   }
+   {
+    ID "689C3DB0753703F0"
+    coords 1.671 0.177 -6.657
+   }
+   {
+    ID "689C3DB0753703FE"
+    coords -1.59 0.19 -4.497
+   }
+   {
+    ID "689C3DB075378AA7"
+    coords -0.844 0.177 -10.67
+   }
+   {
+    ID "689C3DB07537E678"
+    coords -0.929 0.177 -13.747
+   }
+  }
+ }
+}

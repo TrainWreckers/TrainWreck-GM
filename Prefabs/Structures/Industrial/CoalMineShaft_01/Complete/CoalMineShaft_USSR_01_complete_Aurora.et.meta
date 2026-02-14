@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{220167E6E005CE43}Prefabs/Structures/Industrial/CoalMineShaft_01/Complete/CoalMineShaft_USSR_01_complete_Aurora.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

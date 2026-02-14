@@ -1,0 +1,167 @@
+GenericEntity : "{8F2945BE755E7694}Prefabs/Props/Wrecks/ShipWreckWooden_01/ShipWreckWooden_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB79B48A974"
+    coords -0.059 4.706 8.806
+   }
+   {
+    ID "689C3DB79B493A67"
+    coords -0.509 6.23 -3.631
+   }
+   {
+    ID "689C3DB79B497722"
+    coords -2.147 6.672 -2.429
+   }
+   {
+    ID "689C3DB79B49B653"
+    coords -0.48 6.23 -2.018
+   }
+   {
+    ID "689C3DB79B49D1CA"
+    coords 0.826 6.23 -1.836
+   }
+   {
+    ID "689C3DB79B4A2352"
+    coords 0.581 6.23 -3.663
+   }
+   {
+    ID "689C3DB79B4AF196"
+    coords 0.441 8.513 -3.826
+   }
+   {
+    ID "689C3DB79B4B3FCD"
+    coords -2.242 6.671 -4.196
+   }
+   {
+    ID "689C3DB79B4B6450"
+    coords -0.835 8.514 -1.97
+   }
+   {
+    ID "689C3DB79B4BF972"
+    coords 0.734 4.662 -5.951
+   }
+   {
+    ID "689C3DB79B4BFF96"
+    coords -0.822 6.671 -5.887
+   }
+   {
+    ID "689C3DB79B4C68CC"
+    coords 1.972 4.175 -5.847
+   }
+   {
+    ID "689C3DB79B4C90C9"
+    coords -1.02 4.106 -4.136
+   }
+   {
+    ID "689C3DB79B4C90D1"
+    coords -0.992 4.173 -5.665
+   }
+   {
+    ID "689C3DB79B4CC2AA"
+    coords 0.972 4.305 -7.826
+   }
+   {
+    ID "689C3DB79B4CC2E4"
+    coords -1.441 4.314 -7.928
+   }
+   {
+    ID "689C3DB79B4D0D62"
+    coords 0.32 4.055 -2.657
+   }
+   {
+    ID "689C3DB79B4DDEA1"
+    coords -2.1 4.059 -2.754
+   }
+   {
+    ID "689C3DB79B4E0592"
+    coords -1.557 1.73 -0.762
+   }
+   {
+    ID "689C3DB79B4E05EA"
+    coords 0.144 1.662 -5.987
+   }
+   {
+    ID "689C3DB79B4E4C73"
+    coords -1.14 1.656 -2.347
+   }
+   {
+    ID "689C3DB79B4E6FC2"
+    coords 0.333 1.697 -4.57
+   }
+   {
+    ID "689C3DB79B4EE335"
+    coords 1.103 1.736 -0.543
+   }
+   {
+    ID "689C3DB79B4F52AD"
+    coords -0.839 1.723 0.612
+   }
+   {
+    ID "689C3DB79B4F78C9"
+    coords 1.463 1.719 1.554
+   }
+   {
+    ID "689C3DB79B4F78F1"
+    coords 0.326 1.701 3.667
+   }
+   {
+    ID "689C3DB79B4F78F9"
+    coords 1.293 1.703 3.976
+   }
+   {
+    ID "689C3DB79B4F840A"
+    coords 0.542 1.657 6.065
+   }
+   {
+    ID "689C3DB79B4F87F6"
+    coords -0.582 1.475 6.362
+   }
+   {
+    ID "689C3DB79B4F87FE"
+    coords 2.232 4.044 0.807
+   }
+   {
+    ID "689C3DB79B4FE649"
+    coords -1.174 1.714 3.891
+   }
+   {
+    ID "689C3DB79B501598"
+    coords -1.818 4.011 -0.726
+   }
+   {
+    ID "689C3DB79B50649F"
+    coords 0.267 4.011 -0.708
+   }
+   {
+    ID "689C3DB79B5064A7"
+    coords 2.286 4.014 -0.873
+   }
+   {
+    ID "689C3DB79B5064AF"
+    coords 1.998 4.163 3.033
+   }
+   {
+    ID "689C3DB79B50B183"
+    coords -1.944 4.176 3.052
+   }
+   {
+    ID "689C3DB79B50D38D"
+    coords -1.897 4.05 0.584
+   }
+   {
+    ID "689C3DB79B511C7D"
+    coords 1.375 4.3 4.943
+   }
+   {
+    ID "689C3DB79B516308"
+    coords -1.758 4.287 4.876
+   }
+   {
+    ID "689C3DB79B518F46"
+    coords -1.042 4.477 6.755
+   }
+  }
+ }
+}

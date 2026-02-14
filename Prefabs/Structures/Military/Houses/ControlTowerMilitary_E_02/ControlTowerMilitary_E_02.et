@@ -1,0 +1,19 @@
+SCR_DestructibleBuildingEntity : "{0DBDC1DD5949B7EE}Prefabs/Structures/Military/Houses/ControlTowerMilitary_E_02/ControlTowerMilitary_E_02_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB3A4AA7FEA"
+    coords 0.198 3.627 0.726
+   }
+   {
+    ID "689C3DB3A4AB23FD"
+    coords 0.576 3.627 -1.005
+   }
+   {
+    ID "689C3DB3A4ABCCD8"
+    coords 0.159 0.327 -0.16
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+SCR_DestructibleBuildingEntity : "{03120737AE0DB098}Prefabs/Structures/Ruins/Barn_Ruin_01/Barn_Ruin_01_V2_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DBE3BB03758"
+    coords 2.119 0.32 2.848
+   }
+   {
+    ID "689C3DBE3BB07AB4"
+    coords 0.801 0.321 0.707
+   }
+   {
+    ID "689C3DBE3BB146EE"
+    coords -0.499 0.33 3.595
+   }
+   {
+    ID "689C3DBE3BB18BB1"
+    coords 1.83 0.32 -3.127
+   }
+   {
+    ID "689C3DBE3BB19DB4"
+    coords -1.026 0.32 -2.964
+   }
+  }
+ }
+}

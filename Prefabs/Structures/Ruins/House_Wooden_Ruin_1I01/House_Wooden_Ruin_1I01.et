@@ -1,0 +1,67 @@
+SCR_DestructibleBuildingEntity : "{B52A5BB9A9A023EE}Prefabs/Structures/Ruins/House_Wooden_Ruin_1I01/House_Wooden_Ruin_1I01_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB12C2C0333"
+    coords 1.707 0.223 2.517
+   }
+   {
+    ID "689C3DB12C2C4280"
+    coords -1.93 0.368 -0.181
+   }
+   {
+    ID "689C3DB12C2C7D10"
+    coords 1.314 0.324 0.069
+   }
+   {
+    ID "689C3DB12C2C9B61"
+    coords -4.381 0.298 2.212
+   }
+   {
+    ID "689C3DB12C2C9B6A"
+    coords -1.725 0.319 2.102
+   }
+   {
+    ID "689C3DB12C2CDA86"
+    coords -4.547 0.363 0.522
+   }
+   {
+    ID "689C3DB12C2D225D"
+    coords 4.321 0.276 -1.796
+   }
+   {
+    ID "689C3DB12C2DA842"
+    coords 5.78 0.322 -0.044
+   }
+   {
+    ID "689C3DB12C2DA849"
+    coords 4.117 0.299 1.816
+   }
+   {
+    ID "689C3DB12C2DA873"
+    coords 5.595 0.312 -2.007
+   }
+   {
+    ID "689C3DB12C2DA87B"
+    coords 4.456 0.315 -0.071
+   }
+   {
+    ID "689C3DB12C2DE7DE"
+    coords 1.448 0.257 -1.738
+   }
+   {
+    ID "689C3DB12C2DEF6D"
+    coords 5.426 0.284 1.816
+   }
+   {
+    ID "689C3DB12C2F5EA8"
+    coords -1.679 0.355 -1.873
+   }
+   {
+    ID "689C3DB12C2FD837"
+    coords -4.864 0.304 -2.244
+   }
+  }
+ }
+}

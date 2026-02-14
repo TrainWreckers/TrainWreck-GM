@@ -1,0 +1,19 @@
+GenericEntity : "{4CC2C69DE1AEF103}Prefabs/Props/Core/DestructibleMultiPhase_Props_Base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB29C290272"
+    coords 3.129 6.081 -0.164
+   }
+   {
+    ID "689C3DB29C291350"
+    coords -3.464 6.068 0.006
+   }
+   {
+    ID "689C3DB29C2949F2"
+    coords -0.186 6.069 -0.184
+   }
+  }
+ }
+}

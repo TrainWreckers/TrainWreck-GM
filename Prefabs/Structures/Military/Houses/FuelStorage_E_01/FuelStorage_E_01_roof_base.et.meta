@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BF6217A140C7064F}Prefabs/Structures/Military/Houses/FuelStorage_E_01/FuelStorage_E_01_roof_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

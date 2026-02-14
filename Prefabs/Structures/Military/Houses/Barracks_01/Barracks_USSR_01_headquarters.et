@@ -1,0 +1,207 @@
+SCR_DestructibleBuildingEntity : "{173E31DE5DE36ABA}Prefabs/Structures/Military/Houses/Barracks_01/Barracks_USSR_01_headquarters_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB5BE0022C1"
+    coords 0.026 0.287 -5.236
+   }
+   {
+    ID "689C3DB5BE007E8F"
+    coords 0.026 0.287 -3.4
+   }
+   {
+    ID "689C3DB5BE00B721"
+    coords 0.026 0.287 -11.846
+   }
+   {
+    ID "689C3DB5BE00CA77"
+    coords 0.026 0.287 -7.513
+   }
+   {
+    ID "689C3DB5BE00E087"
+    coords 0.026 0.287 -10.068
+   }
+   {
+    ID "689C3DB5BE012615"
+    coords -6.333 0.287 -14.739
+   }
+   {
+    ID "689C3DB5BE014FC9"
+    coords -3.245 0.287 -14.45
+   }
+   {
+    ID "689C3DB5BE0159F5"
+    coords 0.026 0.287 -14.87
+   }
+   {
+    ID "689C3DB5BE017715"
+    coords -2.95 0.287 -12.121
+   }
+   {
+    ID "689C3DB5BE01B3C9"
+    coords -6.09 0.287 -6.69
+   }
+   {
+    ID "689C3DB5BE01E27C"
+    coords -6.26 0.287 -12.127
+   }
+   {
+    ID "689C3DB5BE01E429"
+    coords -5.586 0.287 -10.764
+   }
+   {
+    ID "689C3DB5BE027362"
+    coords -3.045 0.287 -3.592
+   }
+   {
+    ID "689C3DB5BE02736A"
+    coords -6.555 0.287 -3.318
+   }
+   {
+    ID "689C3DB5BE02DC67"
+    coords -2.989 0.287 -6.299
+   }
+   {
+    ID "689C3DB5BE02E166"
+    coords 2.59 0.287 -12.189
+   }
+   {
+    ID "689C3DB5BE02EEE6"
+    coords 3.488 0.287 -14.111
+   }
+   {
+    ID "689C3DB5BE02FF61"
+    coords -4.765 0.287 -3.121
+   }
+   {
+    ID "689C3DB5BE03289E"
+    coords 6.258 0.287 -11.381
+   }
+   {
+    ID "689C3DB5BE037B82"
+    coords 6.48 0.287 -14.035
+   }
+   {
+    ID "689C3DB5BE03BE6A"
+    coords 6.327 0.287 -7.062
+   }
+   {
+    ID "689C3DB5BE03BE7F"
+    coords 6.327 0.287 -3.23
+   }
+   {
+    ID "689C3DB5BE0445F0"
+    coords 2.988 0.287 -7.372
+   }
+   {
+    ID "689C3DB5BE0466A2"
+    coords 2.576 0.287 -5.073
+   }
+   {
+    ID "689C3DB5BE04B4C0"
+    coords 6.342 0.287 0.417
+   }
+   {
+    ID "689C3DB5BE04B4C9"
+    coords 5.842 0.287 3.816
+   }
+   {
+    ID "689C3DB5BE04C341"
+    coords 4.476 0.287 -2.813
+   }
+   {
+    ID "689C3DB5BE0545FE"
+    coords 3.435 0.287 3.769
+   }
+   {
+    ID "689C3DB5BE056512"
+    coords 3.524 0.287 0.456
+   }
+   {
+    ID "689C3DB5BE7CEA2A"
+    coords 6.399 0.287 11.482
+   }
+   {
+    ID "689C3DB5BE7D0B9E"
+    coords 2.953 0.287 7.711
+   }
+   {
+    ID "689C3DB5BE7D5929"
+    coords 1.136 0.287 11.708
+   }
+   {
+    ID "689C3DB5BE7D593C"
+    coords -0.338 0.287 11.708
+   }
+   {
+    ID "689C3DB5BE7D6F95"
+    coords 0.353 0.287 6.806
+   }
+   {
+    ID "689C3DB5BE7D6F9E"
+    coords -0.323 0.287 8.243
+   }
+   {
+    ID "689C3DB5BE7D9870"
+    coords 5.006 0.287 8.07
+   }
+   {
+    ID "689C3DB5BE7E7517"
+    coords 5.495 0.287 9.59
+   }
+   {
+    ID "689C3DB5BE7E81F0"
+    coords -2.896 0.287 8.081
+   }
+   {
+    ID "689C3DB5BE7E81FA"
+    coords -5.744 0.287 11.865
+   }
+   {
+    ID "689C3DB5BE7EF44D"
+    coords -2.691 0.287 11.692
+   }
+   {
+    ID "689C3DB5BE7F2E4F"
+    coords -6.531 0.287 0.362
+   }
+   {
+    ID "689C3DB5BE7F6BD7"
+    coords -6.474 0.287 3.917
+   }
+   {
+    ID "689C3DB5BE7F7CC3"
+    coords -5.661 0.287 8.25
+   }
+   {
+    ID "689C3DB5BE7F8E28"
+    coords -2.67 0.287 2.125
+   }
+   {
+    ID "689C3DB5BE7F8E2F"
+    coords -4.404 0.287 0.526
+   }
+   {
+    ID "689C3DB5BE7FA175"
+    coords -4.415 0.287 3.726
+   }
+   {
+    ID "689C3DB5BE7FA2BA"
+    coords 0.026 0.287 4.088
+   }
+   {
+    ID "689C3DB5BE7FA53F"
+    coords 0.026 0.287 2.704
+   }
+   {
+    ID "689C3DB5BE7FA547"
+    coords 0.026 0.287 0.701
+   }
+   {
+    ID "689C3DB5BE7FA54E"
+    coords 0.026 0.287 -0.929
+   }
+  }
+ }
+}

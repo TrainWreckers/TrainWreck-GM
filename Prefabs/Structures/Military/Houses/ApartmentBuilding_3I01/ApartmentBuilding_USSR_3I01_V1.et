@@ -1,0 +1,35 @@
+SCR_DestructibleBuildingEntity : "{CAAF73FB98E22FE4}Prefabs/Structures/Military/Houses/ApartmentBuilding_3I01/ApartmentBuilding_USSR_3I01.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B1BBE4EDD89C0"
+    coords 19.697 4.662 -1.548
+   }
+   {
+    ID "689B1BBE4EDD8F49"
+    coords 18.15 8.206 -1.548
+   }
+   {
+    ID "689B1BBE4EDE3516"
+    coords 18.15 4.662 -1.548
+   }
+   {
+    ID "689B1BBE4EDEAA8A"
+    coords 18.15 2.997 -4.782
+   }
+   {
+    ID "689B1BBE4EDEF6F3"
+    coords 19.548 6.425 -4.782
+   }
+   {
+    ID "689B1BBE4EDEFC32"
+    coords 19.548 2.997 -4.782
+   }
+   {
+    ID "689B1BBE4EDF3320"
+    coords 18.15 6.425 -4.782
+   }
+  }
+ }
+}

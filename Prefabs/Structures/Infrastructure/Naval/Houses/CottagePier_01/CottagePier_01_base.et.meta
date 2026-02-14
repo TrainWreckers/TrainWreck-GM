@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BF36B09531B570F1}Prefabs/Structures/Infrastructure/Naval/Houses/CottagePier_01/CottagePier_01_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

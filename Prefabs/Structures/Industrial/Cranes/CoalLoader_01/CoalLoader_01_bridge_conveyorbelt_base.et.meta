@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{933630EE89B9CF23}Prefabs/Structures/Industrial/Cranes/CoalLoader_01/CoalLoader_01_bridge_conveyorbelt_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,19 @@
+StaticModelEntity : "{9935C7324AD0196F}Prefabs/Structures/Military/Fortifications/CoastalBattery_USSR_01/CoastalBattery_USSR_01_cabin_base.et" {
+ ID "5272E314F01B2DBE"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB175120CEF"
+    coords -0.668 0.073 -0.485
+   }
+   {
+    ID "689C3DB175120DA9"
+    coords 0.896 0.073 -0.59
+   }
+   {
+    ID "689C3DB175120DEF"
+    coords -0.011 0.073 0.753
+   }
+  }
+ }
+}

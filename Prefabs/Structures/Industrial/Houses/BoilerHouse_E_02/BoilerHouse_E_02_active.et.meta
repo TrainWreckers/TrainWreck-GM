@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7536053061CFE69F}Prefabs/Structures/Industrial/Houses/BoilerHouse_E_02/BoilerHouse_E_02_active.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

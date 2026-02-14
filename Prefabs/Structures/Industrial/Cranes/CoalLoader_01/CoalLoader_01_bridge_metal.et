@@ -1,0 +1,39 @@
+SCR_DestructibleBuildingEntity : "{907785E055892393}Prefabs/Structures/Industrial/Cranes/CoalLoader_01/CoalLoader_01_bridge_metal_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B54DE4746A6A4"
+    coords -2.118 14.986 7.004
+   }
+   {
+    ID "689B54DE4746BDF0"
+    coords -2.118 14.986 -6.565
+   }
+   {
+    ID "689B54DE4748523C"
+    coords 2.069 14.986 7.004
+   }
+   {
+    ID "689B54DE47492483"
+    coords -2.118 14.986 -2.775
+   }
+   {
+    ID "689B54DE47492498"
+    coords 2.069 14.986 -2.775
+   }
+   {
+    ID "689B54DE47495589"
+    coords 2.069 14.986 -6.565
+   }
+   {
+    ID "689B54DE4749AEE0"
+    coords 2.069 14.986 1.982
+   }
+   {
+    ID "689B54DE4749C6B6"
+    coords -2.118 14.986 1.982
+   }
+  }
+ }
+}

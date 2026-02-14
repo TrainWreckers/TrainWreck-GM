@@ -1,0 +1,39 @@
+SCR_DestructibleBuildingEntity : "{5DA5F1F45CABCA21}Prefabs/Structures/Industrial/Cranes/CoalLoader_01/CoalLoader_01_bridge_transition_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B54DEBD30D5AF"
+    coords -2.178 14.986 6.642
+   }
+   {
+    ID "689B54DEBD31073A"
+    coords -2.178 14.986 -5.903
+   }
+   {
+    ID "689B54DEBD31755D"
+    coords -2.178 14.986 -1.622
+   }
+   {
+    ID "689B54DEBD3178DB"
+    coords 2.009 14.986 -5.903
+   }
+   {
+    ID "689B54DEBD3185FC"
+    coords 2.009 14.986 6.642
+   }
+   {
+    ID "689B54DEBD31863D"
+    coords 2.009 14.986 2.011
+   }
+   {
+    ID "689B54DEBD318649"
+    coords -2.178 14.986 2.011
+   }
+   {
+    ID "689B54DEBD318655"
+    coords 2.009 14.986 -1.622
+   }
+  }
+ }
+}

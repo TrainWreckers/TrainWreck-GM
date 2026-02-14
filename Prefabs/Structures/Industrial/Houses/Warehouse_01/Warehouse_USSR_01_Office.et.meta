@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{04457EB8415A90F9}Prefabs/Structures/Industrial/Houses/Warehouse_01/Warehouse_USSR_01_Office.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

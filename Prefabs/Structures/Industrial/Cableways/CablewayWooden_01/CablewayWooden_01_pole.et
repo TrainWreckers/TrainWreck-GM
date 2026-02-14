@@ -1,0 +1,15 @@
+StaticModelEntity : "{A52C6DE05FE53B3B}Prefabs/Structures/Core/StaticObject_base.et" {
+ ID "617A81438B91D9A0"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B497BDE84179A"
+    coords 2.488 5.885 -0.072
+   }
+   {
+    ID "689B497BDE85C383"
+    coords -1.971 5.885 -0.072
+   }
+  }
+ }
+}

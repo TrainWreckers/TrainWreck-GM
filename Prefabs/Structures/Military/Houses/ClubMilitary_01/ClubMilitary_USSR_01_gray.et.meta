@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5F86D1E7E1FA3017}Prefabs/Structures/Military/Houses/ClubMilitary_01/ClubMilitary_USSR_01_gray.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

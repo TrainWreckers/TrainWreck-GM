@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{22E1B02D255BFEC9}Prefabs/Structures/Ruins/House_Ruin_2I01/House_Ruin_2I01_V1_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

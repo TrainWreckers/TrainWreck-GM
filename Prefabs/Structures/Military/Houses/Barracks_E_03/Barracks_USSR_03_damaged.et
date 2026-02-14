@@ -1,0 +1,459 @@
+SCR_DestructibleBuildingEntity : "{B3CF3681D04A5246}Prefabs/Structures/Military/Houses/Barracks_E_03/Barracks_03_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B54DFE7D40677"
+    coords 21.29 7.908 4.389
+   }
+   {
+    ID "689B54DFE7D4C976"
+    coords 11.333 7.856 4.161
+   }
+   {
+    ID "689B54DFE7D60FA4"
+    coords 4.893 4.531 4.422
+   }
+   {
+    ID "689B54DFE7D61AB8"
+    coords 4.893 1.093 4.422
+   }
+   {
+    ID "689B54DFE7D6C59D"
+    coords 4.893 7.975 4.422
+   }
+   {
+    ID "689B54DFE7D6CA41"
+    coords 1.608 1.093 4.422
+   }
+   {
+    ID "689B54DFE7D755B2"
+    coords 14.748 1.093 4.422
+   }
+   {
+    ID "689B54DFE7D77B94"
+    coords 11.339 4.531 4.429
+   }
+   {
+    ID "689B54DFE7D77DA2"
+    coords 17.743 7.975 4.422
+   }
+   {
+    ID "689B54DFE7D77DB5"
+    coords 17.743 1.093 4.422
+   }
+   {
+    ID "689B54DFE7D77DBB"
+    coords 17.743 4.531 4.422
+   }
+   {
+    ID "689B54DFE7D787F0"
+    coords 8.062 7.975 4.422
+   }
+   {
+    ID "689B54DFE7D791B2"
+    coords 8.505 4.531 4.097
+   }
+   {
+    ID "689B54DFE7D7BE51"
+    coords 8.062 1.093 4.422
+   }
+   {
+    ID "689B54DFE7D7D4C7"
+    coords 14.748 7.975 4.422
+   }
+   {
+    ID "689B54DFE7D7FEC1"
+    coords 14.748 4.531 4.422
+   }
+   {
+    ID "689B54DFE7E01031"
+    coords -18.573 7.975 -2.552
+   }
+   {
+    ID "689B54DFE7E0DDCF"
+    coords -21.355 1.093 -4.006
+   }
+   {
+    ID "689B54DFE7E11733"
+    coords -20.831 7.975 -2.332
+   }
+   {
+    ID "689B54DFE7E12347"
+    coords -20.831 1.093 -2.332
+   }
+   {
+    ID "689B54DFE7E12BDF"
+    coords -20.831 4.531 -2.332
+   }
+   {
+    ID "689B54DFE7E19643"
+    coords -18.573 4.531 -2.552
+   }
+   {
+    ID "689B54DFE7E1E344"
+    coords -18.573 1.093 -2.552
+   }
+   {
+    ID "689B54DFE7E21A08"
+    coords -24.417 7.975 -6.128
+   }
+   {
+    ID "689B54DFE7E2711B"
+    coords -24.417 4.531 -6.128
+   }
+   {
+    ID "689B54DFE7E2C42F"
+    coords -21.126 1.093 -6.128
+   }
+   {
+    ID "689B54DFE7E31596"
+    coords -24.417 1.093 -4.006
+   }
+   {
+    ID "689B54DFE7E325FD"
+    coords -21.355 7.975 -4.006
+   }
+   {
+    ID "689B54DFE7E36810"
+    coords -21.355 4.531 -4.006
+   }
+   {
+    ID "689B54DFE7E39280"
+    coords -24.417 1.093 -6.128
+   }
+   {
+    ID "689B54DFE7E3A546"
+    coords -24.417 7.975 -4.006
+   }
+   {
+    ID "689B54DFE7E3D4B4"
+    coords -24.417 4.531 -4.006
+   }
+   {
+    ID "689B54DFE7E43211"
+    coords -14.723 4.531 -6.128
+   }
+   {
+    ID "689B54DFE7E43217"
+    coords -14.723 7.975 -6.128
+   }
+   {
+    ID "689B54DFE7E43260"
+    coords -8.062 1.093 -6.324
+   }
+   {
+    ID "689B54DFE7E4CF6B"
+    coords -8.062 7.975 -6.324
+   }
+   {
+    ID "689B54DFE7E4D82B"
+    coords -8.062 4.531 -6.324
+   }
+   {
+    ID "689B54DFE7E52698"
+    coords -17.993 4.531 -6.128
+   }
+   {
+    ID "689B54DFE7E53AEE"
+    coords -17.993 1.093 -6.128
+   }
+   {
+    ID "689B54DFE7E54105"
+    coords -21.126 4.531 -6.128
+   }
+   {
+    ID "689B54DFE7E5411E"
+    coords -21.126 7.975 -6.128
+   }
+   {
+    ID "689B54DFE7E5A2EC"
+    coords -17.993 7.975 -6.128
+   }
+   {
+    ID "689B54DFE7E5AA5D"
+    coords -14.723 1.093 -6.128
+   }
+   {
+    ID "689B54DFE7E66AD0"
+    coords 5.021 4.531 -6.324
+   }
+   {
+    ID "689B54DFE7E69828"
+    coords 8.256 4.531 -6.324
+   }
+   {
+    ID "689B54DFE7E69833"
+    coords 8.256 1.093 -6.324
+   }
+   {
+    ID "689B54DFE7E6F45E"
+    coords 5.021 7.975 -6.324
+   }
+   {
+    ID "689B54DFE7E71E1C"
+    coords 1.589 4.531 -6.324
+   }
+   {
+    ID "689B54DFE7E723CA"
+    coords -4.818 7.975 -6.324
+   }
+   {
+    ID "689B54DFE7E7295F"
+    coords 1.589 1.093 -6.324
+   }
+   {
+    ID "689B54DFE7E75737"
+    coords -4.818 1.093 -6.324
+   }
+   {
+    ID "689B54DFE7E759C9"
+    coords -4.818 4.531 -6.324
+   }
+   {
+    ID "689B54DFE7E7C52B"
+    coords 5.021 1.093 -6.324
+   }
+   {
+    ID "689B54DFE7E7C6AA"
+    coords 1.589 7.975 -6.324
+   }
+   {
+    ID "689B54DFE7E80E05"
+    coords -5.075 1.093 4.394
+   }
+   {
+    ID "689B54DFE7E8525B"
+    coords -1.696 7.975 4.394
+   }
+   {
+    ID "689B54DFE7E8CA6A"
+    coords -5.075 4.531 4.394
+   }
+   {
+    ID "689B54DFE7E92042"
+    coords -1.696 1.093 4.394
+   }
+   {
+    ID "689B54DFE7E942CA"
+    coords 1.608 4.531 4.422
+   }
+   {
+    ID "689B54DFE7E94C3F"
+    coords 1.608 7.975 4.422
+   }
+   {
+    ID "689B54DFE7E9C3AC"
+    coords -1.696 4.531 4.394
+   }
+   {
+    ID "689B54DFE7EA291C"
+    coords -14.761 4.531 4.393
+   }
+   {
+    ID "689B54DFE7EABF02"
+    coords -14.761 7.975 4.393
+   }
+   {
+    ID "689B54DFE7EB4070"
+    coords -8.298 4.531 4.394
+   }
+   {
+    ID "689B54DFE7EB407A"
+    coords -8.298 1.093 4.394
+   }
+   {
+    ID "689B54DFE7EB54B1"
+    coords -5.075 7.975 4.394
+   }
+   {
+    ID "689B54DFE7EB833A"
+    coords -14.761 1.093 4.393
+   }
+   {
+    ID "689B54DFE7EB833C"
+    coords -11.456 7.975 4.394
+   }
+   {
+    ID "689B54DFE7EBBF62"
+    coords -11.456 4.531 4.394
+   }
+   {
+    ID "689B54DFE7EBFE6F"
+    coords -11.456 1.093 4.394
+   }
+   {
+    ID "689B54DFE7EBFE77"
+    coords -8.298 7.975 4.394
+   }
+   {
+    ID "689B54DFE7EC2968"
+    coords -24.482 7.975 4.393
+   }
+   {
+    ID "689B54DFE7EC367E"
+    coords -24.482 4.531 4.393
+   }
+   {
+    ID "689B54DFE7ECE404"
+    coords -18.543 4.531 -4.291
+   }
+   {
+    ID "689B54DFE7ECE40A"
+    coords -18.543 1.093 -4.291
+   }
+   {
+    ID "689B54DFE7ECE439"
+    coords -15.667 1.093 -4.395
+   }
+   {
+    ID "689B54DFE7ECE43E"
+    coords -18.543 7.975 -4.291
+   }
+   {
+    ID "689B54DFE7ED2A99"
+    coords -18.042 4.531 4.393
+   }
+   {
+    ID "689B54DFE7ED3A94"
+    coords -18.042 1.093 4.393
+   }
+   {
+    ID "689B54DFE7EDAB82"
+    coords -21.539 7.975 4.393
+   }
+   {
+    ID "689B54DFE7EDABFB"
+    coords -24.482 1.093 4.393
+   }
+   {
+    ID "689B54DFE7EDEE31"
+    coords -21.539 4.531 4.393
+   }
+   {
+    ID "689B54DFE7EDF50F"
+    coords -21.539 1.093 4.393
+   }
+   {
+    ID "689B54DFE7EDF517"
+    coords -18.042 7.975 4.393
+   }
+   {
+    ID "689B54DFE7EE1439"
+    coords -23.941 4.531 -2.332
+   }
+   {
+    ID "689B54DFE7EE36ED"
+    coords -23.941 1.093 -2.332
+   }
+   {
+    ID "689B54DFE7EE7095"
+    coords -25.439 7.975 -2.332
+   }
+   {
+    ID "689B54DFE7EE9779"
+    coords -22.517 7.975 -2.332
+   }
+   {
+    ID "689B54DFE7EEAE07"
+    coords -22.517 4.531 -2.332
+   }
+   {
+    ID "689B54DFE7EEC819"
+    coords -23.941 7.975 -2.332
+   }
+   {
+    ID "689B54DFE7EEC81E"
+    coords -22.517 1.093 -2.332
+   }
+   {
+    ID "689B54DFE7EF5610"
+    coords -15.667 7.975 -4.395
+   }
+   {
+    ID "689B54DFE7EF7513"
+    coords -15.667 4.531 -4.395
+   }
+   {
+    ID "689B54DFE7EFD448"
+    coords -25.439 4.531 -2.332
+   }
+   {
+    ID "689B54DFE7EFE5FF"
+    coords -25.439 1.093 -2.332
+   }
+   {
+    ID "689B54DFE7F85229"
+    coords 14.712 7.975 -6.324
+   }
+   {
+    ID "689B54DFE7F8BFBA"
+    coords 17.828 4.531 -5.59
+   }
+   {
+    ID "689B54DFE7F8F793"
+    coords 17.828 1.093 -5.59
+   }
+   {
+    ID "689B54DFE7F904AE"
+    coords 14.712 1.093 -6.324
+   }
+   {
+    ID "689B54DFE7F9613D"
+    coords 8.256 7.975 -6.324
+   }
+   {
+    ID "689B54DFE7F9A239"
+    coords 14.712 4.531 -6.324
+   }
+   {
+    ID "689B54DFE7FA0419"
+    coords 24.387 1.093 -6.089
+   }
+   {
+    ID "689B54DFE7FA5234"
+    coords 24.387 4.531 -6.089
+   }
+   {
+    ID "689B54DFE7FA872C"
+    coords 24.682 4.511 4.389
+   }
+   {
+    ID "689B54DFE7FA876B"
+    coords 24.682 7.908 4.389
+   }
+   {
+    ID "689B54DFE7FAA588"
+    coords 21.29 4.511 4.389
+   }
+   {
+    ID "689B54DFE7FAB0EB"
+    coords 24.682 1.13 4.389
+   }
+   {
+    ID "689B54DFE7FAEA13"
+    coords 21.29 1.13 4.389
+   }
+   {
+    ID "689B54DFE7FB08F7"
+    coords 21.126 4.531 -6.008
+   }
+   {
+    ID "689B54DFE7FB2403"
+    coords 21.126 1.093 -6.008
+   }
+   {
+    ID "689B54DFE7FB3153"
+    coords 17.828 7.975 -5.59
+   }
+   {
+    ID "689B54DFE7FB9CD4"
+    coords 21.126 7.975 -6.008
+   }
+   {
+    ID "689B54DFE7FB9CDC"
+    coords 24.387 7.975 -6.089
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{484A88ED5965CAF9}Prefabs/Structures/Industrial/Cableways/CablewayWooden_01/CablewayWooden_01_bucket_green.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

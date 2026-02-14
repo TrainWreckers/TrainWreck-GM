@@ -1,0 +1,151 @@
+SCR_DestructibleBuildingEntity : "{A665817267C8BC2D}Prefabs/Props/Wrecks/ShipWreckMetal_01/ShipWreckMetal_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB6C8080D69"
+    coords 0.817 1.887 -0.669
+   }
+   {
+    ID "689C3DB6C8084658"
+    coords 0.777 1.887 -1.788
+   }
+   {
+    ID "689C3DB6C808770A"
+    coords -0.941 1.887 -1.855
+   }
+   {
+    ID "689C3DB6C8088085"
+    coords -1.467 1.887 -8.357
+   }
+   {
+    ID "689C3DB6C808EC7B"
+    coords -0.932 1.887 -0.497
+   }
+   {
+    ID "689C3DB6C808F022"
+    coords -1.97 1.887 -5.413
+   }
+   {
+    ID "689C3DB6C808F02C"
+    coords 0.893 1.887 1.318
+   }
+   {
+    ID "689C3DB6C808F03B"
+    coords -1.921 1.887 -6.755
+   }
+   {
+    ID "689C3DB6C808F056"
+    coords -0.904 1.887 1.557
+   }
+   {
+    ID "689C3DB6C809520C"
+    coords -2.062 1.887 -2.559
+   }
+   {
+    ID "689C3DB6C809C5D7"
+    coords -2.051 1.887 -4.031
+   }
+   {
+    ID "689C3DB6C80A68F8"
+    coords 2.282 1.887 -5.166
+   }
+   {
+    ID "689C3DB6C80A787F"
+    coords -0.589 1.914 -5.524
+   }
+   {
+    ID "689C3DB6C80AA9F1"
+    coords -0.699 5.119 -5.859
+   }
+   {
+    ID "689C3DB6C80AA9F9"
+    coords -0.26 1.887 8.792
+   }
+   {
+    ID "689C3DB6C80AE383"
+    coords 0.66 1.914 -5.507
+   }
+   {
+    ID "689C3DB6C80AE385"
+    coords 0.971 5.127 -5.009
+   }
+   {
+    ID "689C3DB6C80B009A"
+    coords 0.257 1.887 -7.152
+   }
+   {
+    ID "689C3DB6C80B061D"
+    coords 1.756 1.887 -8.448
+   }
+   {
+    ID "689C3DB6C80B4A6B"
+    coords 0.397 1.887 -8.305
+   }
+   {
+    ID "689C3DB6C80BD98D"
+    coords 2.094 1.887 -6.852
+   }
+   {
+    ID "689C3DB6C80C1BC9"
+    coords 1.842 1.887 5.436
+   }
+   {
+    ID "689C3DB6C80C6850"
+    coords 0.912 1.887 7.472
+   }
+   {
+    ID "689C3DB6C80C7B53"
+    coords -0.835 1.887 7.094
+   }
+   {
+    ID "689C3DB6C80C8646"
+    coords 1.889 1.887 1.863
+   }
+   {
+    ID "689C3DB6C80CD520"
+    coords 1.996 1.887 3.732
+   }
+   {
+    ID "689C3DB6C80E1D62"
+    coords -2.006 1.887 1.879
+   }
+   {
+    ID "689C3DB6C80E47D3"
+    coords 1.901 1.887 -3.796
+   }
+   {
+    ID "689C3DB6C80E47E8"
+    coords -2.077 1.887 5.319
+   }
+   {
+    ID "689C3DB6C80E574D"
+    coords -2.045 1.887 3.939
+   }
+   {
+    ID "689C3DB6C80E89A8"
+    coords -2.108 1.887 -1.371
+   }
+   {
+    ID "689C3DB6C80EB46C"
+    coords -2.129 1.887 -0.565
+   }
+   {
+    ID "689C3DB6C80EB796"
+    coords -2.108 1.887 0.779
+   }
+   {
+    ID "689C3DB6C80F3A24"
+    coords 1.809 1.887 0.631
+   }
+   {
+    ID "689C3DB6C80F8646"
+    coords 1.917 1.887 -2.379
+   }
+   {
+    ID "689C3DB6C80FD14B"
+    coords 1.688 1.887 -0.696
+   }
+  }
+ }
+}

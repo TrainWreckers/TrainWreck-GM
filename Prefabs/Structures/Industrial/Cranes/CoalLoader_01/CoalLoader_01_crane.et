@@ -1,0 +1,131 @@
+SCR_DestructibleBuildingEntity : "{C65A32635F5DB0DC}Prefabs/Structures/Industrial/Cranes/CoalLoader_01/CoalLoader_01_crane_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B54D92F44018E"
+    coords -2.819 20.923 -2.712
+   }
+   {
+    ID "689B54D92F441EF1"
+    coords -0.1 20.923 -2.905
+   }
+   {
+    ID "689B54D92F441EFA"
+    coords 2.315 20.923 -1.42
+   }
+   {
+    ID "689B54D92F443DB7"
+    coords -2.805 20.923 -0.076
+   }
+   {
+    ID "689B54D92F44454F"
+    coords 4.657 20.923 -8.872
+   }
+   {
+    ID "689B54D92F44AA87"
+    coords 4.581 20.923 -6.076
+   }
+   {
+    ID "689B54D92F44DD79"
+    coords 4.581 20.923 -2.037
+   }
+   {
+    ID "689B54D92F45158F"
+    coords 2.23 14.938 -3.88
+   }
+   {
+    ID "689B54D92F4527D8"
+    coords 4.581 14.938 -2.037
+   }
+   {
+    ID "689B54D92F4527DE"
+    coords 4.941 14.938 -3.969
+   }
+   {
+    ID "689B54D92F455C90"
+    coords -2.4 14.938 -3.975
+   }
+   {
+    ID "689B54D92F45CD8A"
+    coords -2.606 14.938 -1.671
+   }
+   {
+    ID "689B54D92F45D70D"
+    coords -2.108 14.938 4.497
+   }
+   {
+    ID "689B54D92F45E610"
+    coords 2.516 14.938 -1.63
+   }
+   {
+    ID "689B54D92F478E67"
+    coords 0.165 20.923 2.285
+   }
+   {
+    ID "689B54D92F5820B7"
+    coords 4.694 10.56 5.364
+   }
+   {
+    ID "689B54D92F589ECF"
+    coords 2.663 20.923 4.457
+   }
+   {
+    ID "689B54D92F58AB45"
+    coords 2.463 20.923 1.1
+   }
+   {
+    ID "689B54D92F58F63E"
+    coords 1.523 30.181 -1.67
+   }
+   {
+    ID "689B54D92F59178B"
+    coords -1.606 30.181 -1.774
+   }
+   {
+    ID "689B54D92F599CF5"
+    coords -1.536 30.181 1.99
+   }
+   {
+    ID "689B54D92F59C4A4"
+    coords 1.509 30.181 1.962
+   }
+   {
+    ID "689B54D92F5A57E5"
+    coords 2.153 14.938 4.497
+   }
+   {
+    ID "689B54D92F5AD9A2"
+    coords 2.153 14.938 1.797
+   }
+   {
+    ID "689B54D92F5ADA5B"
+    coords -4.988 10.56 5.082
+   }
+   {
+    ID "689B54D92F5B37EE"
+    coords -5.043 10.561 2.624
+   }
+   {
+    ID "689B54D92F5B37F7"
+    coords -4.983 10.559 0.333
+   }
+   {
+    ID "689B54D92F5B70B3"
+    coords -5.013 10.559 -2.768
+   }
+   {
+    ID "689B54D92F5B9081"
+    coords -0.143 10.563 5.68
+   }
+   {
+    ID "689B54D92F5B908B"
+    coords -2.743 10.561 5.218
+   }
+   {
+    ID "689B54D92F5E3A45"
+    coords -2.564 20.923 2.211
+   }
+  }
+ }
+}

@@ -1,0 +1,147 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DBE8F08692B"
+    coords 4.712 3.608 1.521
+   }
+   {
+    ID "689C3DBE8F086931"
+    coords 3.896 3.49 3.605
+   }
+   {
+    ID "689C3DBE8F0880A7"
+    coords 0.802 3.49 3.771
+   }
+   {
+    ID "689C3DBE8F090DF2"
+    coords -0.166 3.581 -2
+   }
+   {
+    ID "689C3DBE8F090DFA"
+    coords -0.224 3.49 2.371
+   }
+   {
+    ID "689C3DBE8F09983B"
+    coords -3.771 0.19 3.238
+   }
+   {
+    ID "689C3DBE8F09E0C9"
+    coords -2.884 0.19 1.486
+   }
+   {
+    ID "689C3DBE8F09E711"
+    coords -0.425 0.19 1.577
+   }
+   {
+    ID "689C3DBE8F0A2D4E"
+    coords 0.867 0.19 -2.243
+   }
+   {
+    ID "689C3DBE8F0A4166"
+    coords 0.462 0.19 3.245
+   }
+   {
+    ID "689C3DBE8F0A4F35"
+    coords 3.165 0.19 3.262
+   }
+   {
+    ID "689C3DBE8F0A51B4"
+    coords 5.116 0.19 0.808
+   }
+   {
+    ID "689C3DBE8F0AC3C7"
+    coords 4.387 0.19 -4.779
+   }
+   {
+    ID "689C3DBE8F0B5D5C"
+    coords -2.018 6.792 -3.981
+   }
+   {
+    ID "689C3DBE8F0B6A31"
+    coords 0.629 0.471 -4.781
+   }
+   {
+    ID "689C3DBE8F0C4F6A"
+    coords -2.27 6.834 2.243
+   }
+   {
+    ID "689C3DBE8F0CB651"
+    coords 1.224 6.991 2.23
+   }
+   {
+    ID "689C3DBE8F0CC600"
+    coords 4.643 6.792 2.636
+   }
+   {
+    ID "689C3DBE8F0CF123"
+    coords 2.404 6.822 0.115
+   }
+   {
+    ID "689C3DBE8F0D30F3"
+    coords 4.857 6.792 0.273
+   }
+   {
+    ID "689C3DBE8F0D60DA"
+    coords 4.52 3.635 -4.046
+   }
+   {
+    ID "689C3DBE8F0DEEB4"
+    coords -1.157 3.485 -4.69
+   }
+   {
+    ID "689C3DBE8F0E7565"
+    coords 3.075 3.504 -3.83
+   }
+   {
+    ID "689C3DBE8F0E757D"
+    coords 3.11 3.605 -2.439
+   }
+   {
+    ID "689C3DBE8F0EAC68"
+    coords -2.481 3.485 -4.876
+   }
+   {
+    ID "689C3DBE8F0EDDA3"
+    coords -4.495 3.533 -2.756
+   }
+   {
+    ID "689C3DBE8F0EE2F3"
+    coords -4.613 3.485 -4.638
+   }
+   {
+    ID "689C3DBE8F0F1B55"
+    coords -4.574 3.521 -0.08
+   }
+   {
+    ID "689C3DBE8F0F4639"
+    coords -3.146 3.495 0.538
+   }
+   {
+    ID "689C3DBE8F0F8BAC"
+    coords -4.545 3.624 3.183
+   }
+   {
+    ID "689C3DBE8F0F8BB4"
+    coords -2.994 3.498 2.94
+   }
+   {
+    ID "689C3DBE8F0FC647"
+    coords -6.198 3.467 2.183
+   }
+   {
+    ID "689C3DBE8F334B36"
+    coords 0.707 6.792 -3.334
+   }
+   {
+    ID "689C3DBE8F33B3CA"
+    coords 4.812 5.684 -1.537
+   }
+   {
+    ID "689C3DBE8F33CD64"
+    coords -2.169 6.792 -1.376
+   }
+  }
+ }
+}

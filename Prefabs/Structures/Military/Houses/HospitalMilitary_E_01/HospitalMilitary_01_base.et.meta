@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EF7848FA0FF4B76B}Prefabs/Structures/Military/Houses/HospitalMilitary_E_01/HospitalMilitary_01_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

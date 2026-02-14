@@ -1,0 +1,43 @@
+StaticModelEntity : "{9F3439895899B06A}Prefabs/Props/Wrecks/ShipWreckMetal_02/ShipWreckMetal_02_Ruin_base.et" {
+ ID "5CAE9B8BF56E4173"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB6F2661607"
+    coords 0.683 0.907 -2.488
+   }
+   {
+    ID "689C3DB6F266BC6C"
+    coords -0.703 0.893 -4.244
+   }
+   {
+    ID "689C3DB6F267122F"
+    coords -0.311 0.898 1.339
+   }
+   {
+    ID "689C3DB6F267BB9B"
+    coords 0.485 0.907 -0.637
+   }
+   {
+    ID "689C3DB6F267E525"
+    coords -0.852 0.907 -0.692
+   }
+   {
+    ID "689C3DB6F2982A4A"
+    coords 0.329 0.893 -6.274
+   }
+   {
+    ID "689C3DB6F298BD8A"
+    coords 0.757 0.898 2.96
+   }
+   {
+    ID "689C3DB6F298BDB0"
+    coords -0.759 0.899 3.467
+   }
+   {
+    ID "689C3DB6F298FCCF"
+    coords 0.904 0.898 1.129
+   }
+  }
+ }
+}

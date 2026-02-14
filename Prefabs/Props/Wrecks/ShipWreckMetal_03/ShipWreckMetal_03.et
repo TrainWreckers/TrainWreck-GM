@@ -1,0 +1,103 @@
+SCR_DestructibleBuildingEntity : "{728B436837CAC3ED}Prefabs/Props/Wrecks/ShipWreckMetal_03/ShipWreckMetal_03_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB64881145C"
+    coords 1.567 1.465 -1.42
+   }
+   {
+    ID "689C3DB64882178F"
+    coords 2.403 3.196 -4.763
+   }
+   {
+    ID "689C3DB648824644"
+    coords 0.894 6.86 -4.916
+   }
+   {
+    ID "689C3DB648824651"
+    coords -0.507 6.848 -5.705
+   }
+   {
+    ID "689C3DB64882582F"
+    coords -2.061 3.201 -3.956
+   }
+   {
+    ID "689C3DB6488262D2"
+    coords -1.534 1.465 -0.822
+   }
+   {
+    ID "689C3DB6488277D7"
+    coords 1.144 3.196 -3.6
+   }
+   {
+    ID "689C3DB6488277EE"
+    coords -0.446 3.196 -3.362
+   }
+   {
+    ID "689C3DB64882A313"
+    coords 1.56 1.463 2.788
+   }
+   {
+    ID "689C3DB64882B975"
+    coords -1.461 1.492 2.708
+   }
+   {
+    ID "689C3DB64882B97D"
+    coords -1.308 1.458 6.529
+   }
+   {
+    ID "689C3DB6488307EF"
+    coords -1.99 3.196 -9.988
+   }
+   {
+    ID "689C3DB6488307F0"
+    coords -1.095 5.536 -7.685
+   }
+   {
+    ID "689C3DB648831EEF"
+    coords 0.962 3.239 -8.16
+   }
+   {
+    ID "689C3DB648831F14"
+    coords 0.275 5.536 -8.254
+   }
+   {
+    ID "689C3DB648832300"
+    coords 0.9 3.322 -9.844
+   }
+   {
+    ID "689C3DB64883B310"
+    coords 2.321 3.196 -9.931
+   }
+   {
+    ID "689C3DB64883D89D"
+    coords 2.279 3.199 -6.813
+   }
+   {
+    ID "689C3DB648843C34"
+    coords -1.148 4.551 -5.132
+   }
+   {
+    ID "689C3DB648849D0B"
+    coords 0.73 4.551 -5.312
+   }
+   {
+    ID "689C3DB64884BF92"
+    coords 1.047 4.551 -6.56
+   }
+   {
+    ID "689C3DB64884BFAC"
+    coords -0.132 4.551 -6.552
+   }
+   {
+    ID "689C3DB64884F65D"
+    coords -0.632 3.239 -8.185
+   }
+   {
+    ID "689C3DB64885F157"
+    coords 1.691 1.458 6.606
+   }
+  }
+ }
+}

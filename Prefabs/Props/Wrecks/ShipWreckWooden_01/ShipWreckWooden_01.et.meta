@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{43957C1E3ECCDFE2}Prefabs/Props/Wrecks/ShipWreckWooden_01/ShipWreckWooden_01.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FA686634810B8E2A}Prefabs/Structures/Infrastructure/Naval/Sheds/FishermanShed_03/FishermanShed_03_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

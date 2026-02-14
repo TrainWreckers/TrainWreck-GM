@@ -1,0 +1,227 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DBEAD700666"
+    coords 5.152 0.19 -4.638
+   }
+   {
+    ID "689C3DBEAD700B99"
+    coords 8.895 6.807 2.634
+   }
+   {
+    ID "689C3DBEAD703672"
+    coords 4.547 0.19 -1.645
+   }
+   {
+    ID "689C3DBEAD703B4C"
+    coords 8.825 0.19 -4.633
+   }
+   {
+    ID "689C3DBEAD709C22"
+    coords 8.825 0.19 1.504
+   }
+   {
+    ID "689C3DBEAD70A7AA"
+    coords 7.586 0.19 3.282
+   }
+   {
+    ID "689C3DBEAD70A7AC"
+    coords 4.779 0.19 3.112
+   }
+   {
+    ID "689C3DBEAD70DC49"
+    coords -2.558 0.19 1.554
+   }
+   {
+    ID "689C3DBEAD72116F"
+    coords 1.308 0.195 -4.611
+   }
+   {
+    ID "689C3DBEAD7215A5"
+    coords -2.852 0.19 -1.385
+   }
+   {
+    ID "689C3DBEAD7285BB"
+    coords 0.082 0.19 2.379
+   }
+   {
+    ID "689C3DBEAD728719"
+    coords -0.666 0.193 -4.071
+   }
+   {
+    ID "689C3DBEAD72DC79"
+    coords -3.356 3.49 -0.744
+   }
+   {
+    ID "689C3DBEAD72F44F"
+    coords -0.895 3.497 2.28
+   }
+   {
+    ID "689C3DBEAD733A3F"
+    coords -7.326 0.19 1.313
+   }
+   {
+    ID "689C3DBEAD733C31"
+    coords -3.721 0.19 3.559
+   }
+   {
+    ID "689C3DBEAD7366E6"
+    coords -6.947 0.19 3.745
+   }
+   {
+    ID "689C3DBEAD7366F2"
+    coords -6.355 0.515 -4.897
+   }
+   {
+    ID "689C3DBEAD7366FA"
+    coords -7.942 0.447 -4.263
+   }
+   {
+    ID "689C3DBEAD7366FC"
+    coords -7.46 0.19 -1.532
+   }
+   {
+    ID "689C3DBEAD73B2ED"
+    coords -3.442 0.19 -5.2
+   }
+   {
+    ID "689C3DBEAD747CF4"
+    coords -8.07 3.632 3.285
+   }
+   {
+    ID "689C3DBEAD74C0B2"
+    coords -6.458 3.49 -1.684
+   }
+   {
+    ID "689C3DBEAD7545DF"
+    coords -2.539 3.49 2.352
+   }
+   {
+    ID "689C3DBEAD75AC05"
+    coords -4.316 3.49 3.413
+   }
+   {
+    ID "689C3DBEAD75F814"
+    coords -6.466 3.546 3.322
+   }
+   {
+    ID "689C3DBEAD760585"
+    coords -2.679 3.49 -4.652
+   }
+   {
+    ID "689C3DBEAD763EA2"
+    coords -0.405 3.485 -5.03
+   }
+   {
+    ID "689C3DBEAD769FD3"
+    coords 1.865 3.485 -4.468
+   }
+   {
+    ID "689C3DBEAD77070C"
+    coords 9.38 3.638 1.58
+   }
+   {
+    ID "689C3DBEAD770714"
+    coords 5.273 3.49 1.794
+   }
+   {
+    ID "689C3DBEAD77071B"
+    coords -6.774 3.472 -4.244
+   }
+   {
+    ID "689C3DBEAD77521D"
+    coords 7.728 3.49 3.474
+   }
+   {
+    ID "689C3DBEAD7795F6"
+    coords 2.129 3.497 2.123
+   }
+   {
+    ID "689C3DBEAD779DF7"
+    coords 4.958 3.49 3.183
+   }
+   {
+    ID "689C3DBEAD77C4F0"
+    coords -0.352 3.537 -2.505
+   }
+   {
+    ID "689C3DBEAD77CC58"
+    coords -0.582 3.495 1.43
+   }
+   {
+    ID "689C3DBEAD782814"
+    coords -2.756 6.792 -5.005
+   }
+   {
+    ID "689C3DBEAD7848A5"
+    coords -7.562 6.88 2.661
+   }
+   {
+    ID "689C3DBEAD785753"
+    coords -4.283 6.792 2.084
+   }
+   {
+    ID "689C3DBEAD785759"
+    coords -4.522 6.792 -2.398
+   }
+   {
+    ID "689C3DBEAD787E54"
+    coords 5.349 6.792 -2.337
+   }
+   {
+    ID "689C3DBEAD787E58"
+    coords -7.133 6.914 -2.485
+   }
+   {
+    ID "689C3DBEAD78C0AB"
+    coords 0.696 6.897 -3.076
+   }
+   {
+    ID "689C3DBEAD790E3A"
+    coords 3.999 3.485 -4.215
+   }
+   {
+    ID "689C3DBEAD79172D"
+    coords 7.223 3.625 -2.169
+   }
+   {
+    ID "689C3DBEAD7979A2"
+    coords -6.986 6.792 -4.632
+   }
+   {
+    ID "689C3DBEAD7979A5"
+    coords 9.251 4.357 -3.548
+   }
+   {
+    ID "689C3DBEAD798882"
+    coords -1.548 6.85 0.116
+   }
+   {
+    ID "689C3DBEAD79D373"
+    coords -1.682 6.85 -2.092
+   }
+   {
+    ID "689C3DBEAD7B0818"
+    coords -0.335 6.87 2.412
+   }
+   {
+    ID "689C3DBEAD7B1A47"
+    coords 0.155 6.866 -0.779
+   }
+   {
+    ID "689C3DBEAD7B1A72"
+    coords 5.139 6.792 0.198
+   }
+   {
+    ID "689C3DBEAD7B366E"
+    coords 4.517 7.023 2.249
+   }
+   {
+    ID "689C3DBEAD7B8246"
+    coords 9.07 6.942 -0.171
+   }
+  }
+ }
+}

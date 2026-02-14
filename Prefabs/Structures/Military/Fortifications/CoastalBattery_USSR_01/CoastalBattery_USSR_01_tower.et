@@ -1,0 +1,79 @@
+SCR_DestructibleBuildingEntity : "{0F5221CE10A609E5}Prefabs/Structures/Military/Fortifications/CoastalBattery_USSR_01/CoastalBattery_USSR_01_tower_base.et" {
+ ID "5272E314F01B2DBE"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB154164992"
+    coords 0.139 18.697 -2.1
+   }
+   {
+    ID "689C3DB155E845A6"
+    coords -2.958 12.394 2.818
+   }
+   {
+    ID "689C3DB155E87EEB"
+    coords -2.106 17.923 -4.215
+   }
+   {
+    ID "689C3DB155E88DE5"
+    coords 1.778 17.927 -4.123
+   }
+   {
+    ID "689C3DB155E8F654"
+    coords -0.04 17.927 -4.786
+   }
+   {
+    ID "689C3DB155E91227"
+    coords -1.01 17.982 1.665
+   }
+   {
+    ID "689C3DB155E91230"
+    coords -2.909 17.927 0.322
+   }
+   {
+    ID "689C3DB155E95468"
+    coords 2.957 17.927 -1.937
+   }
+   {
+    ID "689C3DB155E95EFE"
+    coords 1.194 17.982 1.508
+   }
+   {
+    ID "689C3DB155E9C00E"
+    coords -2.874 17.918 -2.36
+   }
+   {
+    ID "689C3DB155EA9B4B"
+    coords 2.4 12.394 -3.371
+   }
+   {
+    ID "689C3DB155EAD7B4"
+    coords 2.608 12.393 1.207
+   }
+   {
+    ID "689C3DB155EAFCAB"
+    coords 3.545 13.603 -1.147
+   }
+   {
+    ID "689C3DB155EB3769"
+    coords -1.19 12.394 -4.316
+   }
+   {
+    ID "689C3DB155EB6AA4"
+    coords 1.04 12.389 -4.643
+   }
+   {
+    ID "689C3DB155EBD713"
+    coords -2.65 12.394 -3.041
+   }
+   {
+    ID "689C3DB155EBF34E"
+    coords -3.116 12.391 0.873
+   }
+   {
+    ID "689C3DB155EBF3B8"
+    coords -2.963 12.386 -1.499
+   }
+  }
+ }
+}

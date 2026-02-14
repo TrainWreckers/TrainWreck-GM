@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3EB5702FF09D4B2E}Prefabs/Structures/Military/Houses/BarracksWooden_01/BarracksWooden_USSR_01_messhall_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

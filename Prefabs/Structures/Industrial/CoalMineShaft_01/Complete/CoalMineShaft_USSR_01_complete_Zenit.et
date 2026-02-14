@@ -1,0 +1,127 @@
+SCR_DestructibleBuildingEntity : "{EAF94EE6779EB1DE}Prefabs/Structures/Industrial/CoalMineShaft_01/Complete/CoalMineShaft_01_complete_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB0EE3010A5"
+    coords -3.616 0.15 -35.192
+   }
+   {
+    ID "689C3DB0EE306B3C"
+    coords -0.715 0.15 -31.394
+   }
+   {
+    ID "689C3DB0EE30781C"
+    coords -1.422 0.15 -34.534
+   }
+   {
+    ID "689C3DB0EE30F455"
+    coords 0.68 0.15 -29.684
+   }
+   {
+    ID "689C3DB0EE319EF0"
+    coords -6.58 0.15 -35.215
+   }
+   {
+    ID "689C3DB0EE319EFA"
+    coords 1.934 0.19 9.789
+   }
+   {
+    ID "689C3DB0EE345126"
+    coords -1.903 0.15 -3.701
+   }
+   {
+    ID "689C3DB0EE34513E"
+    coords 0.709 0.15 -1.301
+   }
+   {
+    ID "689C3DB0EE349E52"
+    coords -1.908 0.19 9.17
+   }
+   {
+    ID "689C3DB0EE349E6A"
+    coords -1.739 0.19 7.092
+   }
+   {
+    ID "689C3DB0EE34BDAB"
+    coords -1.874 0.19 4.178
+   }
+   {
+    ID "689C3DB0EE34F4D1"
+    coords -1.793 0.19 0.995
+   }
+   {
+    ID "689C3DB0EE351262"
+    coords -0.661 0.15 -11.091
+   }
+   {
+    ID "689C3DB0EE356AFA"
+    coords 1.098 0.15 -7.777
+   }
+   {
+    ID "689C3DB0EE35712D"
+    coords -0.661 0.15 -8.457
+   }
+   {
+    ID "689C3DB0EE357134"
+    coords 0.729 0.15 -10.569
+   }
+   {
+    ID "689C3DB0EE35EF02"
+    coords 0.378 0.15 -5.349
+   }
+   {
+    ID "689C3DB0EE35F2FD"
+    coords -1.504 0.15 -5.546
+   }
+   {
+    ID "689C3DB0EE361FB1"
+    coords 0.756 0.15 -24.446
+   }
+   {
+    ID "689C3DB0EE361FC1"
+    coords 0.756 0.15 -22.483
+   }
+   {
+    ID "689C3DB0EE362852"
+    coords -0.634 0.15 -20.457
+   }
+   {
+    ID "689C3DB0EE365116"
+    coords -0.661 0.15 -15.773
+   }
+   {
+    ID "689C3DB0EE36B5D4"
+    coords -0.661 0.15 -18.682
+   }
+   {
+    ID "689C3DB0EE36B6C3"
+    coords -0.661 0.15 -13.041
+   }
+   {
+    ID "689C3DB0EE3740CA"
+    coords -1.872 0.15 -28.603
+   }
+   {
+    ID "689C3DB0EE378175"
+    coords 0.756 0.15 -26.851
+   }
+   {
+    ID "689C3DB0EE379427"
+    coords -1.872 0.15 -27.255
+   }
+   {
+    ID "689C3DB0EE3B2BD5"
+    coords 1.618 0.185 5.068
+   }
+   {
+    ID "689C3DB0EE3B2EE3"
+    coords 1.871 0.165 1.663
+   }
+   {
+    ID "689C3DB0EE3B99CE"
+    coords 1.808 0.19 7.536
+   }
+  }
+ }
+}

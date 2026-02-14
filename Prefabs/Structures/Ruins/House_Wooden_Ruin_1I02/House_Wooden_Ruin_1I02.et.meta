@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6CD45CA7E09AC6E3}Prefabs/Structures/Ruins/House_Wooden_Ruin_1I02/House_Wooden_Ruin_1I02.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

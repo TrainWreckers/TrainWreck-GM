@@ -1,0 +1,87 @@
+SCR_DestructibleBuildingEntity : "{8A923531EFF0FCEC}Prefabs/Structures/Military/Houses/GuardHouse_05/Guardhouse_USSR_05_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B346ED3D1FCE1"
+    coords 2.1 0.172 4.177
+   }
+   {
+    ID "689B346ED3DC0E44"
+    coords -6.902 0.172 -1.377
+   }
+   {
+    ID "689B346ED3DC0E4D"
+    coords -8.931 0.172 -1.22
+   }
+   {
+    ID "689B346ED3DC578C"
+    coords -8.99 0.172 2.219
+   }
+   {
+    ID "689B346ED3DCB525"
+    coords -10.704 0.172 4.177
+   }
+   {
+    ID "689B346ED3DCEB71"
+    coords -2.253 0.172 4.177
+   }
+   {
+    ID "689B346ED3DE1FF5"
+    coords 8.854 0.172 -0.069
+   }
+   {
+    ID "689B346ED3DE2694"
+    coords 12.378 0.172 -0.161
+   }
+   {
+    ID "689B346ED3DE2FA8"
+    coords 11.345 0.172 -1.735
+   }
+   {
+    ID "689B346ED3DE52C1"
+    coords 11.232 0.172 1.828
+   }
+   {
+    ID "689B346ED3DE52C7"
+    coords 8.279 0.172 2.632
+   }
+   {
+    ID "689B346ED3DE52DC"
+    coords 5.57 0.172 2.69
+   }
+   {
+    ID "689B346ED3DE6BA6"
+    coords 5.642 0.172 -2.667
+   }
+   {
+    ID "689B346ED3DE7984"
+    coords 8.461 0.172 -2.638
+   }
+   {
+    ID "689B346ED3DE853D"
+    coords 2.474 0.172 1.412
+   }
+   {
+    ID "689B346ED3DEA0FE"
+    coords 2.453 0.172 -0.937
+   }
+   {
+    ID "689B346ED3DEC3E2"
+    coords -0.009 0.172 2.016
+   }
+   {
+    ID "689B346ED3DF45B6"
+    coords 0.053 0.172 -2.13
+   }
+   {
+    ID "689B346ED3DFB212"
+    coords -2.281 0.172 -1.45
+   }
+   {
+    ID "689B346ED3DFE819"
+    coords -4.896 0.172 -1.333
+   }
+  }
+ }
+}

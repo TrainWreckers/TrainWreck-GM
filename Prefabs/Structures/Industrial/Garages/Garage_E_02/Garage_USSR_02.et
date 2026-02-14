@@ -1,0 +1,123 @@
+SCR_DestructibleBuildingEntity : "{9D656741EA2AABC5}Prefabs/Structures/Industrial/Garages/Garage_E_02/Garage_E_02_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B346DE5901AB4"
+    coords -11.737 0.157 7.514
+   }
+   {
+    ID "689B346DE5901ABD"
+    coords -11.737 0.157 2.522
+   }
+   {
+    ID "689B346DE59089E5"
+    coords 11.053 3.502 -4.445
+   }
+   {
+    ID "689B346DE59089FD"
+    coords 11.053 3.502 -7.363
+   }
+   {
+    ID "689B346DE590C8AC"
+    coords 11.053 3.502 -0.89
+   }
+   {
+    ID "689B346DE59113D6"
+    coords -5.214 0.157 -7.332
+   }
+   {
+    ID "689B346DE5911B4C"
+    coords -1.728 0.157 -7.332
+   }
+   {
+    ID "689B346DE5911D85"
+    coords 3.143 0.157 -7.332
+   }
+   {
+    ID "689B346DE5919EC7"
+    coords -8.684 0.157 -7.332
+   }
+   {
+    ID "689B346DE591E5EC"
+    coords -11.737 0.157 -6.888
+   }
+   {
+    ID "689B346DE591FBA2"
+    coords -11.737 0.157 -2.865
+   }
+   {
+    ID "689B346DE5933906"
+    coords 10.653 0.157 -7.06
+   }
+   {
+    ID "689B346DE59451F9"
+    coords 12.149 0.157 -0.974
+   }
+   {
+    ID "689B346DE594AD9F"
+    coords 10.591 0.157 1.373
+   }
+   {
+    ID "689B346DE594ADE7"
+    coords 10.7 0.157 -1.275
+   }
+   {
+    ID "689B346DE59586CD"
+    coords 11.661 0.157 -5.444
+   }
+   {
+    ID "689B346DE595EA25"
+    coords 11.544 0.157 -2.846
+   }
+   {
+    ID "689B346DE596786D"
+    coords 6.718 0.157 -0.672
+   }
+   {
+    ID "689B346DE5967F97"
+    coords 0.117 0.157 -0.672
+   }
+   {
+    ID "689B346DE5967F99"
+    coords -6.433 0.157 -0.672
+   }
+   {
+    ID "689B346DE596945A"
+    coords 7.901 0.157 -7.332
+   }
+   {
+    ID "689B346DE59706D3"
+    coords 12.337 0.157 7.904
+   }
+   {
+    ID "689B346DE5971C38"
+    coords 6.576 0.157 8.009
+   }
+   {
+    ID "689B346DE5971ECB"
+    coords 9.169 0.157 8.06
+   }
+   {
+    ID "689B346DE5973C95"
+    coords 0.242 0.157 8.145
+   }
+   {
+    ID "689B346DE5979434"
+    coords -6.296 0.157 8.145
+   }
+   {
+    ID "689B346DE597943F"
+    coords -6.462 0.157 1.011
+   }
+   {
+    ID "689B346DE597B5D0"
+    coords 0.1 0.157 1.011
+   }
+   {
+    ID "689B346DE597F6DD"
+    coords 6.718 0.157 1.011
+   }
+  }
+ }
+}

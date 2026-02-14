@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EDD86D0308801EA4}Prefabs/Structures/Military/Houses/BarracksWooden_01/BarracksWooden_USSR_01_yellow.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

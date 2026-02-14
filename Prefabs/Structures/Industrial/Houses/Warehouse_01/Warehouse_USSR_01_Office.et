@@ -1,0 +1,311 @@
+SCR_DestructibleBuildingEntity : "{E35EA41864A3B0ED}Prefabs/Structures/Industrial/Houses/Warehouse_01/Warehouse_01_Base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B1BBB686046DB"
+    coords -0.622 0.218 -1.665
+   }
+   {
+    ID "689B1BBB686077DF"
+    coords 0.871 0.218 -0.128
+   }
+   {
+    ID "689B1BBB6860F22A"
+    coords -0.622 0.218 -3.45
+   }
+   {
+    ID "689B1BBB6860F232"
+    coords -0.622 0.218 -5.999
+   }
+   {
+    ID "689B1BBB6860F23A"
+    coords 7.365 0.218 -5.63
+   }
+   {
+    ID "689B1BBB6861319B"
+    coords 3.616 0.218 -4.628
+   }
+   {
+    ID "689B1BBB68617FD8"
+    coords 4.471 0.218 -5.881
+   }
+   {
+    ID "689B1BBB6861BFF6"
+    coords 10.707 0.218 -1.847
+   }
+   {
+    ID "689B1BBB68620017"
+    coords 10.434 0.218 4.965
+   }
+   {
+    ID "689B1BBB686259F4"
+    coords 7.486 0.218 5.702
+   }
+   {
+    ID "689B1BBB6862E9AD"
+    coords 2.534 0.218 5.582
+   }
+   {
+    ID "689B1BBB68635BA3"
+    coords 3.071 0.218 2.643
+   }
+   {
+    ID "689B1BBB686372A0"
+    coords 1.517 0.218 4.793
+   }
+   {
+    ID "689B1BBB6863D6DD"
+    coords 2.635 0.218 0.336
+   }
+   {
+    ID "689B1BBB68681B79"
+    coords -13.021 0.218 -4.696
+   }
+   {
+    ID "689B1BBB68685AEE"
+    coords -14.698 0.218 -5.291
+   }
+   {
+    ID "689B1BBB68685E11"
+    coords -11.252 0.218 -5.414
+   }
+   {
+    ID "689B1BBB6868E7EC"
+    coords -14.698 0.218 -2.493
+   }
+   {
+    ID "689B1BBB686949C7"
+    coords -17.794 0.218 0.877
+   }
+   {
+    ID "689B1BBB686949DD"
+    coords -17.794 0.218 3.472
+   }
+   {
+    ID "689B1BBB68696567"
+    coords -16.92 0.218 -1.863
+   }
+   {
+    ID "689B1BBB6869A77E"
+    coords -18.948 0.218 -1.846
+   }
+   {
+    ID "689B1BBB6869BD8D"
+    coords -18.948 0.218 -0.312
+   }
+   {
+    ID "689B1BBB6869CA9A"
+    coords -16.344 0.218 5.455
+   }
+   {
+    ID "689B1BBB686A5F54"
+    coords -9.125 4.273 5.707
+   }
+   {
+    ID "689B1BBB686AE9D9"
+    coords -9.125 4.273 2.782
+   }
+   {
+    ID "689B1BBB686B39EE"
+    coords -9.125 4.273 -0.108
+   }
+   {
+    ID "689B1BBB686B61C8"
+    coords -11.147 0.218 -0.371
+   }
+   {
+    ID "689B1BBB686BE4EE"
+    coords -11.307 0.218 -3.236
+   }
+   {
+    ID "689B1BBB686C0A73"
+    coords -6.217 0.218 1.358
+   }
+   {
+    ID "689B1BBB686C4AA2"
+    coords -2.22 0.218 1.358
+   }
+   {
+    ID "689B1BBB686C4AAA"
+    coords -9.125 0.218 1.358
+   }
+   {
+    ID "689B1BBB686C4AB8"
+    coords -4.216 0.218 1.358
+   }
+   {
+    ID "689B1BBB686CCC4B"
+    coords -4.216 0.218 4.384
+   }
+   {
+    ID "689B1BBB686CCC59"
+    coords -9.125 0.218 4.384
+   }
+   {
+    ID "689B1BBB686CCC5F"
+    coords -6.217 0.218 4.384
+   }
+   {
+    ID "689B1BBB686D478B"
+    coords 9.452 0.218 -1.151
+   }
+   {
+    ID "689B1BBB686D4E6C"
+    coords 9.374 0.218 1.342
+   }
+   {
+    ID "689B1BBB686D7BA5"
+    coords -2.22 0.218 4.384
+   }
+   {
+    ID "689B1BBB686DA575"
+    coords 10.427 0.218 2.418
+   }
+   {
+    ID "689B1BBB686DE4A4"
+    coords 8.876 0.218 5.033
+   }
+   {
+    ID "689B1BBB686E1ABB"
+    coords -18.63 0.218 5.076
+   }
+   {
+    ID "689B1BBB686E71DA"
+    coords -6.217 0.218 -4.685
+   }
+   {
+    ID "689B1BBB686EF5AC"
+    coords -4.216 0.218 -4.685
+   }
+   {
+    ID "689B1BBB686F0DF8"
+    coords -2.22 0.218 -4.685
+   }
+   {
+    ID "689B1BBB686F0DFD"
+    coords -9.125 0.218 -4.685
+   }
+   {
+    ID "689B1BBB686F52CF"
+    coords -2.22 0.218 -1.822
+   }
+   {
+    ID "689B1BBB686F670E"
+    coords -6.217 0.218 -1.822
+   }
+   {
+    ID "689B1BBB686F6713"
+    coords -4.216 0.218 -1.822
+   }
+   {
+    ID "689B1BBB686FE9EA"
+    coords -9.125 0.218 -1.822
+   }
+   {
+    ID "689B1BBB6890E8A3"
+    coords 10.254 0.218 -5.607
+   }
+   {
+    ID "689B1BBB68910029"
+    coords 15.542 0.218 2.821
+   }
+   {
+    ID "689B1BBB6891ABF4"
+    coords 13.266 0.218 5.408
+   }
+   {
+    ID "689B1BBB689433DB"
+    coords -3.404 4.273 -0.108
+   }
+   {
+    ID "689B1BBB689433DC"
+    coords -3.404 4.273 2.782
+   }
+   {
+    ID "689B1BBB68943B94"
+    coords -3.404 4.273 -3.17
+   }
+   {
+    ID "689B1BBB68943B9E"
+    coords -3.404 4.273 -6.064
+   }
+   {
+    ID "689B1BBB68945489"
+    coords -5.174 4.273 -6.064
+   }
+   {
+    ID "689B1BBB6894548F"
+    coords -5.174 4.273 -3.17
+   }
+   {
+    ID "689B1BBB68947152"
+    coords -5.174 4.273 5.707
+   }
+   {
+    ID "689B1BBB68947157"
+    coords -5.174 4.273 2.782
+   }
+   {
+    ID "689B1BBB6894715C"
+    coords -5.174 4.273 -0.108
+   }
+   {
+    ID "689B1BBB689495A0"
+    coords -7.428 4.273 5.707
+   }
+   {
+    ID "689B1BBB6894C32E"
+    coords -7.428 4.273 2.782
+   }
+   {
+    ID "689B1BBB689513DB"
+    coords -7.428 4.273 -3.17
+   }
+   {
+    ID "689B1BBB689516A9"
+    coords -7.428 4.273 -0.108
+   }
+   {
+    ID "689B1BBB68954AFD"
+    coords -7.428 4.273 -6.064
+   }
+   {
+    ID "689B1BBB6895C32C"
+    coords -9.125 4.273 -3.17
+   }
+   {
+    ID "689B1BBB6895FC5F"
+    coords -9.125 4.273 -6.064
+   }
+   {
+    ID "689B1BBB6896242E"
+    coords 13.252 0.218 2.062
+   }
+   {
+    ID "689B1BBB689675DC"
+    coords 15.057 0.218 -5.281
+   }
+   {
+    ID "689B1BBB6896B391"
+    coords 12.96 0.218 -4.584
+   }
+   {
+    ID "689B1BBB6896DC80"
+    coords 15.13 0.218 0.091
+   }
+   {
+    ID "689B1BBB6896E97A"
+    coords 13.432 0.218 -2.127
+   }
+   {
+    ID "689B1BBB68977932"
+    coords 13.294 0.218 0.072
+   }
+   {
+    ID "689B1BBB68979330"
+    coords -3.404 4.273 5.707
+   }
+  }
+ }
+}

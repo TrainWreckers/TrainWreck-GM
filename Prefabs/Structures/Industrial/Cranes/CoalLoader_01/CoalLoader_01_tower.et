@@ -1,0 +1,95 @@
+SCR_DestructibleBuildingEntity : "{45636221B70CD08A}Prefabs/Structures/Industrial/Cranes/CoalLoader_01/CoalLoader_01_tower_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB61C013286"
+    coords 2.722 15.025 0.043
+   }
+   {
+    ID "689C3DB61C0201EF"
+    coords -2.76 15.025 1.065
+   }
+   {
+    ID "689C3DB61C028E8A"
+    coords -2.773 15.025 -2.651
+   }
+   {
+    ID "689C3DB61C02FC0E"
+    coords 2.687 15.025 -2.81
+   }
+   {
+    ID "689C3DB61C033792"
+    coords -4.634 7.51 2.685
+   }
+   {
+    ID "689C3DB61C035B4D"
+    coords -4.931 10.007 -2.214
+   }
+   {
+    ID "689C3DB61C035E30"
+    coords -5.071 12.501 2.382
+   }
+   {
+    ID "689C3DB61C035E38"
+    coords -6.573 12.494 2.402
+   }
+   {
+    ID "689C3DB61C038C6E"
+    coords -6.444 10.01 -2.672
+   }
+   {
+    ID "689C3DB61C03D101"
+    coords -2.579 15.025 2.905
+   }
+   {
+    ID "689C3DB61C03D13B"
+    coords -5.046 15.01 -2.231
+   }
+   {
+    ID "689C3DB61C1C28CB"
+    coords -1.758 0.208 -1.754
+   }
+   {
+    ID "689C3DB61C1C28D1"
+    coords -1.385 0.208 1.952
+   }
+   {
+    ID "689C3DB61C1C4397"
+    coords -6.452 2.493 2.594
+   }
+   {
+    ID "689C3DB61C1C6D32"
+    coords 4.075 0.064 -0.045
+   }
+   {
+    ID "689C3DB61C1CA5EB"
+    coords -4.788 2.498 2.503
+   }
+   {
+    ID "689C3DB61C1CA5ED"
+    coords -4.973 5.01 -2.423
+   }
+   {
+    ID "689C3DB61C1CA5FB"
+    coords -6.767 5.01 -2.658
+   }
+   {
+    ID "689C3DB61C1CC72A"
+    coords -6.659 7.51 2.551
+   }
+   {
+    ID "689C3DB61C1D4362"
+    coords 2.139 0.208 2.421
+   }
+   {
+    ID "689C3DB61C1D763E"
+    coords 2.802 15.025 2.581
+   }
+   {
+    ID "689C3DB61C1D8FA9"
+    coords 2.251 0.208 -2.013
+   }
+  }
+ }
+}

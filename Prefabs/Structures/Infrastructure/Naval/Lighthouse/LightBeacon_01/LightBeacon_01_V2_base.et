@@ -1,0 +1,15 @@
+SCR_DestructibleBuildingEntity : "{4890FA03952D692B}Prefabs/Structures/Infrastructure/Naval/Lighthouse/LightBeacon_01.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB7794D03EA"
+    coords 0.09 8.587 -0.621
+   }
+   {
+    ID "689C3DB7794D395D"
+    coords 0.089 0.275 0.996
+   }
+  }
+ }
+}

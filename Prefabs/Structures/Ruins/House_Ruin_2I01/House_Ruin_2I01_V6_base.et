@@ -1,0 +1,95 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DBEE25039B6"
+    coords 0.097 3.845 2.737
+   }
+   {
+    ID "689C3DBEE25054E2"
+    coords -7.217 0.19 1.317
+   }
+   {
+    ID "689C3DBEE25054EF"
+    coords -6.394 0.19 3.601
+   }
+   {
+    ID "689C3DBEE25422E7"
+    coords -7.194 6.792 -5.082
+   }
+   {
+    ID "689C3DBEE2545770"
+    coords -1.047 3.485 -4.907
+   }
+   {
+    ID "689C3DBEE2549B33"
+    coords -0.53 6.867 -4.89
+   }
+   {
+    ID "689C3DBEE255018A"
+    coords -6.668 6.908 -2.066
+   }
+   {
+    ID "689C3DBEE2558381"
+    coords -1.329 6.789 2.93
+   }
+   {
+    ID "689C3DBEE255E21F"
+    coords -7.523 6.919 3.091
+   }
+   {
+    ID "689C3DBEE2561943"
+    coords -0.598 0.19 -1.556
+   }
+   {
+    ID "689C3DBEE256194A"
+    coords -0.485 0.19 1.248
+   }
+   {
+    ID "689C3DBEE2561A95"
+    coords -0.398 0.19 3.498
+   }
+   {
+    ID "689C3DBEE2565503"
+    coords -2.982 3.49 -4.73
+   }
+   {
+    ID "689C3DBEE256F6BE"
+    coords -0.687 0.191 -3.2
+   }
+   {
+    ID "689C3DBEE2571070"
+    coords -8.003 0.433 -4.247
+   }
+   {
+    ID "689C3DBEE257512A"
+    coords -6.523 0.476 -4.54
+   }
+   {
+    ID "689C3DBEE2578A07"
+    coords -3.83 0.19 3.435
+   }
+   {
+    ID "689C3DBEE257EDA7"
+    coords -2.629 0.19 1.668
+   }
+   {
+    ID "689C3DBEE257EDB7"
+    coords -3.157 0.19 -5.246
+   }
+   {
+    ID "689C3DBEE257EDBE"
+    coords -2.893 0.19 -1.828
+   }
+   {
+    ID "689C3DBEE25BAB8E"
+    coords -0.682 3.583 -2.936
+   }
+   {
+    ID "689C3DBEE25BE5CC"
+    coords -0.443 3.555 0.146
+   }
+  }
+ }
+}

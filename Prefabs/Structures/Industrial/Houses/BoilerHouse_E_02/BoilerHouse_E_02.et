@@ -1,0 +1,111 @@
+SCR_DestructibleBuildingEntity : "{030BB70F40AF9D70}Prefabs/Structures/Industrial/Houses/BoilerHouse_E_02/BoilerHouse_E_02_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B346CB7065947"
+    coords -3.721 0.203 -5.752
+   }
+   {
+    ID "689B346CB7066304"
+    coords -6.867 0.203 -3.656
+   }
+   {
+    ID "689B346CB7066316"
+    coords -9.108 0.203 -4.439
+   }
+   {
+    ID "689B346CB706637F"
+    coords -0.124 0.203 -5.518
+   }
+   {
+    ID "689B346CB7068765"
+    coords -10.925 0.203 -5.768
+   }
+   {
+    ID "689B346CB706D9A0"
+    coords -7.428 0.203 -5.761
+   }
+   {
+    ID "689B346CB707DA0D"
+    coords 14.68 0.147 4.67
+   }
+   {
+    ID "689B346CB707DA51"
+    coords -12.851 0.203 -4.664
+   }
+   {
+    ID "689B346CB718070D"
+    coords 4.17 0.203 3.803
+   }
+   {
+    ID "689B346CB71812A8"
+    coords 3.602 0.203 1.256
+   }
+   {
+    ID "689B346CB7182061"
+    coords 10.522 0.203 1.305
+   }
+   {
+    ID "689B346CB7182D69"
+    coords 7.182 0.203 4.988
+   }
+   {
+    ID "689B346CB7186B65"
+    coords 0.499 0.203 1.248
+   }
+   {
+    ID "689B346CB7186B7A"
+    coords 9.277 0.203 3.744
+   }
+   {
+    ID "689B346CB7189169"
+    coords 10.787 1.027 -2.465
+   }
+   {
+    ID "689B346CB718ADF6"
+    coords 7.564 1.027 -2.731
+   }
+   {
+    ID "689B346CB718C85B"
+    coords 3.141 1.027 -2.731
+   }
+   {
+    ID "689B346CB718EED3"
+    coords 6.56 0.203 1.52
+   }
+   {
+    ID "689B346CB7191093"
+    coords -2.632 0.203 4.715
+   }
+   {
+    ID "689B346CB7193089"
+    coords -3.346 0.203 2.114
+   }
+   {
+    ID "689B346CB7193092"
+    coords -14.275 0.203 -5.728
+   }
+   {
+    ID "689B346CB719F433"
+    coords -4.08 0.203 -0.992
+   }
+   {
+    ID "689B346CB71B0345"
+    coords 12.954 0.147 1.672
+   }
+   {
+    ID "689B346CB71B03FB"
+    coords 12.999 0.147 4.67
+   }
+   {
+    ID "689B346CB71B58A4"
+    coords 14.872 0.147 0.485
+   }
+   {
+    ID "689B346CB71B6A32"
+    coords 15.403 0.147 -2.465
+   }
+  }
+ }
+}

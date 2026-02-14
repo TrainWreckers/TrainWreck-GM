@@ -1,0 +1,51 @@
+SCR_DestructibleBuildingEntity : "{815804CC2355EE4C}Prefabs/Structures/Ruins/ShedMetal_Ruin_01/ShedMetal_Ruin_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B497825C82D24"
+    coords -3.357 0.179 7.104
+   }
+   {
+    ID "689B497825C8A37D"
+    coords 2.756 3.787 1.163
+   }
+   {
+    ID "689B497825C8C23D"
+    coords -3.391 0.191 3.336
+   }
+   {
+    ID "689B497825C8CB58"
+    coords -3.142 0.178 0.998
+   }
+   {
+    ID "689B497825C9BEF6"
+    coords -4.236 0.184 9.49
+   }
+   {
+    ID "689B497825C9EB93"
+    coords 0.505 3.822 7.78
+   }
+   {
+    ID "689B497825CF4861"
+    coords 2.704 3.79 6.064
+   }
+   {
+    ID "689B497825CF4AAA"
+    coords 2.833 3.786 3.319
+   }
+   {
+    ID "689B497825CF70B2"
+    coords 2.942 3.79 8.961
+   }
+   {
+    ID "689B497825CF9C66"
+    coords 0.803 3.82 5.168
+   }
+   {
+    ID "689B497825CFE504"
+    coords -3.963 3.818 5.468
+   }
+  }
+ }
+}

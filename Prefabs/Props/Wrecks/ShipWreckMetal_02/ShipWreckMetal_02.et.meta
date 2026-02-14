@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E8C49FFC3417C2F3}Prefabs/Props/Wrecks/ShipWreckMetal_02/ShipWreckMetal_02.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

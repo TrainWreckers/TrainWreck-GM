@@ -1,0 +1,139 @@
+GenericEntity : "{8F2945BE755E7694}Prefabs/Props/Wrecks/ShipWreckWooden_01/ShipWreckWooden_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689C3DB7F2A203F7"
+    coords 0.484 1.681 -4.98
+   }
+   {
+    ID "689C3DB7F2A267FD"
+    coords -1.316 1.728 -0.309
+   }
+   {
+    ID "689C3DB7F2A2C4AB"
+    coords 0.532 4.731 8.973
+   }
+   {
+    ID "689C3DB7F2A32A0F"
+    coords 0.689 1.7 3.834
+   }
+   {
+    ID "689C3DB7F2A35BB0"
+    coords 0.139 1.635 8.291
+   }
+   {
+    ID "689C3DB7F2A361B1"
+    coords 0.739 1.66 5.914
+   }
+   {
+    ID "689C3DB7F2A361B9"
+    coords -0.127 1.599 6.416
+   }
+   {
+    ID "689C3DB7F2A3998D"
+    coords 1.084 1.734 -0.695
+   }
+   {
+    ID "689C3DB7F2A3E2B1"
+    coords -1.478 1.717 1.518
+   }
+   {
+    ID "689C3DB7F2A3FD7E"
+    coords -1.1 1.73 3.559
+   }
+   {
+    ID "689C3DB7F2A40048"
+    coords 0.643 6.23 -3.949
+   }
+   {
+    ID "689C3DB7F2A40F88"
+    coords -0.462 6.23 -3.667
+   }
+   {
+    ID "689C3DB7F2A454FA"
+    coords 0.496 6.23 -2.039
+   }
+   {
+    ID "689C3DB7F2A47B0B"
+    coords -0.523 6.23 -2.067
+   }
+   {
+    ID "689C3DB7F2A4CE1F"
+    coords -0.931 4.072 -3.158
+   }
+   {
+    ID "689C3DB7F2A4EE40"
+    coords -0.893 4.161 -5.424
+   }
+   {
+    ID "689C3DB7F2A53AA2"
+    coords 1.635 4.172 -5.782
+   }
+   {
+    ID "689C3DB7F2A5C9D7"
+    coords 0.435 4.657 -5.695
+   }
+   {
+    ID "689C3DB7F2A62C24"
+    coords -1.133 4.332 -8.134
+   }
+   {
+    ID "689C3DB7F2A65463"
+    coords -0.848 8.513 -3.777
+   }
+   {
+    ID "689C3DB7F2A65D72"
+    coords 0.497 8.514 -1.859
+   }
+   {
+    ID "689C3DB7F2A6AFE9"
+    coords 1.419 4.333 -8.143
+   }
+   {
+    ID "689C3DB7F2A74FE9"
+    coords 0.059 4.005 -0.92
+   }
+   {
+    ID "689C3DB7F2A78D86"
+    coords -1.815 6.671 -6.061
+   }
+   {
+    ID "689C3DB7F2A7E789"
+    coords -1.988 6.672 -2.471
+   }
+   {
+    ID "689C3DB7F2A8033B"
+    coords 1.64 4.32 5.212
+   }
+   {
+    ID "689C3DB7F2A82297"
+    coords -1.416 4.341 5.696
+   }
+   {
+    ID "689C3DB7F2A86600"
+    coords -0.5 4.724 8.908
+   }
+   {
+    ID "689C3DB7F2A8C10F"
+    coords 2.091 4.161 2.936
+   }
+   {
+    ID "689C3DB7F2A8C114"
+    coords 2.225 4.019 -0.698
+   }
+   {
+    ID "689C3DB7F2A8C11D"
+    coords -2.05 4.014 -0.612
+   }
+   {
+    ID "689C3DB7F2A8C125"
+    coords -2.281 4.054 0.676
+   }
+   {
+    ID "689C3DB7F2A8E6D8"
+    coords -2.124 4.203 3.54
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6E9513DCFE37F89B}Prefabs/Structures/Industrial/Cranes/CoalLoader_01/CoalLoader_01_bridge_transition.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

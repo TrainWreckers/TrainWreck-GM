@@ -1,0 +1,55 @@
+SCR_DestructibleBuildingEntity : "{AEDE422C00A3632C}Prefabs/Structures/Military/Houses/FuelStorage_E_01/FuelStorage_E_01_Base.et" {
+ ID "0000000000000001"
+ {
+  $grp TW_AISpawnPoint {
+   {
+    ID "689B1BBA9FBC1EB5"
+    coords -1.376 0.19 -1.335
+   }
+   {
+    ID "689B1BBA9FBC1EBE"
+    coords -1.46 0.19 1.693
+   }
+   {
+    ID "689B1BBA9FBC54C4"
+    coords 1.249 0.19 -1.225
+   }
+   {
+    ID "689B1BBA9FBC774A"
+    coords 1.289 0.19 1.771
+   }
+   {
+    ID "689B1BBA9FBC949C"
+    coords 2.449 0.19 -1.335
+   }
+   {
+    ID "689B1BBA9FBCF2CA"
+    coords 2.365 0.19 1.693
+   }
+   {
+    ID "689B1BBA9FBCF2F8"
+    coords 5.113 0.19 1.771
+   }
+   {
+    ID "689B1BBA9FBD1431"
+    coords -2.421 0.19 -1.225
+   }
+   {
+    ID "689B1BBA9FBD25E7"
+    coords -2.381 0.19 1.771
+   }
+   {
+    ID "689B1BBA9FBDBEFB"
+    coords -5.046 0.19 -1.335
+   }
+   {
+    ID "689B1BBA9FBDCE97"
+    coords -5.13 0.19 1.693
+   }
+   {
+    ID "689B1BBA9FBEB4F3"
+    coords 5.073 0.19 -1.225
+   }
+  }
+ }
+}
