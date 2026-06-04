@@ -5,14 +5,14 @@ class TW_GridCoordArray<Class T>
 	
 	private ref array<T> data = {};
 	
-	void TW_GridCoordArray(int x, int y)
+	void TW_GridCoordArray(int _x, int _y)
 	{
-		this.x = x;
-		this.y = y;
+		this.x = _x;
+		this.y = _y;
 	}
 	
-	void Add(T item) { data.Insert(item); }
-	void RemoveItem(T item) { data.RemoveItem(item); }
+	void Add(T _item) { data.Insert(_item); }
+	void RemoveItem(T _item) { data.RemoveItem(_item); }
 	
 	T GetRandomElement() { return data.GetRandomElement(); }
 	array<T> GetAll() { return data; }
@@ -35,13 +35,13 @@ class TW_GridCoordItem<Class T>
 	
 	private T item;
 	
-	void TW_GridCoordItem(int x, int y, T item)
+	void TW_GridCoordItem(int _x, int _y, T _item)
 	{
-		this.x = x;
-		this.y = y;
-		this.item = item;
+		this.x = _x;
+		this.y = _y;
+		this.item = _item;
 	}
 	
 	T GetItem() { return item; }
-	void SetItem(T item) { this.item = item; }
+	void SetItem(T _item) { this.item = _item; }
 }

@@ -28,15 +28,15 @@ class TW_MapLocation
 		return items;
 	}
 	
-	void SetData(EMapDescriptorType locationType, vector worldPosition, string locationName, FactionKey ownedBy = FactionKey.Empty, set<string> ownedChunks = null)
+	void SetData(EMapDescriptorType _locationType, vector _worldPosition, string _locationName, FactionKey _ownedBy = FactionKey.Empty, set<string> _ownedChunks = null)
 	{
-		this.locationType = locationType;
-		this.worldPosition = worldPosition;
-		this.locationName = locationName;
-		this.ownedBy = ownedBy;
+		this.locationType = _locationType;
+		this.worldPosition = _worldPosition;
+		this.locationName = _locationName;
+		this.ownedBy = _ownedBy;
 		
-		if(ownedChunks)
-			this.ownershipChunks = ownedChunks;
+		if(_ownedChunks)
+			this.ownershipChunks = _ownedChunks;
 		else
 			this.ownershipChunks = new set<string>();
 	}		

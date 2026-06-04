@@ -13,7 +13,7 @@ class TW_AISafeArea : GenericEntity
 	
 	protected RplComponent rplComp;
 	protected TW_RuntimeAreaMesh areaMesh;
-	protected IEntity owner;
+	protected IEntity _owner;
 	
 	protected ref array<TW_AISpawnPoint> disabledSpawnPoints = {};
 	private vector previousPosition;
@@ -23,7 +23,7 @@ class TW_AISafeArea : GenericEntity
 		if(TW_Global.IsInRuntime())
 			SafeAreas.Insert(this);
 		
-		this.owner = owner;
+		this._owner = owner;
 		areaMesh = TW_RuntimeAreaMesh.Cast(owner.FindComponent(TW_RuntimeAreaMesh));
 		rplComp = RplComponent.Cast(owner.FindComponent(RplComponent));
 		

@@ -232,6 +232,8 @@ class TW_MonitorPositions
 	
 	TW_OnPlayerPositionsChangedInvoker AddGridSubscription(string systemName, int gridSize, int radius)
 	{
+		PrintFormat("TrainWreck: Adding grid subscription for '%1', grid size '%2', and radius '%3'", systemName, gridSize, radius);
+		
 		if(!m_GridSystems.Contains(gridSize))
 		{
 			ref TW_GridRadiusSubscription sub = new TW_GridRadiusSubscription(gridSize);
